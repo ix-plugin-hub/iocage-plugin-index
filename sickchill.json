@@ -1,6 +1,6 @@
 {
     "name": "SickChill",
-    "release": "11.2-RELEASE",
+    "release": "11.3-RELEASE",
     "artifact": "https://github.com/dvarious/iocage-plugin-sickchill.git",
     "properties": {
         "nat": 1,

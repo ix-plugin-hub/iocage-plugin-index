@@ -1,7 +1,7 @@
 {
     "name": "Dnsmasq",
     "plugin_schema": "2",
-    "release": "11.2-RELEASE",
+    "release": "11.3-RELEASE",
     "artifact": "https://github.com/timsavage/iocage-plugin-dnsmasq.git",
     "properties": {
         "dhcp": 1
