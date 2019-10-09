@@ -71,13 +71,6 @@
         "description": "Software-Defined Networking platform that provides an end-to-end system of network devices across different locations. (Long term support version)",
         "official": false
     },
-    "homebridge": {
-        "MANIFEST": "homebridge.json",
-        "name": "Homebridge",
-        "icon": "https://camo.githubusercontent.com/97c6fb19fc469358ceada9d9abd96fa65fc14a0f/68747470733a2f2f636c2e6c792f3939653638616334396365662f4c6f676f32782e706e67",
-        "description": "Lightweight iOS HomeKit API emulator. Enables adding unsupported devices to HomeKit.",
-        "offical": false
-    },
     "dnsmasq": {
         "MANIFEST": "dnsmasq.json",
         "name": "Dnsmasq",
@@ -85,14 +78,6 @@
         "description": "Network infrastructure management for small networks: DNS, DHCP, router advertisement, and network boot.",
         "official": false,
         "primary_pkg": "dnsmasq"
-    },
-    "channels-dvr": {
-        "MANIFEST": "channels-dvr.json",
-        "name": "Channels DVR",
-        "icon": "https://getchannels.com/assets/img/icon-1024.png",
-        "description": "DVR server for the Channels apps. Makes digital recordings of broadcast television using HDHomeRun network tuners. (Requires Subscription)",
-        "primary_pkg": "",
-        "official": false
     },
     "rtorrent-flood": {
         "MANIFEST": "rtorrent-flood.json",
