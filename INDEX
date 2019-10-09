@@ -47,6 +47,14 @@
         "description": "Modular IRC client using a CLI interface.",
         "official": true
     },
+    "quasselcore": {
+        "MANIFEST": "quasselcore.json",
+        "name": "Quasselcore",
+        "primary_pkg": "quassel-core",
+        "icon": "https://www.trueos.org/iocage-icons/quasselcore.png",
+        "description": "Headless IRC Client that supports 24/7 connectivity. Quassel Client can be attached.",
+        "official": true
+    },
     "unificontroller": {
         "MANIFEST": "unificontroller.json",
         "name": "unificontroller",
