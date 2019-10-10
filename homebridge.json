@@ -1,6 +1,6 @@
 {
     "name": "Homebridge",
-    "release": "11.2-RELEASE",
+    "release": "11.3-RELEASE",
     "artifact": "https://github.com/grimneko/iocage-plugin-homebridge.git",
     "properties": {
         "vnet": 1
