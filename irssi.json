@@ -3,6 +3,9 @@
     "plugin_schema": "2",
     "release": "11.3-RELEASE",
     "artifact": "https://github.com/freenas/iocage-plugin-irssi.git",
+    "properties": {
+        "nat": 1
+    },
     "pkgs": [
         "irssi"
     ],
@@ -15,5 +18,6 @@
             }
         ]
     },
-    "official": true
+    "official": true,
+    "revision": "0"
 }
