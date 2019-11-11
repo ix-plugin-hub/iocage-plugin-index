@@ -14,7 +14,7 @@ For more detailed information on creating a plugin, see [Create a Plugin](https:
 ## Using Local File
 Install a plugin using a local file:
 <pre>
-iocage fetch -P --name /the/path/to/plugin.json ip4_addr="<i>interface</i>|<i>IPaddress</i>"
+iocage fetch -P /path/to/local/file.json ip4_addr="<i>interface</i>|<i>IPaddress</i>"
 </pre>
 where *interface* is the name of the active network interface and *IP address* is the desired IP address for the plugin.
 For example, `ip4_addr="em0|10.238.4.196"`.
@@ -22,7 +22,7 @@ For example, `ip4_addr="em0|10.238.4.196"`.
 ## Pulling from Internet
 Install a plugin from the internet:
 <pre>
-iocage fetch --plugins --name "jenkins" ip4_addr="<i>interface</i>|<i>IPaddress</i>"
+iocage fetch -P jenkins -g https://github.com/ix-plugin-hub/iocage-plugin-index ip4_addr="<i>interface</i>|<i>IPaddress</i>"
 </pre>
 where *interface* is the name of the active network interface and *IP address* is the desired IP address for the plugin.
 For example, `ip4_addr="igb0|192.168.0.91"`
