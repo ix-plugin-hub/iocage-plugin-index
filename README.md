@@ -10,10 +10,10 @@ it will appear in iocage's plugin listing
 
 ## Using Local File
 ```
-iocage fetch -P --name /the/path/to/jenkins.json ip4_addr="re0|192.168.0.100"
+iocage fetch -P /path/to/local/file.json
 ```
 
 ## Pulling from Internet
 ```
-iocage fetch --plugins --name "jenkins" ip4_addr="igb0|192.168.0.91"
+iocage fetch -P unificontroller -g https://github.com/ix-plugin-hub/iocage-plugin-index
 ```
