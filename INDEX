@@ -101,7 +101,7 @@
         "description": "rTorrent with Flood web interface (optionally restricted to OpenVPN).",
         "official": false,
         "primary_pkg": "rtorrent"
-    }
+    },
         "homeassistant": {
         "MANIFEST": "homeassistant.json",
         "name": "Home Assistant",
