@@ -101,5 +101,12 @@
         "description": "rTorrent with Flood web interface (optionally restricted to OpenVPN).",
         "official": false,
         "primary_pkg": "rtorrent"
-    }
+    },
+       "tasmoadmin": { 
+       "MANIFEST": "tasmoadmin.json", 
+       "name": "TasmoAdmin", 
+       "description": "Website to manage Sonoff Devices flashed with Tasmota.", 
+       "icon": "https://raw.githubusercontent.com/reloxx13/TasmoAdmin/master/tasmoadmin/resources/img/logo_small.PNG", 
+       "official": false 
+   }
 }
