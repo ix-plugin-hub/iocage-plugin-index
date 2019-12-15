@@ -102,4 +102,11 @@
         "official": false,
         "primary_pkg": "rtorrent"
     }
+        "homeassistant": {
+        "MANIFEST": "homeassistant.json",
+        "name": "Home Assistant",
+        "description": "Open source home automation that puts local control and privacy first.",
+        "icon": "https://raw.githubusercontent.com/tprelog/iocage-homeassistant/master/icon.png",
+        "official": false
+    }
 }
