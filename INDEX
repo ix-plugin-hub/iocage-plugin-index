@@ -101,5 +101,12 @@
         "description": "rTorrent with Flood web interface (optionally restricted to OpenVPN).",
         "official": false,
         "primary_pkg": "rtorrent"
+    },
+    "node-red": {
+        "MANIFEST": "node-red.json",
+        "name": "Node-RED",
+        "icon": "https://nodered.org/about/resources/media/node-red-icon.png",
+        "description": "Low-code programming for event-driven applications.",
+        "official": false
     }
 }
