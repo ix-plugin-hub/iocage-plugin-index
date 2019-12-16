@@ -5,10 +5,7 @@
   "official": "false",
   "properties": {
     "allow_raw_sockets": "1",
-    "boot": "on",
-    "bpf": "on",
-    "dhcp": "1",
-    "vnet": "yes"
+    "dhcp": "1"
   },
   "pkgs": [
     "archivers/zip",
