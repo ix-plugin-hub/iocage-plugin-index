@@ -101,5 +101,13 @@
         "description": "rTorrent with Flood web interface (optionally restricted to OpenVPN).",
         "official": false,
         "primary_pkg": "rtorrent"
+    },
+    "mosquitto": {
+        "MANIFEST": "mosquitto.json",
+        "name": "Mosquitto MQTT",
+        "icon": "https://mosquitto.org/stickers/mosquitto-colour.png",
+        "description": "An open source MQTT broker.",
+        "official": false,
+        "primary_pkg": "mosquitto"
     }
 }
