@@ -8,12 +8,12 @@
     "dhcp": "1"
   },
   "pkgs": [
-    "shells/bash",
-    "devel/gmake",
-    "www/node10",
-    "www/npm-node10",
-    "lang/python27",
-    "lang/python"
+    "bash",
+    "gmake",
+    "node10",
+    "npm-node10",
+    "python27",
+    "python"
   ],
   "packagesite": "http://pkg.FreeBSD.org/${ABI}/quarterly",
   "fingerprints": {
