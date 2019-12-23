@@ -8,15 +8,15 @@
     "dhcp": "1"
   },
   "pkgs": [
-    "shells/bash",
-    "www/nginx",
-    "lang/php72",
-    "ftp/php72-curl",
-    "security/php72-filter",
-    "devel/php72-json",
-    "www/php72-session",
-    "archivers/php72-zip",
-    "net/svnup"
+    "bash",
+    "nginx",
+    "php72",
+    "php72-curl",
+    "php72-filter",
+    "php72-json",
+    "php72-session",
+    "php72-zip",
+    "svnup"
   ],
   "packagesite": "http://pkg.FreeBSD.org/${ABI}/quarterly",
   "fingerprints": {
