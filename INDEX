@@ -102,7 +102,7 @@
         "official": false,
         "primary_pkg": "rtorrent"
     },
-       "tasmoadmin": { 
+    "tasmoadmin": { 
        "MANIFEST": "tasmoadmin.json", 
        "name": "TasmoAdmin", 
        "description": "Website to manage Sonoff Devices flashed with Tasmota.", 
@@ -115,5 +115,20 @@
         "icon": "https://nodered.org/about/resources/media/node-red-icon.png",
         "description": "Low-code programming for event-driven applications.",
         "official": false
-    }   
+    },   
+    "homeassistant": {
+        "MANIFEST": "homeassistant.json",
+        "name": "Home Assistant",
+        "description": "Open source home automation that puts local control and privacy first.",
+        "icon": "https://raw.githubusercontent.com/tprelog/iocage-homeassistant/master/icon.png",
+        "official": false
+    },
+    "mosquitto": {
+        "MANIFEST": "mosquitto.json",
+        "name": "Mosquitto MQTT",
+        "icon": "https://mosquitto.org/stickers/mosquitto-colour.png",
+        "description": "An open source MQTT broker.",
+        "official": false,
+        "primary_pkg": "mosquitto"
+    }
 }
