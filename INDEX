@@ -116,4 +116,12 @@
         "icon": "https://raw.githubusercontent.com/tprelog/iocage-homeassistant/master/icon.png",
         "official": false
     }
+    "mosquitto": {
+        "MANIFEST": "mosquitto.json",
+        "name": "Mosquitto MQTT",
+        "icon": "https://mosquitto.org/stickers/mosquitto-colour.png",
+        "description": "An open source MQTT broker.",
+        "official": false,
+        "primary_pkg": "mosquitto"
+    }
 }
