@@ -108,7 +108,7 @@
        "description": "Website to manage Sonoff Devices flashed with Tasmota.", 
        "icon": "https://raw.githubusercontent.com/reloxx13/TasmoAdmin/master/tasmoadmin/resources/img/logo_small.PNG", 
        "official": false 
-   },
+    },
     "node-red": {
         "MANIFEST": "node-red.json",
         "name": "Node-RED",
