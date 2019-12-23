@@ -102,11 +102,18 @@
         "official": false,
         "primary_pkg": "rtorrent"
     },
+       "tasmoadmin": { 
+       "MANIFEST": "tasmoadmin.json", 
+       "name": "TasmoAdmin", 
+       "description": "Website to manage Sonoff Devices flashed with Tasmota.", 
+       "icon": "https://raw.githubusercontent.com/reloxx13/TasmoAdmin/master/tasmoadmin/resources/img/logo_small.PNG", 
+       "official": false 
+   },
     "node-red": {
         "MANIFEST": "node-red.json",
         "name": "Node-RED",
         "icon": "https://nodered.org/about/resources/media/node-red-icon.png",
         "description": "Low-code programming for event-driven applications.",
         "official": false
-    }
+    }   
 }
