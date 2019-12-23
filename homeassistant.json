@@ -8,18 +8,18 @@
     "dhcp": "1"
   },
   "pkgs": [
-    "archivers/zip",
-    "devel/autoconf",
-    "shells/bash",
-    "security/ca_root_nss",
-    "devel/gmake",
-    "devel/pkgconf",
-    "lang/python37",
-    "databases/py-sqlite3",
-    "textproc/libxml2",
-    "textproc/libxslt",
-    "security/sudo",
-    "ftp/wget"
+    "zip",
+    "autoconf",
+    "bash",
+    "ca_root_nss",
+    "gmake",
+    "pkgconf",
+    "python37",
+    "py-sqlite3",
+    "libxml2",
+    "libxslt",
+    "sudo",
+    "wget"
   ],
   "packagesite": "http://pkg.FreeBSD.org/${ABI}/latest",
   "fingerprints": {
