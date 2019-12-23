@@ -8,7 +8,7 @@
     "dhcp": "1"
   },
   "pkgs": [
-    "net/mosquitto"
+    "mosquitto"
   ],
   "packagesite": "http://pkg.FreeBSD.org/${ABI}/latest",
   "fingerprints": {
