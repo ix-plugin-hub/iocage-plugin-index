@@ -102,11 +102,20 @@
         "official": false,
         "primary_pkg": "rtorrent"
     },
-       "tasmoadmin": { 
+    "tasmoadmin": { 
        "MANIFEST": "tasmoadmin.json", 
        "name": "TasmoAdmin", 
        "description": "Website to manage Sonoff Devices flashed with Tasmota.", 
        "icon": "https://raw.githubusercontent.com/reloxx13/TasmoAdmin/master/tasmoadmin/resources/img/logo_small.PNG", 
        "official": false 
-   }
+    },
+    "mosquitto": {
+        "MANIFEST": "mosquitto.json",
+        "name": "Mosquitto MQTT",
+        "icon": "https://mosquitto.org/stickers/mosquitto-colour.png",
+        "description": "An open source MQTT broker.",
+        "official": false,
+        "primary_pkg": "mosquitto"
+    }
+   
 }
