@@ -15,7 +15,7 @@
     "gmake",
     "pkgconf",
     "python37",
-    "py-sqlite3",
+    "pypy-sqlite3",
     "libxml2",
     "libxslt",
     "sudo",
