@@ -123,5 +123,13 @@
         "description": "An open source MQTT broker.",
         "official": false,
         "primary_pkg": "mosquitto"
+    },
+    "gogs": {
+        "MANIFEST": "gogs.json",
+        "name": "Gogs",
+        "icon": "https://raw.githubusercontent.com/tprelog/iocage-gogs/master/icon.png",
+        "description": "A painless self-hosted Git service.",
+        "official": false,
+        "primary_pkg": "gogs"
     }
 }
