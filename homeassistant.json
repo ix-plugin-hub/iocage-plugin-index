@@ -8,18 +8,13 @@
     "dhcp": "1"
   },
   "pkgs": [
-    "zip",
     "autoconf",
     "bash",
     "ca_root_nss",
     "gmake",
     "pkgconf",
     "python37",
-    "pypy-sqlite3",
-    "libxml2",
-    "libxslt",
-    "sudo",
-    "wget"
+    "py37-sqlite3"
   ],
   "packagesite": "http://pkg.FreeBSD.org/${ABI}/latest",
   "fingerprints": {
