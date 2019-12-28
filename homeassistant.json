@@ -14,7 +14,10 @@
     "gmake",
     "pkgconf",
     "python37",
-    "py37-sqlite3"
+    "py37-sqlite3",
+    "sudo",
+    "wget",
+    "zip"
   ],
   "packagesite": "http://pkg.FreeBSD.org/${ABI}/latest",
   "fingerprints": {
