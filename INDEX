@@ -109,6 +109,13 @@
        "icon": "https://raw.githubusercontent.com/reloxx13/TasmoAdmin/master/tasmoadmin/resources/img/logo_small.PNG", 
        "official": false 
     },
+    "node-red": {
+        "MANIFEST": "node-red.json",
+        "name": "Node-RED",
+        "icon": "https://nodered.org/about/resources/media/node-red-icon.png",
+        "description": "Low-code programming for event-driven applications.",
+        "official": false
+    },   
     "homeassistant": {
         "MANIFEST": "homeassistant.json",
         "name": "Home Assistant",
