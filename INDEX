@@ -115,7 +115,7 @@
         "description": "Open source home automation that puts local control and privacy first.",
         "icon": "https://raw.githubusercontent.com/tprelog/iocage-homeassistant/master/icon.png",
         "official": false
-    }
+    },
     "mosquitto": {
         "MANIFEST": "mosquitto.json",
         "name": "Mosquitto MQTT",
