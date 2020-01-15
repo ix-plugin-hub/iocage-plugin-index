@@ -142,7 +142,7 @@
     "jackett": {
         "MANIFEST": "jackett.json",
         "name": "jackett",
-        "icon": "https://raw.githubusercontent.com/tprelog/iocage-gogs/master/icon.png",
+        "icon": "https://raw.githubusercontent.com/RogerAirgood/iocage-plugin-index/master/icons/jackett.png",
         "description": "Jackett translates queries from apps into torrent tracker site specific queries",
         "official": false,
         "primary_pkg": "jackett"
