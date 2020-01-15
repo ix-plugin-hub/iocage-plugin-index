@@ -139,4 +139,12 @@
         "official": false,
         "primary_pkg": "gogs"
     }
+    "jackett": {
+        "MANIFEST": "jackett.json",
+        "name": "jackett",
+        "icon": "https://avatars1.githubusercontent.com/u/15383019?s=200&v=4",
+        "description": "Jackett works as a proxy server: it translates queries from apps into tracker-site-specific http queries, parses the html response, then sends results back to the requesting software.",
+        "official": false,
+        "primary_pkg": "jackett"
+    }
 }
