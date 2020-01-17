@@ -138,5 +138,13 @@
         "description": "A painless self-hosted Git service.",
         "official": false,
         "primary_pkg": "gogs"
+    },
+    "sabnzbd": {
+        "MANIFEST": "sabnzbd.json",
+        "name": "Sabnzbd",
+        "icon": "https://raw.githubusercontent.com/RogerAirgood/iocage-plugin-index/master/icons/sabnzbd.png",
+        "description": "Sabznbd is a newsgroup reader.",
+        "official": false,
+        "primary_pkg": "sabnzbdplus"
     }
 }
