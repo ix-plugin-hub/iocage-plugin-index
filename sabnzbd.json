@@ -1,7 +1,7 @@
 {
     "name": "sabnzbd",
     "release": "11.3-RELEASE",
-    "artifact": "https://github.com/RogerAirgood/iocage-plugin-sabnzbd.git",
+    "artifact": "https://github.com/ConorBeh/iocage-plugin-sabnzbd.git",
     "properties": {
         "nat": 1,
         "nat_forwards": "tcp(8080:8080)"
