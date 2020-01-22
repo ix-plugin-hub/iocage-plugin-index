@@ -1,14 +1,17 @@
 {
-    "name": "sabnzbd",
+    "name": "PrivateBin",
+    "plugin_schema": "2",
     "release": "11.3-RELEASE",
-    "artifact": "https://github.com/ConorBeh/iocage-plugin-sabnzbd.git",
-    "properties": {
-        "nat": 1,
-        "nat_forwards": "tcp(8080:8080)"
-    },
+    "artifact": "https://github.com/ConorBeh/iocage-plugin-privatebin.git",
     "pkgs": [
-        "sabnzbdplus"
+        "privatebin",
+        "lighttpd",
+        "ca_root_nss",
+        "openssl"
     ],
+    "properties": {
+        "dhcp": 1
+    },
     "packagesite": "http://pkg.FreeBSD.org/FreeBSD:11:amd64/latest",
     "fingerprints": {
         "plugin-default": [
@@ -18,5 +21,6 @@
             }
         ]
     },
+    "official": false,
     "revision": "0"
 }
