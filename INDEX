@@ -154,5 +154,13 @@
         "description": "PrivateBin is a minimalist, open source online pastebin where the server has zero knowledge of pasted data.",
         "official": false,
         "primary_pkg": "privatebin"
-    }
+    },
+    "gitea": {
+        "MANIFEST": "gitea.json",
+        "name": "Gitea",
+        "icon": "https://gitea.io/images/gitea.png",
+        "description": "Gitea is a community managed lightweight code hosting solution written in Go.",
+        "official": false,
+        "primary_pkg": "gitea"
+    } 
 }
