@@ -1,19 +1,28 @@
 # iocage-ix-plugins
-Official iXsystems iocage plugins for [FreeNAS](http://www.freenas.org), [TrueOS](https://www.trueos.org) and [FreeBSD](http://www.freebsd.org)
+Official community created plugins for [FreeNAS](http://www.freenas.org), [TrueOS](https://www.trueos.org) and [FreeBSD](http://www.freebsd.org)
 
-Plugin Json files are added to this repo, along with a respective icon in icons/
+# Creating Plugins
+Add a plugin JSON file to this repo along with an appropriate icon in the [icons directory](icons/).
 
-When a plugin is made 'official' it should be added to the INDEX json and
-it will appear in iocage's plugin listing
+After creating the JSON file and adding an icon, add the plugin to the [INDEX file](INDEX).
+If the plugin is approved, it appears in the list of iocage plugins.
+
+For more detailed information on creating a plugin, see [Create a Plugin](https://www.ixsystems.com/documentation/freenas/11.2-U6/plugins.html#create-a-plugin).
 
 # Installing Plugins
 
 ## Using Local File
-```
-iocage fetch -P --name /the/path/to/jenkins.json ip4_addr="re0|192.168.0.100"
-```
+Install a plugin using a local file:
+<pre>
+iocage fetch -P /path/to/local/file.json ip4_addr="<i>interface</i>|<i>IPaddress</i>"
+</pre>
+where *interface* is the name of the active network interface and *IP address* is the desired IP address for the plugin.
+For example, `ip4_addr="em0|10.238.4.196"`.
 
 ## Pulling from Internet
-```
-iocage fetch --plugins --name "jenkins" ip4_addr="igb0|192.168.0.91"
-```
+Install a plugin from the internet:
+<pre>
+iocage fetch -P jenkins -g https://github.com/ix-plugin-hub/iocage-plugin-index ip4_addr="<i>interface</i>|<i>IPaddress</i>"
+</pre>
+where *interface* is the name of the active network interface and *IP address* is the desired IP address for the plugin.
+For example, `ip4_addr="igb0|192.168.0.91"`

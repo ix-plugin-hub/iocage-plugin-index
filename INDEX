@@ -101,5 +101,58 @@
         "description": "rTorrent with Flood web interface (optionally restricted to OpenVPN).",
         "official": false,
         "primary_pkg": "rtorrent"
+    },
+    "tasmoadmin": { 
+       "MANIFEST": "tasmoadmin.json", 
+       "name": "TasmoAdmin", 
+       "description": "Website to manage Sonoff Devices flashed with Tasmota.", 
+       "icon": "https://raw.githubusercontent.com/reloxx13/TasmoAdmin/master/tasmoadmin/resources/img/logo_small.PNG", 
+       "official": false 
+    },
+    "node-red": {
+        "MANIFEST": "node-red.json",
+        "name": "Node-RED",
+        "icon": "https://nodered.org/about/resources/media/node-red-icon.png",
+        "description": "Low-code programming for event-driven applications.",
+        "official": false
+    },   
+    "homeassistant": {
+        "MANIFEST": "homeassistant.json",
+        "name": "Home Assistant",
+        "description": "Open source home automation that puts local control and privacy first.",
+        "icon": "https://raw.githubusercontent.com/tprelog/iocage-homeassistant/master/icon.png",
+        "official": false
+    },
+    "mosquitto": {
+        "MANIFEST": "mosquitto.json",
+        "name": "Mosquitto MQTT",
+        "icon": "https://mosquitto.org/stickers/mosquitto-colour.png",
+        "description": "An open source MQTT broker.",
+        "official": false,
+        "primary_pkg": "mosquitto"
+    },
+    "gogs": {
+        "MANIFEST": "gogs.json",
+        "name": "Gogs",
+        "icon": "https://raw.githubusercontent.com/tprelog/iocage-gogs/master/icon.png",
+        "description": "A painless self-hosted Git service.",
+        "official": false,
+        "primary_pkg": "gogs"
+    },
+    "sabnzbd": {
+        "MANIFEST": "sabnzbd.json",
+        "name": "Sabnzbd",
+        "icon": "https://raw.githubusercontent.com/ix-plugin-hub/iocage-plugin-index/master/icons/sabnzbd.png",
+        "description": "Sabznbd is a newsgroup reader.",
+        "official": false,
+        "primary_pkg": "sabnzbdplus"
+    },
+    "privatebin": {
+        "MANIFEST": "privatebin.json",
+        "name": "PrivateBin",
+        "icon": "https://privatebin.info/img/logo.png",
+        "description": "PrivateBin is a minimalist, open source online pastebin where the server has zero knowledge of pasted data.",
+        "official": false,
+        "primary_pkg": "privatebin"
     }
 }

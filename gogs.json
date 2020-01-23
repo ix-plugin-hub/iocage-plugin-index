@@ -1,0 +1,22 @@
+{
+  "name": "gogs",
+  "release": "11.3-RELEASE",
+  "artifact": "https://github.com/tprelog/iocage-gogs.git",
+  "official": "false",
+  "properties": {
+    "dhcp": "1"
+  },
+  "pkgs": [
+    "gogs"
+  ],
+  "packagesite": "http://pkg.FreeBSD.org/${ABI}/quarterly",
+  "fingerprints": {
+    "plugin-default": [
+      {
+        "function": "sha256",
+        "fingerprint": "b0170035af3acc5f3f3ae1859dc717101b4e6c1d0a794ad554928ca0cbb2f438"
+      }
+    ]
+  },
+  "revision": "0"
+}
