@@ -1,14 +1,16 @@
 {
-    "name": "gitea",
+    "name": "Gitea",
+    "plugin_schema": "2",
     "release": "11.3-RELEASE",
     "artifact": "https://github.com/ConorBeh/iocage-plugin-gitea.git",
+    "pkgs": [
+        "gitea",
+        "postgresql11-server",
+        "postgresql11-contrib"
+    ],
     "properties": {
         "dhcp": 1
     },
-    "pkgs": [
-        "gitea",
-        "mysql57-server"
-    ],
     "packagesite": "http://pkg.FreeBSD.org/FreeBSD:11:amd64/latest",
     "fingerprints": {
         "plugin-default": [
@@ -18,5 +20,6 @@
             }
         ]
     },
+    "official": false,
     "revision": "0"
 }
