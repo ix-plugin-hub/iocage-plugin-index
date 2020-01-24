@@ -1,17 +1,29 @@
 {
-  "definitions": {},
-  "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "http://example.com/root.json",
+  "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
-  "title": "The Root Schema",
-  "required": [
-    ""
-  ],
   "properties": {
     "": {
-      "$id": "#/properties/",
       "type": "object",
-      "title": "The  Schema",
+      "properties": {
+        "MANIFEST": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "primary_pkg": {
+          "type": "string"
+        },
+        "icon": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "official": {
+          "type": "boolean"
+        }
+      },
       "required": [
         "MANIFEST",
         "name",
@@ -19,68 +31,7 @@
         "icon",
         "description",
         "official"
-      ],
-      "properties": {
-        "MANIFEST": {
-          "$id": "#/properties//properties/MANIFEST",
-          "type": "string",
-          "title": "The Manifest Schema",
-          "default": "",
-          "examples": [
-            "openvpn.json"
-          ],
-          "pattern": "^(.*)$"
-        },
-        "name": {
-          "$id": "#/properties//properties/name",
-          "type": "string",
-          "title": "The Name Schema",
-          "default": "",
-          "examples": [
-            "OpenVPN Server"
-          ],
-          "pattern": "^(.*)$"
-        },
-        "primary_pkg": {
-          "$id": "#/properties//properties/primary_pkg",
-          "type": "string",
-          "title": "The Primary_pkg Schema",
-          "default": "",
-          "examples": [
-            "openvpn"
-          ],
-          "pattern": "^(.*)$"
-        },
-        "icon": {
-          "$id": "#/properties//properties/icon",
-          "type": "string",
-          "title": "The Icon Schema",
-          "default": "",
-          "examples": [
-            "http://swupdate.openvpn.net/community/icons/ovpntech_key.png"
-          ],
-          "pattern": "^(.*)$"
-        },
-        "description": {
-          "$id": "#/properties//properties/description",
-          "type": "string",
-          "title": "The Description Schema",
-          "default": "",
-          "examples": [
-            "Virtual private network software to create secure point-to-point connections."
-          ],
-          "pattern": "^(.*)$"
-        },
-        "official": {
-          "$id": "#/properties//properties/official",
-          "type": "boolean",
-          "title": "The Official Schema",
-          "default": false,
-          "examples": [
-            false
-          ]
-        }
-      }
+      ]
     }
-  }
+  },
 }
