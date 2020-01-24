@@ -1,158 +1,166 @@
 {
-    "openvpn": {
-        "MANIFEST": "openvpn.json",
-        "name": "OpenVPN Server",
-        "primary_pkg": "openvpn",
-        "icon": "http://swupdate.openvpn.net/community/icons/ovpntech_key.png",
-        "description": "Virtual private network software to create secure point-to-point connections.",
-        "official": false
-    },
-    "madsonic": {
-        "MANIFEST": "madsonic.json",
-        "name": "MadSonic",
-        "primary_pkg": "madsonic-standalone",
-        "icon": "https://www.trueos.org/iocage-icons/madsonic.png",
-        "description": "Open source media streaming software and music player.",
-        "official": true
-    },
-    "sickchill": {
-        "MANIFEST": "sickchill.json",
-        "name": "SickChill",
-        "primary_pkg": "Git branch - Master",
-        "icon": "https://www.trueos.org/iocage-icons/sickchill.png",
-        "description": "Automatic video library manager for TV Shows.",
-        "official": false
-    },
-    "xmrig": {
-        "MANIFEST": "xmrig.json",
-        "name": "XMRig",
-        "primary_pkg": "xmrig",
-        "icon": "https://www.trueos.org/iocage-icons/xmrig.png",
-        "description": "High performance Monero (XMR) CPU miner written in C++.",
-        "official": true
-    },
-    "weechat": {
-        "MANIFEST": "weechat.json",
-        "name": "weechat",
-        "primary_pkg": "weechat",
-        "icon": "https://www.trueos.org/iocage-icons/weechat.png",
-        "description": "Fast and light IRC client.",
-        "official": true
-    },
-    "irssi": {
-        "MANIFEST": "irssi.json",
-        "name": "irssi",
-        "primary_pkg": "irssi",
-        "icon": "https://www.trueos.org/iocage-icons/irssi.png",
-        "description": "Modular IRC client using a CLI interface.",
-        "official": true
-    },
-    "quasselcore": {
-        "MANIFEST": "quasselcore.json",
-        "name": "Quasselcore",
-        "primary_pkg": "quassel-core",
-        "icon": "https://www.trueos.org/iocage-icons/quasselcore.png",
-        "description": "Headless IRC Client that supports 24/7 connectivity. Quassel Client can be attached.",
-        "official": true
-    },
-    "unificontroller": {
-        "MANIFEST": "unificontroller.json",
-        "name": "unificontroller",
-        "primary_pkg": "unifi5",
-        "icon": "https://www.trueos.org/iocage-icons/unificontroller.png",
-        "description": "Software-Defined Networking platform that provides an end-to-end system of network devices across different locations.",
-        "official": false
-    },
-    "unificontroller-lts": {
-        "MANIFEST": "unificontroller-lts.json",
-        "name": "unificontroller-lts",
-        "primary_pkg": "unifi-lts",
-        "icon": "https://www.trueos.org/iocage-icons/unificontroller.png",
-        "description": "Software-Defined Networking platform that provides an end-to-end system of network devices across different locations. (Long term support version)",
-        "official": false
-    },
-    "homebridge": {
-        "MANIFEST": "homebridge.json",
-        "name": "Homebridge",
-        "icon": "https://camo.githubusercontent.com/97c6fb19fc469358ceada9d9abd96fa65fc14a0f/68747470733a2f2f636c2e6c792f3939653638616334396365662f4c6f676f32782e706e67",
-        "description": "Lightweight iOS HomeKit API emulator. Enables adding unsupported devices to HomeKit.",
-        "offical": false
-    },
-    "dnsmasq": {
-        "MANIFEST": "dnsmasq.json",
-        "name": "Dnsmasq",
-        "icon": "https://www.trueos.org/iocage-icons/dnsmasq.png",
-        "description": "Network infrastructure management for small networks: DNS, DHCP, router advertisement, and network boot.",
-        "official": false,
-        "primary_pkg": "dnsmasq"
-    },
-    "channels-dvr": {
-        "MANIFEST": "channels-dvr.json",
-        "name": "Channels DVR",
-        "icon": "https://getchannels.com/assets/img/icon-1024.png",
-        "description": "DVR server for the Channels apps. Makes digital recordings of broadcast television using HDHomeRun network tuners. (Requires Subscription)",
-        "primary_pkg": "",
-        "official": false
-    },
-    "rtorrent-flood": {
-        "MANIFEST": "rtorrent-flood.json",
-        "name": "rtorrent-flood",
-        "icon": "https://raw.githubusercontent.com/freenas/iocage-ix-plugins/master/icons/rtorrent-flood.png",
-        "description": "rTorrent with Flood web interface (optionally restricted to OpenVPN).",
-        "official": false,
-        "primary_pkg": "rtorrent"
-    },
-    "tasmoadmin": { 
-       "MANIFEST": "tasmoadmin.json", 
-       "name": "TasmoAdmin", 
-       "description": "Website to manage Sonoff Devices flashed with Tasmota.", 
-       "icon": "https://raw.githubusercontent.com/reloxx13/TasmoAdmin/master/tasmoadmin/resources/img/logo_small.PNG", 
-       "official": false 
-    },
-    "node-red": {
-        "MANIFEST": "node-red.json",
-        "name": "Node-RED",
-        "icon": "https://nodered.org/about/resources/media/node-red-icon.png",
-        "description": "Low-code programming for event-driven applications.",
-        "official": false
-    },   
-    "homeassistant": {
-        "MANIFEST": "homeassistant.json",
-        "name": "Home Assistant",
-        "description": "Open source home automation that puts local control and privacy first.",
-        "icon": "https://raw.githubusercontent.com/tprelog/iocage-homeassistant/master/icon.png",
-        "official": false
-    },
-    "mosquitto": {
-        "MANIFEST": "mosquitto.json",
-        "name": "Mosquitto MQTT",
-        "icon": "https://mosquitto.org/stickers/mosquitto-colour.png",
-        "description": "An open source MQTT broker.",
-        "official": false,
-        "primary_pkg": "mosquitto"
-    },
-    "gogs": {
-        "MANIFEST": "gogs.json",
-        "name": "Gogs",
-        "icon": "https://raw.githubusercontent.com/tprelog/iocage-gogs/master/icon.png",
-        "description": "A painless self-hosted Git service.",
-        "official": false,
-        "primary_pkg": "gogs"
-    },
-    "sabnzbd": {
-        "MANIFEST": "sabnzbd.json",
-        "name": "Sabnzbd",
-        "icon": "https://raw.githubusercontent.com/ix-plugin-hub/iocage-plugin-index/master/icons/sabnzbd.png",
-        "description": "Sabznbd is a newsgroup reader.",
-        "official": false,
-        "primary_pkg": "sabnzbdplus"
-    },
-    "privatebin": {
-        "MANIFEST": "privatebin.json",
-        "name": "PrivateBin",
-        "icon": "https://privatebin.info/img/logo.png",
-        "description": "PrivateBin is a minimalist, open source online pastebin where the server has zero knowledge of pasted data.",
-        "official": false,
-        "primary_pkg": "privatebin"
-    }
+  "channels-dvr": {
+    "MANIFEST": "channels-dvr.json",
+    "description": "DVR server for the Channels apps. Makes digital recordings of broadcast television using HDHomeRun network tuners. (Requires Subscription)",
+    "icon": "https://getchannels.com/assets/img/icon-1024.png",
+    "name": "Channels DVR",
+    "official": false,
+    "primary_pkg": ""
+  },
+  "dnsmasq": {
+    "MANIFEST": "dnsmasq.json",
+    "description": "Network infrastructure management for small networks: DNS, DHCP, router advertisement, and network boot.",
+    "icon": "https://www.trueos.org/iocage-icons/dnsmasq.png",
+    "name": "Dnsmasq",
+    "official": false,
+    "primary_pkg": "dnsmasq"
+  },
+  "drupal8": {
+    "MANIFEST": "drupal8.json",
+    "description": "Drupal is an open source platform for building amazing digital experiences.",
+    "icon": "https://raw.githubusercontent.com/ix-plugin-hub/iocage-plugin-index/master/icons/drupal.png",
+    "name": "Drupal8",
+    "official": false,
+    "primary_pkg": "drupal8"
+  },
+  "gogs": {
+    "MANIFEST": "gogs.json",
+    "description": "A painless self-hosted Git service.",
+    "icon": "https://raw.githubusercontent.com/tprelog/iocage-gogs/master/icon.png",
+    "name": "Gogs",
+    "official": false,
+    "primary_pkg": "gogs"
+  },
+  "homeassistant": {
+    "MANIFEST": "homeassistant.json",
+    "description": "Open source home automation that puts local control and privacy first.",
+    "icon": "https://raw.githubusercontent.com/tprelog/iocage-homeassistant/master/icon.png",
+    "name": "Home Assistant",
+    "official": false
+  },
+  "homebridge": {
+    "MANIFEST": "homebridge.json",
+    "description": "Lightweight iOS HomeKit API emulator. Enables adding unsupported devices to HomeKit.",
+    "icon": "https://camo.githubusercontent.com/97c6fb19fc469358ceada9d9abd96fa65fc14a0f/68747470733a2f2f636c2e6c792f3939653638616334396365662f4c6f676f32782e706e67",
+    "name": "Homebridge",
+    "offical": false
+  },
+  "irssi": {
+    "MANIFEST": "irssi.json",
+    "description": "Modular IRC client using a CLI interface.",
+    "icon": "https://www.trueos.org/iocage-icons/irssi.png",
+    "name": "irssi",
+    "official": true,
+    "primary_pkg": "irssi"
+  },
+  "madsonic": {
+    "MANIFEST": "madsonic.json",
+    "description": "Open source media streaming software and music player.",
+    "icon": "https://www.trueos.org/iocage-icons/madsonic.png",
+    "name": "MadSonic",
+    "official": true,
+    "primary_pkg": "madsonic-standalone"
+  },
+  "mosquitto": {
+    "MANIFEST": "mosquitto.json",
+    "description": "An open source MQTT broker.",
+    "icon": "https://mosquitto.org/stickers/mosquitto-colour.png",
+    "name": "Mosquitto MQTT",
+    "official": false,
+    "primary_pkg": "mosquitto"
+  },
+  "node-red": {
+    "MANIFEST": "node-red.json",
+    "description": "Low-code programming for event-driven applications.",
+    "icon": "https://nodered.org/about/resources/media/node-red-icon.png",
+    "name": "Node-RED",
+    "official": false
+  },
+  "openvpn": {
+    "MANIFEST": "openvpn.json",
+    "description": "Virtual private network software to create secure point-to-point connections.",
+    "icon": "http://swupdate.openvpn.net/community/icons/ovpntech_key.png",
+    "name": "OpenVPN Server",
+    "official": false,
+    "primary_pkg": "openvpn"
+  },
+  "privatebin": {
+    "MANIFEST": "privatebin.json",
+    "description": "PrivateBin is a minimalist, open source online pastebin where the server has zero knowledge of pasted data.",
+    "icon": "https://raw.githubusercontent.com/ix-plugin-hub/iocage-plugin-index/master/icons/privatebin.png",
+    "name": "PrivateBin",
+    "official": false,
+    "primary_pkg": "privatebin"
+  },
+  "quasselcore": {
+    "MANIFEST": "quasselcore.json",
+    "description": "Headless IRC Client that supports 24/7 connectivity. Quassel Client can be attached.",
+    "icon": "https://www.trueos.org/iocage-icons/quasselcore.png",
+    "name": "Quasselcore",
+    "official": true,
+    "primary_pkg": "quassel-core"
+  },
+  "rtorrent-flood": {
+    "MANIFEST": "rtorrent-flood.json",
+    "description": "rTorrent with Flood web interface (optionally restricted to OpenVPN).",
+    "icon": "https://raw.githubusercontent.com/freenas/iocage-ix-plugins/master/icons/rtorrent-flood.png",
+    "name": "rtorrent-flood",
+    "official": false,
+    "primary_pkg": "rtorrent"
+  },
+  "sabnzbd": {
+    "MANIFEST": "sabnzbd.json",
+    "description": "Sabznbd is a newsgroup reader.",
+    "icon": "https://raw.githubusercontent.com/ix-plugin-hub/iocage-plugin-index/master/icons/sabnzbd.png",
+    "name": "Sabnzbd",
+    "official": false,
+    "primary_pkg": "sabnzbdplus"
+  },
+  "sickchill": {
+    "MANIFEST": "sickchill.json",
+    "description": "Automatic video library manager for TV Shows.",
+    "icon": "https://www.trueos.org/iocage-icons/sickchill.png",
+    "name": "SickChill",
+    "official": false,
+    "primary_pkg": "Git branch - Master"
+  },
+  "tasmoadmin": {
+    "MANIFEST": "tasmoadmin.json",
+    "description": "Website to manage Sonoff Devices flashed with Tasmota.",
+    "icon": "https://raw.githubusercontent.com/reloxx13/TasmoAdmin/master/tasmoadmin/resources/img/logo_small.PNG",
+    "name": "TasmoAdmin",
+    "official": false
+  },
+  "unificontroller": {
+    "MANIFEST": "unificontroller.json",
+    "description": "Software-Defined Networking platform that provides an end-to-end system of network devices across different locations.",
+    "icon": "https://www.trueos.org/iocage-icons/unificontroller.png",
+    "name": "unificontroller",
+    "official": false,
+    "primary_pkg": "unifi5"
+  },
+  "unificontroller-lts": {
+    "MANIFEST": "unificontroller-lts.json",
+    "description": "Software-Defined Networking platform that provides an end-to-end system of network devices across different locations. (Long term support version)",
+    "icon": "https://www.trueos.org/iocage-icons/unificontroller.png",
+    "name": "unificontroller-lts",
+    "official": false,
+    "primary_pkg": "unifi-lts"
+  },
+  "weechat": {
+    "MANIFEST": "weechat.json",
+    "description": "Fast and light IRC client.",
+    "icon": "https://www.trueos.org/iocage-icons/weechat.png",
+    "name": "weechat",
+    "official": true,
+    "primary_pkg": "weechat"
+  },
+  "xmrig": {
+    "MANIFEST": "xmrig.json",
+    "description": "High performance Monero (XMR) CPU miner written in C++.",
+    "icon": "https://www.trueos.org/iocage-icons/xmrig.png",
+    "name": "XMRig",
+    "official": true,
+    "primary_pkg": "xmrig"
+  }
 }
