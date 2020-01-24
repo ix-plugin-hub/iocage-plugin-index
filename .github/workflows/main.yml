@@ -1,0 +1,19 @@
+name: JSON Validator
+
+on: 
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Validate JSON
+        uses: OrRosenblatt/validate-json-action@0.1.0
+        with:
+          # Relative file path under the repository of a JSON schema file to validate the other JSON files with.
+          schema: ./index.schema # default is ./schema.json
+          # One or more relative file paths under the repository (seperated by comma) of the JSON files to validate with the schema provided.
+          json: ./INDEX
