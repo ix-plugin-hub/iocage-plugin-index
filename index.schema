@@ -5,14 +5,13 @@
   "type": "object",
   "title": "The Root Schema",
   "required": [
-    "openvpn"
+    ""
   ],
   "properties": {
-    "openvpn": {
-      "$id": "#/properties/openvpn",
+    "": {
+      "$id": "#/properties/",
       "type": "object",
-      "title": "The Plugin Name",
-      "default": null,
+      "title": "The  Schema",
       "required": [
         "MANIFEST",
         "name",
@@ -23,7 +22,7 @@
       ],
       "properties": {
         "MANIFEST": {
-          "$id": "#/properties/openvpn/properties/MANIFEST",
+          "$id": "#/properties//properties/MANIFEST",
           "type": "string",
           "title": "The Manifest Schema",
           "default": "",
@@ -33,7 +32,7 @@
           "pattern": "^(.*)$"
         },
         "name": {
-          "$id": "#/properties/openvpn/properties/name",
+          "$id": "#/properties//properties/name",
           "type": "string",
           "title": "The Name Schema",
           "default": "",
@@ -43,7 +42,7 @@
           "pattern": "^(.*)$"
         },
         "primary_pkg": {
-          "$id": "#/properties/openvpn/properties/primary_pkg",
+          "$id": "#/properties//properties/primary_pkg",
           "type": "string",
           "title": "The Primary_pkg Schema",
           "default": "",
@@ -53,7 +52,7 @@
           "pattern": "^(.*)$"
         },
         "icon": {
-          "$id": "#/properties/openvpn/properties/icon",
+          "$id": "#/properties//properties/icon",
           "type": "string",
           "title": "The Icon Schema",
           "default": "",
@@ -63,7 +62,7 @@
           "pattern": "^(.*)$"
         },
         "description": {
-          "$id": "#/properties/openvpn/properties/description",
+          "$id": "#/properties//properties/description",
           "type": "string",
           "title": "The Description Schema",
           "default": "",
@@ -73,7 +72,7 @@
           "pattern": "^(.*)$"
         },
         "official": {
-          "$id": "#/properties/openvpn/properties/official",
+          "$id": "#/properties//properties/official",
           "type": "boolean",
           "title": "The Official Schema",
           "default": false,
