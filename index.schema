@@ -1,0 +1,37 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "": {
+      "type": "object",
+      "properties": {
+        "MANIFEST": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "primary_pkg": {
+          "type": "string"
+        },
+        "icon": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "official": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "MANIFEST",
+        "name",
+        "primary_pkg",
+        "icon",
+        "description",
+        "official"
+      ]
+    }
+  },
+}
