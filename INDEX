@@ -23,6 +23,14 @@
     "official": false,
     "primary_pkg": "drupal8"
   },
+  "gitea": {
+    "MANIFEST": "gitea.json",
+    "name": "Gitea",
+    "icon": "https://raw.githubusercontent.com/ix-plugin-hub/iocage-plugin-index/master/icons/gitea.png",
+    "description": "Gitea is a community managed lightweight code hosting solution written in Go.",
+    "official": false,
+    "primary_pkg": "gitea"
+  }, 
   "gogs": {
     "MANIFEST": "gogs.json",
     "description": "A painless self-hosted Git service.",
