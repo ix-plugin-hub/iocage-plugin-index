@@ -9,7 +9,6 @@
     "pkgs": [
         "mono",
         "py27-sqlite3",
-        "curl",
         "ca_root_nss"
     ],
     "packagesite": "http://pkg.cdn.trueos.org/iocage/unstable",
