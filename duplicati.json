@@ -1,6 +1,6 @@
 {
     "name": "duplicati",
-	"plugin_schema": "2",
+    "plugin_schema": "2",
     "release": "11.3-RELEASE",
     "artifact": "https://github.com/rexit1982/iocage-plugin-duplicati.git",
     "properties": {
@@ -10,7 +10,7 @@
         "mono",
         "py27-sqlite3",
         "curl",
-		"ca_root_nss"
+        "ca_root_nss"
     ],
     "packagesite": "http://pkg.cdn.trueos.org/iocage/unstable",
     "fingerprints": {
