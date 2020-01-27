@@ -2,7 +2,7 @@
   "channels-dvr": {
     "MANIFEST": "channels-dvr.json",
     "description": "DVR server for the Channels apps. Makes digital recordings of broadcast television using HDHomeRun network tuners. (Requires Subscription)",
-    "icon": "https://getchannels.com/assets/img/icon-1024.png",
+    "icon": "https://icons.freenas.org/community-icons/channels-dvr.png",
     "name": "Channels DVR",
     "official": false,
     "primary_pkg": ""
@@ -10,7 +10,7 @@
   "dnsmasq": {
     "MANIFEST": "dnsmasq.json",
     "description": "Network infrastructure management for small networks: DNS, DHCP, router advertisement, and network boot.",
-    "icon": "https://www.trueos.org/iocage-icons/dnsmasq.png",
+    "icon": "https://icons.freenas.org/community-icons/dnsmasq.png",
     "name": "Dnsmasq",
     "official": false,
     "primary_pkg": "dnsmasq"
@@ -18,7 +18,7 @@
   "drupal8": {
     "MANIFEST": "drupal8.json",
     "description": "Drupal is an open source platform for building amazing digital experiences.",
-    "icon": "https://raw.githubusercontent.com/ix-plugin-hub/iocage-plugin-index/master/icons/drupal.png",
+    "icon": "https://icons.freenas.org/community-icons/drupal.png",
     "name": "Drupal8",
     "official": false,
     "primary_pkg": "drupal8"
@@ -26,7 +26,7 @@
   "gitea": {
     "MANIFEST": "gitea.json",
     "name": "Gitea",
-    "icon": "https://raw.githubusercontent.com/ix-plugin-hub/iocage-plugin-index/master/icons/gitea.png",
+    "icon": "https://icons.freenas.org/community-icons/gitea.png",
     "description": "Gitea is a community managed lightweight code hosting solution written in Go.",
     "official": false,
     "primary_pkg": "gitea"
@@ -34,7 +34,7 @@
   "gogs": {
     "MANIFEST": "gogs.json",
     "description": "A painless self-hosted Git service.",
-    "icon": "https://raw.githubusercontent.com/tprelog/iocage-gogs/master/icon.png",
+    "icon": "https://icons.freenas.org/community-icons/gogs.png",
     "name": "Gogs",
     "official": false,
     "primary_pkg": "gogs"
@@ -42,21 +42,21 @@
   "homeassistant": {
     "MANIFEST": "homeassistant.json",
     "description": "Open source home automation that puts local control and privacy first.",
-    "icon": "https://raw.githubusercontent.com/tprelog/iocage-homeassistant/master/icon.png",
+    "icon": "https://icons.freenas.org/community-icons/homeassistant.png",
     "name": "Home Assistant",
     "official": false
   },
   "homebridge": {
     "MANIFEST": "homebridge.json",
     "description": "Lightweight iOS HomeKit API emulator. Enables adding unsupported devices to HomeKit.",
-    "icon": "https://camo.githubusercontent.com/97c6fb19fc469358ceada9d9abd96fa65fc14a0f/68747470733a2f2f636c2e6c792f3939653638616334396365662f4c6f676f32782e706e67",
+    "icon": "https://icons.freenas.org/community-icons/homebridge.png",
     "name": "Homebridge",
     "offical": false
   },
   "irssi": {
     "MANIFEST": "irssi.json",
     "description": "Modular IRC client using a CLI interface.",
-    "icon": "https://www.trueos.org/iocage-icons/irssi.png",
+    "icon": "https://icons.freenas.org/community-icons/irssi.png",
     "name": "irssi",
     "official": true,
     "primary_pkg": "irssi"
@@ -64,7 +64,7 @@
   "madsonic": {
     "MANIFEST": "madsonic.json",
     "description": "Open source media streaming software and music player.",
-    "icon": "https://www.trueos.org/iocage-icons/madsonic.png",
+    "icon": "https://icons.freenas.org/community-icons/madsonic.png",
     "name": "MadSonic",
     "official": true,
     "primary_pkg": "madsonic-standalone"
@@ -72,7 +72,7 @@
   "mosquitto": {
     "MANIFEST": "mosquitto.json",
     "description": "An open source MQTT broker.",
-    "icon": "https://mosquitto.org/stickers/mosquitto-colour.png",
+    "icon": "https://icons.freenas.org/community-icons/mosquitto.png",
     "name": "Mosquitto MQTT",
     "official": false,
     "primary_pkg": "mosquitto"
@@ -80,14 +80,14 @@
   "node-red": {
     "MANIFEST": "node-red.json",
     "description": "Low-code programming for event-driven applications.",
-    "icon": "https://nodered.org/about/resources/media/node-red-icon.png",
+    "icon": "https://icons.freenas.org/community-icons/node-red.png",
     "name": "Node-RED",
     "official": false
   },
   "openvpn": {
     "MANIFEST": "openvpn.json",
     "description": "Virtual private network software to create secure point-to-point connections.",
-    "icon": "http://swupdate.openvpn.net/community/icons/ovpntech_key.png",
+    "icon": "https://icons.freenas.org/community-icons/openvpn.png",
     "name": "OpenVPN Server",
     "official": false,
     "primary_pkg": "openvpn"
@@ -95,7 +95,7 @@
   "privatebin": {
     "MANIFEST": "privatebin.json",
     "description": "PrivateBin is a minimalist, open source online pastebin where the server has zero knowledge of pasted data.",
-    "icon": "https://raw.githubusercontent.com/ix-plugin-hub/iocage-plugin-index/master/icons/privatebin.png",
+    "icon": "https://icons.freenas.org/community-icons/privatebin.png",
     "name": "PrivateBin",
     "official": false,
     "primary_pkg": "privatebin"
@@ -103,7 +103,7 @@
   "quasselcore": {
     "MANIFEST": "quasselcore.json",
     "description": "Headless IRC Client that supports 24/7 connectivity. Quassel Client can be attached.",
-    "icon": "https://www.trueos.org/iocage-icons/quasselcore.png",
+    "icon": "https://icons.freenas.org/community-icons/quasselcore.png",
     "name": "Quasselcore",
     "official": true,
     "primary_pkg": "quassel-core"
@@ -111,7 +111,7 @@
   "rtorrent-flood": {
     "MANIFEST": "rtorrent-flood.json",
     "description": "rTorrent with Flood web interface (optionally restricted to OpenVPN).",
-    "icon": "https://raw.githubusercontent.com/freenas/iocage-ix-plugins/master/icons/rtorrent-flood.png",
+    "icon": "https://icons.freenas.org/community-icons/rtorrent-flood.png",
     "name": "rtorrent-flood",
     "official": false,
     "primary_pkg": "rtorrent"
@@ -119,7 +119,7 @@
   "sabnzbd": {
     "MANIFEST": "sabnzbd.json",
     "description": "Sabznbd is a newsgroup reader.",
-    "icon": "https://raw.githubusercontent.com/ix-plugin-hub/iocage-plugin-index/master/icons/sabnzbd.png",
+    "icon": "https://icons.freenas.org/community-icons/sabnzbd.png",
     "name": "Sabnzbd",
     "official": false,
     "primary_pkg": "sabnzbdplus"
@@ -127,7 +127,7 @@
   "sickchill": {
     "MANIFEST": "sickchill.json",
     "description": "Automatic video library manager for TV Shows.",
-    "icon": "https://www.trueos.org/iocage-icons/sickchill.png",
+    "icon": "https://icons.freenas.org/community-icons/sickchill.png",
     "name": "SickChill",
     "official": false,
     "primary_pkg": "Git branch - Master"
@@ -135,14 +135,14 @@
   "tasmoadmin": {
     "MANIFEST": "tasmoadmin.json",
     "description": "Website to manage Sonoff Devices flashed with Tasmota.",
-    "icon": "https://raw.githubusercontent.com/reloxx13/TasmoAdmin/master/tasmoadmin/resources/img/logo_small.PNG",
+    "icon": "https://icons.freenas.org/community-icons/tasmoadmin.png",
     "name": "TasmoAdmin",
     "official": false
   },
   "unificontroller": {
     "MANIFEST": "unificontroller.json",
     "description": "Software-Defined Networking platform that provides an end-to-end system of network devices across different locations.",
-    "icon": "https://www.trueos.org/iocage-icons/unificontroller.png",
+    "icon": "https://icons.freenas.org/community-icons/unificontroller.png",
     "name": "unificontroller",
     "official": false,
     "primary_pkg": "unifi5"
@@ -150,7 +150,7 @@
   "unificontroller-lts": {
     "MANIFEST": "unificontroller-lts.json",
     "description": "Software-Defined Networking platform that provides an end-to-end system of network devices across different locations. (Long term support version)",
-    "icon": "https://www.trueos.org/iocage-icons/unificontroller.png",
+    "icon": "https://icons.freenas.org/community-icons/unificontroller.png",
     "name": "unificontroller-lts",
     "official": false,
     "primary_pkg": "unifi-lts"
@@ -158,7 +158,7 @@
   "weechat": {
     "MANIFEST": "weechat.json",
     "description": "Fast and light IRC client.",
-    "icon": "https://www.trueos.org/iocage-icons/weechat.png",
+    "icon": "https://icons.freenas.org/community-icons/weechat.png",
     "name": "weechat",
     "official": true,
     "primary_pkg": "weechat"
@@ -166,7 +166,7 @@
   "xmrig": {
     "MANIFEST": "xmrig.json",
     "description": "High performance Monero (XMR) CPU miner written in C++.",
-    "icon": "https://www.trueos.org/iocage-icons/xmrig.png",
+    "icon": "https://icons.freenas.org/community-icons/xmrig.png",
     "name": "XMRig",
     "official": true,
     "primary_pkg": "xmrig"
