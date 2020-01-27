@@ -28,7 +28,7 @@
     "name": "Duplicati",
     "description": "Duplicati 2.0 Store securely encrypted backups on cloud storage services!",
     "official": false,
-    "icon": "https://raw.githubusercontent.com/ix-plugin-hub/iocage-plugin-index/master/icons/duplicati.png",
+    "icon": "https://icons.freenas.org/community-icons/duplicati.png",
     "primary_pkg": "",
     "category": "backup"
   },
