@@ -1,7 +1,7 @@
 {
   "name": "reverseproxy",
   "release": "11.3-RELEASE",
-  "artifact": "https://github.com/tprelog/iocage-homeassistant.git",
+  "artifact": "https://github.com/m1ch/iocage-plugin-reverseproxy.git",
   "official": "false",
   "properties": {
     "allow_raw_sockets": "1",
