@@ -52,7 +52,7 @@
     "MANIFEST": "homeassistant.json",
     "description": "Open source home automation that puts local control and privacy first.",
     "icon": "https://icons.freenas.org/community-icons/homeassistant.png",
-    "name": "Home Assistant",
+    "name": "Home Assistant Core",
     "official": false
   },
   "homebridge": {
