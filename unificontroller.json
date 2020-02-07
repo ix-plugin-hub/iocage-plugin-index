@@ -4,7 +4,7 @@
     "artifact": "https://github.com/lbalker/iocage-plugin-unificontroller.git",
     "properties": {
         "nat": 1,
-        "nat_forwards": "tcp(8443:8444)"
+        "nat_forwards": "tcp(8443:8444),udp(3478:3478),tcp(8080:8080),tcp(6789:6789),udp(10001:10001),udp(1900:1900)"
     },
     "pkgs": [
         "unifi5"
