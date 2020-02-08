@@ -32,6 +32,13 @@
     "primary_pkg": "",
     "category": "backup"
   },
+  "esphome": {
+        "MANIFEST": "esphome.json",
+        "name": "ESPHome",
+        "icon": "https://raw.githubusercontent.com/tprelog/freenas-plugin-index/11.3-RELEASE/icons/esphome.png",
+        "description": "ESPHome is a system to control your ESP8266/ESP32 by simple yet powerful configuration files and control them remotely through Home Automation systems.",
+        "official": false
+  },
   "gitea": {
     "MANIFEST": "gitea.json",
     "name": "Gitea",
