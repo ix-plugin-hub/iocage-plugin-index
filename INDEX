@@ -95,7 +95,7 @@
   },
   "node-red": {
     "MANIFEST": "node-red.json",
-    "description": "Low-code programming for event-driven applications.",
+    "description": "Node-RED is a programming tool for wiring together hardware devices, APIs and online services in new and interesting ways.",
     "icon": "https://icons.freenas.org/community-icons/node-red.png",
     "name": "Node-RED",
     "official": false
@@ -150,7 +150,7 @@
   },
   "tasmoadmin": {
     "MANIFEST": "tasmoadmin.json",
-    "description": "Website to manage Sonoff Devices flashed with Tasmota.",
+    "description": "Website to manage devices flashed with Tasmota.",
     "icon": "https://icons.freenas.org/community-icons/tasmoadmin.png",
     "name": "TasmoAdmin",
     "official": false
