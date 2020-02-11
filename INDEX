@@ -62,6 +62,14 @@
     "name": "Homebridge",
     "offical": false
   },
+  "i2p": {
+    "MANIFEST": "i2p.json",
+    "name": "I2P",
+    "icon": "https://icons.freenas.org/community-icons/i2p.png",
+    "description": "The Invisible Internet Project (I2P) is an anonymous network layer (implemented as a Mix Network) that allows for censorship-resistant, peer to peer communication.",
+    "official": false,
+    "primary_pkg": "i2p"
+  },
   "irssi": {
     "MANIFEST": "irssi.json",
     "description": "Modular IRC client using a CLI interface.",
