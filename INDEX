@@ -36,6 +36,7 @@
         "MANIFEST": "esphome.json",
         "name": "ESPHome",
         "icon": "https://raw.githubusercontent.com/tprelog/freenas-plugin-index/11.3-RELEASE/icons/esphome.png",
+        "primary_pkg": null,
         "description": "ESPHome is a system to control your ESP8266/ESP32 by simple yet powerful configuration files and control them remotely through Home Automation systems.",
         "official": false
   },
@@ -105,6 +106,7 @@
     "MANIFEST": "node-red.json",
     "description": "Node-RED is a programming tool for wiring together hardware devices, APIs and online services in new and interesting ways.",
     "icon": "https://icons.freenas.org/community-icons/node-red.png",
+    "primary_pkg": null,
     "name": "Node-RED",
     "official": false
   },
