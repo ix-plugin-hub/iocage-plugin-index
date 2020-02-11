@@ -32,6 +32,13 @@
     "primary_pkg": "",
     "category": "backup"
   },
+  "esphome": {
+        "MANIFEST": "esphome.json",
+        "name": "ESPHome",
+        "icon": "https://raw.githubusercontent.com/tprelog/freenas-plugin-index/11.3-RELEASE/icons/esphome.png",
+        "description": "ESPHome is a system to control your ESP8266/ESP32 by simple yet powerful configuration files and control them remotely through Home Automation systems.",
+        "official": false
+  },
   "gitea": {
     "MANIFEST": "gitea.json",
     "name": "Gitea",
@@ -96,7 +103,7 @@
   },
   "node-red": {
     "MANIFEST": "node-red.json",
-    "description": "Low-code programming for event-driven applications.",
+    "description": "Node-RED is a programming tool for wiring together hardware devices, APIs and online services in new and interesting ways.",
     "icon": "https://icons.freenas.org/community-icons/node-red.png",
     "name": "Node-RED",
     "official": false
@@ -151,7 +158,7 @@
   },
   "tasmoadmin": {
     "MANIFEST": "tasmoadmin.json",
-    "description": "Website to manage Sonoff Devices flashed with Tasmota.",
+    "description": "Website to manage devices flashed with Tasmota.",
     "icon": "https://icons.freenas.org/community-icons/tasmoadmin.png",
     "name": "TasmoAdmin",
     "official": false
