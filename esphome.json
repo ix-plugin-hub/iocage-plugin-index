@@ -1,0 +1,32 @@
+{
+  "name": "esphome",
+  "release": "11.3-RELEASE",
+  "artifact": "https://github.com/tprelog/iocage-esphome.git",
+  "official": "false",
+  "properties": {
+    "allow_raw_sockets": "1",
+    "dhcp": "1"
+  },
+  "pkgs": [
+    "autoconf",
+    "bash",
+    "ca_root_nss",
+    "gcc",
+    "gmake",
+    "pkgconf",
+    "python37",
+    "wget",
+    "zip"
+  ],
+  "packagesite": "http://pkg.FreeBSD.org/${ABI}/latest",
+  "fingerprints": {
+    "plugin-default": [
+      {
+        "function": "sha256",
+        "fingerprint": "b0170035af3acc5f3f3ae1859dc717101b4e6c1d0a794ad554928ca0cbb2f438"
+      }
+    ]
+  },
+  "plugin_schema": "2",
+  "revision": "0"
+}
