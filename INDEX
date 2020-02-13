@@ -61,6 +61,7 @@
     "description": "Open source home automation that puts local control and privacy first.",
     "icon": "https://icons.freenas.org/community-icons/homeassistant.png",
     "name": "Home Assistant Core",
+    "primary_pkg": null,
     "official": false
   },
   "homebridge": {
@@ -163,6 +164,7 @@
     "description": "Website to manage devices flashed with Tasmota.",
     "icon": "https://icons.freenas.org/community-icons/tasmoadmin.png",
     "name": "TasmoAdmin",
+    "primary_pkg": null,
     "official": false
   },
   "unificontroller": {
