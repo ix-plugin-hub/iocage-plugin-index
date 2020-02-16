@@ -4,6 +4,7 @@
   "artifact": "https://github.com/tprelog/iocage-mosquitto.git",
   "official": "false",
   "properties": {
+    "priority": "98",
     "allow_raw_sockets": "1",
     "dhcp": "1"
   },
