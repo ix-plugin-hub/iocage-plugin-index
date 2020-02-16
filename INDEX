@@ -102,6 +102,14 @@
     "official": false,
     "primary_pkg": "mosquitto"
   },
+  "netdata": {
+    "MANIFEST": "netdata.json",
+    "description": "Monitor everything in real-time",
+    "icon": "https://icons.freenas.org/community-icons/netdata.png",
+    "primary_pkg": "netdata",
+    "name": "Netdata",
+    "official": false
+  },
   "node-red": {
     "MANIFEST": "node-red.json",
     "description": "Node-RED is a programming tool for wiring together hardware devices, APIs and online services in new and interesting ways.",
