@@ -14,7 +14,8 @@
     "sysvmsg": "new",
     "sysvsem": "new",
     "sysvshm": "new",
-    "dhcp": "1"
+    "nat": 1,
+    "nat_forwards": "tcp(19999:19999)"
   },
   "pkgs": [
     "netdata"

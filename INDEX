@@ -107,6 +107,7 @@
     "description": "Monitor everything in real-time",
     "icon": "https://icons.freenas.org/community-icons/netdata.png",
     "primary_pkg": "netdata",
+    "maintainer": "Kris Moore <kris@ixsystems.com>",
     "name": "Netdata",
     "official": false
   },
