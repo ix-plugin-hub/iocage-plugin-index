@@ -35,7 +35,7 @@
   "esphome": {
     "MANIFEST": "esphome.json",
     "name": "ESPHome",
-    "icon": "https://raw.githubusercontent.com/tprelog/freenas-plugin-index/11.3-RELEASE/icons/esphome.png",
+    "icon": "https://icons.freenas.org/community-icons/esphome.png",
     "primary_pkg": null,
     "description": "ESPHome is a system to control your ESP8266/ESP32 by simple yet powerful configuration files and control them remotely through Home Automation systems.",
     "official": false
