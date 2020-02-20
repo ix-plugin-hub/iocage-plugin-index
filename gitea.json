@@ -6,7 +6,8 @@
     "pkgs": [
         "gitea",
         "postgresql11-server",
-        "postgresql11-contrib"
+        "postgresql11-contrib",
+        "bash"
     ],
     "properties": {
         "dhcp": 1
