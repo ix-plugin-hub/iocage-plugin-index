@@ -5,10 +5,10 @@
   "artifact": "https://github.com/fulder/iocage-plugin-bazarr",
   "pkgs": [
     "ca_root_nss",
-    "python38",
-    "py-pip",
-    "py-libxml2",
-    "py-sqlite3",
+    "python37",
+    "py37-pip",
+    "py37-libxml2",
+    "py37-sqlite3",
     "libxslt",
     "git"
   ],
