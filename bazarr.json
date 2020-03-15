@@ -5,7 +5,11 @@
   "artifact": "https://github.com/fulder/iocage-plugin-bazarr",
   "pkgs": [
     "security/ca_root_nss",
-    "lang/python38"
+    "lang/python38",
+    "devel/py-pip",
+    "textproc/py-libxml2",
+    "databases/py-sqlite3",
+    "textproc/libxslt/"
   ],
   "packagesite": "http://pkg.cdn.trueos.org/iocage/11.3-RELEASE",
   "fingerprints": {
