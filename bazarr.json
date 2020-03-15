@@ -4,13 +4,13 @@
   "release": "11.3-RELEASE",
   "artifact": "https://github.com/fulder/iocage-plugin-bazarr",
   "pkgs": [
-    "security/ca_root_nss",
-    "lang/python38",
-    "devel/py-pip",
-    "textproc/py-libxml2",
-    "databases/py-sqlite3",
-    "textproc/libxslt",
-    "devel/git"
+    "ca_root_nss",
+    "python38",
+    "py-pip",
+    "py-libxml2",
+    "py-sqlite3",
+    "libxslt",
+    "git"
   ],
   "packagesite": "http://pkg.FreeBSD.org/FreeBSD:11:amd64/quarterly",
   "fingerprints": {
