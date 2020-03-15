@@ -9,7 +9,7 @@
     "devel/py-pip",
     "textproc/py-libxml2",
     "databases/py-sqlite3",
-    "textproc/libxslt/"
+    "textproc/libxslt"
   ],
   "packagesite": "http://pkg.cdn.trueos.org/iocage/11.3-RELEASE",
   "fingerprints": {
