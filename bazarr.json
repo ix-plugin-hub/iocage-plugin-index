@@ -4,7 +4,8 @@
   "release": "11.3-RELEASE",
   "artifact": "https://github.com/fulder/iocage-plugin-bazarr",
   "pkgs": [
-    "security/ca_root_nss"
+    "security/ca_root_nss",
+    "lang/python38"
   ],
   "packagesite": "http://pkg.cdn.trueos.org/iocage/11.3-RELEASE",
   "fingerprints": {
