@@ -5,7 +5,7 @@
     "icon": "https://icons.freenas.org/community-icons/bazarr.png",
     "name": "Bazarr",
     "official": false,
-    "primary_pkg": ""
+    "primary_pkg": null
   },
   "channels-dvr": {
     "MANIFEST": "channels-dvr.json",
