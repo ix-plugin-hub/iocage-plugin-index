@@ -1,4 +1,12 @@
 {
+  "bazarr": {
+    "MANIFEST": "bazarr.json",
+    "description": "Bazarr is a companion application to Sonarr and Radarr that manages and downloads subtitles.",
+    "icon": "https://icons.freenas.org/community-icons/bazarr.png",
+    "name": "Bazarr",
+    "official": false,
+    "primary_pkg": null
+  },
   "channels-dvr": {
     "MANIFEST": "channels-dvr.json",
     "description": "DVR server for the Channels apps. Makes digital recordings of broadcast television using HDHomeRun network tuners. (Requires Subscription)",
@@ -31,6 +39,14 @@
     "icon": "https://icons.freenas.org/community-icons/duplicati.png",
     "primary_pkg": "",
     "category": "backup"
+  },
+  "emby-server-stable": {
+    "MANIFEST": "emby-server-stable.json",
+    "name": "Emby Server",
+    "icon": "https://icons.freenas.org/community-icons/emby-server-png-128.png",
+    "primary_pkg": null,
+    "description": "Emby brings together your personal videos, music, photos, and live television",
+    "official": false
   },
   "esphome": {
     "MANIFEST": "esphome.json",
