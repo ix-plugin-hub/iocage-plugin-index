@@ -42,7 +42,7 @@
   },
   "emby-server-stable": {
     "MANIFEST": "emby-server-stable.json",
-    "name": "EEmby Server",
+    "name": "Emby Server",
     "icon": "https://icons.freenas.org/community-icons/emby-server-png-128.png",
     "primary_pkg": null,
     "description": "Emby brings together your personal videos, music, photos, and live television",
