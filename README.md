@@ -1,5 +1,7 @@
+![Validate JSONs](https://github.com/ix-plugin-hub/iocage-plugin-index/workflows/Validate%20JSONs/badge.svg)
+
 # iocage-ix-plugins
-Official community created plugins for [FreeNAS](http://www.freenas.org), [TrueOS](https://www.trueos.org) and [FreeBSD](http://www.freebsd.org)
+Official community created plugins for [FreeNAS](http://www.freenas.org) and [FreeBSD](http://www.freebsd.org)
 
 # Creating Plugins
 Add a plugin JSON file to this repo along with an appropriate icon in the [icons directory](icons/).
