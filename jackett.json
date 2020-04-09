@@ -4,7 +4,7 @@
   "release": "11.3-RELEASE",
   "artifact": "https://github.com/fulder/iocage-plugin-jackett.git",
   "pkgs": [
-
+    "jackett"
   ],
   "packagesite": "http://pkg.FreeBSD.org/FreeBSD:11:amd64/quarterly",
   "fingerprints": {
