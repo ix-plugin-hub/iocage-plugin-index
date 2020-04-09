@@ -6,7 +6,9 @@
   "pkgs": [
     "apache24",
     "mysql80-server",
-    "php74"
+    "php74",
+    "php74-mysqli",
+    "mod_php74"
   ],
   "packagesite": "http://pkg.FreeBSD.org/${ABI}/latest",
   "fingerprints": {
