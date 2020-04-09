@@ -103,6 +103,14 @@
     "official": true,
     "primary_pkg": "irssi"
   },
+  "jackett": {
+    "MANIFEST": "jackett.json",
+    "description": "API Support for your favorite torrent trackers",
+    "icon": "https://icons.freenas.org/community-icons/jackett.png",
+    "name": "Jackett",
+    "official": false,
+    "primary_pkg": "jackett"
+  },
   "madsonic": {
     "MANIFEST": "madsonic.json",
     "description": "Open source media streaming software and music player.",
