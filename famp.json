@@ -4,7 +4,9 @@
   "release": "11.3-RELEASE",
   "artifact": "https://github.com/fulder/iocage-plugin-famp.git",
   "pkgs": [
-    "apache24"
+    "apache24",
+    "mysql80-server",
+    "php74"
   ],
   "packagesite": "http://pkg.FreeBSD.org/${ABI}/latest",
   "fingerprints": {
