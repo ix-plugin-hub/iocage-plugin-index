@@ -56,6 +56,14 @@
     "description": "ESPHome is a system to control your ESP8266/ESP32 by simple yet powerful configuration files and control them remotely through Home Automation systems.",
     "official": false
   },
+  "famp": {
+    "MANIFEST": "famp.json",
+    "description": "FAMP (FreeBSD, Apache, MySQL and PHP) web server",
+    "icon": "https://icons.freenas.org/community-icons/famp.png",
+    "name": "FAMP",
+    "official": false,
+    "primary_pkg": null
+  },
   "gitea": {
     "MANIFEST": "gitea.json",
     "name": "Gitea",
