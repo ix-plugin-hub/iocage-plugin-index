@@ -2,9 +2,6 @@
 	"name": "hoobs",
 	"release": "11.3-RELEASE",
 	"artifact": "https://github.com/rahul-r/iocage-plugin-hoobs.git",
-	"properties": {
-		"boot": "on"
-	},
 	"pkgs": [
 		"python",
 		"perl5",
