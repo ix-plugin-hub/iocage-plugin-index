@@ -1,5 +1,4 @@
-  
-{
+ {
     "name": "ArchiveBox",
     "plugin_schema": "2",
     "release": "11.3-RELEASE",
@@ -27,3 +26,4 @@
     },
     "revision": "0"
 }
+ 
