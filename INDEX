@@ -1,4 +1,12 @@
 {
+  "bazarr": {
+    "MANIFEST": "bazarr.json",
+    "description": "Bazarr is a companion application to Sonarr and Radarr that manages and downloads subtitles.",
+    "icon": "https://icons.freenas.org/community-icons/bazarr.png",
+    "name": "Bazarr",
+    "official": false,
+    "primary_pkg": null
+  },
   "channels-dvr": {
     "MANIFEST": "channels-dvr.json",
     "description": "DVR server for the Channels apps. Makes digital recordings of broadcast television using HDHomeRun network tuners. (Requires Subscription)",
@@ -32,13 +40,29 @@
     "primary_pkg": "",
     "category": "backup"
   },
+  "emby-server-stable": {
+    "MANIFEST": "emby-server-stable.json",
+    "name": "Emby Server",
+    "icon": "https://icons.freenas.org/community-icons/emby-server-png-128.png",
+    "primary_pkg": null,
+    "description": "Emby brings together your personal videos, music, photos, and live television",
+    "official": false
+  },
   "esphome": {
-        "MANIFEST": "esphome.json",
-        "name": "ESPHome",
-        "icon": "https://raw.githubusercontent.com/tprelog/freenas-plugin-index/11.3-RELEASE/icons/esphome.png",
-        "primary_pkg": null,
-        "description": "ESPHome is a system to control your ESP8266/ESP32 by simple yet powerful configuration files and control them remotely through Home Automation systems.",
-        "official": false
+    "MANIFEST": "esphome.json",
+    "name": "ESPHome",
+    "icon": "https://icons.freenas.org/community-icons/esphome.png",
+    "primary_pkg": null,
+    "description": "ESPHome is a system to control your ESP8266/ESP32 by simple yet powerful configuration files and control them remotely through Home Automation systems.",
+    "official": false
+  },
+  "famp": {
+    "MANIFEST": "famp.json",
+    "description": "FAMP (FreeBSD, Apache, MySQL and PHP) web server",
+    "icon": "https://icons.freenas.org/community-icons/famp.png",
+    "name": "FAMP",
+    "official": false,
+    "primary_pkg": null
   },
   "gitea": {
     "MANIFEST": "gitea.json",
@@ -61,6 +85,7 @@
     "description": "Open source home automation that puts local control and privacy first.",
     "icon": "https://icons.freenas.org/community-icons/homeassistant.png",
     "name": "Home Assistant Core",
+    "primary_pkg": null,
     "official": false
   },
   "homebridge": {
@@ -68,6 +93,13 @@
     "description": "Lightweight iOS HomeKit API emulator. Enables adding unsupported devices to HomeKit.",
     "icon": "https://icons.freenas.org/community-icons/homebridge.png",
     "name": "Homebridge",
+    "offical": false
+  },
+  "hoobs": {
+    "MANIFEST": "hoobs.json",
+    "description": "HOOBS a Homebridge stack with a interface that simplifies configuration and installing plugins. This adds a process wrapper for Homebridge. It also adds an API that can be used as an endpoint for an application.",
+    "icon": "https://icons.freenas.org/community-icons/hoobs.png",
+    "name": "HOOBS",
     "offical": false
   },
   "i2p": {
@@ -86,6 +118,14 @@
     "official": true,
     "primary_pkg": "irssi"
   },
+  "jackett": {
+    "MANIFEST": "jackett.json",
+    "description": "API Support for your favorite torrent trackers",
+    "icon": "https://icons.freenas.org/community-icons/jackett.png",
+    "name": "Jackett",
+    "official": false,
+    "primary_pkg": "jackett"
+  },
   "madsonic": {
     "MANIFEST": "madsonic.json",
     "description": "Open source media streaming software and music player.",
@@ -101,6 +141,15 @@
     "name": "Mosquitto MQTT",
     "official": false,
     "primary_pkg": "mosquitto"
+  },
+  "netdata": {
+    "MANIFEST": "netdata.json",
+    "description": "Monitor everything in real-time",
+    "icon": "https://icons.freenas.org/community-icons/netdata.png",
+    "primary_pkg": "netdata",
+    "maintainer": "Kris Moore <kris@ixsystems.com>",
+    "name": "Netdata",
+    "official": false
   },
   "node-red": {
     "MANIFEST": "node-red.json",
@@ -163,6 +212,7 @@
     "description": "Website to manage devices flashed with Tasmota.",
     "icon": "https://icons.freenas.org/community-icons/tasmoadmin.png",
     "name": "TasmoAdmin",
+    "primary_pkg": null,
     "official": false
   },
   "unificontroller": {
