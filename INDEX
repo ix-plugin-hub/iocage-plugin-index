@@ -1,4 +1,12 @@
 {
+  "archivebox": {
+    "MANIFEST": "bazarr.json",
+    "description": "ArchiveBox takes a list of website URLs you want to archive, and creates a local, static, browsable HTML clone of the content from those websites ",
+    "icon": "https://icons.freenas.org/community-icons/archivebox.png",
+    "name": "ArchiveBox",
+    "official": false,
+    "primary_pkg": null
+  },
   "bazarr": {
     "MANIFEST": "bazarr.json",
     "description": "Bazarr is a companion application to Sonarr and Radarr that manages and downloads subtitles.",
