@@ -10,7 +10,8 @@
     "py37-sqlite3",
     "libxslt",
     "git",
-    "unrar"
+    "unrar",
+    "ffmpeg"
   ],
   "packagesite": "http://pkg.FreeBSD.org/${ABI}/latest",
   "fingerprints": {
