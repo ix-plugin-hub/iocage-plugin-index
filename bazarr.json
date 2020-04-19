@@ -9,7 +9,8 @@
     "py37-libxml2",
     "py37-sqlite3",
     "libxslt",
-    "git"
+    "git",
+    "unrar"
   ],
   "packagesite": "http://pkg.FreeBSD.org/${ABI}/latest",
   "fingerprints": {
