@@ -15,6 +15,14 @@
     "official": false,
     "primary_pkg": ""
   },
+  "deluge-pip": {
+    "MANIFEST": "deluge-pip.json",
+    "description": "Deluge is Python-based Bittorent client.",
+    "icon": "https://icons.freenas.org/community-icons/deluge.png",
+    "name": "Deluge",
+    "official": false,
+    "primary_pkg": ""
+  },
   "dnsmasq": {
     "MANIFEST": "dnsmasq.json",
     "description": "Network infrastructure management for small networks: DNS, DHCP, router advertisement, and network boot.",
