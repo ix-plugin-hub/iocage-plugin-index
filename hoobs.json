@@ -14,7 +14,7 @@
         "nss_mdns",
         "jq"
     ],
-    "packagesite": "http://pkg.FreeBSD.org/FreeBSD:11:amd64/quarterly",
+    "packagesite": "http://pkg.FreeBSD.org/${ABI}/quarterly",
     "fingerprints": {
         "plugin-default": [
             {
