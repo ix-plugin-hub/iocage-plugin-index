@@ -15,6 +15,14 @@
     "official": false,
     "primary_pkg": ""
   },
+  "deluge-pip": {
+    "MANIFEST": "deluge-pip.json",
+    "description": "Deluge is Python-based Bittorent client.",
+    "icon": "https://icons.freenas.org/community-icons/deluge.png",
+    "name": "Deluge",
+    "official": false,
+    "primary_pkg": ""
+  },
   "dnsmasq": {
     "MANIFEST": "dnsmasq.json",
     "description": "Network infrastructure management for small networks: DNS, DHCP, router advertisement, and network boot.",
@@ -56,6 +64,14 @@
     "description": "ESPHome is a system to control your ESP8266/ESP32 by simple yet powerful configuration files and control them remotely through Home Automation systems.",
     "official": false
   },
+  "famp": {
+    "MANIFEST": "famp.json",
+    "description": "FAMP (FreeBSD, Apache, MySQL and PHP) web server",
+    "icon": "https://icons.freenas.org/community-icons/famp.png",
+    "name": "FAMP",
+    "official": false,
+    "primary_pkg": null
+  },
   "gitea": {
     "MANIFEST": "gitea.json",
     "name": "Gitea",
@@ -85,6 +101,14 @@
     "description": "Lightweight iOS HomeKit API emulator. Enables adding unsupported devices to HomeKit.",
     "icon": "https://icons.freenas.org/community-icons/homebridge.png",
     "name": "Homebridge",
+    "offical": false
+  },
+  "hoobs": {
+    "MANIFEST": "hoobs.json",
+    "description": "HOOBS a Homebridge stack with a interface that simplifies configuration and installing plugins. This adds a process wrapper for Homebridge. It also adds an API that can be used as an endpoint for an application.",
+    "icon": "https://icons.freenas.org/community-icons/hoobs.png",
+    "name": "HOOBS",
+    "primary_pkg": null,
     "offical": false
   },
   "i2p": {

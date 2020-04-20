@@ -1,17 +1,14 @@
 {
-  "name": "bazarr",
+  "name": "famp",
   "plugin_schema": "2",
   "release": "11.3-RELEASE",
-  "artifact": "https://github.com/fulder/iocage-plugin-bazarr",
+  "artifact": "https://github.com/fulder/iocage-plugin-famp.git",
   "pkgs": [
-    "python37",
-    "py37-pip",
-    "py37-libxml2",
-    "py37-sqlite3",
-    "libxslt",
-    "git",
-    "unrar",
-    "ffmpeg"
+    "apache24",
+    "mysql80-server",
+    "php74",
+    "php74-mysqli",
+    "mod_php74"
   ],
   "packagesite": "http://pkg.FreeBSD.org/${ABI}/latest",
   "fingerprints": {
