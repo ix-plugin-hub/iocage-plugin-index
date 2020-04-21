@@ -79,7 +79,7 @@
     "description": "Gitea is a community managed lightweight code hosting solution written in Go.",
     "official": false,
     "primary_pkg": "gitea"
-  }, 
+  },
   "gogs": {
     "MANIFEST": "gogs.json",
     "description": "A painless self-hosted Git service.",
@@ -255,5 +255,13 @@
     "name": "XMRig",
     "official": true,
     "primary_pkg": "xmrig"
+  },
+  "zrepl": {
+    "MANIFEST": "zrepl.json",
+    "description": "zrepl is a one-stop, integrated solution for ZFS replication.",
+    "icon": "https://icons.freenas.org/community-icons/zrepl.png",
+    "name": "zrepl",
+    "official": false,
+    "primary_pkg": "zrepl"
   }
 }
