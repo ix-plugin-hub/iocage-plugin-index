@@ -13,7 +13,7 @@
     "icon": "https://icons.freenas.org/community-icons/calibre-web.png",
     "name": "Calibre-Web",
     "official": false,
-    "primary_pkg": ""
+    "primary_pkg": null
   },
   "channels-dvr": {
     "MANIFEST": "channels-dvr.json",
