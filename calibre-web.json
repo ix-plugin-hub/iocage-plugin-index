@@ -1,0 +1,26 @@
+{
+    "name": "Calibre-Web",
+    "plugin_schema": "2",
+    "release": "11.3-RELEASE",
+    "artifact": "https://github.com/entuerto/iocage-plugin-calibre-web.git",
+    "pkgs": [
+        "python37",
+        "py37-pip",
+        "py37-setuptools",
+        "py37-sqlite3"
+    ],
+    "properties": {
+        "dhcp": 1
+    },
+    "packagesite": "http://pkg.FreeBSD.org/${ABI}/latest",
+    "fingerprints": {
+        "plugin-default": [
+            {
+                "function": "sha256",
+                "fingerprint": "226efd3a126fb86e71d60a37353d17f57af816d1c7ecad0623c21f0bf73eb0c7" // ???
+            }
+        ]
+    },
+    "official": false,
+    "revision": "0"
+}

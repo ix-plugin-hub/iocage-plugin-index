@@ -7,6 +7,14 @@
     "official": false,
     "primary_pkg": null
   },
+  "calibre-web": {
+    "MANIFEST": "calibre-web.json",
+    "description": "Web app for browsing, reading and downloading eBooks stored in a Calibre database",
+    "icon": "https://icons.freenas.org/community-icons/calibre-web.png",
+    "name": "Calibre-Web",
+    "official": false,
+    "primary_pkg": ""
+  },
   "channels-dvr": {
     "MANIFEST": "channels-dvr.json",
     "description": "DVR server for the Channels apps. Makes digital recordings of broadcast television using HDHomeRun network tuners. (Requires Subscription)",
