@@ -4,6 +4,7 @@
     "release": "11.3-RELEASE",
     "artifact": "https://github.com/entuerto/iocage-plugin-calibre-web.git",
     "pkgs": [
+        "git",
         "python37",
         "py37-pip",
         "py37-setuptools",
