@@ -2,7 +2,7 @@
     "name": "Calibre-Web",
     "plugin_schema": "2",
     "release": "11.3-RELEASE",
-    "artifact": "https://github.com/entuerto/iocage-plugin-calibre-web.git",
+    "artifact": "https://github.com/aserrallerios/iocage-plugin-calibre-web.git",
     "pkgs": [
         "git",
         "python37",
