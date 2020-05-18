@@ -5,6 +5,7 @@
     "artifact": "https://github.com/aserrallerios/iocage-plugin-calibre-web.git",
     "pkgs": [
         "git",
+        "python3",
         "python37",
         "py37-pip",
         "py37-setuptools",
