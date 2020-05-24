@@ -16,6 +16,7 @@
     "gmake",
     "libxml2",
     "libxslt",
+    "openssl",
     "pkgconf",
     "python37",
     "py37-av",
