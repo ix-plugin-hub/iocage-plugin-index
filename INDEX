@@ -7,6 +7,14 @@
     "official": false,
     "primary_pkg": null
   },
+  "calibre-web": {
+    "MANIFEST": "calibre-web.json",
+    "description": "Web app for browsing, reading and downloading eBooks stored in a Calibre database",
+    "icon": "https://icons.freenas.org/community-icons/calibre-web.png",
+    "name": "Calibre-Web",
+    "official": false,
+    "primary_pkg": null
+  },
   "channels-dvr": {
     "MANIFEST": "channels-dvr.json",
     "description": "DVR server for the Channels apps. Makes digital recordings of broadcast television using HDHomeRun network tuners. (Requires Subscription)",
@@ -79,7 +87,7 @@
     "description": "Gitea is a community managed lightweight code hosting solution written in Go.",
     "official": false,
     "primary_pkg": "gitea"
-  }, 
+  },
   "gogs": {
     "MANIFEST": "gogs.json",
     "description": "A painless self-hosted Git service.",
@@ -255,5 +263,13 @@
     "name": "XMRig",
     "official": true,
     "primary_pkg": "xmrig"
+  },
+  "zrepl": {
+    "MANIFEST": "zrepl.json",
+    "description": "zrepl is a one-stop, integrated solution for ZFS replication.",
+    "icon": "https://icons.freenas.org/community-icons/zrepl.png",
+    "name": "zrepl",
+    "official": false,
+    "primary_pkg": "zrepl"
   }
 }
