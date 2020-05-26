@@ -149,7 +149,7 @@
     "icon": "https://icons.freenas.org/community-icons/madsonic.png",
     "name": "MadSonic",
     "official": true,
-    "primary_pkg": "madsonic-standalone"
+    "primary_pkg": null
   },
   "mosquitto": {
     "MANIFEST": "mosquitto.json",
