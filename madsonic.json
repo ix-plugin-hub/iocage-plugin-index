@@ -8,7 +8,8 @@
     },
     "pkgs": [
         "openjdk8-jre",
-        "ca_root_nss"
+        "ca_root_nss",
+        "ffmpeg"
     ],
     "packagesite": "http://pkg.cdn.trueos.org/iocage/11.3-RELEASE",
     "fingerprints": {
