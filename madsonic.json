@@ -7,7 +7,7 @@
         "nat_forwards": "tcp(4040:4040)"
     },
     "pkgs": [
-        "madsonic-standalone"
+        "openjdk8-jre"
     ],
     "packagesite": "http://pkg.cdn.trueos.org/iocage/11.3-RELEASE",
     "fingerprints": {
