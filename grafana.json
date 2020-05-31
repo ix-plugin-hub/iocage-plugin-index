@@ -11,7 +11,7 @@
     "properties": {
         "dhcp": 1
     },
-    "packagesite": "http://pkg.FreeBSD.org/FreeBSD:11:amd64/latest",
+    "packagesite": "http://pkg.FreeBSD.org/${ABI}/latest",
     "fingerprints": {
         "plugin-default": [
             {
