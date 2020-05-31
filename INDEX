@@ -102,7 +102,7 @@
     "icon": "https://icons.freenas.org/community-icons/grafana.png",
     "name": "Grafana (with InfluxDB)",
     "official": false,
-    "primary_pkg": "grafana"
+    "primary_pkg": "grafana6"
   },
   "homeassistant": {
     "MANIFEST": "homeassistant.json",
