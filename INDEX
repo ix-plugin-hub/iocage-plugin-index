@@ -96,6 +96,14 @@
     "official": false,
     "primary_pkg": "gogs"
   },
+  "grafana": {
+    "MANIFEST": "grafana.json",
+    "description": "Grafana allows you to query, visualize, alert on and understand your metrics no matter where they are stored. Create, explore, and share dashboards with your team and foster a data driven culture.",
+    "icon": "https://icons.freenas.org/community-icons/grafana.png",
+    "name": "Grafana (with InfluxDB)",
+    "official": false,
+    "primary_pkg": "grafana6"
+  },
   "homeassistant": {
     "MANIFEST": "homeassistant.json",
     "description": "Open source home automation that puts local control and privacy first.",
