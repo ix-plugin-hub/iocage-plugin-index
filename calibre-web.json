@@ -9,10 +9,14 @@
         "python37",
         "py37-pip",
         "py37-setuptools",
-        "py37-sqlite3"
+        "py37-sqlite3",
+        "py37-ldap",
+        "calibre",
+        "unrar"
     ],
     "properties": {
-        "dhcp": 1
+        "nat": 1,
+        "nat_forwards": "tcp(8083:8083)"
     },
     "packagesite": "http://pkg.FreeBSD.org/${ABI}/latest",
     "fingerprints": {
