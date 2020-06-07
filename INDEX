@@ -88,6 +88,14 @@
     "official": false,
     "primary_pkg": "gitea"
   },
+  "gitlab": {
+    "MANIFEST": "gitlab.json",
+    "name": "GitLab",
+    "icon": "https://icons.freenas.org/community-icons/gitlab.png",
+    "description": "Gitlab CE - Git and CI platform to manage development projects",
+    "official": false,
+    "primary_pkg": "gitlab-ce"
+  },
   "gogs": {
     "MANIFEST": "gogs.json",
     "description": "A painless self-hosted Git service.",
