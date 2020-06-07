@@ -3,7 +3,7 @@
   "release": "11.3-RELEASE",
   "artifact": "https://github.com/pandorixtech/iocage-plugin-gitlab.git",
   "pkgs": [
-    "www/gitlab-ce",
+    "gitlab-ce",
     "postgresql11-server",
     "postgresql11-contrib",
     "postgresql11-client",
