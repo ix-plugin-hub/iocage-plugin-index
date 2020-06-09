@@ -88,6 +88,14 @@
     "official": false,
     "primary_pkg": "gitea"
   },
+  "gitlab": {
+    "MANIFEST": "gitlab.json",
+    "name": "GitLab",
+    "icon": "https://icons.freenas.org/community-icons/gitlab.png",
+    "description": "Gitlab CE - Git and CI platform to manage development projects",
+    "official": false,
+    "primary_pkg": "gitlab-ce"
+  },
   "gogs": {
     "MANIFEST": "gogs.json",
     "description": "A painless self-hosted Git service.",
@@ -95,6 +103,14 @@
     "name": "Gogs",
     "official": false,
     "primary_pkg": "gogs"
+  },
+  "grafana": {
+    "MANIFEST": "grafana.json",
+    "description": "Grafana allows you to query, visualize, alert on and understand your metrics no matter where they are stored. Create, explore, and share dashboards with your team and foster a data driven culture.",
+    "icon": "https://icons.freenas.org/community-icons/grafana.png",
+    "name": "Grafana (with InfluxDB)",
+    "official": false,
+    "primary_pkg": "grafana6"
   },
   "homeassistant": {
     "MANIFEST": "homeassistant.json",
@@ -149,7 +165,7 @@
     "icon": "https://icons.freenas.org/community-icons/madsonic.png",
     "name": "MadSonic",
     "official": true,
-    "primary_pkg": "madsonic-standalone"
+    "primary_pkg": null
   },
   "mosquitto": {
     "MANIFEST": "mosquitto.json",

@@ -1,22 +1,15 @@
 {
-    "name": "Calibre-Web",
+    "name": "Grafana",
     "plugin_schema": "2",
     "release": "11.3-RELEASE",
-    "artifact": "https://github.com/aserrallerios/iocage-plugin-calibre-web.git",
+    "artifact": "https://github.com/MalteHillmann/iocage-plugin-grafana.git",
     "pkgs": [
-        "git",
-        "python3",
-        "python37",
-        "py37-pip",
-        "py37-setuptools",
-        "py37-sqlite3",
-        "py37-ldap",
-        "calibre",
-        "unrar"
+        "grafana6",
+        "influxdb",
+        "curl"
     ],
     "properties": {
-        "nat": 1,
-        "nat_forwards": "tcp(8083:8083)"
+        "dhcp": 1
     },
     "packagesite": "http://pkg.FreeBSD.org/${ABI}/latest",
     "fingerprints": {
