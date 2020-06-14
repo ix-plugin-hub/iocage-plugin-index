@@ -112,6 +112,14 @@
     "official": false,
     "primary_pkg": "grafana6"
   },
+  "heimdall-dashboard": {
+    "MANIFEST": "heimdall-dashboard.json",
+    "description": "Heimdall Application Dashboard is an elegant solution to organize all your web applications and links onto a single page website.",
+    "icon": "https://icons.freenas.org/community-icons/heimdall-dashboard.png",
+    "name": "Heimdall",
+    "official": false,
+    "primary_pkg": null
+  },
   "homeassistant": {
     "MANIFEST": "homeassistant.json",
     "description": "Open source home automation that puts local control and privacy first.",
