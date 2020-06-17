@@ -1,6 +1,6 @@
 {
   "name": "node-red",
-  "release": "11.3-RELEASE",
+  "release": "12.1-RELEASE",
   "artifact": "https://github.com/tprelog/iocage-node-red.git",
   "official": "false",
   "properties": { 

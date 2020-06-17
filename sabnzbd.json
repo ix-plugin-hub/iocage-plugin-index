@@ -1,6 +1,6 @@
 {
     "name": "sabnzbd",
-    "release": "11.3-RELEASE",
+    "release": "12.1-RELEASE",
     "artifact": "https://github.com/ConorBeh/iocage-plugin-sabnzbd.git",
     "properties": {
         "nat": 1,
@@ -9,7 +9,7 @@
     "pkgs": [
         "sabnzbdplus"
     ],
-    "packagesite": "http://pkg.FreeBSD.org/FreeBSD:11:amd64/latest",
+    "packagesite": "http://pkg.FreeBSD.org/${ABI}/latest",
     "fingerprints": {
         "plugin-default": [
             {
