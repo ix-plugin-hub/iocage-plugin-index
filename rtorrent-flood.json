@@ -1,6 +1,6 @@
 {
     "name": "rtorrent-flood",
-    "release": "11.3-RELEASE",
+    "release": "12.1-RELEASE",
     "artifact": "https://github.com/pierrickrouxel/iocage-plugin-rtorrent-flood.git",
     "pkgs": [
         "tmux",
@@ -16,7 +16,7 @@
         "allow_tun": 1,
         "dhcp": 1
     },
-    "packagesite": "http://pkg.FreeBSD.org/FreeBSD:11:amd64/quarterly",
+    "packagesite": "http://pkg.FreeBSD.org/${ABI}/quarterly",
     "fingerprints": {
         "iocage-plugins": [
             {

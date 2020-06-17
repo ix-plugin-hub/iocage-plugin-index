@@ -1,6 +1,6 @@
 {
     "name": "emby-server-stable",
-    "release": "11.3-RELEASE",
+    "release": "12.1-RELEASE",
     "artifact": "https://github.com/freenas/iocage-plugin-emby.git",
     "properties": {
         "dhcp": 1,
@@ -10,7 +10,7 @@
         "emby-server",
         "ffmpeg"
     ],
-    "packagesite": "http://pkg.FreeBSD.org/FreeBSD:11:amd64/latest",
+    "packagesite": "http://pkg.FreeBSD.org/${ABI}/latest",
     "fingerprints": {
         "iocage-plugins": [
             {
