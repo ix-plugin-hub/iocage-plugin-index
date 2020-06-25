@@ -12,6 +12,7 @@
     "bash",
     "ca_root_nss",
     "curl",
+    "ffmpeg",
     "gcc",
     "gmake",
     "libxml2",
