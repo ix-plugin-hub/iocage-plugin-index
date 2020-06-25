@@ -224,6 +224,16 @@
     "official": true,
     "primary_pkg": "quassel-core"
   },
+  "radarr": {
+    "MANIFEST": "radarr.json",
+    "name": "radarr",
+    "icon": "https://icons.freenas.org/community-icons/radarr.png",
+    "description": "Fork of Sonarr. Automatically download movies in the style of Couchpotato.",
+    "official": false,
+    "primary_pkg": "radarr",
+    "category": "content",
+    "homepage": "https://radarr.video/"
+  },
   "rtorrent-flood": {
     "MANIFEST": "rtorrent-flood.json",
     "description": "rTorrent with Flood web interface (optionally restricted to OpenVPN).",
@@ -247,6 +257,16 @@
     "name": "SickChill",
     "official": false,
     "primary_pkg": "Git branch - Master"
+  },
+  "sonarr": {
+    "MANIFEST": "sonarr.json",
+    "name": "Sonarr",
+    "icon": "https://icons.freenas.org/community-icons/sonarr.png",
+    "description": "Multi-platform app to search, download, and manage TV shows.",
+    "official": false,
+    "primary_pkg": "sonarr",
+    "category": "content",
+    "homepage": "https://sonarr.tv/"
   },
   "tasmoadmin": {
     "MANIFEST": "tasmoadmin.json",
