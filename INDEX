@@ -7,6 +7,14 @@
     "official": false,
     "primary_pkg": null
   },
+  "bind": {
+    "MANIFEST": "bind.json",
+    "description": "BIND DNS server",
+    "icon": "https://icons.freenas.org/community-icons/bind.png",
+    "name": "Bind DNS",
+    "official": false,
+    "primary_pkg": null
+  },
   "calibre-web": {
     "MANIFEST": "calibre-web.json",
     "description": "Web app for browsing, reading and downloading eBooks stored in a Calibre database",
