@@ -13,7 +13,7 @@
     "icon": "https://icons.freenas.org/community-icons/bind.png",
     "name": "Bind DNS",
     "official": false,
-    "primary_pkg": null
+    "primary_pkg": "bind916"
   },
   "calibre-web": {
     "MANIFEST": "calibre-web.json",

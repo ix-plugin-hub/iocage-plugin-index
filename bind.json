@@ -9,8 +9,8 @@
     },
     "pkgs": [
         "bind916",
-	"vim",
-	"mc"
+        "vim",
+        "mc"
     ],
     "packagesite": "http://pkg.FreeBSD.org/${ABI}/latest",
     "fingerprints": {
