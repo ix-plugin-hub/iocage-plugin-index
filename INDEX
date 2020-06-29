@@ -224,6 +224,17 @@
     "official": true,
     "primary_pkg": "quassel-core"
   },
+  "radarr": {
+    "MANIFEST": "radarr.json",
+    "name": "radarr",
+    "icon": "https://icons.freenas.org/community-icons/radarr.png",
+    "description": "Fork of Sonarr. Automatically download movies in the style of Couchpotato.",
+    "official": true,
+    "primary_pkg": "radarr",
+    "category": "content",
+    "maintainer": "iXsystems <dev@ixsystems.com>",
+    "homepage": "https://radarr.video/"
+  },
   "rtorrent-flood": {
     "MANIFEST": "rtorrent-flood.json",
     "description": "rTorrent with Flood web interface (optionally restricted to OpenVPN).",
@@ -231,6 +242,17 @@
     "name": "rtorrent-flood",
     "official": false,
     "primary_pkg": "rtorrent"
+  },
+  "sonarr": {
+    "MANIFEST": "sonarr.json",
+    "name": "Sonarr",
+    "icon": "https://icons.freenas.org/community-icons/sonarr.png",
+    "description": "Multi-platform app to search, download, and manage TV shows.",
+    "official": true,
+    "primary_pkg": "sonarr",
+    "category": "content",
+    "maintainer": "iXsystems <dev@ixsystems.com>",
+    "homepage": "https://sonarr.tv/"
   },
   "sabnzbd": {
     "MANIFEST": "sabnzbd.json",
