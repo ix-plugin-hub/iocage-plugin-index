@@ -3,6 +3,18 @@
   "release": "12.1-RELEASE",
   "artifact": "https://github.com/tprelog/iocage-homeassistant.git",
   "official": "false",
+  "devfs_ruleset": {
+    "paths": {
+      "zfs": null,
+      "bpf*": null,
+      "cua*": null
+    },
+    "includes": [
+      "1",
+      "2",
+      "3"
+    ]
+  },
   "properties": {
     "allow_raw_sockets": "1",
     "dhcp": "1"
@@ -12,15 +24,14 @@
     "bash",
     "ca_root_nss",
     "curl",
+    "ffmpeg",
     "gcc",
     "gmake",
     "libxml2",
     "libxslt",
-    "openssl",
     "pkgconf",
-    "python37",
-    "py37-av",
-    "py37-sqlite3",
+    "python38",
+    "py38-sqlite3",
     "sudo",
     "wget",
     "zip"
@@ -35,5 +46,5 @@
     ]
   },
   "plugin_schema": "2",
-  "revision": "0"
+  "revision": "1"
 }
