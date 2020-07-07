@@ -264,7 +264,7 @@
         "icon": "https://icons.freenas.org/community-icons/sickchill.png",
         "name": "SickChill",
         "official": false,
-        "primary_pkg": "Git branch - Master"
+        "primary_pkg": null
     },
     "sonarr": {
         "MANIFEST": "sonarr.json",
@@ -390,7 +390,7 @@
         "icon": "https://icons.freenas.org/community-icons/mineos.png",
         "description": "Set up and manage Minecraft servers.",
         "official": false,
-        "primary_pkg": "Git branch - Master",
+        "primary_pkg": null,
         "category": "entertainment",
         "homepage": "https://minecraft.codeemo.com/"
     },
@@ -410,7 +410,7 @@
         "icon": "https://icons.freenas.org/community-icons/tautulli.png",
         "description": "Monitors analytics and notifications for Plex Media Server. (formerly known as PlexPy)",
         "official": false,
-        "primary_pkg": "Git branch - Master",
+        "primary_pkg": null,
         "category": "entertainment",
         "homepage": "https://tautulli.com/"
     },
