@@ -7,6 +7,14 @@
         "official": false,
         "primary_pkg": "bind916"
     },
+  "OpenSpeedTest-Server": {
+    "MANIFEST": "OpenSpeedTest-Server.json",
+    "description": "HTML5 Network Speed Test Apllication by OpenSpeedTest.",
+    "icon": "https://icons.freenas.org/community-icons/openspeedtest.png",
+    "name": "OpenSpeedTest",
+    "official": false,
+    "primary_pkg": null
+  },
     "bazarr": {
         "MANIFEST": "bazarr.json",
         "description": "Bazarr is a companion application to Sonarr and Radarr that manages and downloads subtitles.",
