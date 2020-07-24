@@ -216,8 +216,8 @@
         "official": false,
         "primary_pkg": "openvpn"
     },
-  "OpenSpeedTest-Server": {
-    "MANIFEST": "OpenSpeedTest-Server.json",
+  "openspeedtest-server": {
+    "MANIFEST": "openspeedtest-server.json",
     "description": "HTML5 Network Speed Test Apllication by OpenSpeedTest.",
     "icon": "https://icons.freenas.org/community-icons/openspeedtest.png",
     "name": "OpenSpeedTest",

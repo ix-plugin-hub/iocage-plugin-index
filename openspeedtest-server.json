@@ -4,7 +4,7 @@
     "artifact": "https://github.com/openspeedtest/iocage-plugin-OpenSpeedTest-Server.git",
     "properties": {
         "nat": 1,
-        "nat_forwards": "tcp(80:8080)"
+        "nat_forwards": "tcp(8080:8080)"
     },
     "pkgs": [
         "nginx"
