@@ -216,6 +216,14 @@
         "official": false,
         "primary_pkg": "openvpn"
     },
+  "openspeedtest-server": {
+    "MANIFEST": "openspeedtest-server.json",
+    "description": "HTML5 Network Speed Test Apllication by OpenSpeedTest.",
+    "icon": "https://icons.freenas.org/community-icons/openspeedtest.png",
+    "name": "OpenSpeedTest",
+    "official": false,
+    "primary_pkg": null
+  },
     "privatebin": {
         "MANIFEST": "privatebin.json",
         "description": "PrivateBin is a minimalist, open source online pastebin where the server has zero knowledge of pasted data.",
