@@ -441,5 +441,13 @@
         "primary_pkg": "zoneminder",
         "category": "security",
         "homepage": "https://zoneminder.com/"
-    }
+    },
+    "nzbget": {
+        "MANIFEST": "nzbget.json",
+        "name": "NZBGet",
+        "primary_pkg": null,
+        "description": "The most efficient usenet downloader.",
+        "icon": "https://icons.freenas.org/community-icons/nzbget.png",
+        "official": false
+    },
 }
