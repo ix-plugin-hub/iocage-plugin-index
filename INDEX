@@ -208,6 +208,14 @@
         "name": "Node-RED",
         "official": false
     },
+    "nzbget": {
+        "MANIFEST": "nzbget.json",
+        "name": "NZBGet",
+        "primary_pkg": null,
+        "description": "The most efficient usenet downloader.",
+        "icon": "https://icons.freenas.org/community-icons/nzbget.png",
+        "official": false
+    },
     "openvpn": {
         "MANIFEST": "openvpn.json",
         "description": "Virtual private network software to create secure point-to-point connections.",
