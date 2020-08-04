@@ -156,7 +156,7 @@
     "description": "Modular IRC client using a CLI interface.",
     "icon": "https://icons.freenas.org/community-icons/irssi.png",
     "name": "irssi",
-    "official": true,
+    "official": false,
     "primary_pkg": "irssi"
   },
   "jackett": {
@@ -172,7 +172,7 @@
     "description": "Open source media streaming software and music player.",
     "icon": "https://icons.freenas.org/community-icons/madsonic.png",
     "name": "MadSonic",
-    "official": true,
+    "official": false,
     "primary_pkg": null
   },
   "mosquitto": {
@@ -221,7 +221,7 @@
     "description": "Headless IRC Client that supports 24/7 connectivity. Quassel Client can be attached.",
     "icon": "https://icons.freenas.org/community-icons/quasselcore.png",
     "name": "Quasselcore",
-    "official": true,
+    "official": false,
     "primary_pkg": "quassel-core"
   },
   "radarr": {
@@ -229,7 +229,7 @@
     "name": "radarr",
     "icon": "https://icons.freenas.org/community-icons/radarr.png",
     "description": "Fork of Sonarr. Automatically download movies in the style of Couchpotato.",
-    "official": true,
+    "official": false,
     "primary_pkg": "radarr",
     "category": "content",
     "maintainer": "iXsystems <dev@ixsystems.com>",
@@ -248,7 +248,7 @@
     "name": "Sonarr",
     "icon": "https://icons.freenas.org/community-icons/sonarr.png",
     "description": "Multi-platform app to search, download, and manage TV shows.",
-    "official": true,
+    "official": false,
     "primary_pkg": "sonarr",
     "category": "content",
     "maintainer": "iXsystems <dev@ixsystems.com>",
@@ -299,7 +299,7 @@
     "description": "Fast and light IRC client.",
     "icon": "https://icons.freenas.org/community-icons/weechat.png",
     "name": "weechat",
-    "official": true,
+    "official": false,
     "primary_pkg": "weechat"
   },
   "xmrig": {
@@ -307,7 +307,7 @@
     "description": "High performance Monero (XMR) CPU miner written in C++.",
     "icon": "https://icons.freenas.org/community-icons/xmrig.png",
     "name": "XMRig",
-    "official": true,
+    "official": false,
     "primary_pkg": "xmrig"
   },
   "zrepl": {
