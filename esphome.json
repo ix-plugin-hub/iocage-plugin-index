@@ -1,17 +1,24 @@
 {
-  "name": "mosquitto",
+  "name": "esphome",
   "release": "11.3-RELEASE",
-  "artifact": "https://github.com/tprelog/iocage-mosquitto.git",
+  "artifact": "https://github.com/tprelog/iocage-esphome.git",
   "official": "false",
   "properties": {
-    "priority": "98",
     "allow_raw_sockets": "1",
     "dhcp": "1"
   },
   "pkgs": [
-    "mosquitto"
+    "autoconf",
+    "bash",
+    "ca_root_nss",
+    "gcc",
+    "gmake",
+    "pkgconf",
+    "python37",
+    "wget",
+    "zip"
   ],
-  "packagesite": "http://pkg.FreeBSD.org/${ABI}/quarterly",
+  "packagesite": "http://pkg.FreeBSD.org/${ABI}/latest",
   "fingerprints": {
     "plugin-default": [
       {
@@ -20,5 +27,6 @@
       }
     ]
   },
+  "plugin_schema": "2",
   "revision": "0"
 }

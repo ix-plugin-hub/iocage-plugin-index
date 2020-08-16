@@ -1,0 +1,26 @@
+{
+  "name": "bazarr",
+  "plugin_schema": "2",
+  "release": "11.3-RELEASE",
+  "artifact": "https://github.com/fulder/iocage-plugin-bazarr",
+  "pkgs": [
+    "ca_root_nss",
+    "python37",
+    "py37-pip",
+    "py37-libxml2",
+    "py37-sqlite3",
+    "libxslt",
+    "git",
+    "unrar"
+  ],
+  "packagesite": "http://pkg.FreeBSD.org/FreeBSD:11:amd64/quarterly",
+  "fingerprints": {
+    "iocage-plugins": [
+      {
+        "function": "sha256",
+        "fingerprint": "b0170035af3acc5f3f3ae1859dc717101b4e6c1d0a794ad554928ca0cbb2f438"
+      }
+    ]
+  },
+  "official": "false"
+}
