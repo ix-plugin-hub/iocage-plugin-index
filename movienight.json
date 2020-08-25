@@ -1,0 +1,23 @@
+{
+    "name": "movienight",
+    "plugin_schema": "2",
+    "release": "12.1-RELEASE",
+    "artifact": "https://github.com/zorglube/freenas-iocage-movienight.git",
+    "official": false,
+    "properties": {
+        "dhcp": 1
+    },
+    "pkgs": [
+        "nano", "bash", "gzip", "ca_root_nss", "git", "lang/go"
+    ],
+    "packagesite": "http://pkg.FreeBSD.org/${ABI}/latest",
+    "fingerprints": {
+        "iocage-plugins": [
+            {
+                "function": "",
+                "fingerprint": ""
+            }
+        ]
+    },
+    "revision": "0"
+}
