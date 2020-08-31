@@ -191,14 +191,14 @@
         "official": false,
         "primary_pkg": "mosquitto"
     },
-    "movienight": {
+    "movienight-x86": {
         "MANIFEST": "movienight.json",
         "description": "Single-instance streaming server with chat.",
         "icon": "https://github.com/zorchenhimer/MovieNight/blob/master/static/img/remote_active.png",
         "name": "Movie Night",
         "official": false,
         "primary_pkg": "movienight"
-    },
+    }
     "netdata": {
         "MANIFEST": "netdata.json",
         "description": "Monitor everything in real-time",
