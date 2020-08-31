@@ -214,7 +214,7 @@
         "name": "Movie Night",
         "official": false,
         "primary_pkg": "movienight"
-    },
+    }
     "netdata": {
         "MANIFEST": "netdata.json",
         "description": "Monitor everything in real-time",
