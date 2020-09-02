@@ -8,9 +8,8 @@
     "dhcp": "1"
   },
   "pkgs": [
-    "nginx",
-    "letsencrypt",
-    "wget"
+    "mariadb103-server",
+    "mariadb103-client"
   ],
   "packagesite": "http://pkg.FreeBSD.org/${ABI}/latest",
   "fingerprints": {
