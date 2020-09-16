@@ -1,0 +1,30 @@
+{
+    "name": "motioneye",
+    "plugin_schema": "2",
+    "release": "11.3-RELEASE",
+    "artifact": "https://github.com/cilix-lab/iocage-plugin-motioneye.git",
+    "official": false,
+    "properties": {
+        "nat": 1,
+        "nat_forwards": "tcp(8765:8765)"
+    },
+    "pkgs": [
+        "python27",
+        "py27-pip",
+        "motion",
+        "ffmpeg",
+        "v4l-utils",
+        "jpeg-turbo",
+        "curl"
+    ],
+    "packagesite": "http://pkg.FreeBSD.org/${ABI}/latest",
+    "fingerprints": {
+        "iocage-plugins": [
+            {
+                "function": "sha256",
+                "fingerprint": "b0170035af3acc5f3f3ae1859dc717101b4e6c1d0a794ad554928ca0cbb2f438"
+            }
+        ]
+    },
+    "revision": "0"
+}
