@@ -191,6 +191,14 @@
         "official": false,
         "primary_pkg": "mosquitto"
     },
+    "motioneye": {
+        "MANIFEST": "motioneye.json",
+        "description": "motionEye is a web frontend for the motion daemon, written in Python.",
+        "icon": "https://icons.freenas.org/community-icons/motioneye.png",
+        "name": "MotionEye",
+        "official": false,
+        "primary_pkg": null
+    },
     "netdata": {
         "MANIFEST": "netdata.json",
         "description": "Monitor everything in real-time",
