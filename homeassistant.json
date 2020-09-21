@@ -36,7 +36,7 @@
     "wget",
     "zip"
   ],
-  "packagesite": "http://pkg.FreeBSD.org/${ABI}/latest",
+  "packagesite": "http://pkg.FreeBSD.org/${ABI}/quarterly",
   "fingerprints": {
     "plugin-default": [
       {

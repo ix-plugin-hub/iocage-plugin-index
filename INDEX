@@ -164,7 +164,7 @@
         "description": "Modular IRC client using a CLI interface.",
         "icon": "https://icons.freenas.org/community-icons/irssi.png",
         "name": "irssi",
-        "official": true,
+        "official": false,
         "primary_pkg": "irssi"
     },
     "jackett": {
@@ -180,7 +180,7 @@
         "description": "Open source media streaming software and music player.",
         "icon": "https://icons.freenas.org/community-icons/madsonic.png",
         "name": "MadSonic",
-        "official": true,
+        "official": false,
         "primary_pkg": null
     },
     "mosquitto": {
@@ -190,6 +190,14 @@
         "name": "Mosquitto MQTT",
         "official": false,
         "primary_pkg": "mosquitto"
+    },
+    "motioneye": {
+        "MANIFEST": "motioneye.json",
+        "description": "motionEye is a web frontend for the motion daemon, written in Python.",
+        "icon": "https://icons.freenas.org/community-icons/motioneye.png",
+        "name": "MotionEye",
+        "official": false,
+        "primary_pkg": null
     },
     "netdata": {
         "MANIFEST": "netdata.json",
@@ -208,6 +216,14 @@
         "name": "Node-RED",
         "official": false
     },
+    "nzbget": {
+        "MANIFEST": "nzbget.json",
+        "name": "NZBGet",
+        "primary_pkg": null,
+        "description": "The most efficient usenet downloader.",
+        "icon": "https://icons.freenas.org/community-icons/nzbget.png",
+        "official": false
+    },
     "openvpn": {
         "MANIFEST": "openvpn.json",
         "description": "Virtual private network software to create secure point-to-point connections.",
@@ -216,6 +232,14 @@
         "official": false,
         "primary_pkg": "openvpn"
     },
+  "openspeedtest-server": {
+    "MANIFEST": "openspeedtest-server.json",
+    "description": "HTML5 Network Speed Test Apllication by OpenSpeedTest.",
+    "icon": "https://icons.freenas.org/community-icons/openspeedtest.png",
+    "name": "OpenSpeedTest",
+    "official": false,
+    "primary_pkg": null
+  },
     "privatebin": {
         "MANIFEST": "privatebin.json",
         "description": "PrivateBin is a minimalist, open source online pastebin where the server has zero knowledge of pasted data.",
@@ -229,7 +253,7 @@
         "description": "Headless IRC Client that supports 24/7 connectivity. Quassel Client can be attached.",
         "icon": "https://icons.freenas.org/community-icons/quasselcore.png",
         "name": "Quasselcore",
-        "official": true,
+        "official": false,
         "primary_pkg": "quassel-core"
     },
     "radarr": {
@@ -264,7 +288,7 @@
         "icon": "https://icons.freenas.org/community-icons/sickchill.png",
         "name": "SickChill",
         "official": false,
-        "primary_pkg": "Git branch - Master"
+        "primary_pkg": null
     },
     "sonarr": {
         "MANIFEST": "sonarr.json",
@@ -305,7 +329,7 @@
         "description": "Fast and light IRC client.",
         "icon": "https://icons.freenas.org/community-icons/weechat.png",
         "name": "weechat",
-        "official": true,
+        "official": false,
         "primary_pkg": "weechat"
     },
     "xmrig": {
@@ -313,7 +337,7 @@
         "description": "High performance Monero (XMR) CPU miner written in C++.",
         "icon": "https://icons.freenas.org/community-icons/xmrig.png",
         "name": "XMRig",
-        "official": true,
+        "official": false,
         "primary_pkg": "xmrig"
     },
     "zrepl": {
@@ -390,7 +414,7 @@
         "icon": "https://icons.freenas.org/community-icons/mineos.png",
         "description": "Set up and manage Minecraft servers.",
         "official": false,
-        "primary_pkg": "Git branch - Master",
+        "primary_pkg": null,
         "category": "entertainment",
         "homepage": "https://minecraft.codeemo.com/"
     },
@@ -410,7 +434,7 @@
         "icon": "https://icons.freenas.org/community-icons/tautulli.png",
         "description": "Monitors analytics and notifications for Plex Media Server. (formerly known as PlexPy)",
         "official": false,
-        "primary_pkg": "Git branch - Master",
+        "primary_pkg": null,
         "category": "entertainment",
         "homepage": "https://tautulli.com/"
     },
