@@ -1,14 +1,16 @@
 {
-    "name": "unificontroller-lts",
-    "release": "11.3-RELEASE",
-    "artifact": "https://github.com/lbalker/iocage-plugin-unificontroller.git",
-    "properties": {
-        "nat": 1,
-        "nat_forwards": "tcp(8443:8445),udp(3478:3478),tcp(8080:8080),tcp(6789:6789),udp(10001:10001),udp(1900:1900)"
-    },
+    "name": "Sonarr",
+    "release": "12.1-RELEASE",
+    "artifact": "https://github.com/freenas/iocage-plugin-sonarr.git",
+    "official": false,
     "pkgs": [
-        "unifi-lts"
+        "sonarr"
     ],
+    "properties": {
+        "allow_sysvipc": 1,
+        "nat": 1,
+        "nat_forwards": "tcp(8989:8989)"
+    },
     "packagesite": "http://pkg.FreeBSD.org/${ABI}/latest",
     "fingerprints": {
         "iocage-plugins": [
@@ -18,6 +20,5 @@
             }
         ]
     },
-    "official": false,
     "revision": "0"
 }
