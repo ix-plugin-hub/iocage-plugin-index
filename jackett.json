@@ -4,7 +4,8 @@
   "release": "12.1-RELEASE",
   "artifact": "https://github.com/fulder/iocage-plugin-jackett.git",
   "pkgs": [
-    "jackett"
+    "jackett",
+    "libiconv"
   ],
   "packagesite": "http://pkg.FreeBSD.org/${ABI}/latest",
   "fingerprints": {
