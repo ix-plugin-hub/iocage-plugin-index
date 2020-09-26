@@ -1,19 +1,18 @@
- {
-    "name": "ArchiveBox",
-    "plugin_schema": "2",
-    "release": "11.3-RELEASE",
-    "artifact": "https://github.com/ConorBeh/iocage-plugin-archivebox.git",
+{
+    "name": "Tautulli",
+    "release": "12.1-RELEASE",
+    "artifact": "https://github.com/arcooke/iocage-plugin-tautulli.git",
     "official": false,
     "properties": {
-        "dhcp": 1
+        "nat": 1,
+        "nat_forwards": "tcp(8181:8181)"
     },
     "pkgs": [
-        "python36",
-        "wget",
-        "curl",
-	"youtube_dl",
-	"git",
-	"chromium"
+        "lang/python",
+        "py37-sqlite3",
+        "py37-openssl",
+        "security/ca_root_nss",
+        "git"
     ],
     "packagesite": "http://pkg.FreeBSD.org/${ABI}/latest",
     "fingerprints": {
@@ -26,4 +25,3 @@
     },
     "revision": "0"
 }
- 

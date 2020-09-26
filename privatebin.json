@@ -1,7 +1,7 @@
 {
     "name": "PrivateBin",
     "plugin_schema": "2",
-    "release": "11.3-RELEASE",
+    "release": "12.1-RELEASE",
     "artifact": "https://github.com/ConorBeh/iocage-plugin-privatebin.git",
     "pkgs": [
         "privatebin",
@@ -12,7 +12,7 @@
     "properties": {
         "dhcp": 1
     },
-    "packagesite": "http://pkg.FreeBSD.org/FreeBSD:11:amd64/latest",
+    "packagesite": "http://pkg.FreeBSD.org/${ABI}/latest",
     "fingerprints": {
         "plugin-default": [
             {

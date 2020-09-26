@@ -1,6 +1,6 @@
 {
     "name": "Homebridge",
-    "release": "11.3-RELEASE",
+    "release": "12.1-RELEASE",
     "artifact": "https://github.com/grimneko/iocage-plugin-homebridge.git",
     "properties": {
         "dhcp": 1
@@ -14,7 +14,7 @@
         "gcc",
         "nss_mdns"
     ],
-    "packagesite": "http://pkg.FreeBSD.org/FreeBSD:11:amd64/quarterly",
+    "packagesite": "http://pkg.FreeBSD.org/${ABI}/quarterly",
     "fingerprints": {
         "plugin-default": [
             {

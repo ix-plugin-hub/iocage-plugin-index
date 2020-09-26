@@ -1,10 +1,11 @@
 {
   "name": "jackett",
   "plugin_schema": "2",
-  "release": "11.3-RELEASE",
+  "release": "12.1-RELEASE",
   "artifact": "https://github.com/fulder/iocage-plugin-jackett.git",
   "pkgs": [
-    "jackett"
+    "jackett",
+    "libiconv"
   ],
   "packagesite": "http://pkg.FreeBSD.org/${ABI}/latest",
   "fingerprints": {

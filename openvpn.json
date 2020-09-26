@@ -1,7 +1,7 @@
 {
     "name": "OpenVPN",
     "plugin_schema": "2",
-    "release": "11.3-RELEASE",
+    "release": "12.1-RELEASE",
     "artifact": "https://github.com/gitbulb/iocage-plugin-openvpn.git",
     "pkgs": [
         "openvpn"
@@ -11,7 +11,7 @@
         "dhcp": 1,
         "allow_tun": 1
     },
-    "packagesite": "http://pkg.FreeBSD.org/FreeBSD:11:amd64/latest",
+    "packagesite": "http://pkg.FreeBSD.org/${ABI}/latest",
     "fingerprints": {
         "plugin-default": [
             {

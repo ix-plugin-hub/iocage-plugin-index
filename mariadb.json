@@ -1,6 +1,7 @@
 {
-  "name": "mariadb",
-  "release": "11.3-RELEASE",
+  "name": "MariaDB",
+  "plugin_schema": "2",
+  "release": "11.4-RELEASE",
   "artifact": "https://github.com/m1ch/iocage-plugin-mariadb.git",
   "official": "false",
   "properties": {
@@ -8,18 +9,19 @@
     "dhcp": "1"
   },
   "pkgs": [
-    "mariadb103-server",
-    "mariadb103-client"
+    "databases/mariadb104-server",
+    "databases/mariadb104-client",
+    "databases/adminer",
+    "php72-mysqli"
   ],
   "packagesite": "http://pkg.FreeBSD.org/${ABI}/latest",
   "fingerprints": {
     "plugin-default": [
       {
         "function": "sha256",
-        "fingerprint": "b0170035af3acc5f3f3ae1859dc717101b4e6c1d0a794ad554928ca0cbb2f438"
+        "fingerprint": "226efd3a126fb86e71d60a37353d17f57af816d1c7ecad0623c21f0bf73eb0c7"
       }
     ]
   },
-  "plugin_schema": "2",
   "revision": "0"
 }
