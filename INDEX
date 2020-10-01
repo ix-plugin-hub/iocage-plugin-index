@@ -454,7 +454,7 @@
         "icon": "https://icons.freenas.org/community-icons/vault.png",
         "description": "Manage secrets and protect sensitive data.",
         "official": false,
-        "primary_pkg": null,
+        "primary_pkg": "vault",
         "category": "devops",
         "homepage": "https://www.vaultproject.io/"
     },
