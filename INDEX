@@ -448,6 +448,16 @@
         "category": "content",
         "homepage": "http://qbittorrent.org/"
     },
+    "vault": {
+        "MANIFEST": "vault.json",
+        "name": "vault",
+        "icon": "https://icons.freenas.org/community-icons/vault.png",
+        "description": "Manage secrets and protect sensitive data.",
+        "official": false,
+        "primary_pkg": "vault",
+        "category": "devops",
+        "homepage": "https://www.vaultproject.io/"
+    },
     "zoneminder": {
         "MANIFEST": "zoneminder.json",
         "name": "Zoneminder",
