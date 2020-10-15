@@ -11,14 +11,14 @@
     "autoconf",
     "bash",
     "ca_root_nss",
+    "curl",
     "gcc",
     "gmake",
     "pkgconf",
     "python37",
-    "wget",
-    "zip"
+    "py37-pillow"
   ],
-  "packagesite": "http://pkg.FreeBSD.org/${ABI}/latest",
+  "packagesite": "http://pkg.FreeBSD.org/${ABI}/quarterly",
   "fingerprints": {
     "plugin-default": [
       {
