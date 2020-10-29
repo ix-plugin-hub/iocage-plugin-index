@@ -268,7 +268,7 @@
     },
     "rslsync": {
         "MANIFEST": "rslsync.json",
-        "name": "rslsync",
+        "name": "Resilio Sync",
         "icon": "https://icons.freenas.org/community-icons/rslsync.png",
         "description": "Resilient, fast and scalable file sync software for enterprises and individuals.",
         "official": false,
