@@ -378,7 +378,6 @@
         "category": "security",
         "homepage": "https://www.clamav.net/"
     },
-
     "emby": {
         "MANIFEST": "emby.json",
         "name": "Emby",
