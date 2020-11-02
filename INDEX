@@ -378,16 +378,7 @@
         "category": "security",
         "homepage": "https://www.clamav.net/"
     },
-    "couchpotato": {
-        "MANIFEST": "couchpotato.json",
-        "name": "CouchPotato",
-        "icon": "https://icons.freenas.org/community-icons/couchpotato.png",
-        "description": "Automatic NZB and torrent downloader.",
-        "official": false,
-        "primary_pkg": "couchpotato",
-        "category": "content",
-        "homepage": "https://couchpota.to/"
-    },
+
     "emby": {
         "MANIFEST": "emby.json",
         "name": "Emby",
