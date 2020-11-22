@@ -4,7 +4,7 @@
     "release": "12.1-RELEASE",
     "artifact": "https://github.com/MalteHillmann/iocage-plugin-grafana.git",
     "pkgs": [
-        "grafana6",
+        "grafana7",
         "influxdb",
         "curl"
     ],
