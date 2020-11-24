@@ -1,19 +1,17 @@
 {
-    "name": "Grafana",
-    "plugin_schema": "2",
+    "name": "rslsync",
     "release": "12.1-RELEASE",
-    "artifact": "https://github.com/MalteHillmann/iocage-plugin-grafana.git",
-    "pkgs": [
-        "grafana7",
-        "influxdb",
-        "curl"
-    ],
+    "artifact": "https://github.com/brianannis/iocage-plugin-rslsync.git",
     "properties": {
-        "dhcp": 1
+        "nat": 1,
+        "nat_forwards": "tcp(8888:8888)"
     },
+    "pkgs": [
+        "ca_root_nss"
+    ],
     "packagesite": "http://pkg.FreeBSD.org/${ABI}/latest",
     "fingerprints": {
-        "plugin-default": [
+        "iocage-plugins": [
             {
                 "function": "sha256",
                 "fingerprint": "b0170035af3acc5f3f3ae1859dc717101b4e6c1d0a794ad554928ca0cbb2f438"
