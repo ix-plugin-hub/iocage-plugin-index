@@ -30,7 +30,7 @@
         "php74-pecl-imagick-im7-3.4.4_2",
         "php74-tokenizer-7.4.12",
         "php74-fileinfo-7.4.12",
-        "acme.sh-2.8.7",
+        "acme.sh-2.8.7"
     ],
     "packagesite": "http://pkg.FreeBSD.org/${ABI}/latest",
     "fingerprints": {
