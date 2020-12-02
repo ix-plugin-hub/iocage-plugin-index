@@ -183,6 +183,15 @@
         "official": false,
         "primary_pkg": null
     },
+    "monica": {
+        "MANIFEST": "monica.json",
+        "name": "Monica",
+        "icon": "https://icons.freenas.org/community-icons/monica.png",
+        "description": "Personal CRM. Remember everything about your friends, family and business relationships.",
+        "official": false,
+        "primary_pkg": null,
+        "homepage": "https://www.monicahq.com"
+    },
     "mosquitto": {
         "MANIFEST": "mosquitto.json",
         "description": "An open source MQTT broker.",
@@ -477,14 +486,5 @@
         "primary_pkg": "zoneminder",
         "category": "security",
         "homepage": "https://zoneminder.com/"
-    },
-    "monica": {
-        "MANIFEST": "monica.json",
-        "name": "Monica",
-        "icon": "https://icons.freenas.org/community-icons/monica.png",
-        "description": "Personal CRM. Remember everything about your friends, family and business relationships.",
-        "official": false,
-        "primary_pkg": null,
-        "homepage": "https://www.monicahq.com"
     }
 }
