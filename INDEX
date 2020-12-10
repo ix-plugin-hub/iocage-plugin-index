@@ -64,14 +64,6 @@
     "description": "Emby brings together your personal videos, music, photos, and live television",
     "official": false
   },
-  "esphome": {
-    "MANIFEST": "esphome.json",
-    "name": "ESPHome",
-    "icon": "https://icons.freenas.org/community-icons/esphome.png",
-    "primary_pkg": null,
-    "description": "ESPHome is a system to control your ESP8266/ESP32 by simple yet powerful configuration files and control them remotely through Home Automation systems.",
-    "official": false
-  },
   "famp": {
     "MANIFEST": "famp.json",
     "description": "FAMP (FreeBSD, Apache, MySQL and PHP) web server",
@@ -119,14 +111,6 @@
     "name": "Heimdall",
     "official": false,
     "primary_pkg": null
-  },
-  "homeassistant": {
-    "MANIFEST": "homeassistant.json",
-    "description": "Open source home automation that puts local control and privacy first.",
-    "icon": "https://icons.freenas.org/community-icons/homeassistant.png",
-    "name": "Home Assistant Core",
-    "primary_pkg": null,
-    "official": false
   },
   "homebridge": {
     "MANIFEST": "homebridge.json",
@@ -190,14 +174,6 @@
     "primary_pkg": "netdata",
     "maintainer": "Kris Moore <kris@ixsystems.com>",
     "name": "Netdata",
-    "official": false
-  },
-  "node-red": {
-    "MANIFEST": "node-red.json",
-    "description": "Node-RED is a programming tool for wiring together hardware devices, APIs and online services in new and interesting ways.",
-    "icon": "https://icons.freenas.org/community-icons/node-red.png",
-    "primary_pkg": null,
-    "name": "Node-RED",
     "official": false
   },
   "openvpn": {
@@ -269,14 +245,6 @@
     "name": "SickChill",
     "official": false,
     "primary_pkg": "Git branch - Master"
-  },
-  "tasmoadmin": {
-    "MANIFEST": "tasmoadmin.json",
-    "description": "Website to manage devices flashed with Tasmota.",
-    "icon": "https://icons.freenas.org/community-icons/tasmoadmin.png",
-    "name": "TasmoAdmin",
-    "primary_pkg": null,
-    "official": false
   },
   "unificontroller": {
     "MANIFEST": "unificontroller.json",
