@@ -7,9 +7,16 @@
         "nat_forwards": "tcp(8081:8081)"
     },
     "pkgs": [
-        "lang/python27",
-        "security/ca_root_nss",
-        "databases/py-sqlite3"
+        "git",
+        "python3",
+        "python37",
+        "py37-pip",
+        "py37-setuptools",
+        "py37-sqlite3",
+        "unrar",
+        "ca_root_nss",
+        "py37-pillow",
+        "libmediainfo"
     ],
     "packagesite": "http://pkg.cdn.trueos.org/iocage/11.3-RELEASE",
     "fingerprints": {
