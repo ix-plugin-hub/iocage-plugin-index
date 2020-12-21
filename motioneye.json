@@ -1,7 +1,7 @@
 {
     "name": "motioneye",
     "plugin_schema": "2",
-    "release": "11.3-RELEASE",
+    "release": "12.2-RELEASE",
     "artifact": "https://github.com/cilix-lab/iocage-plugin-motioneye.git",
     "official": false,
     "properties": {
@@ -26,5 +26,5 @@
             }
         ]
     },
-    "revision": "0"
+    "revision": "12.2"
 }
