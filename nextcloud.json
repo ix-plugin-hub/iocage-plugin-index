@@ -1,0 +1,62 @@
+{
+    "name": "Nextcloud",
+    "plugin_schema": "2",
+    "release": "12.2-RELEASE",
+    "artifact": "https://github.com/m1ch/iocage-plugin-nextcloud.git",
+    "official": false,
+    "properties": {
+        "nat": 0,
+        "nat_forwards": "tcp(80:8282)"
+    },
+    "pkgs": [
+        "php74-pecl-imagick-im7",
+        "php74-bcmath",
+        "php74-gmp",
+        "php74",
+        "php74-bz2",
+        "php74-ctype",
+        "php74-curl",
+        "php74-dom",
+        "php74-exif",
+        "php74-fileinfo",
+        "php74-filter",
+        "php74-gd",
+        "php74-iconv",
+        "php74-intl",
+        "php74-json",
+        "php74-ldap",
+        "php74-mbstring",
+        "php74-opcache",
+        "php74-openssl",
+        "php74-pdo",
+        "php74-pdo_mysql",
+        "php74-pecl-APCu",
+        "php74-posix",
+        "php74-session",
+        "php74-simplexml",
+        "php74-xml",
+        "php74-xmlreader",
+        "php74-xmlwriter",
+        "php74-xsl",
+        "php74-zip",
+        "php74-zlib",
+        "php74-pecl-smbclient",
+        "php74-ftp",
+        "php74-imap",
+        "php74-pecl-redis",
+        "ffmpeg",
+        "nginx",
+    ],
+    "packagesite": "http://pkg.FreeBSD.org/${ABI}/latest",
+    "fingerprints": {
+        "iocage-plugins": [
+            {
+                "function": "sha256",
+                "fingerprint": "b0170035af3acc5f3f3ae1859dc717101b4e6c1d0a794ad554928ca0cbb2f438"
+            }
+        ]
+    },
+    "revision": "0"
+}
+
+
