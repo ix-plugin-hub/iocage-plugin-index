@@ -175,6 +175,14 @@
         "official": false,
         "primary_pkg": "jackett"
     },
+    "lidarr": {
+        "MANIFEST": "lidarr.json",
+        "description": "Fork of Sonarr. Automatically download music in the style of Couchpotato.",
+        "icon": "https://github.com/lidarr/Lidarr/blob/develop/Logo/128.png",
+        "name": "Lidarr",
+        "official": false,
+        "primary_pkg": "lidarr"
+    },
     "madsonic": {
         "MANIFEST": "madsonic.json",
         "description": "Open source media streaming software and music player.",
