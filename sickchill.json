@@ -13,7 +13,8 @@
         "unrar",
         "ca_root_nss",
         "py37-pillow",
-        "libmediainfo"
+        "libmediainfo",
+        "libxslt"
     ],
     "properties": {
         "nat": 1,
