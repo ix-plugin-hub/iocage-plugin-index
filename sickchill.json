@@ -7,16 +7,23 @@
         "nat_forwards": "tcp(8081:8081)"
     },
     "pkgs": [
-        "lang/python27",
-        "security/ca_root_nss",
-        "databases/py-sqlite3"
+        "git",
+        "python3",
+        "python37",
+        "py37-pip",
+        "py37-setuptools",
+        "py37-sqlite3",
+        "unrar",
+        "ca_root_nss",
+        "py37-pillow",
+        "libmediainfo"
     ],
-    "packagesite": "http://pkg.cdn.trueos.org/iocage/11.3-RELEASE",
+    "packagesite": "http://pkg.FreeBSD.org/${ABI}/latest",
     "fingerprints": {
         "iocage-plugins": [
             {
                 "function": "sha256",
-                "fingerprint": "226efd3a126fb86e71d60a37353d17f57af816d1c7ecad0623c21f0bf73eb0c7"
+                "fingerprint": "b0170035af3acc5f3f3ae1859dc717101b4e6c1d0a794ad554928ca0cbb2f438"
             }
         ]
     },
