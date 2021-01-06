@@ -8,26 +8,26 @@
     },
     "pkgs": [
         "emby-server",
-        "ffmpeg"
-        "mono"
-        "libass"
-        "fontconfig"
-        "freetype2" 
-        "fribidi"
-        "gnutls"
-        "iconv" 
-        "opus" 
-        "sqlite3" 
-        "libtheora"
-        "libva" 
-        "libvpx" 
-        "libvorbis"
-        "webp"
-        "libx264"
-        "x265"
-        "dav1d"
-        "libzvbi"
-        "libraw"
+        "ffmpeg",
+        "mono",
+        "libass",
+        "fontconfig",
+        "freetype2",
+        "fribidi",
+        "gnutls",
+        "iconv",
+        "opus",
+        "sqlite3",
+        "libtheora",
+        "libva",
+        "libvpx",
+        "libvorbis",
+        "webp",
+        "libx264",
+        "x265",
+        "dav1d",
+        "libzvbi",
+        "libraw",
         "ImageMagick6"
     ],
     "packagesite": "http://pkg.FreeBSD.org/${ABI}/latest",
