@@ -1,0 +1,19 @@
+{
+    "artifact": "https://github.com/dropsignal/iocage-plugin-lidarr.git",
+    "fingerprints": {
+        "iocage-plugins": [
+            {
+                "fingerprint": "b0170035af3acc5f3f3ae1859dc717101b4e6c1d0a794ad554928ca0cbb2f438",
+                "function": "sha256"
+            }
+        ]
+    },
+    "name": "Lidarr",
+    "official": "false",
+    "packagesite": "http://pkg.FreeBSD.org/${ABI}/latest",
+    "pkgs": [
+        "lidarr"
+    ],
+    "plugin_schema": "2",
+    "release": "12.1-RELEASE"
+}

@@ -175,6 +175,14 @@
         "official": false,
         "primary_pkg": "jackett"
     },
+    "lidarr": {
+        "MANIFEST": "lidarr.json",
+        "description": "Fork of Sonarr. Automatically download music in the style of Couchpotato.",
+        "icon": "https://github.com/lidarr/Lidarr/blob/develop/Logo/128.png",
+        "name": "Lidarr",
+        "official": false,
+        "primary_pkg": "lidarr"
+    },
     "madsonic": {
         "MANIFEST": "madsonic.json",
         "description": "Open source media streaming software and music player.",
@@ -182,6 +190,15 @@
         "name": "MadSonic",
         "official": false,
         "primary_pkg": null
+    },
+    "monica": {
+        "MANIFEST": "monica.json",
+        "name": "Monica",
+        "icon": "https://icons.freenas.org/community-icons/monica.png",
+        "description": "Personal CRM. Remember everything about your friends, family and business relationships.",
+        "official": false,
+        "primary_pkg": null,
+        "homepage": "https://www.monicahq.com"
     },
     "mosquitto": {
         "MANIFEST": "mosquitto.json",
@@ -377,16 +394,6 @@
         "primary_pkg": "clamav",
         "category": "security",
         "homepage": "https://www.clamav.net/"
-    },
-    "couchpotato": {
-        "MANIFEST": "couchpotato.json",
-        "name": "CouchPotato",
-        "icon": "https://icons.freenas.org/community-icons/couchpotato.png",
-        "description": "Automatic NZB and torrent downloader.",
-        "official": false,
-        "primary_pkg": "couchpotato",
-        "category": "content",
-        "homepage": "https://couchpota.to/"
     },
     "emby": {
         "MANIFEST": "emby.json",

@@ -1,0 +1,46 @@
+{
+    "name": "monica",
+    "plugin_schema": 2,
+    "release": "11.3-RELEASE",
+    "artifact": "https://github.com/aoyono/iocage-plugin-monica.git",
+    "pkgs": [
+        "git-lite",
+        "pwgen-2.08,2",
+        "apache24-2.4.46",
+        "mysql57-server",
+        "redis-5.0.9",
+        "mod_php74",
+        "php74-composer-1.10.15",
+        "php74-bcmath-7.4.12",
+        "php74-curl-7.4.12",
+        "php74-dom-7.4.12",
+        "php74-gd-7.4.12",
+        "php74-gmp-7.4.12",
+        "php74-iconv-7.4.12",
+        "php74-intl-7.4.12_1",
+        "php74-json-7.4.12",
+        "php74-mbstring-7.4.12",
+        "php74-mysqli-7.4.12",
+        "php74-opcache-7.4.12",
+        "php74-pdo_mysql-7.4.12",
+        "php74-pecl-redis-5.3.2",
+        "php74-sodium-7.4.12",
+        "php74-xml-7.4.12",
+        "php74-zip-7.4.12",
+        "php74-pecl-imagick-im7-3.4.4_2",
+        "php74-tokenizer-7.4.12",
+        "php74-fileinfo-7.4.12",
+        "acme.sh-2.8.7"
+    ],
+    "packagesite": "http://pkg.FreeBSD.org/${ABI}/latest",
+    "fingerprints": {
+        "iocage-plugins": [
+            {
+                "function": "sha256",
+                "fingerprint": "b0170035af3acc5f3f3ae1859dc717101b4e6c1d0a794ad554928ca0cbb2f438"
+            }
+        ]
+    },
+    "official": false,
+    "revision": 0
+}
