@@ -42,7 +42,7 @@
     "dnsmasq": {
         "MANIFEST": "dnsmasq.json",
         "description": "Network infrastructure management for small networks: DNS, DHCP, router advertisement, and network boot.",
-        "icon": "https://icons.freenas.org/community-icons/dnsmasq.png",
+        "icon": "https://icons.freenas.org/community-icons/dnsmasq.svg",
         "name": "Dnsmasq",
         "official": false,
         "primary_pkg": "dnsmasq"
@@ -178,7 +178,7 @@
     "lidarr": {
         "MANIFEST": "lidarr.json",
         "description": "Fork of Sonarr. Automatically download music in the style of Couchpotato.",
-        "icon": "https://github.com/lidarr/Lidarr/blob/develop/Logo/128.png",
+        "icon": "https://raw.githubusercontent.com/lidarr/Lidarr/develop/Logo/128.png",
         "name": "Lidarr",
         "official": false,
         "primary_pkg": "lidarr"
