@@ -42,7 +42,7 @@
     "dnsmasq": {
         "MANIFEST": "dnsmasq.json",
         "description": "Network infrastructure management for small networks: DNS, DHCP, router advertisement, and network boot.",
-        "icon": "https://icons.freenas.org/community-icons/dnsmasq.png",
+        "icon": "https://icons.freenas.org/community-icons/dnsmasq.svg",
         "name": "Dnsmasq",
         "official": false,
         "primary_pkg": "dnsmasq"
