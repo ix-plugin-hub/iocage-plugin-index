@@ -4,20 +4,19 @@
 	"release": "12.1-RELEASE",
 	"artifact": "https://github.com/SumGuyV5/iocage-plugin-drupal8.git",
 	"pkgs": [
-		"php72-zlib",
+		"php74-zlib",
 		"mysql57-server",
 		"mysql57-client",
-		"php72-mysqli",
-		"php72-pdo_mysql",
-		"php72-curl",
-		"php72-gd",
-		"php72-extensions",
-		"php72",
-		"php72-hash",
+		"php74-mysqli",
+		"php74-pdo_mysql",
+		"php74-curl",
+		"php74-gd",
+		"php74-extensions",
+		"php74",
 		"apache24",
-		"mod_php72",
+		"mod_php74",
 		"drupal8",
-		"drush-php72"
+		"drush-php74"
 	],
 	"properties": {
 		"dhcp": 1
