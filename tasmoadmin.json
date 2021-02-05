@@ -10,12 +10,12 @@
   "pkgs": [
     "bash",
     "nginx",
-    "php72",
-    "php72-curl",
-    "php72-filter",
-    "php72-json",
-    "php72-session",
-    "php72-zip",
+    "php74",
+    "php74-curl",
+    "php74-filter",
+    "php74-json",
+    "php74-session",
+    "php74-zip",
     "svnup"
   ],
   "packagesite": "http://pkg.FreeBSD.org/${ABI}/quarterly",
