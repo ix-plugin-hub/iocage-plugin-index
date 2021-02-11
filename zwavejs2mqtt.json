@@ -1,0 +1,43 @@
+{
+    "name": "zwavejs2mqtt",
+    "release": "12.2-RELEASE",
+    "artifact": "https://github.com/tprelog/iocage-zwavejs2mqtt.git",
+    "official": "false",
+    "devfs_ruleset": {
+        "paths": {
+            "zfs": null,
+            "bpf*": null,
+            "cua*": null
+        },
+        "includes": [
+            "1",
+            "2",
+            "3"
+        ]
+    },
+    "properties": {
+        "allow_raw_sockets": "1",
+        "dhcp": "1"
+    },
+    "pkgs": [
+        "bash",
+        "ca_root_nss",
+        "curl",
+        "git-lite",
+        "node",
+        "npm",
+        "python",
+        "rsync",
+        "wget"
+    ],
+    "packagesite": "http://pkg.FreeBSD.org/${ABI}/latest",
+    "fingerprints": {
+        "plugin-default": [
+            {
+                "function": "sha256",
+                "fingerprint": "b0170035af3acc5f3f3ae1859dc717101b4e6c1d0a794ad554928ca0cbb2f438"
+            }
+        ]
+    },
+    "revision": "0"
+}
