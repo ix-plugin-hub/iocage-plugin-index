@@ -50,7 +50,7 @@
     "dnsmasq": {
         "MANIFEST": "dnsmasq.json",
         "description": "Network infrastructure management for small networks: DNS, DHCP, router advertisement, and network boot.",
-        "icon": "https://icons.freenas.org/community-icons/dnsmasq.png",
+        "icon": "https://icons.freenas.org/community-icons/dnsmasq.svg",
         "name": "Dnsmasq",
         "official": false,
         "primary_pkg": "dnsmasq"
@@ -183,6 +183,14 @@
         "official": false,
         "primary_pkg": "jackett"
     },
+    "lidarr": {
+        "MANIFEST": "lidarr.json",
+        "description": "Fork of Sonarr. Automatically download music in the style of Couchpotato.",
+        "icon": "https://raw.githubusercontent.com/lidarr/Lidarr/develop/Logo/128.png",
+        "name": "Lidarr",
+        "official": false,
+        "primary_pkg": "lidarr"
+    },
     "madsonic": {
         "MANIFEST": "madsonic.json",
         "description": "Open source media streaming software and music player.",
@@ -190,6 +198,15 @@
         "name": "MadSonic",
         "official": false,
         "primary_pkg": null
+    },
+    "monica": {
+        "MANIFEST": "monica.json",
+        "name": "Monica",
+        "icon": "https://icons.freenas.org/community-icons/monica.png",
+        "description": "Personal CRM. Remember everything about your friends, family and business relationships.",
+        "official": false,
+        "primary_pkg": null,
+        "homepage": "https://www.monicahq.com"
     },
     "mosquitto": {
         "MANIFEST": "mosquitto.json",
@@ -281,6 +298,16 @@
         "primary_pkg": "radarr",
         "category": "content",
         "homepage": "https://radarr.video/"
+    },
+    "rslsync": {
+        "MANIFEST": "rslsync.json",
+        "name": "rslsync",
+        "icon": "https://icons.freenas.org/community-icons/rslsync.png",
+        "description": "Resilient, fast and scalable file sync software for enterprises and individuals.",
+        "official": false,
+        "primary_pkg": "null",
+        "category": "content",
+        "homepage": "https://www.resilio.com/"
     },
     "rtorrent-flood": {
         "MANIFEST": "rtorrent-flood.json",
@@ -384,16 +411,6 @@
         "category": "security",
         "homepage": "https://www.clamav.net/"
     },
-    "couchpotato": {
-        "MANIFEST": "couchpotato.json",
-        "name": "CouchPotato",
-        "icon": "https://icons.freenas.org/community-icons/couchpotato.png",
-        "description": "Automatic NZB and torrent downloader.",
-        "official": false,
-        "primary_pkg": "couchpotato",
-        "category": "content",
-        "homepage": "https://couchpota.to/"
-    },
     "emby": {
         "MANIFEST": "emby.json",
         "name": "Emby",
@@ -464,6 +481,16 @@
         "category": "content",
         "homepage": "http://qbittorrent.org/"
     },
+    "vault": {
+        "MANIFEST": "vault.json",
+        "name": "vault",
+        "icon": "https://icons.freenas.org/community-icons/vault.png",
+        "description": "Manage secrets and protect sensitive data.",
+        "official": false,
+        "primary_pkg": "vault",
+        "category": "devops",
+        "homepage": "https://www.vaultproject.io/"
+    },
     "zoneminder": {
         "MANIFEST": "zoneminder.json",
         "name": "Zoneminder",
@@ -473,5 +500,13 @@
         "primary_pkg": "zoneminder",
         "category": "security",
         "homepage": "https://zoneminder.com/"
+    },
+    "zwavejs2mqtt": {
+        "MANIFEST": "zwavejs2mqtt.json",
+        "name": "Z-WaveJS to MQTT",
+        "description": "Fully configurable Zwave to MQTT gateway and Control Panel using NodeJS and Vue. This also includes the Z-Wave JS Web Socket Server!",
+        "icon": "https://icons.freenas.org/community-icons/zwavejs2mqtt.png",
+        "primary_pkg": null,
+        "official": false
     }
 }
