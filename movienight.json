@@ -2,7 +2,7 @@
     "name": "movienight",
     "plugin_schema": "2",
     "release": "12.1-RELEASE",
-    "artifact": "https://github.com/zorglube/freenas-iocage-movienight.git",
+    "artifact": "https://github.com/zorglube/iocage-plugin-movienight.git",
     "official": false,
     "properties": {
         "dhcp": 1
