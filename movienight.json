@@ -9,7 +9,6 @@
     },
     "pkgs": [
         "nano",
-        "gzip",
         "wget",
         "ca_root_nss"
     ],
