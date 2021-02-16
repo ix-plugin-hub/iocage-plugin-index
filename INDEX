@@ -7,13 +7,15 @@
         "official": false,
         "primary_pkg": null
     },
-    "bind": {
-        "MANIFEST": "bind.json",
-        "description": "BIND DNS server",
-        "icon": "https://icons.freenas.org/community-icons/bind.png",
-        "name": "Bind DNS",
+    "backuppc": {
+        "MANIFEST": "backuppc.json",
+        "name": "BackupPC",
+        "icon": "https://icons.freenas.org/community-icons/backuppc.png",
+        "description": "Enterprise-grade system for backing up Linux, Windows, and MacOSX computers to a server.",
         "official": false,
-        "primary_pkg": "bind916"
+        "primary_pkg": "backuppc4",
+        "category": "security",
+        "homepage": "http://backuppc.sourceforge.net/"
     },
     "bazarr": {
         "MANIFEST": "bazarr.json",
@@ -22,6 +24,14 @@
         "name": "Bazarr",
         "official": false,
         "primary_pkg": null
+    },
+   "bind": {
+        "MANIFEST": "bind.json",
+        "description": "BIND DNS server",
+        "icon": "https://icons.freenas.org/community-icons/bind.png",
+        "name": "Bind DNS",
+        "official": false,
+        "primary_pkg": "bind916"
     },
     "calibre-web": {
         "MANIFEST": "calibre-web.json",
@@ -38,6 +48,16 @@
         "name": "Channels DVR",
         "official": false,
         "primary_pkg": ""
+    },
+    "clamav": {
+        "MANIFEST": "clamav.json",
+        "name": "ClamAV",
+        "icon": "https://icons.freenas.org/community-icons/clamav.png",
+        "description": "Open source antivirus engine for detecting trojans, viruses, malware, and other malicious threats.",
+        "official": false,
+        "primary_pkg": "clamav",
+        "category": "security",
+        "homepage": "https://www.clamav.net/"
     },
     "deluge-pip": {
         "MANIFEST": "deluge-pip.json",
@@ -71,6 +91,16 @@
         "icon": "https://icons.freenas.org/community-icons/duplicati.png",
         "primary_pkg": "",
         "category": "backup"
+    },
+    "emby": {
+        "MANIFEST": "emby.json",
+        "name": "Emby",
+        "icon": "https://icons.freenas.org/community-icons/emby.png",
+        "description": "Home media server to organize, play, and stream audio and video to a variety of devices.",
+        "official": false,
+        "primary_pkg": "emby-server",
+        "category": "entertainment",
+        "homepage": "https://emby.media/"
     },
     "emby-server-stable": {
         "MANIFEST": "emby-server-stable.json",
@@ -183,6 +213,26 @@
         "official": false,
         "primary_pkg": "jackett"
     },
+    "jenkins": {
+        "MANIFEST": "jenkins.json",
+        "name": "Jenkins",
+        "icon": "https://icons.freenas.org/community-icons/jenkins.png",
+        "description": "Open source build automation software.",
+        "official": false,
+        "primary_pkg": "jenkins",
+        "category": "devops",
+        "homepage": "https://jenkins.io/"
+    },
+    "jenkins-lts": {
+        "MANIFEST": "jenkins-lts.json",
+        "name": "Jenkins (LTS)",
+        "icon": "https://icons.freenas.org/community-icons/jenkins.png",
+        "description": "Open source build automation software. (Long Term Support Version)",
+        "official": false,
+        "primary_pkg": "jenkins-lts",
+        "category": "devops",
+        "homepage": "https://jenkins.io/"
+    },
     "lidarr": {
         "MANIFEST": "lidarr.json",
         "description": "Fork of Sonarr. Automatically download music in the style of Couchpotato.",
@@ -232,6 +282,16 @@
         "official": false,
         "primary_pkg": null
     },
+    "mineos": {
+        "MANIFEST": "mineos.json",
+        "name": "MineOS",
+        "icon": "https://icons.freenas.org/community-icons/mineos.png",
+        "description": "Set up and manage Minecraft servers.",
+        "official": false,
+        "primary_pkg": null,
+        "category": "entertainment",
+        "homepage": "https://minecraft.codeemo.com/"
+    },
     "netdata": {
         "MANIFEST": "netdata.json",
         "description": "Monitor everything in real-time",
@@ -280,6 +340,16 @@
         "name": "PrivateBin",
         "official": false,
         "primary_pkg": "privatebin"
+    },
+    "qbittorrent": {
+        "MANIFEST": "qbittorrent.json",
+        "name": "qbittorrent",
+        "icon": "https://icons.freenas.org/community-icons/qbittorrent.png",
+        "description": "Open source Bittorent client written in C++ and QT.",
+        "official": false,
+        "primary_pkg": "qbittorrent-nox",
+        "category": "content",
+        "homepage": "http://qbittorrent.org/"
     },
     "quasselcore": {
         "MANIFEST": "quasselcore.json",
@@ -351,6 +421,26 @@
         "primary_pkg": null,
         "official": false
     },
+    "tautulli": {
+        "MANIFEST": "tautulli.json",
+        "name": "Tautulli",
+        "icon": "https://icons.freenas.org/community-icons/tautulli.png",
+        "description": "Monitors analytics and notifications for Plex Media Server. (formerly known as PlexPy)",
+        "official": false,
+        "primary_pkg": null,
+        "category": "entertainment",
+        "homepage": "https://tautulli.com/"
+    },
+    "transmission": {
+        "MANIFEST": "transmission.json",
+        "name": "Transmission",
+        "icon": "https://icons.freenas.org/community-icons/transmission.png",
+        "description": "Fast and lightweight BitTorrent client.",
+        "official": false,
+        "primary_pkg": "transmission-daemon",
+        "category": "content",
+        "homepage": "https://transmissionbt.com/"
+    },
     "unificontroller": {
         "MANIFEST": "unificontroller.json",
         "description": "Software-Defined Networking platform that provides an end-to-end system of network devices across different locations.",
@@ -366,6 +456,16 @@
         "name": "unificontroller-lts",
         "official": false,
         "primary_pkg": "unifi-lts"
+    },
+    "vault": {
+        "MANIFEST": "vault.json",
+        "name": "vault",
+        "icon": "https://icons.freenas.org/community-icons/vault.png",
+        "description": "Manage secrets and protect sensitive data.",
+        "official": false,
+        "primary_pkg": "vault",
+        "category": "devops",
+        "homepage": "https://www.vaultproject.io/"
     },
     "weechat": {
         "MANIFEST": "weechat.json",
@@ -383,114 +483,6 @@
         "official": false,
         "primary_pkg": "xmrig"
     },
-    "zrepl": {
-        "MANIFEST": "zrepl.json",
-        "description": "zrepl is a one-stop, integrated solution for ZFS replication.",
-        "icon": "https://icons.freenas.org/community-icons/zrepl.png",
-        "name": "zrepl",
-        "official": false,
-        "primary_pkg": "zrepl"
-    },
-    "backuppc": {
-        "MANIFEST": "backuppc.json",
-        "name": "BackupPC",
-        "icon": "https://icons.freenas.org/community-icons/backuppc.png",
-        "description": "Enterprise-grade system for backing up Linux, Windows, and MacOSX computers to a server.",
-        "official": false,
-        "primary_pkg": "backuppc4",
-        "category": "security",
-        "homepage": "http://backuppc.sourceforge.net/"
-    },
-    "clamav": {
-        "MANIFEST": "clamav.json",
-        "name": "ClamAV",
-        "icon": "https://icons.freenas.org/community-icons/clamav.png",
-        "description": "Open source antivirus engine for detecting trojans, viruses, malware, and other malicious threats.",
-        "official": false,
-        "primary_pkg": "clamav",
-        "category": "security",
-        "homepage": "https://www.clamav.net/"
-    },
-    "emby": {
-        "MANIFEST": "emby.json",
-        "name": "Emby",
-        "icon": "https://icons.freenas.org/community-icons/emby.png",
-        "description": "Home media server to organize, play, and stream audio and video to a variety of devices.",
-        "official": false,
-        "primary_pkg": "emby-server",
-        "category": "entertainment",
-        "homepage": "https://emby.media/"
-    },
-    "jenkins": {
-        "MANIFEST": "jenkins.json",
-        "name": "Jenkins",
-        "icon": "https://icons.freenas.org/community-icons/jenkins.png",
-        "description": "Open source build automation software.",
-        "official": false,
-        "primary_pkg": "jenkins",
-        "category": "devops",
-        "homepage": "https://jenkins.io/"
-    },
-    "jenkins-lts": {
-        "MANIFEST": "jenkins-lts.json",
-        "name": "Jenkins (LTS)",
-        "icon": "https://icons.freenas.org/community-icons/jenkins.png",
-        "description": "Open source build automation software. (Long Term Support Version)",
-        "official": false,
-        "primary_pkg": "jenkins-lts",
-        "category": "devops",
-        "homepage": "https://jenkins.io/"
-    },
-    "mineos": {
-        "MANIFEST": "mineos.json",
-        "name": "MineOS",
-        "icon": "https://icons.freenas.org/community-icons/mineos.png",
-        "description": "Set up and manage Minecraft servers.",
-        "official": false,
-        "primary_pkg": null,
-        "category": "entertainment",
-        "homepage": "https://minecraft.codeemo.com/"
-    },
-    "transmission": {
-        "MANIFEST": "transmission.json",
-        "name": "Transmission",
-        "icon": "https://icons.freenas.org/community-icons/transmission.png",
-        "description": "Fast and lightweight BitTorrent client.",
-        "official": false,
-        "primary_pkg": "transmission-daemon",
-        "category": "content",
-        "homepage": "https://transmissionbt.com/"
-    },
-    "tautulli": {
-        "MANIFEST": "tautulli.json",
-        "name": "Tautulli",
-        "icon": "https://icons.freenas.org/community-icons/tautulli.png",
-        "description": "Monitors analytics and notifications for Plex Media Server. (formerly known as PlexPy)",
-        "official": false,
-        "primary_pkg": null,
-        "category": "entertainment",
-        "homepage": "https://tautulli.com/"
-    },
-    "qbittorrent": {
-        "MANIFEST": "qbittorrent.json",
-        "name": "qbittorrent",
-        "icon": "https://icons.freenas.org/community-icons/qbittorrent.png",
-        "description": "Open source Bittorent client written in C++ and QT.",
-        "official": false,
-        "primary_pkg": "qbittorrent-nox",
-        "category": "content",
-        "homepage": "http://qbittorrent.org/"
-    },
-    "vault": {
-        "MANIFEST": "vault.json",
-        "name": "vault",
-        "icon": "https://icons.freenas.org/community-icons/vault.png",
-        "description": "Manage secrets and protect sensitive data.",
-        "official": false,
-        "primary_pkg": "vault",
-        "category": "devops",
-        "homepage": "https://www.vaultproject.io/"
-    },
     "zoneminder": {
         "MANIFEST": "zoneminder.json",
         "name": "Zoneminder",
@@ -500,6 +492,14 @@
         "primary_pkg": "zoneminder",
         "category": "security",
         "homepage": "https://zoneminder.com/"
+    },
+    "zrepl": {
+        "MANIFEST": "zrepl.json",
+        "description": "zrepl is a one-stop, integrated solution for ZFS replication.",
+        "icon": "https://icons.freenas.org/community-icons/zrepl.png",
+        "name": "zrepl",
+        "official": false,
+        "primary_pkg": "zrepl"
     },
     "zwavejs2mqtt": {
         "MANIFEST": "zwavejs2mqtt.json",
