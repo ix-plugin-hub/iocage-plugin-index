@@ -9,11 +9,9 @@
     },
     "pkgs": [
         "nano",
-        "bash",
         "gzip",
-        "ca_root_nss",
-        "git",
-        "lang/go"
+        "wget",
+        "ca_root_nss"
     ],
     "packagesite": "http://pkg.FreeBSD.org/${ABI}/latest",
     "fingerprints": {
