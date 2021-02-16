@@ -12,7 +12,8 @@
         "py37-sqlite3",
         "py37-ldap",
         "calibre",
-        "unrar"
+        "unrar",
+        "ImageMagick7"
     ],
     "properties": {
         "nat": 1,
