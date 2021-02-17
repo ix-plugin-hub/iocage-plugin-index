@@ -2,7 +2,7 @@
     "name": "movienight",
     "plugin_schema": "2",
     "release": "12.2-RELEASE",
-    "artifact": "https://github.com/tprelog/iocage-plugin-movienight.git",
+    "artifact": "https://github.com/zorglube/iocage-plugin-movienight.git",
     "official": false,
     "properties": {
         "dhcp": 1
