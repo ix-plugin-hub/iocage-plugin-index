@@ -8,10 +8,10 @@
         "dhcp": 1
     },
     "pkgs": [
-        "nano",
-        "gzip",
-        "wget",
-        "ca_root_nss"
+        "bash",
+        "ca_root_nss",
+        "git-lite",
+        "go"
     ],
     "packagesite": "http://pkg.FreeBSD.org/${ABI}/latest",
     "fingerprints": {
