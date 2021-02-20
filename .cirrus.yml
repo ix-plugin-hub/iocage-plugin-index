@@ -21,6 +21,7 @@ install_backuppc_task:
       cp -r plugin/overlay /
     fi
 
+    ls -l cat usr/local/etc/apache24/httpd.conf
     pkg remove -y git-lite
 
     pkg_dir=/usr/local/test
