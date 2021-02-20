@@ -9,6 +9,9 @@ jobs:
     name: Get Changed files
 
     steps:
+      outputs:
+        files: ${{ steps.getfile.outputs.files }}
+
       - name: checkout
         uses: actions/checkout@v2
         with:
@@ -18,13 +21,6 @@ jobs:
         id: getfile
         run: |
           echo "::set-output name=files::$(git diff origin/master... --name-only | xargs)"
-
-      - name: echo the changed files
-        run: |
-          for i in ${{ steps.getfile.outputs.files }}
-          do
-              echo $i
-          done
 
   test-install:
     runs-on: macos-latest
@@ -36,10 +32,18 @@ jobs:
         uses: vmactions/freebsd-vm@v0.1.2
         with:
           usesh: true
-          prepare: pkg install -y curl
+          prepare: |
+            pkg update
+            pkg install jq
           run: |
-            pwd
-            ls -lah
-            whoami
-            env
             freebsd-version
+
+            for i in ${{ needs.changed-files.outputs.files }}
+            do
+                release=$(jq '.release' $i)
+                if [[ $a == "12.2"* ]]
+                then
+                  echo "Testing install plugin pkgs from $i"
+                fi
+            done
+
