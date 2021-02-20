@@ -30,12 +30,17 @@ install_backuppc_task:
     for repo_name in $fingerprints
     do
       repo_path="${FINGERPRINTS}/$repo_name/trusted"
+      echo "Creating file: ${repo_path}"
       mkdir -p ${repo_path}
-      repos=$(jq '."fingerprints"."'${repo_name}'"[]' $plugin_file)
+
+      repo_fingerprints=$(jq '."fingerprints"."'${repo_name}'"[]' $plugin_file)
 
       repo_count=1
-      for r in $repos
+      for f in $repo_fingerprints
       do
+        echo "Creating fingerprint file for repo:"
+        echo $r
+
         function=$(echo $r | jq -r '.function')
         fingerprint=$(echo $r | jq -r '.fingerprint')
         file_path=${repo_path}/${repo_name}_${repo_count}
