@@ -14,7 +14,6 @@ install_backuppc_task:
     plugin_repo=$(jq '.artifact' $plugin_file)
 
     pkg install -y git-lite
-    mkdir plugin
     git clone ${plugin_repo} plugin
     pkg remove -y git-lite
 
