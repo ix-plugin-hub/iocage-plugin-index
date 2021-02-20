@@ -34,7 +34,7 @@ jobs:
           usesh: true
           prepare: |
             pkg update
-            pkg install jq
+            pkg install -y jq
           run: |
             freebsd-version
 
@@ -44,6 +44,10 @@ jobs:
                 if [[ $a == "12.2"* ]]
                 then
                   echo "Testing install plugin pkgs from $i"
+
+                  pkgs=$(jq '.pkgs[]' $i)
+                  echo "$i pkgs: $pkgs"
+                  pkg install -y $pkgs
                 fi
             done
 
