@@ -4,7 +4,7 @@ on: [push]
 #on: [pull_request]
 
 jobs:
-  runs-on: macos-latest
+  runs-on: ubuntu-latest
   name: Test FreeBSD job
   steps:
     - name: checkout
