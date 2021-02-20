@@ -19,7 +19,7 @@ install_backuppc_task:
 
     echo "Creating main repos dir: ${repos_dir}"
     mkdir -p $repos_dir
-    export REPOS_URL=$repos_dir
+    export REPOS_DIR=$repos_dir
 
     pkg_conf_path="${pk_dir}/test.conf"
     echo "iocage-plugins: {" > $pkg_conf_path
