@@ -13,7 +13,7 @@ jobs:
       - name: get changed plugin files
         id: changed_plugins
         run: |
-          plugin_files=$(git diff origin/master... --name-only | grep .json)
+          plugin_files=$(git diff origin/master --name-only | grep .json)
           echo $plugin_files
           echo "::set-output name=files::${plugin_files}"
 
