@@ -8,6 +8,11 @@ install_backuppc_task:
     plugin_file=backuppc.json
     release=$(jq -r '.release' $plugin_file)
     name=$(jq '.name' $plugin_file)
+    packagesite=$(jq '.packagesite' $plugin_file)
+
+    major_freebsd_release=$(freebsd-version | cut -d "." -f1)
+    export ABI="FreeBSD:${major_freebsd_release}:amd64"
+    export PACKAGESITE=${packagesite}
 
     echo "Testing install plugin pkgs for plugin: $name"
 
