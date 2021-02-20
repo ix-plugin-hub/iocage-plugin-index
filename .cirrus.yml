@@ -37,10 +37,10 @@ install_backuppc_task:
       for f in $repo_fingerprints
       do
         echo "Creating fingerprint file for repo:"
-        echo $r
+        echo $f
 
-        function=$(echo $r | jq -r '.function')
-        fingerprint=$(echo $r | jq -r '.fingerprint')
+        function=$(echo $f | jq -r '.function')
+        fingerprint=$(echo $f | jq -r '.fingerprint')
         file_path=${repo_path}/${repo_name}_${repo_count}
 
         echo "Creating new fingerprint file: ${file_path}"
