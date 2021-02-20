@@ -23,7 +23,7 @@ install_backuppc_task:
 
     pkg_conf_path="${pkg_dir}/test.conf"
     echo "iocage-plugins: {" > $pkg_conf_path
-    echo "url: \"$packagesite\"," >> $pkg_conf_path
+    echo "url: $packagesite," >> $pkg_conf_path
     echo "signature_type: \"fingerprints\"," >> $pkg_conf_path
     echo "fingerprints \"${pkg_dir}\"," >> $pkg_conf_path
     echo "enabled: true" >> $pkg_conf_path
