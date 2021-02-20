@@ -21,7 +21,7 @@ install_backuppc_task:
     mkdir -p $repos_dir
     export REPOS_DIR=$repos_dir
 
-    mkdir -p $fingerprints_dir
+    mkdir -p "$fingerprints_dir/trusted"
 
     pkg_conf_path="${repos_dir}/test.conf"
     echo "iocage-plugins: {" > $pkg_conf_path
@@ -46,7 +46,7 @@ install_backuppc_task:
 
         function=$(echo $f | jq -r '.function')
         fingerprint=$(echo $f | jq -r '.fingerprint')
-        file_path=${fingerprints_dir}/${repo_name}_${repo_count}
+        file_path=${fingerprints_dir}/trusted/${repo_name}_${repo_count}
 
         echo "Creating new fingerprint file: ${file_path}"
 
@@ -59,7 +59,7 @@ install_backuppc_task:
 
     pkg update
 
-    echo "Testing install plugin pkgs for plugin: $name"
+    echo "Test install plugin pkgs for plugin: $name"
     pkgs=$(jq -r '.pkgs | join(" ")' $plugin_file)
     echo "Installing $name pkgs: $pkgs"
     pkg install -y $pkgs
