@@ -59,7 +59,14 @@ install_backuppc_task:
       done
     done
 
+    pkg update
+
     echo "Testing install plugin pkgs for plugin: $name"
     pkgs=$(jq -r '.pkgs[]' $plugin_file)
     echo "Installing $name pkgs: $pkgs"
     pkg install -y $pkgs
+
+    plugin_archive=$(echo $plugin_repo | sed 's/\.git/\/archive\/master.zip/')
+    fetch ${plugin_archive} plugin.zip
+    mkdir plugin
+    unzip -d plugin plugin.zip
