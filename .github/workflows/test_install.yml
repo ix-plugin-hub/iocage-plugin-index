@@ -27,6 +27,7 @@ jobs:
   test-install:
     runs-on: macos-latest
     name: Test FreeBSD job
+    needs: changed-files
 
     steps:
       - name: Test in FreeBSD
