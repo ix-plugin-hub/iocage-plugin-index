@@ -14,14 +14,14 @@ install_backuppc_task:
     plugin_repo=$(jq -r '.artifact' $plugin_file)
 
     pkg install -y git-lite
-    git clone ${plugin_repo} plugin
-    if [ -d "/plugin/overlay" ];
+    git clone ${plugin_repo} ./plugin
+    if [ -d "./plugin/overlay" ];
     then
       echo "Found overlay folder";
-      cp -r plugin/overlay /
+      cp -r ./plugin/overlay /
     fi
 
-    ls -l cat usr/local/etc/apache24/httpd.conf
+    cat /usr/local/etc/apache24/httpd.conf
     pkg remove -y git-lite
 
     pkg_dir=/usr/local/test
