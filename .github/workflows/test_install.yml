@@ -33,14 +33,14 @@ jobs:
 
             for plugin_file in ${{ steps.changed_plugins.outputs.files }}
             do
-                release=$(jq '.release' $plugin_file)
+                release=$(jq -r '.release' $plugin_file)
                 name=$(jq '.name' $plugin_file)
 
                 if [ "$release" = "12.2-RELEASE" ]
                 then
                   echo "Testing install plugin pkgs for plugin $name"
 
-                  pkgs=$(jq '.pkgs[]' $plugin_file)
+                  pkgs=$(jq -r '.pkgs[]' $plugin_file)
                   echo "Installing $name pkgs: $pkgs"
                   pkg install -y $pkgs
                 else
