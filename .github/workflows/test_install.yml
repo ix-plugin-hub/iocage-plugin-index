@@ -29,16 +29,19 @@ jobs:
             ls -l
             freebsd-version
 
-            for i in ${{ steps.changed_plugins.outputs.files }}
+            for plugin_file in ${{ steps.changed_plugins.outputs.files }}
             do
-                release=$(jq '.release' $i)
-                if [[ $a == "12.2"* ]]
+                release=$(jq '.release' $plugin_file)
+                name=$(jq '.name' $plugin_file)
+                if [ "$release" = "12.2-RELEASE" ]
                 then
-                  echo "Testing install plugin pkgs from $i"
+                  echo "Testing install plugin pkgs for plugin $name"
 
                   pkgs=$(jq '.pkgs[]' $i)
                   echo "$i pkgs: $pkgs"
                   pkg install -y $pkgs
+                else
+                  echo "Plugin: $name has a release: $release older than latest FreeBSD version"
                 fi
             done
 
