@@ -25,6 +25,8 @@ install_backuppc_task:
     export SIGNATURE_TYPE=FINGERPRINTS
     export FINGERPRINTS=/usr/local/etc/pkg/fingerprints
 
+    printenv
+
     for repo_name in $fingerprints
     do
       repo_path="${FINGERPRINTS}/$repo_name/trusted"
