@@ -37,6 +37,8 @@ install_backuppc_task:
         fingerprint=$(echo $r | jq -r '.fingerprint')
         file_path=${repo_path}/${repo_name}_${repo_count}
 
+        echo "Creating new fingerprint file: ${file_path}"
+
         echo "function: $function" > ${file_path}
         echo "fingerprint: $fingerprint" >> ${file_path}
 
