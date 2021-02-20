@@ -6,7 +6,6 @@ jobs:
   test-install:
     runs-on: macos-latest
     name: Test install updated plugins
-    needs: changed-files
 
     steps:
       - uses: actions/checkout@v2
