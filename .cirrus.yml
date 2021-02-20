@@ -32,7 +32,7 @@ install_backuppc_task:
     echo "Created test pkg config file:"
     cat $pkg_conf_path
 
-    $trusted_fingerprints="$fingerprints_dir/trusted"
+    trusted_fingerprints="$fingerprints_dir/trusted"
     mkdir -p "${trusted_fingerprints}"
 
     for repo_name in $fingerprints
