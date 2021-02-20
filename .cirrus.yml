@@ -47,7 +47,7 @@ install_backuppc_task:
 
         function=$(echo $f | jq -r '.function')
         fingerprint=$(echo $f | jq -r '.fingerprint')
-        file_path=${trusted_fingerprints_dir}/${repo_name}_${repo_count}
+        file_path=${trusted_fingerprints}/${repo_name}_${repo_count}
 
         echo "Creating new fingerprint file: ${file_path}"
 
