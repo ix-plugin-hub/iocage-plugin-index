@@ -1,16 +1,17 @@
 freebsd_instance:
   image_family: freebsd-12-2
   cpu: 1
-  memory: 1
+  memory: "1"
 
 install_backuppc_task:
-  install_script: pkg install -y jq
-  test_script: |
+  requirements_script: pkg install -y jq git
+  install_script: |
     plugin_file=backuppc.json
     release=$(jq -r '.release' $plugin_file)
     name=$(jq '.name' $plugin_file)
     packagesite=$(jq '.packagesite' $plugin_file)
     fingerprints=$(jq -r '.fingerprints | keys[]' backuppc.json)
+    plugin_repo=$(jq '.artifact' $plugin_file)
 
     echo "Parsed plugin info"
     echo "Release: $release"
@@ -18,18 +19,33 @@ install_backuppc_task:
     echo "Packagesite: $packagesite"
     echo "Fingerprints: $fingerprints"
 
+    pkg_dir=/usr/local/test
+    repos_dir="${pkg_dir}/repos"
+    fingerprint_dir="${pkg_dir}/fingerprints"
+
+    echo "Creating main repos dir: ${repos_dir}"
+    mkdir -p $repos_dir
+    export REPOS_URL=$repos_dir
+
     major_freebsd_release=$(freebsd-version | cut -d "." -f1)
     ABI="FreeBSD:${major_freebsd_release}:amd64"
-    echo "Setting PACKAGESITE env var to: ${packagesite}"
-    export PACKAGESITE=${packagesite}
-    export SIGNATURE_TYPE=FINGERPRINTS
-    export FINGERPRINTS=/usr/local/etc/pkg/fingerprints
+
+    pkg_conf_path="${pk_dir}/test.conf"
+    echo "iocage-plugins: {" > $pkg_conf_path
+    echo "url: \"$packagesite\"," >> $pkg_conf_path
+    echo "signature_type: \"fingerprints\"," >> $pkg_conf_path
+    echo "fingerprints \"${pkg_dir}\"," >> $pkg_conf_path
+    echo "enabled: true" >> $pkg_conf_path
+    echo } >> $pkg_conf_path
+
+    echo "Created test pkg config file:"
+    cat $pkg_conf_path
 
     for repo_name in $fingerprints
     do
-      repo_path="${FINGERPRINTS}/$repo_name/trusted"
-      echo "Creating file: ${repo_path}"
-      mkdir -p ${repo_path}
+      f_path="${fingerprint_dir}/$repo_name/trusted"
+      echo "Creating file: ${f_path}"
+      mkdir -p ${f_path}
 
       repo_fingerprints=$(jq -rc '."fingerprints"."'${repo_name}'"[]' $plugin_file)
 
@@ -41,7 +57,7 @@ install_backuppc_task:
 
         function=$(echo $f | jq -r '.function')
         fingerprint=$(echo $f | jq -r '.fingerprint')
-        file_path=${repo_path}/${repo_name}_${repo_count}
+        file_path=${f_path}/${repo_name}_${repo_count}
 
         echo "Creating new fingerprint file: ${file_path}"
 
