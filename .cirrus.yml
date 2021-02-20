@@ -21,6 +21,8 @@ install_backuppc_task:
     mkdir -p $repos_dir
     export REPOS_DIR=$repos_dir
 
+    mkdir -p $fingerprints_dir
+
     pkg_conf_path="${pkg_dir}/test.conf"
     echo "iocage-plugins: {" > $pkg_conf_path
     echo "url: $packagesite," >> $pkg_conf_path
