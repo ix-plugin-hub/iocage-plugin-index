@@ -11,7 +11,7 @@ install_backuppc_task:
     name=$(jq '.name' $plugin_file)
     packagesite=$(jq '.packagesite' $plugin_file)
     fingerprints=$(jq -r '.fingerprints | keys[]' backuppc.json)
-    plugin_repo=$(jq '.artifact' $plugin_file)
+    plugin_repo=$(jq -r '.artifact' $plugin_file)
 
     pkg install -y git-lite
     git clone ${plugin_repo} plugin
