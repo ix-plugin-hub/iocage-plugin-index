@@ -29,7 +29,7 @@ install_backuppc_task:
     do
       repo_path="${FINGERPRINTS}/$repo_name/trusted"
       mkdir -p ${repo_path}
-      repos=$(jq '."fingerprints"."'${repo_name}'"' $plugin_file)
+      repos=$(jq '."fingerprints"."'${repo_name}'"[]' $plugin_file)
 
       repo_count=1
       for r in $repos
