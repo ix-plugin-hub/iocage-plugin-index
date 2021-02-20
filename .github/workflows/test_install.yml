@@ -3,27 +3,6 @@ name: Test installing plugins
 on: [push]
 
 jobs:
-
-  changed-files:
-    runs-on: ubuntu-latest
-    name: Get Changed files
-
-    outputs:
-      files: ${{ steps.getfiles.outputs.files }}
-
-    steps:
-      - name: checkout
-        uses: actions/checkout@v2
-        with:
-          fetch-depth: 0
-
-      - name: get changed files
-        id: getfiles
-        run: |
-          plugin_files=$(git diff origin/master... --name-only | grep .json)
-          echo $plugin_files
-          echo "::set-output name=files::${plugin_files}"
-
   test-install:
     runs-on: macos-latest
     name: Test install updated plugins
@@ -31,6 +10,14 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
+
+      - name: get changed plugin files
+        id: changed_plugins
+        run: |
+          plugin_files=$(git diff origin/master... --name-only | grep .json)
+          echo $plugin_files
+          echo "::set-output name=files::${plugin_files}"
+
       - name: Test in FreeBSD
         id: test
         uses: vmactions/freebsd-vm@v0.1.2
@@ -43,7 +30,7 @@ jobs:
             ls -l
             freebsd-version
 
-            for i in ${{ needs.changed-files.outputs.files }}
+            for i in ${{ steps.changed_plugins.outputs.files }}
             do
                 release=$(jq '.release' $i)
                 if [[ $a == "12.2"* ]]
