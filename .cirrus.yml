@@ -21,10 +21,12 @@ install_backuppc_task:
     export ABI="FreeBSD:${major_freebsd_release}:amd64"
     echo "Setting PACKAGESITE env var to: ${packagesite}"
     export PACKAGESITE=${packagesite}
+    export SIGNATURE_TYPE=FINGERPRINTS
+    export FINGERPRINTS=/usr/local/etc/pkg/fingerprints
 
     for repo_name in $fingerprints
     do
-      repo_path="/usr/local/etc/pkg/fingerprints/$repo_name/trusted"
+      repo_path="${FINGERPRINTS}/$repo_name/trusted"
       mkdir -p ${repo_path}
       repos=$(jq '."fingerprints"."'${repo_name}'"' $plugin_file)
 
