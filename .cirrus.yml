@@ -3,7 +3,7 @@ freebsd_instance:
 
 test_install:
   install_script: pkg install -y jq
-  script: |
+  test_script: |
     plugin_file=backuppc.json
     release=$(jq -r '.release' $plugin_file)
     name=$(jq '.name' $plugin_file)
