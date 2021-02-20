@@ -28,7 +28,7 @@ jobs:
             pkg update
             pkg install -y jq
           run: |
-            ls -l
+            echo "FreeBSD version:"
             freebsd-version
 
             for plugin_file in ${{ steps.changed_plugins.outputs.files }}
