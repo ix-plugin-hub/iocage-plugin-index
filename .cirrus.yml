@@ -4,7 +4,7 @@ freebsd_instance:
   memory: "1"
 
 install_backuppc_task:
-  requirements_script: pkg install -y jq git
+  requirements_script: pkg install -y jq
   install_script: |
     plugin_file=backuppc.json
     release=$(jq -r '.release' $plugin_file)
@@ -13,12 +13,6 @@ install_backuppc_task:
     fingerprints=$(jq -r '.fingerprints | keys[]' backuppc.json)
     plugin_repo=$(jq '.artifact' $plugin_file)
 
-    echo "Parsed plugin info"
-    echo "Release: $release"
-    echo "Name: $name"
-    echo "Packagesite: $packagesite"
-    echo "Fingerprints: $fingerprints"
-
     pkg_dir=/usr/local/test
     repos_dir="${pkg_dir}/repos"
     fingerprint_dir="${pkg_dir}/fingerprints"
@@ -26,9 +20,6 @@ install_backuppc_task:
     echo "Creating main repos dir: ${repos_dir}"
     mkdir -p $repos_dir
     export REPOS_URL=$repos_dir
-
-    major_freebsd_release=$(freebsd-version | cut -d "." -f1)
-    ABI="FreeBSD:${major_freebsd_release}:amd64"
 
     pkg_conf_path="${pk_dir}/test.conf"
     echo "iocage-plugins: {" > $pkg_conf_path
