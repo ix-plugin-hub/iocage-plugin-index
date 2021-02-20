@@ -55,6 +55,7 @@ install_backuppc_task:
       done
     done
 
+    pkg -vv
     pkg update
 
     echo "Testing install plugin pkgs for plugin: $name"
