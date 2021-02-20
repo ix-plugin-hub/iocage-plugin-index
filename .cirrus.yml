@@ -63,6 +63,7 @@ install_backuppc_task:
     echo "Installing $name pkgs: $pkgs"
     pkg install -y $pkgs
 
+    pkg install ca_root_nss
     plugin_archive=$(echo $plugin_repo | sed 's/\.git/\/archive\/master.zip/')
     fetch ${plugin_archive} plugin.zip
     mkdir plugin
