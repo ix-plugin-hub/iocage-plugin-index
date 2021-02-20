@@ -15,10 +15,8 @@ install_backuppc_task:
 
     pkg install -y git-lite
     mkdir plugin
-    git clone ${plugin_archive} plugin
+    git clone ${plugin_repo} plugin
     pkg remove -y git-lite
-
-
 
     pkg_dir=/usr/local/test
     repos_dir="${pkg_dir}/repos"
