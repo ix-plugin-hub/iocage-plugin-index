@@ -13,11 +13,10 @@ install_backuppc_task:
     fingerprints=$(jq -r '.fingerprints | keys[]' backuppc.json)
     plugin_repo=$(jq '.artifact' $plugin_file)
 
-    pkg install -y ca_root_nss
-    plugin_archive=$(echo $plugin_repo | sed 's/\.git/\/archive\/master.zip/')
-    fetch ${plugin_archive} plugin.zip
+    pkg install -y git-lite
     mkdir plugin
-    unzip -d plugin plugin.zip
+    git clone ${plugin_archive} plugin
+    pkg remove -y git-lite
 
 
 
