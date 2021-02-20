@@ -15,7 +15,7 @@ install_backuppc_task:
 
     pkg_dir=/usr/local/test
     repos_dir="${pkg_dir}/repos"
-    fingerprint_dir="${pkg_dir}/fingerprints"
+    fingerprints_dir="${pkg_dir}/fingerprints"
 
     echo "Creating main repos dir: ${repos_dir}"
     mkdir -p $repos_dir
@@ -25,7 +25,7 @@ install_backuppc_task:
     echo "iocage-plugins: {" > $pkg_conf_path
     echo "url: $packagesite," >> $pkg_conf_path
     echo "signature_type: \"fingerprints\"," >> $pkg_conf_path
-    echo "fingerprints \"${pkg_dir}\"," >> $pkg_conf_path
+    echo "fingerprints \"${fingerprints_dir}\"," >> $pkg_conf_path
     echo "enabled: true" >> $pkg_conf_path
     echo } >> $pkg_conf_path
 
@@ -34,10 +34,6 @@ install_backuppc_task:
 
     for repo_name in $fingerprints
     do
-      f_path="${fingerprint_dir}/$repo_name/trusted"
-      echo "Creating file: ${f_path}"
-      mkdir -p ${f_path}
-
       repo_fingerprints=$(jq -rc '."fingerprints"."'${repo_name}'"[]' $plugin_file)
 
       repo_count=1
@@ -48,7 +44,7 @@ install_backuppc_task:
 
         function=$(echo $f | jq -r '.function')
         fingerprint=$(echo $f | jq -r '.fingerprint')
-        file_path=${f_path}/${repo_name}_${repo_count}
+        file_path=${fingerprints_dir}/${repo_name}_${repo_count}
 
         echo "Creating new fingerprint file: ${file_path}"
 
