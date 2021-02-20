@@ -9,9 +9,7 @@ jobs:
     name: Get Changed files
 
     outputs:
-      files:
-        description: "changed json files"
-        value: ${{ steps.getfiles.outputs.files }}
+      files: ${{ steps.getfiles.outputs.files }}
 
     steps:
       - name: checkout
@@ -22,7 +20,9 @@ jobs:
       - name: get changed files
         id: getfiles
         run: |
-          echo "::set-output name=files::$(git diff origin/master... --name-only | grep .json)"
+          plugin_files=$(git diff origin/master... --name-only | grep .json)
+          echo $plugin_files
+          echo "::set-output name=files::${plugin_files}"
 
   test-install:
     runs-on: macos-latest
