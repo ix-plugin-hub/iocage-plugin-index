@@ -1,20 +1,23 @@
 name: Test installing plugins
 
 on: [push]
-#on: [pull_request]
 
 jobs:
-  runs-on: ubuntu-latest
-  name: Test FreeBSD job
-  steps:
-    - name: checkout
-      uses: actions/checkout@v2
-      with:
-        fetch-depth: 0
-    - name: get changed files
-      id: getfile
-      run: |
-        echo "::set-output name=files::$(git diff-tree --no-commit-id --name-only -r ${{ github.sha }}| xargs)"
+
+  changed-files:
+    runs-on: ubuntu_latest
+    name: Get Changed files
+
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+     - name: get changed files
+       id: getfile
+       run: |
+         echo "::set-output name=files::$(git diff-tree --no-commit-id --name-only -r ${{ github.sha }}| xargs)"
 
     - name: echo the changed files
       run: |
@@ -23,15 +26,20 @@ jobs:
             echo $i
         done
 
-    - name: Test in FreeBSD
-      id: test
-      uses: vmactions/freebsd-vm@v0.1.2
-      with:
-        usesh: true
-        prepare: pkg install -y curl
-        run: |
-          pwd
-          ls -lah
-          whoami
-          env
-          freebsd-version
+  test-install:
+    runs-on: macos-latest
+    name: Test FreeBSD job
+
+    steps:
+      - name: Test in FreeBSD
+        id: test
+        uses: vmactions/freebsd-vm@v0.1.2
+        with:
+          usesh: true
+          prepare: pkg install -y curl
+          run: |
+            pwd
+            ls -lah
+            whoami
+            env
+            freebsd-version
