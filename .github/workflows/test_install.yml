@@ -1,0 +1,24 @@
+name: Test installing plugins
+
+on: [push]
+#on: [pull_request]
+
+jobs:
+  runs-on: macos-latest
+  name: Test FreeBSD job
+  steps:
+    - name: checkout
+      uses: actions/checkout@v2
+      with:
+        fetch-depth: 0
+    - name: get changed files
+      id: getfile
+      run: |
+        echo "::set-output name=files::$(git diff-tree --no-commit-id --name-only -r ${{ github.sha }}| xargs)"
+
+    - name: echo the changed files
+      run: |
+        for i in ${{ steps.getfile.outputs.files }}
+        do
+            echo $i
+        done
