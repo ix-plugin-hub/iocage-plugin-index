@@ -19,13 +19,11 @@ install_backuppc_task:
     echo "Fingerprints: $fingerprints"
 
     major_freebsd_release=$(freebsd-version | cut -d "." -f1)
-    export ABI="FreeBSD:${major_freebsd_release}:amd64"
+    ABI="FreeBSD:${major_freebsd_release}:amd64"
     echo "Setting PACKAGESITE env var to: ${packagesite}"
     export PACKAGESITE=${packagesite}
     export SIGNATURE_TYPE=FINGERPRINTS
     export FINGERPRINTS=/usr/local/etc/pkg/fingerprints
-
-    printenv
 
     for repo_name in $fingerprints
     do
