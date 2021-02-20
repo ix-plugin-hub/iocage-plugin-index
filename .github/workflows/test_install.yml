@@ -4,12 +4,12 @@ on: [push]
 
 jobs:
 
-  changed-files:
+  changes:
     runs-on: ubuntu-latest
     name: Get Changed files
 
     outputs:
-      files: ${{ steps.getfile.outputs.files }}
+      files: ${{ steps.getfiles.outputs.files }}
 
     steps:
       - name: checkout
@@ -18,9 +18,9 @@ jobs:
           fetch-depth: 0
 
       - name: get changed files
-        id: getfile
+        id: getfiles
         run: |
-          echo "::set-output name=files::$(git diff origin/master... --name-only | xargs)"
+          echo "::set-output name=files::$(git diff origin/master... --name-only | grep .json)"
 
   test-install:
     runs-on: macos-latest
@@ -38,7 +38,7 @@ jobs:
           run: |
             freebsd-version
 
-            for i in ${{ needs.changed-files.outputs.files }}
+            for i in ${{ needs.changes.outputs.files }}
             do
                 release=$(jq '.release' $i)
                 if [[ $a == "12.2"* ]]
