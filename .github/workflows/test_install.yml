@@ -4,12 +4,14 @@ on: [push]
 
 jobs:
 
-  changes:
+  changed-files:
     runs-on: ubuntu-latest
     name: Get Changed files
 
     outputs:
-      files: ${{ steps.getfiles.outputs.files }}
+      files:
+        description: "changed json files"
+        value: ${{ steps.getfiles.outputs.files }}
 
     steps:
       - name: checkout
@@ -38,7 +40,7 @@ jobs:
           run: |
             freebsd-version
 
-            for i in ${{ needs.changes.outputs.files }}
+            for i in ${{ needs.changed-files.outputs.files }}
             do
                 release=$(jq '.release' $i)
                 if [[ $a == "12.2"* ]]
