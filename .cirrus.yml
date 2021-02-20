@@ -9,13 +9,40 @@ install_backuppc_task:
     release=$(jq -r '.release' $plugin_file)
     name=$(jq '.name' $plugin_file)
     packagesite=$(jq '.packagesite' $plugin_file)
+    fingerprints=$(jq -r '.fingerprints | keys[]' backuppc.json)
+
+    echo "Parsed plugin info"
+    echo "Release: $release"
+    echo "Name: $name"
+    echo "Packagesite: $packagesite"
+    echo "Fingerprints: $fingerprints"
 
     major_freebsd_release=$(freebsd-version | cut -d "." -f1)
     export ABI="FreeBSD:${major_freebsd_release}:amd64"
+    echo "Setting PACKAGESITE env var to: ${packagesite}"
     export PACKAGESITE=${packagesite}
 
-    echo "Testing install plugin pkgs for plugin: $name"
+    for repo_name in $fingerprints
+    do
+      repo_path="/usr/local/etc/pkg/fingerprints/$repo_name/trusted"
+      mkdir -p ${repo_path}
+      repos=$(jq '."fingerprints"."'${repo_name}'"' $plugin_file)
 
+      repo_count=1
+      for r in $repos
+      do
+        function=$(echo $r | jq -r '.function')
+        fingerprint=$(echo $r | jq -r '.fingerprint')
+        file_path=${repo_path}/${repo_name}_${repo_count}
+
+        echo "function: $function" > ${file_path}
+        echo "fingerprint: $fingerprint" >> ${file_path}
+
+        repo_count=$(expr $repo_count + 1)
+      done
+    done
+
+    echo "Testing install plugin pkgs for plugin: $name"
     pkgs=$(jq -r '.pkgs[]' $plugin_file)
     echo "Installing $name pkgs: $pkgs"
     pkg install -y $pkgs
