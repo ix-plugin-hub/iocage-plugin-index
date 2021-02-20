@@ -33,12 +33,13 @@ jobs:
             do
                 release=$(jq '.release' $plugin_file)
                 name=$(jq '.name' $plugin_file)
+
                 if [ "$release" = "12.2-RELEASE" ]
                 then
                   echo "Testing install plugin pkgs for plugin $name"
 
-                  pkgs=$(jq '.pkgs[]' $i)
-                  echo "$i pkgs: $pkgs"
+                  pkgs=$(jq '.pkgs[]' $plugin_file)
+                  echo "Installing $name pkgs: $pkgs"
                   pkg install -y $pkgs
                 else
                   echo "Plugin: $name has a release: $release older than latest FreeBSD version"
