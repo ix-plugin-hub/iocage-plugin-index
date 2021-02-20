@@ -1,20 +1,15 @@
 freebsd_instance:
   image_family: freebsd-12-2
 
-test_install_task:
+install_backuppc_task:
   install_script: pkg install -y jq
   test_script: |
     plugin_file=backuppc.json
     release=$(jq -r '.release' $plugin_file)
     name=$(jq '.name' $plugin_file)
 
-    if [ "$release" = "12.2-RELEASE" ]
-    then
-      echo "Testing install plugin pkgs for plugin $name"
+    echo "Testing install plugin pkgs for plugin: $name"
 
-      pkgs=$(jq -r '.pkgs[]' $plugin_file)
-      echo "Installing $name pkgs: $pkgs"
-      pkg install -y $pkgs
-    else
-      echo "Plugin: $name has a release: $release older than latest stable FreeBSD version"
-    fi
+    pkgs=$(jq -r '.pkgs[]' $plugin_file)
+    echo "Installing $name pkgs: $pkgs"
+    pkg install -y $pkgs
