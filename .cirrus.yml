@@ -60,7 +60,7 @@ install_backuppc_task:
     pkg update
 
     echo "Testing install plugin pkgs for plugin: $name"
-    pkgs=$(jq -r '.pkgs[]' $plugin_file)
+    pkgs=$(jq -r '.pkgs | join(" ")' $plugin_file)
     echo "Installing $name pkgs: $pkgs"
     pkg install -y $pkgs
 
