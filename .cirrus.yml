@@ -1,6 +1,6 @@
 freebsd_instance:
   image_family: freebsd-12-2
-  cpu: 0.2
+  cpu: 1
 
 install_backuppc_task:
   install_script: pkg install -y jq
