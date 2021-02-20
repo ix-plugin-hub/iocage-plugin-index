@@ -1,7 +1,7 @@
 freebsd_instance:
   image_family: freebsd-12-2
 
-test_install:
+test_install_task:
   install_script: pkg install -y jq
   test_script: |
     plugin_file=backuppc.json
