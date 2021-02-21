@@ -81,16 +81,16 @@ install_template: &INSTALL_PLUGIN
       cp -r ./plugin/overlay/ /
     fi
 
-    source ./plugin/post_install.sh
+    . ./plugin/post_install.sh
 
     if [ -f ./plugin/pre_update.sh ]
     then
-      source ./plugin/pre_update.sh
+      . ./plugin/pre_update.sh
     fi
 
     if [ -f ./plugin/post_update.sh ]
     then
-      source ./plugin/post_update.sh
+      . ./plugin/post_update.sh
     fi
 
 backuppc_task:
