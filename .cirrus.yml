@@ -78,7 +78,7 @@ install_template: &INSTALL_PLUGIN
 
     if [ -f ./plugin/pre_update.sh ]
     then
-      ./plugin/pre_install.sh
+      ./plugin/pre_update.sh
     fi
 
     if [ -f ./plugin/post_update.sh ]
