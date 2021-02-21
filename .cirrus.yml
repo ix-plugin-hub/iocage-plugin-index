@@ -18,7 +18,7 @@ install_backuppc_task:
     if [ -d "./plugin/overlay" ];
     then
       echo "Found overlay folder";
-      cp -r ./plugin/overlay /
+      cp -r ./plugin/overlay/ /
     fi
 
     cat /usr/local/etc/apache24/httpd.conf
