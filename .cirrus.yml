@@ -14,15 +14,17 @@ install_template: &INSTALL_PLUGIN
       fetch_success=false
       sleep_time=5
 
-      while [ $retry -lt $max_retires ]
+      while [ $retry -lt $max_retries ]
       do
+        retry=$(expr $retry + 1)
+
         if fetch ${admin_portal} 2> /dev/null
         then
           fetch_success=true
           break
         fi
 
-        echo "Admin UI fetch failed, sleeping ${sleep_time} seconds, and retrying"
+        echo "Admin UI fetch failed, sleeping ${sleep_time} seconds, and retrying (${retry}/${max_retries})"
         sleep ${sleep_time}
       done
 
