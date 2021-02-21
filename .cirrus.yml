@@ -28,7 +28,7 @@ install_template: &INSTALL_PLUGIN
         sleep ${sleep_time}
       done
 
-      if fetch_success
+      if $fetch_success
       then
         echo "Admin Portal reachable"
       else
