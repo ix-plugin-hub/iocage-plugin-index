@@ -13,17 +13,6 @@ install_backuppc_task:
     fingerprints=$(jq -r '.fingerprints | keys[]' backuppc.json)
     plugin_repo=$(jq -r '.artifact' $plugin_file)
 
-    pkg install -y git-lite
-    git clone ${plugin_repo} ./plugin
-    if [ -d "./plugin/overlay" ];
-    then
-      echo "Found overlay folder";
-      cp -r ./plugin/overlay/ /
-    fi
-
-    cat /usr/local/etc/apache24/httpd.conf
-    pkg remove -y git-lite
-
     pkg_dir=/usr/local/test
     repos_dir="${pkg_dir}/repos"
     fingerprints_dir="${pkg_dir}/fingerprints"
@@ -73,3 +62,18 @@ install_backuppc_task:
     pkgs=$(jq -r '.pkgs | join(" ")' $plugin_file)
     echo "Installing $name pkgs: $pkgs"
     pkg install -y $pkgs
+
+    pkg install -y git-lite
+    git clone ${plugin_repo} ./plugin
+    if [ -d "./plugin/overlay" ];
+    then
+      echo "Found overlay folder";
+      cp -r ./plugin/overlay/ /
+    fi
+
+    if ! echo ${pkgs} | grep -q git-lite
+    then
+      pkg remove -y git-lite
+    fi
+
+    ./plugin/post_install.sh
