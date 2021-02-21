@@ -89,6 +89,10 @@ backuppc_task:
         image_family: freebsd-12-2
         cpu: 1
         memory: 1
+    - freebsd_instance:
+        image_family: freebsd-12-1
+        cpu: 1
+        memory: 1
   env:
     PLUGIN_FILE: "backuppc.json"
 
