@@ -81,7 +81,7 @@ install_template: &INSTALL_PLUGIN
       ./plugin/post_update.sh
     fi
 
-install_backuppc_task:
+backuppc_task:
   <<: *INSTALL_PLUGIN
   only_if: "changesInclude('backuppc.json')"
   matrix:
@@ -92,7 +92,7 @@ install_backuppc_task:
   env:
     PLUGIN_FILE: "backuppc.json"
 
-install_bazarr_task:
+bazarr_task:
   <<: *INSTALL_PLUGIN
   only_if: "changesInclude('bazarr.json')"
   matrix:
@@ -103,7 +103,7 @@ install_bazarr_task:
   env:
     PLUGIN_FILE: "bazarr.json"
 
-install_bind_task:
+bind_task:
   <<: *INSTALL_PLUGIN
   only_if: "changesInclude('bind.json')"
   matrix:
@@ -114,7 +114,7 @@ install_bind_task:
   env:
     PLUGIN_FILE: "bind.json"
 
-install_calibre-web_task:
+calibre-web_task:
   <<: *INSTALL_PLUGIN
   only_if: "changesInclude('calibre-web.json')"
   matrix:
@@ -125,7 +125,7 @@ install_calibre-web_task:
   env:
     PLUGIN_FILE: "calibre-web.json"
 
-install_channels-dvr_task:
+channels-dvr_task:
   <<: *INSTALL_PLUGIN
   only_if: "changesInclude('channels-dvr.json')"
   matrix:
@@ -136,7 +136,7 @@ install_channels-dvr_task:
   env:
     PLUGIN_FILE: "channels-dvr.json"
 
-install_clamav_task:
+clamav_task:
   <<: *INSTALL_PLUGIN
   only_if: "changesInclude('clamav.json')"
   matrix:
@@ -147,7 +147,7 @@ install_clamav_task:
   env:
     PLUGIN_FILE: "clamav.json"
 
-install_deluge-pip_task:
+deluge-pip_task:
   <<: *INSTALL_PLUGIN
   only_if: "changesInclude('deluge-pip.json')"
   matrix:
@@ -158,7 +158,7 @@ install_deluge-pip_task:
   env:
     PLUGIN_FILE: "deluge-pip.json"
 
-install_dnsmasq_task:
+dnsmasq_task:
   <<: *INSTALL_PLUGIN
   only_if: "changesInclude('dnsmasq.json')"
   matrix:
@@ -169,7 +169,7 @@ install_dnsmasq_task:
   env:
     PLUGIN_FILE: "dnsmasq.json"
 
-install_drupal8_task:
+drupal8_task:
   <<: *INSTALL_PLUGIN
   only_if: "changesInclude('drupal8.json')"
   matrix:
@@ -180,7 +180,7 @@ install_drupal8_task:
   env:
     PLUGIN_FILE: "drupal8.json"
 
-install_duplicati_task:
+duplicati_task:
   <<: *INSTALL_PLUGIN
   only_if: "changesInclude('duplicati.json')"
   matrix:
@@ -191,7 +191,7 @@ install_duplicati_task:
   env:
     PLUGIN_FILE: "duplicati.json"
 
-install_emby_task:
+emby_task:
   <<: *INSTALL_PLUGIN
   only_if: "changesInclude('emby.json')"
   matrix:
@@ -202,7 +202,7 @@ install_emby_task:
   env:
     PLUGIN_FILE: "emby.json"
 
-install_emby-server-stable_task:
+emby-server-stable_task:
   <<: *INSTALL_PLUGIN
   only_if: "changesInclude('emby-server-stable.json')"
   matrix:
@@ -213,7 +213,7 @@ install_emby-server-stable_task:
   env:
     PLUGIN_FILE: "emby-server-stable.json"
 
-install_esphome_task:
+esphome_task:
   <<: *INSTALL_PLUGIN
   only_if: "changesInclude('esphome.json')"
   matrix:
@@ -224,7 +224,7 @@ install_esphome_task:
   env:
     PLUGIN_FILE: "esphome.json"
 
-install_famp_task:
+famp_task:
   <<: *INSTALL_PLUGIN
   only_if: "changesInclude('famp.json')"
   matrix:
@@ -235,7 +235,7 @@ install_famp_task:
   env:
     PLUGIN_FILE: "famp.json"
 
-install_gitea_task:
+gitea_task:
   <<: *INSTALL_PLUGIN
   only_if: "changesInclude('gitea.json')"
   matrix:
@@ -246,7 +246,7 @@ install_gitea_task:
   env:
     PLUGIN_FILE: "gitea.json"
 
-install_gitlab_task:
+gitlab_task:
   <<: *INSTALL_PLUGIN
   only_if: "changesInclude('gitlab.json')"
   matrix:
@@ -257,7 +257,7 @@ install_gitlab_task:
   env:
     PLUGIN_FILE: "gitlab.json"
 
-install_gogs_task:
+gogs_task:
   <<: *INSTALL_PLUGIN
   only_if: "changesInclude('gogs.json')"
   matrix:
@@ -268,7 +268,7 @@ install_gogs_task:
   env:
     PLUGIN_FILE: "gogs.json"
 
-install_grafana_task:
+grafana_task:
   <<: *INSTALL_PLUGIN
   only_if: "changesInclude('grafana.json')"
   matrix:
@@ -279,7 +279,7 @@ install_grafana_task:
   env:
     PLUGIN_FILE: "grafana.json"
 
-install_heimdall-dashboard_task:
+heimdall-dashboard_task:
   <<: *INSTALL_PLUGIN
   only_if: "changesInclude('heimdall-dashboard.json')"
   matrix:
@@ -290,7 +290,7 @@ install_heimdall-dashboard_task:
   env:
     PLUGIN_FILE: "heimdall-dashboard.json"
 
-install_homeassistant_task:
+homeassistant_task:
   <<: *INSTALL_PLUGIN
   only_if: "changesInclude('homeassistant.json')"
   matrix:
@@ -301,7 +301,7 @@ install_homeassistant_task:
   env:
     PLUGIN_FILE: "homeassistant.json"
 
-install_homebridge_task:
+homebridge_task:
   <<: *INSTALL_PLUGIN
   only_if: "changesInclude('homebridge.json')"
   matrix:
@@ -312,7 +312,7 @@ install_homebridge_task:
   env:
     PLUGIN_FILE: "homebridge.json"
 
-install_hoobs_task:
+hoobs_task:
   <<: *INSTALL_PLUGIN
   only_if: "changesInclude('hoobs.json')"
   matrix:
@@ -323,7 +323,7 @@ install_hoobs_task:
   env:
     PLUGIN_FILE: "hoobs.json"
 
-install_i2p_task:
+i2p_task:
   <<: *INSTALL_PLUGIN
   only_if: "changesInclude('i2p.json')"
   matrix:
@@ -334,7 +334,7 @@ install_i2p_task:
   env:
     PLUGIN_FILE: "i2p.json"
 
-install_irssi_task:
+irssi_task:
   <<: *INSTALL_PLUGIN
   only_if: "changesInclude('irssi.json')"
   matrix:
@@ -345,7 +345,7 @@ install_irssi_task:
   env:
     PLUGIN_FILE: "irssi.json"
 
-install_jackett_task:
+jackett_task:
   <<: *INSTALL_PLUGIN
   only_if: "changesInclude('jackett.json')"
   matrix:
@@ -356,7 +356,7 @@ install_jackett_task:
   env:
     PLUGIN_FILE: "jackett.json"
 
-install_jenkins_task:
+jenkins_task:
   <<: *INSTALL_PLUGIN
   only_if: "changesInclude('jenkins.json')"
   matrix:
@@ -367,7 +367,7 @@ install_jenkins_task:
   env:
     PLUGIN_FILE: "jenkins.json"
 
-install_jenkins-lts_task:
+jenkins-lts_task:
   <<: *INSTALL_PLUGIN
   only_if: "changesInclude('jenkins-lts.json')"
   matrix:
@@ -378,7 +378,7 @@ install_jenkins-lts_task:
   env:
     PLUGIN_FILE: "jenkins-lts.json"
 
-install_lidarr_task:
+lidarr_task:
   <<: *INSTALL_PLUGIN
   only_if: "changesInclude('lidarr.json')"
   matrix:
@@ -389,7 +389,7 @@ install_lidarr_task:
   env:
     PLUGIN_FILE: "lidarr.json"
 
-install_madsonic_task:
+madsonic_task:
   <<: *INSTALL_PLUGIN
   only_if: "changesInclude('madsonic.json')"
   matrix:
@@ -400,7 +400,7 @@ install_madsonic_task:
   env:
     PLUGIN_FILE: "madsonic.json"
 
-install_mineos_task:
+mineos_task:
   <<: *INSTALL_PLUGIN
   only_if: "changesInclude('mineos.json')"
   matrix:
@@ -411,7 +411,7 @@ install_mineos_task:
   env:
     PLUGIN_FILE: "mineos.json"
 
-install_monica_task:
+monica_task:
   <<: *INSTALL_PLUGIN
   only_if: "changesInclude('monica.json')"
   matrix:
@@ -422,7 +422,7 @@ install_monica_task:
   env:
     PLUGIN_FILE: "monica.json"
 
-install_mosquitto_task:
+mosquitto_task:
   <<: *INSTALL_PLUGIN
   only_if: "changesInclude('mosquitto.json')"
   matrix:
@@ -433,7 +433,7 @@ install_mosquitto_task:
   env:
     PLUGIN_FILE: "mosquitto.json"
 
-install_motioneye_task:
+motioneye_task:
   <<: *INSTALL_PLUGIN
   only_if: "changesInclude('motioneye.json')"
   matrix:
@@ -444,7 +444,7 @@ install_motioneye_task:
   env:
     PLUGIN_FILE: "motioneye.json"
 
-install_netdata_task:
+netdata_task:
   <<: *INSTALL_PLUGIN
   only_if: "changesInclude('netdata.json')"
   matrix:
@@ -455,7 +455,7 @@ install_netdata_task:
   env:
     PLUGIN_FILE: "netdata.json"
 
-install_node-red_task:
+node-red_task:
   <<: *INSTALL_PLUGIN
   only_if: "changesInclude('node-red.json')"
   matrix:
@@ -466,7 +466,7 @@ install_node-red_task:
   env:
     PLUGIN_FILE: "node-red.json"
 
-install_nzbget_task:
+nzbget_task:
   <<: *INSTALL_PLUGIN
   only_if: "changesInclude('nzbget.json')"
   matrix:
@@ -477,7 +477,7 @@ install_nzbget_task:
   env:
     PLUGIN_FILE: "nzbget.json"
 
-install_openspeedtest-server_task:
+openspeedtest-server_task:
   <<: *INSTALL_PLUGIN
   only_if: "changesInclude('openspeedtest-server.json')"
   matrix:
@@ -488,7 +488,7 @@ install_openspeedtest-server_task:
   env:
     PLUGIN_FILE: "openspeedtest-server.json"
 
-install_openvpn_task:
+openvpn_task:
   <<: *INSTALL_PLUGIN
   only_if: "changesInclude('openvpn.json')"
   matrix:
@@ -499,7 +499,7 @@ install_openvpn_task:
   env:
     PLUGIN_FILE: "openvpn.json"
 
-install_privatebin_task:
+privatebin_task:
   <<: *INSTALL_PLUGIN
   only_if: "changesInclude('privatebin.json')"
   matrix:
@@ -510,7 +510,7 @@ install_privatebin_task:
   env:
     PLUGIN_FILE: "privatebin.json"
 
-install_qbittorrent_task:
+qbittorrent_task:
   <<: *INSTALL_PLUGIN
   only_if: "changesInclude('qbittorrent.json')"
   matrix:
@@ -521,7 +521,7 @@ install_qbittorrent_task:
   env:
     PLUGIN_FILE: "qbittorrent.json"
 
-install_quasselcore_task:
+quasselcore_task:
   <<: *INSTALL_PLUGIN
   only_if: "changesInclude('quasselcore.json')"
   matrix:
@@ -532,7 +532,7 @@ install_quasselcore_task:
   env:
     PLUGIN_FILE: "quasselcore.json"
 
-install_radarr_task:
+radarr_task:
   <<: *INSTALL_PLUGIN
   only_if: "changesInclude('radarr.json')"
   matrix:
@@ -543,7 +543,7 @@ install_radarr_task:
   env:
     PLUGIN_FILE: "radarr.json"
 
-install_rslsync_task:
+rslsync_task:
   <<: *INSTALL_PLUGIN
   only_if: "changesInclude('rslsync.json')"
   matrix:
@@ -554,7 +554,7 @@ install_rslsync_task:
   env:
     PLUGIN_FILE: "rslsync.json"
 
-install_rtorrent-flood_task:
+rtorrent-flood_task:
   <<: *INSTALL_PLUGIN
   only_if: "changesInclude('rtorrent-flood.json')"
   matrix:
@@ -565,7 +565,7 @@ install_rtorrent-flood_task:
   env:
     PLUGIN_FILE: "rtorrent-flood.json"
 
-install_sabnzbd_task:
+sabnzbd_task:
   <<: *INSTALL_PLUGIN
   only_if: "changesInclude('sabnzbd.json')"
   matrix:
@@ -576,7 +576,7 @@ install_sabnzbd_task:
   env:
     PLUGIN_FILE: "sabnzbd.json"
 
-install_sickchill_task:
+sickchill_task:
   <<: *INSTALL_PLUGIN
   only_if: "changesInclude('sickchill.json')"
   matrix:
@@ -587,7 +587,7 @@ install_sickchill_task:
   env:
     PLUGIN_FILE: "sickchill.json"
 
-install_sonarr_task:
+sonarr_task:
   <<: *INSTALL_PLUGIN
   only_if: "changesInclude('sonarr.json')"
   matrix:
@@ -598,7 +598,7 @@ install_sonarr_task:
   env:
     PLUGIN_FILE: "sonarr.json"
 
-install_tasmoadmin_task:
+tasmoadmin_task:
   <<: *INSTALL_PLUGIN
   only_if: "changesInclude('tasmoadmin.json')"
   matrix:
@@ -609,7 +609,7 @@ install_tasmoadmin_task:
   env:
     PLUGIN_FILE: "tasmoadmin.json"
 
-install_tautulli_task:
+tautulli_task:
   <<: *INSTALL_PLUGIN
   only_if: "changesInclude('tautulli.json')"
   matrix:
@@ -620,7 +620,7 @@ install_tautulli_task:
   env:
     PLUGIN_FILE: "tautulli.json"
 
-install_transmission_task:
+transmission_task:
   <<: *INSTALL_PLUGIN
   only_if: "changesInclude('transmission.json')"
   matrix:
@@ -631,7 +631,7 @@ install_transmission_task:
   env:
     PLUGIN_FILE: "transmission.json"
 
-install_unificontroller_task:
+unificontroller_task:
   <<: *INSTALL_PLUGIN
   only_if: "changesInclude('unificontroller.json')"
   matrix:
@@ -642,7 +642,7 @@ install_unificontroller_task:
   env:
     PLUGIN_FILE: "unificontroller.json"
 
-install_unificontroller-lts_task:
+unificontroller-lts_task:
   <<: *INSTALL_PLUGIN
   only_if: "changesInclude('unificontroller-lts.json')"
   matrix:
@@ -653,7 +653,7 @@ install_unificontroller-lts_task:
   env:
     PLUGIN_FILE: "unificontroller-lts.json"
 
-install_vault_task:
+vault_task:
   <<: *INSTALL_PLUGIN
   only_if: "changesInclude('vault.json')"
   matrix:
@@ -664,7 +664,7 @@ install_vault_task:
   env:
     PLUGIN_FILE: "vault.json"
 
-install_weechat_task:
+weechat_task:
   <<: *INSTALL_PLUGIN
   only_if: "changesInclude('weechat.json')"
   matrix:
@@ -675,7 +675,7 @@ install_weechat_task:
   env:
     PLUGIN_FILE: "weechat.json"
 
-install_xmrig_task:
+xmrig_task:
   <<: *INSTALL_PLUGIN
   only_if: "changesInclude('xmrig.json')"
   matrix:
@@ -686,7 +686,7 @@ install_xmrig_task:
   env:
     PLUGIN_FILE: "xmrig.json"
 
-install_zoneminder_task:
+zoneminder_task:
   <<: *INSTALL_PLUGIN
   only_if: "changesInclude('zoneminder.json')"
   matrix:
@@ -697,7 +697,7 @@ install_zoneminder_task:
   env:
     PLUGIN_FILE: "zoneminder.json"
 
-install_zrepl_task:
+zrepl_task:
   <<: *INSTALL_PLUGIN
   only_if: "changesInclude('zrepl.json')"
   matrix:
@@ -708,7 +708,7 @@ install_zrepl_task:
   env:
     PLUGIN_FILE: "zrepl.json"
 
-install_zwavejs2mqtt_task:
+zwavejs2mqtt_task:
   <<: *INSTALL_PLUGIN
   only_if: "changesInclude('zwavejs2mqtt.json')"
   matrix:

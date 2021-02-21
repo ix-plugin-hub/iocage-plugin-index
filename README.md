@@ -30,118 +30,118 @@ where *interface* is the name of the active network interface and *IP address* i
 For example, `ip4_addr="igb0|192.168.0.91"`
 
 ## Plugin build status
-[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=install_backuppc&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=install_backuppc&branch=test-install-plugins>)
+[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=backuppc&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=backuppc&branch=test-install-plugins>)
 
-[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=install_bazarr&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=install_bazarr&branch=test-install-plugins>)
+[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=bazarr&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=bazarr&branch=test-install-plugins>)
 
-[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=install_bind&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=install_bind&branch=test-install-plugins>)
+[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=bind&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=bind&branch=test-install-plugins>)
 
-[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=install_calibre-web&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=install_calibre-web&branch=test-install-plugins>)
+[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=calibre-web&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=calibre-web&branch=test-install-plugins>)
 
-[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=install_channels-dvr&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=install_channels-dvr&branch=test-install-plugins>)
+[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=channels-dvr&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=channels-dvr&branch=test-install-plugins>)
 
-[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=install_clamav&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=install_clamav&branch=test-install-plugins>)
+[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=clamav&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=clamav&branch=test-install-plugins>)
 
-[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=install_deluge-pip&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=install_deluge-pip&branch=test-install-plugins>)
+[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=deluge-pip&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=deluge-pip&branch=test-install-plugins>)
 
-[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=install_dnsmasq&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=install_dnsmasq&branch=test-install-plugins>)
+[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=dnsmasq&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=dnsmasq&branch=test-install-plugins>)
 
-[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=install_drupal8&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=install_drupal8&branch=test-install-plugins>)
+[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=drupal8&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=drupal8&branch=test-install-plugins>)
 
-[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=install_duplicati&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=install_duplicati&branch=test-install-plugins>)
+[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=duplicati&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=duplicati&branch=test-install-plugins>)
 
-[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=install_emby&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=install_emby&branch=test-install-plugins>)
+[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=emby&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=emby&branch=test-install-plugins>)
 
-[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=install_emby-server-stable&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=install_emby-server-stable&branch=test-install-plugins>)
+[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=emby-server-stable&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=emby-server-stable&branch=test-install-plugins>)
 
-[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=install_esphome&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=install_esphome&branch=test-install-plugins>)
+[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=esphome&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=esphome&branch=test-install-plugins>)
 
-[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=install_famp&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=install_famp&branch=test-install-plugins>)
+[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=famp&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=famp&branch=test-install-plugins>)
 
-[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=install_gitea&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=install_gitea&branch=test-install-plugins>)
+[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=gitea&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=gitea&branch=test-install-plugins>)
 
-[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=install_gitlab&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=install_gitlab&branch=test-install-plugins>)
+[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=gitlab&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=gitlab&branch=test-install-plugins>)
 
-[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=install_gogs&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=install_gogs&branch=test-install-plugins>)
+[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=gogs&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=gogs&branch=test-install-plugins>)
 
-[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=install_grafana&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=install_grafana&branch=test-install-plugins>)
+[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=grafana&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=grafana&branch=test-install-plugins>)
 
-[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=install_heimdall-dashboard&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=install_heimdall-dashboard&branch=test-install-plugins>)
+[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=heimdall-dashboard&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=heimdall-dashboard&branch=test-install-plugins>)
 
-[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=install_homeassistant&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=install_homeassistant&branch=test-install-plugins>)
+[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=homeassistant&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=homeassistant&branch=test-install-plugins>)
 
-[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=install_homebridge&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=install_homebridge&branch=test-install-plugins>)
+[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=homebridge&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=homebridge&branch=test-install-plugins>)
 
-[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=install_hoobs&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=install_hoobs&branch=test-install-plugins>)
+[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=hoobs&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=hoobs&branch=test-install-plugins>)
 
-[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=install_i2p&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=install_i2p&branch=test-install-plugins>)
+[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=i2p&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=i2p&branch=test-install-plugins>)
 
-[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=install_irssi&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=install_irssi&branch=test-install-plugins>)
+[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=irssi&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=irssi&branch=test-install-plugins>)
 
-[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=install_jackett&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=install_jackett&branch=test-install-plugins>)
+[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=jackett&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=jackett&branch=test-install-plugins>)
 
-[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=install_jenkins&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=install_jenkins&branch=test-install-plugins>)
+[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=jenkins&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=jenkins&branch=test-install-plugins>)
 
-[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=install_jenkins-lts&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=install_jenkins-lts&branch=test-install-plugins>)
+[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=jenkins-lts&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=jenkins-lts&branch=test-install-plugins>)
 
-[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=install_lidarr&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=install_lidarr&branch=test-install-plugins>)
+[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=lidarr&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=lidarr&branch=test-install-plugins>)
 
-[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=install_madsonic&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=install_madsonic&branch=test-install-plugins>)
+[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=madsonic&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=madsonic&branch=test-install-plugins>)
 
-[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=install_mineos&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=install_mineos&branch=test-install-plugins>)
+[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=mineos&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=mineos&branch=test-install-plugins>)
 
-[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=install_monica&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=install_monica&branch=test-install-plugins>)
+[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=monica&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=monica&branch=test-install-plugins>)
 
-[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=install_mosquitto&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=install_mosquitto&branch=test-install-plugins>)
+[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=mosquitto&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=mosquitto&branch=test-install-plugins>)
 
-[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=install_motioneye&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=install_motioneye&branch=test-install-plugins>)
+[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=motioneye&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=motioneye&branch=test-install-plugins>)
 
-[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=install_netdata&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=install_netdata&branch=test-install-plugins>)
+[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=netdata&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=netdata&branch=test-install-plugins>)
 
-[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=install_node-red&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=install_node-red&branch=test-install-plugins>)
+[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=node-red&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=node-red&branch=test-install-plugins>)
 
-[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=install_nzbget&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=install_nzbget&branch=test-install-plugins>)
+[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=nzbget&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=nzbget&branch=test-install-plugins>)
 
-[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=install_openspeedtest-server&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=install_openspeedtest-server&branch=test-install-plugins>)
+[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=openspeedtest-server&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=openspeedtest-server&branch=test-install-plugins>)
 
-[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=install_openvpn&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=install_openvpn&branch=test-install-plugins>)
+[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=openvpn&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=openvpn&branch=test-install-plugins>)
 
-[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=install_privatebin&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=install_privatebin&branch=test-install-plugins>)
+[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=privatebin&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=privatebin&branch=test-install-plugins>)
 
-[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=install_qbittorrent&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=install_qbittorrent&branch=test-install-plugins>)
+[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=qbittorrent&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=qbittorrent&branch=test-install-plugins>)
 
-[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=install_quasselcore&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=install_quasselcore&branch=test-install-plugins>)
+[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=quasselcore&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=quasselcore&branch=test-install-plugins>)
 
-[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=install_radarr&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=install_radarr&branch=test-install-plugins>)
+[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=radarr&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=radarr&branch=test-install-plugins>)
 
-[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=install_rslsync&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=install_rslsync&branch=test-install-plugins>)
+[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=rslsync&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=rslsync&branch=test-install-plugins>)
 
-[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=install_rtorrent-flood&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=install_rtorrent-flood&branch=test-install-plugins>)
+[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=rtorrent-flood&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=rtorrent-flood&branch=test-install-plugins>)
 
-[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=install_sabnzbd&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=install_sabnzbd&branch=test-install-plugins>)
+[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=sabnzbd&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=sabnzbd&branch=test-install-plugins>)
 
-[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=install_sickchill&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=install_sickchill&branch=test-install-plugins>)
+[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=sickchill&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=sickchill&branch=test-install-plugins>)
 
-[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=install_sonarr&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=install_sonarr&branch=test-install-plugins>)
+[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=sonarr&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=sonarr&branch=test-install-plugins>)
 
-[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=install_tasmoadmin&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=install_tasmoadmin&branch=test-install-plugins>)
+[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=tasmoadmin&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=tasmoadmin&branch=test-install-plugins>)
 
-[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=install_tautulli&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=install_tautulli&branch=test-install-plugins>)
+[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=tautulli&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=tautulli&branch=test-install-plugins>)
 
-[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=install_transmission&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=install_transmission&branch=test-install-plugins>)
+[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=transmission&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=transmission&branch=test-install-plugins>)
 
-[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=install_unificontroller&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=install_unificontroller&branch=test-install-plugins>)
+[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=unificontroller&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=unificontroller&branch=test-install-plugins>)
 
-[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=install_unificontroller-lts&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=install_unificontroller-lts&branch=test-install-plugins>)
+[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=unificontroller-lts&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=unificontroller-lts&branch=test-install-plugins>)
 
-[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=install_vault&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=install_vault&branch=test-install-plugins>)
+[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=vault&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=vault&branch=test-install-plugins>)
 
-[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=install_weechat&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=install_weechat&branch=test-install-plugins>)
+[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=weechat&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=weechat&branch=test-install-plugins>)
 
-[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=install_xmrig&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=install_xmrig&branch=test-install-plugins>)
+[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=xmrig&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=xmrig&branch=test-install-plugins>)
 
-[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=install_zoneminder&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=install_zoneminder&branch=test-install-plugins>)
+[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=zoneminder&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=zoneminder&branch=test-install-plugins>)
 
-[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=install_zrepl&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=install_zrepl&branch=test-install-plugins>)
+[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=zrepl&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=zrepl&branch=test-install-plugins>)
 
-[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=install_zwavejs2mqtt&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=install_zwavejs2mqtt&branch=test-install-plugins>)
+[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=zwavejs2mqtt&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=zwavejs2mqtt&branch=test-install-plugins>)
