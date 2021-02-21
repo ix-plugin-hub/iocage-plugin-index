@@ -88,233 +88,291 @@ install_template: &INSTALL_PLUGIN
 
 install_backuppc_task:
   <<: *INSTALL_PLUGIN
+  only_if: "changesInclude('backuppc.json')"
   env:
     PLUGIN_FILE: "backuppc.json"
 install_bazarr_task:
   <<: *INSTALL_PLUGIN
+  only_if: "changesInclude('bazarr.json')"
   env:
     PLUGIN_FILE: "bazarr.json"
 install_bind_task:
   <<: *INSTALL_PLUGIN
+  only_if: "changesInclude('bind.json')"
   env:
     PLUGIN_FILE: "bind.json"
 install_calibre-web_task:
   <<: *INSTALL_PLUGIN
+  only_if: "changesInclude('calibre-web.json')"
   env:
     PLUGIN_FILE: "calibre-web.json"
 install_channels-dvr_task:
   <<: *INSTALL_PLUGIN
+  only_if: "changesInclude('channels-dvr.json')"
   env:
     PLUGIN_FILE: "channels-dvr.json"
 install_clamav_task:
   <<: *INSTALL_PLUGIN
+  only_if: "changesInclude('clamav.json')"
   env:
     PLUGIN_FILE: "clamav.json"
 install_deluge-pip_task:
   <<: *INSTALL_PLUGIN
+  only_if: "changesInclude('deluge-pip.json')"
   env:
     PLUGIN_FILE: "deluge-pip.json"
 install_dnsmasq_task:
   <<: *INSTALL_PLUGIN
+  only_if: "changesInclude('dnsmasq.json')"
   env:
     PLUGIN_FILE: "dnsmasq.json"
 install_drupal8_task:
   <<: *INSTALL_PLUGIN
+  only_if: "changesInclude('drupal8.json')"
   env:
     PLUGIN_FILE: "drupal8.json"
 install_duplicati_task:
   <<: *INSTALL_PLUGIN
+  only_if: "changesInclude('duplicati.json')"
   env:
     PLUGIN_FILE: "duplicati.json"
 install_emby_task:
   <<: *INSTALL_PLUGIN
+  only_if: "changesInclude('emby.json')"
   env:
     PLUGIN_FILE: "emby.json"
 install_emby-server-stable_task:
   <<: *INSTALL_PLUGIN
+  only_if: "changesInclude('emby-server-stable.json')"
   env:
     PLUGIN_FILE: "emby-server-stable.json"
 install_esphome_task:
   <<: *INSTALL_PLUGIN
+  only_if: "changesInclude('esphome.json')"
   env:
     PLUGIN_FILE: "esphome.json"
 install_famp_task:
   <<: *INSTALL_PLUGIN
+  only_if: "changesInclude('famp.json')"
   env:
     PLUGIN_FILE: "famp.json"
 install_gitea_task:
   <<: *INSTALL_PLUGIN
+  only_if: "changesInclude('gitea.json')"
   env:
     PLUGIN_FILE: "gitea.json"
 install_gitlab_task:
   <<: *INSTALL_PLUGIN
+  only_if: "changesInclude('gitlab.json')"
   env:
     PLUGIN_FILE: "gitlab.json"
 install_gogs_task:
   <<: *INSTALL_PLUGIN
+  only_if: "changesInclude('gogs.json')"
   env:
     PLUGIN_FILE: "gogs.json"
 install_grafana_task:
   <<: *INSTALL_PLUGIN
+  only_if: "changesInclude('grafana.json')"
   env:
     PLUGIN_FILE: "grafana.json"
 install_heimdall-dashboard_task:
   <<: *INSTALL_PLUGIN
+  only_if: "changesInclude('heimdall-dashboard.json')"
   env:
     PLUGIN_FILE: "heimdall-dashboard.json"
 install_homeassistant_task:
   <<: *INSTALL_PLUGIN
+  only_if: "changesInclude('homeassistant.json')"
   env:
     PLUGIN_FILE: "homeassistant.json"
 install_homebridge_task:
   <<: *INSTALL_PLUGIN
+  only_if: "changesInclude('homebridge.json')"
   env:
     PLUGIN_FILE: "homebridge.json"
 install_hoobs_task:
   <<: *INSTALL_PLUGIN
+  only_if: "changesInclude('hoobs.json')"
   env:
     PLUGIN_FILE: "hoobs.json"
 install_i2p_task:
   <<: *INSTALL_PLUGIN
+  only_if: "changesInclude('i2p.json')"
   env:
     PLUGIN_FILE: "i2p.json"
 install_irssi_task:
   <<: *INSTALL_PLUGIN
+  only_if: "changesInclude('irssi.json')"
   env:
     PLUGIN_FILE: "irssi.json"
 install_jackett_task:
   <<: *INSTALL_PLUGIN
+  only_if: "changesInclude('jackett.json')"
   env:
     PLUGIN_FILE: "jackett.json"
 install_jenkins_task:
   <<: *INSTALL_PLUGIN
+  only_if: "changesInclude('jenkins.json')"
   env:
     PLUGIN_FILE: "jenkins.json"
 install_jenkins-lts_task:
   <<: *INSTALL_PLUGIN
+  only_if: "changesInclude('jenkins-lts.json')"
   env:
     PLUGIN_FILE: "jenkins-lts.json"
 install_lidarr_task:
   <<: *INSTALL_PLUGIN
+  only_if: "changesInclude('lidarr.json')"
   env:
     PLUGIN_FILE: "lidarr.json"
 install_madsonic_task:
   <<: *INSTALL_PLUGIN
+  only_if: "changesInclude('madsonic.json')"
   env:
     PLUGIN_FILE: "madsonic.json"
 install_mineos_task:
   <<: *INSTALL_PLUGIN
+  only_if: "changesInclude('mineos.json')"
   env:
     PLUGIN_FILE: "mineos.json"
 install_monica_task:
   <<: *INSTALL_PLUGIN
+  only_if: "changesInclude('monica.json')"
   env:
     PLUGIN_FILE: "monica.json"
 install_mosquitto_task:
   <<: *INSTALL_PLUGIN
+  only_if: "changesInclude('mosquitto.json')"
   env:
     PLUGIN_FILE: "mosquitto.json"
 install_motioneye_task:
   <<: *INSTALL_PLUGIN
+  only_if: "changesInclude('motioneye.json')"
   env:
     PLUGIN_FILE: "motioneye.json"
 install_netdata_task:
   <<: *INSTALL_PLUGIN
+  only_if: "changesInclude('netdata.json')"
   env:
     PLUGIN_FILE: "netdata.json"
 install_node-red_task:
   <<: *INSTALL_PLUGIN
+  only_if: "changesInclude('node-red.json')"
   env:
     PLUGIN_FILE: "node-red.json"
 install_nzbget_task:
   <<: *INSTALL_PLUGIN
+  only_if: "changesInclude('nzbget.json')"
   env:
     PLUGIN_FILE: "nzbget.json"
 install_openspeedtest-server_task:
   <<: *INSTALL_PLUGIN
+  only_if: "changesInclude('openspeedtest-server.json')"
   env:
     PLUGIN_FILE: "openspeedtest-server.json"
 install_openvpn_task:
   <<: *INSTALL_PLUGIN
+  only_if: "changesInclude('openvpn.json')"
   env:
     PLUGIN_FILE: "openvpn.json"
 install_privatebin_task:
   <<: *INSTALL_PLUGIN
+  only_if: "changesInclude('privatebin.json')"
   env:
     PLUGIN_FILE: "privatebin.json"
 install_qbittorrent_task:
   <<: *INSTALL_PLUGIN
+  only_if: "changesInclude('qbittorrent.json')"
   env:
     PLUGIN_FILE: "qbittorrent.json"
 install_quasselcore_task:
   <<: *INSTALL_PLUGIN
+  only_if: "changesInclude('quasselcore.json')"
   env:
     PLUGIN_FILE: "quasselcore.json"
 install_radarr_task:
   <<: *INSTALL_PLUGIN
+  only_if: "changesInclude('radarr.json')"
   env:
     PLUGIN_FILE: "radarr.json"
 install_rslsync_task:
   <<: *INSTALL_PLUGIN
+  only_if: "changesInclude('rslsync.json')"
   env:
     PLUGIN_FILE: "rslsync.json"
 install_rtorrent-flood_task:
   <<: *INSTALL_PLUGIN
+  only_if: "changesInclude('rtorrent-flood.json')"
   env:
     PLUGIN_FILE: "rtorrent-flood.json"
 install_sabnzbd_task:
   <<: *INSTALL_PLUGIN
+  only_if: "changesInclude('sabnzbd.json')"
   env:
     PLUGIN_FILE: "sabnzbd.json"
 install_sickchill_task:
   <<: *INSTALL_PLUGIN
+  only_if: "changesInclude('sickchill.json')"
   env:
     PLUGIN_FILE: "sickchill.json"
 install_sonarr_task:
   <<: *INSTALL_PLUGIN
+  only_if: "changesInclude('sonarr.json')"
   env:
     PLUGIN_FILE: "sonarr.json"
 install_tasmoadmin_task:
   <<: *INSTALL_PLUGIN
+  only_if: "changesInclude('tasmoadmin.json')"
   env:
     PLUGIN_FILE: "tasmoadmin.json"
 install_tautulli_task:
   <<: *INSTALL_PLUGIN
+  only_if: "changesInclude('tautulli.json')"
   env:
     PLUGIN_FILE: "tautulli.json"
 install_transmission_task:
   <<: *INSTALL_PLUGIN
+  only_if: "changesInclude('transmission.json')"
   env:
     PLUGIN_FILE: "transmission.json"
 install_unificontroller_task:
   <<: *INSTALL_PLUGIN
+  only_if: "changesInclude('unificontroller.json')"
   env:
     PLUGIN_FILE: "unificontroller.json"
 install_unificontroller-lts_task:
   <<: *INSTALL_PLUGIN
+  only_if: "changesInclude('unificontroller-lts.json')"
   env:
     PLUGIN_FILE: "unificontroller-lts.json"
 install_vault_task:
   <<: *INSTALL_PLUGIN
+  only_if: "changesInclude('vault.json')"
   env:
     PLUGIN_FILE: "vault.json"
 install_weechat_task:
   <<: *INSTALL_PLUGIN
+  only_if: "changesInclude('weechat.json')"
   env:
     PLUGIN_FILE: "weechat.json"
 install_xmrig_task:
   <<: *INSTALL_PLUGIN
+  only_if: "changesInclude('xmrig.json')"
   env:
     PLUGIN_FILE: "xmrig.json"
 install_zoneminder_task:
   <<: *INSTALL_PLUGIN
+  only_if: "changesInclude('zoneminder.json')"
   env:
     PLUGIN_FILE: "zoneminder.json"
 install_zrepl_task:
   <<: *INSTALL_PLUGIN
+  only_if: "changesInclude('zrepl.json')"
   env:
     PLUGIN_FILE: "zrepl.json"
 install_zwavejs2mqtt_task:
   <<: *INSTALL_PLUGIN
+  only_if: "changesInclude('zwavejs2mqtt.json')"
   env:
     PLUGIN_FILE: "zwavejs2mqtt.json"
