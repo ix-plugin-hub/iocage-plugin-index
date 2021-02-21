@@ -14,7 +14,7 @@ install_template: &INSTALL_PLUGIN
       fetch_success=false
       sleep_time=5
 
-      while [$retry -lt $max_retires]
+      while [ $retry -lt $max_retires ]
       do
         if fetch ${admin_portal} 2> /dev/null
         then
