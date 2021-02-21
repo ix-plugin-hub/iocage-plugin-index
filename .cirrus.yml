@@ -3,7 +3,7 @@ freebsd_instance:
   cpu: 1
   memory: "1"
 
-install_template: &INSTALL_PLUGIN:
+install_template: &INSTALL_PLUGIN
   requirements_script: pkg install -y jq
   install_script: |
     release=$(jq -r '.release' $PLUGIN_FILE)
