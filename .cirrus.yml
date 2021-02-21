@@ -249,10 +249,6 @@ homeassistant_task:
   <<: *INSTALL_PLUGIN
   matrix:
     - freebsd_instance:
-        image_family: freebsd-11-2
-    - freebsd_instance:
-        image_family: freebsd-11-3
-    - freebsd_instance:
         image_family: freebsd-12-1
   env:
     PLUGIN_FILE: "homeassistant.json"
@@ -268,8 +264,6 @@ homebridge_task:
 hoobs_task:
   <<: *INSTALL_PLUGIN
   matrix:
-    - freebsd_instance:
-        image_family: freebsd-11-3
     - freebsd_instance:
         image_family: freebsd-12-1
   env:
