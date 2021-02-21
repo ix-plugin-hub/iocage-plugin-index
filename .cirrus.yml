@@ -10,6 +10,7 @@ install_template: &INSTALL_PLUGIN
     packagesite=$(jq '.packagesite' $PLUGIN_FILE)
     fingerprints=$(jq -r '.fingerprints | keys[]' $PLUGIN_FILE)
     plugin_repo=$(jq -r '.artifact' $PLUGIN_FILE)
+    pkgs=$(jq -r '.pkgs | join(" ")' $PLUGIN_FILE)
 
     pkg_dir=/usr/local/test
     repos_dir="${pkg_dir}/repos"
@@ -71,7 +72,6 @@ install_template: &INSTALL_PLUGIN
     fi
 
     echo "Test install plugin pkgs for plugin: $name"
-    pkgs=$(jq -r '.pkgs | join(" ")' $PLUGIN_FILE)
     echo "Installing $name pkgs: $pkgs"
     pkg install -y $pkgs
 
