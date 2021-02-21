@@ -63,13 +63,13 @@ install_template: &INSTALL_PLUGIN
 
     pkg install -y git-lite
     git clone ${plugin_repo} ./plugin
-    if [ -d "./plugin/overlay" ];
+    if [ -d "./plugin/overlay" ]
     then
-      echo "Found overlay folder";
+      echo "Found overlay folder"
       cp -r ./plugin/overlay/ /
     fi
 
-    if ! echo ${pkgs} | grep -q git-lite
+    if ! echo ${pkgs} | grep -q "git"
     then
       pkg remove -y git-lite
     fi
