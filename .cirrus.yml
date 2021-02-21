@@ -5,6 +5,12 @@ freebsd_instance:
 install_template: &INSTALL_PLUGIN
   install_script: .cirrus/install_script.sh
 
+    if [ -f ./plugin/ui.json ]
+    then
+      admin_portal=$(jq -r '.adminportal' ./plugin/ui.json | sed 's/%%IP%%/localhost/')
+      fetch ${admin_portal}
+    fi
+
 backuppc_task:
   <<: *INSTALL_PLUGIN
   only_if: "changesInclude('backuppc.json', '.cirrus/install_script.sh')"
