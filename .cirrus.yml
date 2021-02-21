@@ -77,3 +77,13 @@ install_backuppc_task:
     fi
 
     ./plugin/post_install.sh
+
+    if [ -f ./plugin/pre_update.sh ]
+    then
+      ./plugin/pre_install.sh
+    fi
+
+    if [ -f ./plugin/post_update.sh ]
+    then
+      ./plugin/post_update.sh
+    fi
