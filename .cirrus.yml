@@ -9,10 +9,11 @@ install_template: &INSTALL_PLUGIN
     then
       admin_portal=$(jq -r '.adminportal' ./plugin/ui.json | sed 's/%%IP%%/localhost/')
 
-      if echo $a | grep -q "http\|localhost"
+      if echo $admin_portal | grep -q "http\|localhost"
       then
         echo "Found http or localhost in adminportal, will try to fetch"
       else
+        echo "Admin portal does not contain localhost or http. Skip fetch"
         exit 0
       fi
 
