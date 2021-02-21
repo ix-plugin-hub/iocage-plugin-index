@@ -3,6 +3,11 @@ freebsd_instance:
   cpu: 1
   memory: "1"
 
+install_backuppc: &INSTALL_PLUGIN
+  requirements_script: pkg install -y jq
+  env:
+    PLUGIN_FILE: "backuppc.json"
+
 install_bazarr: &INSTALL_PLUGIN
   requirements_script: pkg install -y jq
   env:
