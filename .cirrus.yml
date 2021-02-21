@@ -3,7 +3,7 @@ freebsd_instance:
   cpu: 1
   memory: "1"
 
-task: &INSTALL_PLUGIN:
+install_template: &INSTALL_PLUGIN:
   requirements_script: pkg install -y jq
   install_script: |
     release=$(jq -r '.release' $PLUGIN_FILE)
@@ -86,12 +86,12 @@ task: &INSTALL_PLUGIN:
       ./plugin/post_update.sh
     fi
 
-install_backuppc:
+install_backuppc_task:
   <<: *INSTALL_PLUGIN
   env:
     PLUGIN_FILE: "backuppc.json"
 
-install_bazarr:
+install_bazarr_task:
   <<: *INSTALL_PLUGIN
   env:
     PLUGIN_FILE: "bazarr.json"
