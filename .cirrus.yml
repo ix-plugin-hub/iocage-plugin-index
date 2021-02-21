@@ -60,8 +60,14 @@ install_template: &INSTALL_PLUGIN
     echo "Installing $name pkgs: $pkgs"
     pkg install -y $pkgs
 
-    pkg install -y git-lite
-    git clone ${plugin_repo} ./plugin
+    if [ "$(which git)" = "" ]
+    then
+      pkg install -y git-lite || pkg install -y git
+    fi
+
+    release_branch="$(freebsd-version | cut -d '-' -f1)-RELEASE"
+    git clone -b ${release_branch} ${plugin_repo} ./plugin || git clone -b master ${plugin_repo} ./plugin
+
     if [ -d "./plugin/overlay" ]
     then
       echo "Found overlay folder"
@@ -70,7 +76,8 @@ install_template: &INSTALL_PLUGIN
 
     if ! echo ${pkgs} | grep -q "git"
     then
-      pkg remove -y git-lite
+      pkg remove -y git-lite git
+      pkg autoremove -y
     fi
 
     ./plugin/post_install.sh
@@ -117,7 +124,7 @@ calibre-web_task:
   only_if: "changesInclude('calibre-web.json')"
   matrix:
     - freebsd_instance:
-        image_family: freebsd-12-1
+        image_family: freebsd-12-2
   env:
     PLUGIN_FILE: "calibre-web.json"
 
@@ -144,7 +151,7 @@ deluge-pip_task:
   only_if: "changesInclude('deluge-pip.json')"
   matrix:
     - freebsd_instance:
-        image_family: freebsd-12-1
+        image_family: freebsd-12-2
   env:
     PLUGIN_FILE: "deluge-pip.json"
 
@@ -198,7 +205,7 @@ esphome_task:
   only_if: "changesInclude('esphome.json')"
   matrix:
     - freebsd_instance:
-        image_family: freebsd-12-1
+        image_family: freebsd-11-3
   env:
     PLUGIN_FILE: "esphome.json"
 
@@ -261,6 +268,10 @@ homeassistant_task:
   only_if: "changesInclude('homeassistant.json')"
   matrix:
     - freebsd_instance:
+        image_family: freebsd-11-2
+    - freebsd_instance:
+        image_family: freebsd-11-3
+    - freebsd_instance:
         image_family: freebsd-12-1
   env:
     PLUGIN_FILE: "homeassistant.json"
@@ -278,6 +289,8 @@ hoobs_task:
   <<: *INSTALL_PLUGIN
   only_if: "changesInclude('hoobs.json')"
   matrix:
+    - freebsd_instance:
+        image_family: freebsd-11-3
     - freebsd_instance:
         image_family: freebsd-12-1
   env:
@@ -360,7 +373,7 @@ monica_task:
   only_if: "changesInclude('monica.json')"
   matrix:
     - freebsd_instance:
-        image_family: freebsd-11-3
+        image_family: freebsd-12-2
   env:
     PLUGIN_FILE: "monica.json"
 
@@ -396,7 +409,7 @@ node-red_task:
   only_if: "changesInclude('node-red.json')"
   matrix:
     - freebsd_instance:
-        image_family: freebsd-12-1
+        image_family: freebsd-12-2
   env:
     PLUGIN_FILE: "node-red.json"
 
