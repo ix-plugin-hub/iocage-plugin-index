@@ -91,8 +91,6 @@ backuppc_task:
   matrix:
     - freebsd_instance:
         image_family: freebsd-12-2
-    - freebsd_instance:
-        image_family: freebsd-12-1
   env:
     PLUGIN_FILE: "backuppc.json"
 
@@ -102,8 +100,6 @@ bazarr_task:
   matrix:
     - freebsd_instance:
         image_family: freebsd-12-2
-        cpu: 1
-        memory: 1
   env:
     PLUGIN_FILE: "bazarr.json"
 
@@ -113,8 +109,6 @@ bind_task:
   matrix:
     - freebsd_instance:
         image_family: freebsd-12-2
-        cpu: 1
-        memory: 1
   env:
     PLUGIN_FILE: "bind.json"
 
@@ -124,8 +118,6 @@ calibre-web_task:
   matrix:
     - freebsd_instance:
         image_family: freebsd-12-2
-        cpu: 1
-        memory: 1
   env:
     PLUGIN_FILE: "calibre-web.json"
 
@@ -135,8 +127,6 @@ channels-dvr_task:
   matrix:
     - freebsd_instance:
         image_family: freebsd-12-2
-        cpu: 1
-        memory: 1
   env:
     PLUGIN_FILE: "channels-dvr.json"
 
@@ -146,8 +136,6 @@ clamav_task:
   matrix:
     - freebsd_instance:
         image_family: freebsd-12-2
-        cpu: 1
-        memory: 1
   env:
     PLUGIN_FILE: "clamav.json"
 
@@ -157,8 +145,6 @@ deluge-pip_task:
   matrix:
     - freebsd_instance:
         image_family: freebsd-12-2
-        cpu: 1
-        memory: 1
   env:
     PLUGIN_FILE: "deluge-pip.json"
 
@@ -168,8 +154,6 @@ dnsmasq_task:
   matrix:
     - freebsd_instance:
         image_family: freebsd-12-2
-        cpu: 1
-        memory: 1
   env:
     PLUGIN_FILE: "dnsmasq.json"
 
@@ -179,8 +163,6 @@ drupal8_task:
   matrix:
     - freebsd_instance:
         image_family: freebsd-12-2
-        cpu: 1
-        memory: 1
   env:
     PLUGIN_FILE: "drupal8.json"
 
@@ -190,8 +172,6 @@ duplicati_task:
   matrix:
     - freebsd_instance:
         image_family: freebsd-12-2
-        cpu: 1
-        memory: 1
   env:
     PLUGIN_FILE: "duplicati.json"
 
@@ -201,8 +181,6 @@ emby_task:
   matrix:
     - freebsd_instance:
         image_family: freebsd-12-2
-        cpu: 1
-        memory: 1
   env:
     PLUGIN_FILE: "emby.json"
 
@@ -212,8 +190,6 @@ emby-server-stable_task:
   matrix:
     - freebsd_instance:
         image_family: freebsd-12-2
-        cpu: 1
-        memory: 1
   env:
     PLUGIN_FILE: "emby-server-stable.json"
 
@@ -223,8 +199,6 @@ esphome_task:
   matrix:
     - freebsd_instance:
         image_family: freebsd-12-2
-        cpu: 1
-        memory: 1
   env:
     PLUGIN_FILE: "esphome.json"
 
@@ -234,8 +208,6 @@ famp_task:
   matrix:
     - freebsd_instance:
         image_family: freebsd-12-2
-        cpu: 1
-        memory: 1
   env:
     PLUGIN_FILE: "famp.json"
 
@@ -245,8 +217,6 @@ gitea_task:
   matrix:
     - freebsd_instance:
         image_family: freebsd-12-2
-        cpu: 1
-        memory: 1
   env:
     PLUGIN_FILE: "gitea.json"
 
@@ -256,8 +226,6 @@ gitlab_task:
   matrix:
     - freebsd_instance:
         image_family: freebsd-12-2
-        cpu: 1
-        memory: 1
   env:
     PLUGIN_FILE: "gitlab.json"
 
@@ -267,8 +235,6 @@ gogs_task:
   matrix:
     - freebsd_instance:
         image_family: freebsd-12-2
-        cpu: 1
-        memory: 1
   env:
     PLUGIN_FILE: "gogs.json"
 
@@ -278,8 +244,6 @@ grafana_task:
   matrix:
     - freebsd_instance:
         image_family: freebsd-12-2
-        cpu: 1
-        memory: 1
   env:
     PLUGIN_FILE: "grafana.json"
 
@@ -289,8 +253,6 @@ heimdall-dashboard_task:
   matrix:
     - freebsd_instance:
         image_family: freebsd-12-2
-        cpu: 1
-        memory: 1
   env:
     PLUGIN_FILE: "heimdall-dashboard.json"
 
@@ -300,8 +262,6 @@ homeassistant_task:
   matrix:
     - freebsd_instance:
         image_family: freebsd-12-2
-        cpu: 1
-        memory: 1
   env:
     PLUGIN_FILE: "homeassistant.json"
 
@@ -311,8 +271,6 @@ homebridge_task:
   matrix:
     - freebsd_instance:
         image_family: freebsd-12-2
-        cpu: 1
-        memory: 1
   env:
     PLUGIN_FILE: "homebridge.json"
 
@@ -322,8 +280,6 @@ hoobs_task:
   matrix:
     - freebsd_instance:
         image_family: freebsd-12-2
-        cpu: 1
-        memory: 1
   env:
     PLUGIN_FILE: "hoobs.json"
 
@@ -333,8 +289,6 @@ i2p_task:
   matrix:
     - freebsd_instance:
         image_family: freebsd-12-2
-        cpu: 1
-        memory: 1
   env:
     PLUGIN_FILE: "i2p.json"
 
@@ -344,8 +298,6 @@ irssi_task:
   matrix:
     - freebsd_instance:
         image_family: freebsd-12-2
-        cpu: 1
-        memory: 1
   env:
     PLUGIN_FILE: "irssi.json"
 
@@ -355,8 +307,6 @@ jackett_task:
   matrix:
     - freebsd_instance:
         image_family: freebsd-12-2
-        cpu: 1
-        memory: 1
   env:
     PLUGIN_FILE: "jackett.json"
 
@@ -366,8 +316,6 @@ jenkins_task:
   matrix:
     - freebsd_instance:
         image_family: freebsd-12-2
-        cpu: 1
-        memory: 1
   env:
     PLUGIN_FILE: "jenkins.json"
 
@@ -377,8 +325,6 @@ jenkins-lts_task:
   matrix:
     - freebsd_instance:
         image_family: freebsd-12-2
-        cpu: 1
-        memory: 1
   env:
     PLUGIN_FILE: "jenkins-lts.json"
 
@@ -388,8 +334,6 @@ lidarr_task:
   matrix:
     - freebsd_instance:
         image_family: freebsd-12-2
-        cpu: 1
-        memory: 1
   env:
     PLUGIN_FILE: "lidarr.json"
 
@@ -399,8 +343,6 @@ madsonic_task:
   matrix:
     - freebsd_instance:
         image_family: freebsd-12-2
-        cpu: 1
-        memory: 1
   env:
     PLUGIN_FILE: "madsonic.json"
 
@@ -410,8 +352,6 @@ mineos_task:
   matrix:
     - freebsd_instance:
         image_family: freebsd-12-2
-        cpu: 1
-        memory: 1
   env:
     PLUGIN_FILE: "mineos.json"
 
@@ -421,8 +361,6 @@ monica_task:
   matrix:
     - freebsd_instance:
         image_family: freebsd-12-2
-        cpu: 1
-        memory: 1
   env:
     PLUGIN_FILE: "monica.json"
 
@@ -432,8 +370,6 @@ mosquitto_task:
   matrix:
     - freebsd_instance:
         image_family: freebsd-12-2
-        cpu: 1
-        memory: 1
   env:
     PLUGIN_FILE: "mosquitto.json"
 
@@ -443,8 +379,6 @@ motioneye_task:
   matrix:
     - freebsd_instance:
         image_family: freebsd-12-2
-        cpu: 1
-        memory: 1
   env:
     PLUGIN_FILE: "motioneye.json"
 
@@ -454,8 +388,6 @@ netdata_task:
   matrix:
     - freebsd_instance:
         image_family: freebsd-12-2
-        cpu: 1
-        memory: 1
   env:
     PLUGIN_FILE: "netdata.json"
 
@@ -465,8 +397,6 @@ node-red_task:
   matrix:
     - freebsd_instance:
         image_family: freebsd-12-2
-        cpu: 1
-        memory: 1
   env:
     PLUGIN_FILE: "node-red.json"
 
@@ -476,8 +406,6 @@ nzbget_task:
   matrix:
     - freebsd_instance:
         image_family: freebsd-12-2
-        cpu: 1
-        memory: 1
   env:
     PLUGIN_FILE: "nzbget.json"
 
@@ -487,8 +415,6 @@ openspeedtest-server_task:
   matrix:
     - freebsd_instance:
         image_family: freebsd-12-2
-        cpu: 1
-        memory: 1
   env:
     PLUGIN_FILE: "openspeedtest-server.json"
 
@@ -498,8 +424,6 @@ openvpn_task:
   matrix:
     - freebsd_instance:
         image_family: freebsd-12-2
-        cpu: 1
-        memory: 1
   env:
     PLUGIN_FILE: "openvpn.json"
 
@@ -509,8 +433,6 @@ privatebin_task:
   matrix:
     - freebsd_instance:
         image_family: freebsd-12-2
-        cpu: 1
-        memory: 1
   env:
     PLUGIN_FILE: "privatebin.json"
 
@@ -520,8 +442,6 @@ qbittorrent_task:
   matrix:
     - freebsd_instance:
         image_family: freebsd-12-2
-        cpu: 1
-        memory: 1
   env:
     PLUGIN_FILE: "qbittorrent.json"
 
@@ -531,8 +451,6 @@ quasselcore_task:
   matrix:
     - freebsd_instance:
         image_family: freebsd-12-2
-        cpu: 1
-        memory: 1
   env:
     PLUGIN_FILE: "quasselcore.json"
 
@@ -542,8 +460,6 @@ radarr_task:
   matrix:
     - freebsd_instance:
         image_family: freebsd-12-2
-        cpu: 1
-        memory: 1
   env:
     PLUGIN_FILE: "radarr.json"
 
@@ -553,8 +469,6 @@ rslsync_task:
   matrix:
     - freebsd_instance:
         image_family: freebsd-12-2
-        cpu: 1
-        memory: 1
   env:
     PLUGIN_FILE: "rslsync.json"
 
@@ -564,8 +478,6 @@ rtorrent-flood_task:
   matrix:
     - freebsd_instance:
         image_family: freebsd-12-2
-        cpu: 1
-        memory: 1
   env:
     PLUGIN_FILE: "rtorrent-flood.json"
 
@@ -575,8 +487,6 @@ sabnzbd_task:
   matrix:
     - freebsd_instance:
         image_family: freebsd-12-2
-        cpu: 1
-        memory: 1
   env:
     PLUGIN_FILE: "sabnzbd.json"
 
@@ -586,8 +496,6 @@ sickchill_task:
   matrix:
     - freebsd_instance:
         image_family: freebsd-12-2
-        cpu: 1
-        memory: 1
   env:
     PLUGIN_FILE: "sickchill.json"
 
@@ -597,8 +505,6 @@ sonarr_task:
   matrix:
     - freebsd_instance:
         image_family: freebsd-12-2
-        cpu: 1
-        memory: 1
   env:
     PLUGIN_FILE: "sonarr.json"
 
@@ -608,8 +514,6 @@ tasmoadmin_task:
   matrix:
     - freebsd_instance:
         image_family: freebsd-12-2
-        cpu: 1
-        memory: 1
   env:
     PLUGIN_FILE: "tasmoadmin.json"
 
@@ -619,8 +523,6 @@ tautulli_task:
   matrix:
     - freebsd_instance:
         image_family: freebsd-12-2
-        cpu: 1
-        memory: 1
   env:
     PLUGIN_FILE: "tautulli.json"
 
@@ -630,8 +532,6 @@ transmission_task:
   matrix:
     - freebsd_instance:
         image_family: freebsd-12-2
-        cpu: 1
-        memory: 1
   env:
     PLUGIN_FILE: "transmission.json"
 
@@ -641,8 +541,6 @@ unificontroller_task:
   matrix:
     - freebsd_instance:
         image_family: freebsd-12-2
-        cpu: 1
-        memory: 1
   env:
     PLUGIN_FILE: "unificontroller.json"
 
@@ -652,8 +550,6 @@ unificontroller-lts_task:
   matrix:
     - freebsd_instance:
         image_family: freebsd-12-2
-        cpu: 1
-        memory: 1
   env:
     PLUGIN_FILE: "unificontroller-lts.json"
 
@@ -663,8 +559,6 @@ vault_task:
   matrix:
     - freebsd_instance:
         image_family: freebsd-12-2
-        cpu: 1
-        memory: 1
   env:
     PLUGIN_FILE: "vault.json"
 
@@ -674,8 +568,6 @@ weechat_task:
   matrix:
     - freebsd_instance:
         image_family: freebsd-12-2
-        cpu: 1
-        memory: 1
   env:
     PLUGIN_FILE: "weechat.json"
 
@@ -685,8 +577,6 @@ xmrig_task:
   matrix:
     - freebsd_instance:
         image_family: freebsd-12-2
-        cpu: 1
-        memory: 1
   env:
     PLUGIN_FILE: "xmrig.json"
 
@@ -696,8 +586,6 @@ zoneminder_task:
   matrix:
     - freebsd_instance:
         image_family: freebsd-12-2
-        cpu: 1
-        memory: 1
   env:
     PLUGIN_FILE: "zoneminder.json"
 
@@ -707,8 +595,6 @@ zrepl_task:
   matrix:
     - freebsd_instance:
         image_family: freebsd-12-2
-        cpu: 1
-        memory: 1
   env:
     PLUGIN_FILE: "zrepl.json"
 
@@ -718,8 +604,6 @@ zwavejs2mqtt_task:
   matrix:
     - freebsd_instance:
         image_family: freebsd-12-2
-        cpu: 1
-        memory: 1
   env:
     PLUGIN_FILE: "zwavejs2mqtt.json"
 
