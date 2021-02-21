@@ -30,118 +30,118 @@ where *interface* is the name of the active network interface and *IP address* i
 For example, `ip4_addr="igb0|192.168.0.91"`
 
 ## Plugin build status
-[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=backuppc&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=backuppc&branch=test-install-plugins>)
+[![Build Status](https://api.cirrus-ci.com/github/ix-plugin-hub/iocage-plugin-index.svg?task=backuppc&branch=master)](https://api.cirrus-ci.com/github/ix-plugin-hub/iocage-plugin-index.svg?task=backuppc&branch=master>)
 
-[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=bazarr&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=bazarr&branch=test-install-plugins>)
+[![Build Status](https://api.cirrus-ci.com/github/ix-plugin-hub/iocage-plugin-index.svg?task=bazarr&branch=master)](https://api.cirrus-ci.com/github/ix-plugin-hub/iocage-plugin-index.svg?task=bazarr&branch=master>)
 
-[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=bind&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=bind&branch=test-install-plugins>)
+[![Build Status](https://api.cirrus-ci.com/github/ix-plugin-hub/iocage-plugin-index.svg?task=bind&branch=master)](https://api.cirrus-ci.com/github/ix-plugin-hub/iocage-plugin-index.svg?task=bind&branch=master>)
 
-[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=calibre-web&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=calibre-web&branch=test-install-plugins>)
+[![Build Status](https://api.cirrus-ci.com/github/ix-plugin-hub/iocage-plugin-index.svg?task=calibre-web&branch=master)](https://api.cirrus-ci.com/github/ix-plugin-hub/iocage-plugin-index.svg?task=calibre-web&branch=master>)
 
-[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=channels-dvr&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=channels-dvr&branch=test-install-plugins>)
+[![Build Status](https://api.cirrus-ci.com/github/ix-plugin-hub/iocage-plugin-index.svg?task=channels-dvr&branch=master)](https://api.cirrus-ci.com/github/ix-plugin-hub/iocage-plugin-index.svg?task=channels-dvr&branch=master>)
 
-[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=clamav&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=clamav&branch=test-install-plugins>)
+[![Build Status](https://api.cirrus-ci.com/github/ix-plugin-hub/iocage-plugin-index.svg?task=clamav&branch=master)](https://api.cirrus-ci.com/github/ix-plugin-hub/iocage-plugin-index.svg?task=clamav&branch=master>)
 
-[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=deluge-pip&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=deluge-pip&branch=test-install-plugins>)
+[![Build Status](https://api.cirrus-ci.com/github/ix-plugin-hub/iocage-plugin-index.svg?task=deluge-pip&branch=master)](https://api.cirrus-ci.com/github/ix-plugin-hub/iocage-plugin-index.svg?task=deluge-pip&branch=master>)
 
-[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=dnsmasq&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=dnsmasq&branch=test-install-plugins>)
+[![Build Status](https://api.cirrus-ci.com/github/ix-plugin-hub/iocage-plugin-index.svg?task=dnsmasq&branch=master)](https://api.cirrus-ci.com/github/ix-plugin-hub/iocage-plugin-index.svg?task=dnsmasq&branch=master>)
 
-[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=drupal8&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=drupal8&branch=test-install-plugins>)
+[![Build Status](https://api.cirrus-ci.com/github/ix-plugin-hub/iocage-plugin-index.svg?task=drupal8&branch=master)](https://api.cirrus-ci.com/github/ix-plugin-hub/iocage-plugin-index.svg?task=drupal8&branch=master>)
 
-[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=duplicati&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=duplicati&branch=test-install-plugins>)
+[![Build Status](https://api.cirrus-ci.com/github/ix-plugin-hub/iocage-plugin-index.svg?task=duplicati&branch=master)](https://api.cirrus-ci.com/github/ix-plugin-hub/iocage-plugin-index.svg?task=duplicati&branch=master>)
 
-[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=emby&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=emby&branch=test-install-plugins>)
+[![Build Status](https://api.cirrus-ci.com/github/ix-plugin-hub/iocage-plugin-index.svg?task=emby&branch=master)](https://api.cirrus-ci.com/github/ix-plugin-hub/iocage-plugin-index.svg?task=emby&branch=master>)
 
-[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=emby-server-stable&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=emby-server-stable&branch=test-install-plugins>)
+[![Build Status](https://api.cirrus-ci.com/github/ix-plugin-hub/iocage-plugin-index.svg?task=emby-server-stable&branch=master)](https://api.cirrus-ci.com/github/ix-plugin-hub/iocage-plugin-index.svg?task=emby-server-stable&branch=master>)
 
-[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=esphome&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=esphome&branch=test-install-plugins>)
+[![Build Status](https://api.cirrus-ci.com/github/ix-plugin-hub/iocage-plugin-index.svg?task=esphome&branch=master)](https://api.cirrus-ci.com/github/ix-plugin-hub/iocage-plugin-index.svg?task=esphome&branch=master>)
 
-[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=famp&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=famp&branch=test-install-plugins>)
+[![Build Status](https://api.cirrus-ci.com/github/ix-plugin-hub/iocage-plugin-index.svg?task=famp&branch=master)](https://api.cirrus-ci.com/github/ix-plugin-hub/iocage-plugin-index.svg?task=famp&branch=master>)
 
-[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=gitea&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=gitea&branch=test-install-plugins>)
+[![Build Status](https://api.cirrus-ci.com/github/ix-plugin-hub/iocage-plugin-index.svg?task=gitea&branch=master)](https://api.cirrus-ci.com/github/ix-plugin-hub/iocage-plugin-index.svg?task=gitea&branch=master>)
 
-[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=gitlab&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=gitlab&branch=test-install-plugins>)
+[![Build Status](https://api.cirrus-ci.com/github/ix-plugin-hub/iocage-plugin-index.svg?task=gitlab&branch=master)](https://api.cirrus-ci.com/github/ix-plugin-hub/iocage-plugin-index.svg?task=gitlab&branch=master>)
 
-[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=gogs&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=gogs&branch=test-install-plugins>)
+[![Build Status](https://api.cirrus-ci.com/github/ix-plugin-hub/iocage-plugin-index.svg?task=gogs&branch=master)](https://api.cirrus-ci.com/github/ix-plugin-hub/iocage-plugin-index.svg?task=gogs&branch=master>)
 
-[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=grafana&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=grafana&branch=test-install-plugins>)
+[![Build Status](https://api.cirrus-ci.com/github/ix-plugin-hub/iocage-plugin-index.svg?task=grafana&branch=master)](https://api.cirrus-ci.com/github/ix-plugin-hub/iocage-plugin-index.svg?task=grafana&branch=master>)
 
-[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=heimdall-dashboard&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=heimdall-dashboard&branch=test-install-plugins>)
+[![Build Status](https://api.cirrus-ci.com/github/ix-plugin-hub/iocage-plugin-index.svg?task=heimdall-dashboard&branch=master)](https://api.cirrus-ci.com/github/ix-plugin-hub/iocage-plugin-index.svg?task=heimdall-dashboard&branch=master>)
 
-[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=homeassistant&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=homeassistant&branch=test-install-plugins>)
+[![Build Status](https://api.cirrus-ci.com/github/ix-plugin-hub/iocage-plugin-index.svg?task=homeassistant&branch=master)](https://api.cirrus-ci.com/github/ix-plugin-hub/iocage-plugin-index.svg?task=homeassistant&branch=master>)
 
-[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=homebridge&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=homebridge&branch=test-install-plugins>)
+[![Build Status](https://api.cirrus-ci.com/github/ix-plugin-hub/iocage-plugin-index.svg?task=homebridge&branch=master)](https://api.cirrus-ci.com/github/ix-plugin-hub/iocage-plugin-index.svg?task=homebridge&branch=master>)
 
-[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=hoobs&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=hoobs&branch=test-install-plugins>)
+[![Build Status](https://api.cirrus-ci.com/github/ix-plugin-hub/iocage-plugin-index.svg?task=hoobs&branch=master)](https://api.cirrus-ci.com/github/ix-plugin-hub/iocage-plugin-index.svg?task=hoobs&branch=master>)
 
-[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=i2p&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=i2p&branch=test-install-plugins>)
+[![Build Status](https://api.cirrus-ci.com/github/ix-plugin-hub/iocage-plugin-index.svg?task=i2p&branch=master)](https://api.cirrus-ci.com/github/ix-plugin-hub/iocage-plugin-index.svg?task=i2p&branch=master>)
 
-[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=irssi&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=irssi&branch=test-install-plugins>)
+[![Build Status](https://api.cirrus-ci.com/github/ix-plugin-hub/iocage-plugin-index.svg?task=irssi&branch=master)](https://api.cirrus-ci.com/github/ix-plugin-hub/iocage-plugin-index.svg?task=irssi&branch=master>)
 
-[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=jackett&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=jackett&branch=test-install-plugins>)
+[![Build Status](https://api.cirrus-ci.com/github/ix-plugin-hub/iocage-plugin-index.svg?task=jackett&branch=master)](https://api.cirrus-ci.com/github/ix-plugin-hub/iocage-plugin-index.svg?task=jackett&branch=master>)
 
-[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=jenkins&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=jenkins&branch=test-install-plugins>)
+[![Build Status](https://api.cirrus-ci.com/github/ix-plugin-hub/iocage-plugin-index.svg?task=jenkins&branch=master)](https://api.cirrus-ci.com/github/ix-plugin-hub/iocage-plugin-index.svg?task=jenkins&branch=master>)
 
-[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=jenkins-lts&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=jenkins-lts&branch=test-install-plugins>)
+[![Build Status](https://api.cirrus-ci.com/github/ix-plugin-hub/iocage-plugin-index.svg?task=jenkins-lts&branch=master)](https://api.cirrus-ci.com/github/ix-plugin-hub/iocage-plugin-index.svg?task=jenkins-lts&branch=master>)
 
-[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=lidarr&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=lidarr&branch=test-install-plugins>)
+[![Build Status](https://api.cirrus-ci.com/github/ix-plugin-hub/iocage-plugin-index.svg?task=lidarr&branch=master)](https://api.cirrus-ci.com/github/ix-plugin-hub/iocage-plugin-index.svg?task=lidarr&branch=master>)
 
-[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=madsonic&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=madsonic&branch=test-install-plugins>)
+[![Build Status](https://api.cirrus-ci.com/github/ix-plugin-hub/iocage-plugin-index.svg?task=madsonic&branch=master)](https://api.cirrus-ci.com/github/ix-plugin-hub/iocage-plugin-index.svg?task=madsonic&branch=master>)
 
-[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=mineos&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=mineos&branch=test-install-plugins>)
+[![Build Status](https://api.cirrus-ci.com/github/ix-plugin-hub/iocage-plugin-index.svg?task=mineos&branch=master)](https://api.cirrus-ci.com/github/ix-plugin-hub/iocage-plugin-index.svg?task=mineos&branch=master>)
 
-[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=monica&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=monica&branch=test-install-plugins>)
+[![Build Status](https://api.cirrus-ci.com/github/ix-plugin-hub/iocage-plugin-index.svg?task=monica&branch=master)](https://api.cirrus-ci.com/github/ix-plugin-hub/iocage-plugin-index.svg?task=monica&branch=master>)
 
-[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=mosquitto&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=mosquitto&branch=test-install-plugins>)
+[![Build Status](https://api.cirrus-ci.com/github/ix-plugin-hub/iocage-plugin-index.svg?task=mosquitto&branch=master)](https://api.cirrus-ci.com/github/ix-plugin-hub/iocage-plugin-index.svg?task=mosquitto&branch=master>)
 
-[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=motioneye&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=motioneye&branch=test-install-plugins>)
+[![Build Status](https://api.cirrus-ci.com/github/ix-plugin-hub/iocage-plugin-index.svg?task=motioneye&branch=master)](https://api.cirrus-ci.com/github/ix-plugin-hub/iocage-plugin-index.svg?task=motioneye&branch=master>)
 
-[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=netdata&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=netdata&branch=test-install-plugins>)
+[![Build Status](https://api.cirrus-ci.com/github/ix-plugin-hub/iocage-plugin-index.svg?task=netdata&branch=master)](https://api.cirrus-ci.com/github/ix-plugin-hub/iocage-plugin-index.svg?task=netdata&branch=master>)
 
-[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=node-red&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=node-red&branch=test-install-plugins>)
+[![Build Status](https://api.cirrus-ci.com/github/ix-plugin-hub/iocage-plugin-index.svg?task=node-red&branch=master)](https://api.cirrus-ci.com/github/ix-plugin-hub/iocage-plugin-index.svg?task=node-red&branch=master>)
 
-[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=nzbget&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=nzbget&branch=test-install-plugins>)
+[![Build Status](https://api.cirrus-ci.com/github/ix-plugin-hub/iocage-plugin-index.svg?task=nzbget&branch=master)](https://api.cirrus-ci.com/github/ix-plugin-hub/iocage-plugin-index.svg?task=nzbget&branch=master>)
 
-[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=openspeedtest-server&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=openspeedtest-server&branch=test-install-plugins>)
+[![Build Status](https://api.cirrus-ci.com/github/ix-plugin-hub/iocage-plugin-index.svg?task=openspeedtest-server&branch=master)](https://api.cirrus-ci.com/github/ix-plugin-hub/iocage-plugin-index.svg?task=openspeedtest-server&branch=master>)
 
-[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=openvpn&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=openvpn&branch=test-install-plugins>)
+[![Build Status](https://api.cirrus-ci.com/github/ix-plugin-hub/iocage-plugin-index.svg?task=openvpn&branch=master)](https://api.cirrus-ci.com/github/ix-plugin-hub/iocage-plugin-index.svg?task=openvpn&branch=master>)
 
-[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=privatebin&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=privatebin&branch=test-install-plugins>)
+[![Build Status](https://api.cirrus-ci.com/github/ix-plugin-hub/iocage-plugin-index.svg?task=privatebin&branch=master)](https://api.cirrus-ci.com/github/ix-plugin-hub/iocage-plugin-index.svg?task=privatebin&branch=master>)
 
-[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=qbittorrent&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=qbittorrent&branch=test-install-plugins>)
+[![Build Status](https://api.cirrus-ci.com/github/ix-plugin-hub/iocage-plugin-index.svg?task=qbittorrent&branch=master)](https://api.cirrus-ci.com/github/ix-plugin-hub/iocage-plugin-index.svg?task=qbittorrent&branch=master>)
 
-[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=quasselcore&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=quasselcore&branch=test-install-plugins>)
+[![Build Status](https://api.cirrus-ci.com/github/ix-plugin-hub/iocage-plugin-index.svg?task=quasselcore&branch=master)](https://api.cirrus-ci.com/github/ix-plugin-hub/iocage-plugin-index.svg?task=quasselcore&branch=master>)
 
-[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=radarr&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=radarr&branch=test-install-plugins>)
+[![Build Status](https://api.cirrus-ci.com/github/ix-plugin-hub/iocage-plugin-index.svg?task=radarr&branch=master)](https://api.cirrus-ci.com/github/ix-plugin-hub/iocage-plugin-index.svg?task=radarr&branch=master>)
 
-[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=rslsync&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=rslsync&branch=test-install-plugins>)
+[![Build Status](https://api.cirrus-ci.com/github/ix-plugin-hub/iocage-plugin-index.svg?task=rslsync&branch=master)](https://api.cirrus-ci.com/github/ix-plugin-hub/iocage-plugin-index.svg?task=rslsync&branch=master>)
 
-[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=rtorrent-flood&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=rtorrent-flood&branch=test-install-plugins>)
+[![Build Status](https://api.cirrus-ci.com/github/ix-plugin-hub/iocage-plugin-index.svg?task=rtorrent-flood&branch=master)](https://api.cirrus-ci.com/github/ix-plugin-hub/iocage-plugin-index.svg?task=rtorrent-flood&branch=master>)
 
-[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=sabnzbd&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=sabnzbd&branch=test-install-plugins>)
+[![Build Status](https://api.cirrus-ci.com/github/ix-plugin-hub/iocage-plugin-index.svg?task=sabnzbd&branch=master)](https://api.cirrus-ci.com/github/ix-plugin-hub/iocage-plugin-index.svg?task=sabnzbd&branch=master>)
 
-[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=sickchill&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=sickchill&branch=test-install-plugins>)
+[![Build Status](https://api.cirrus-ci.com/github/ix-plugin-hub/iocage-plugin-index.svg?task=sickchill&branch=master)](https://api.cirrus-ci.com/github/ix-plugin-hub/iocage-plugin-index.svg?task=sickchill&branch=master>)
 
-[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=sonarr&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=sonarr&branch=test-install-plugins>)
+[![Build Status](https://api.cirrus-ci.com/github/ix-plugin-hub/iocage-plugin-index.svg?task=sonarr&branch=master)](https://api.cirrus-ci.com/github/ix-plugin-hub/iocage-plugin-index.svg?task=sonarr&branch=master>)
 
-[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=tasmoadmin&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=tasmoadmin&branch=test-install-plugins>)
+[![Build Status](https://api.cirrus-ci.com/github/ix-plugin-hub/iocage-plugin-index.svg?task=tasmoadmin&branch=master)](https://api.cirrus-ci.com/github/ix-plugin-hub/iocage-plugin-index.svg?task=tasmoadmin&branch=master>)
 
-[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=tautulli&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=tautulli&branch=test-install-plugins>)
+[![Build Status](https://api.cirrus-ci.com/github/ix-plugin-hub/iocage-plugin-index.svg?task=tautulli&branch=master)](https://api.cirrus-ci.com/github/ix-plugin-hub/iocage-plugin-index.svg?task=tautulli&branch=master>)
 
-[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=transmission&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=transmission&branch=test-install-plugins>)
+[![Build Status](https://api.cirrus-ci.com/github/ix-plugin-hub/iocage-plugin-index.svg?task=transmission&branch=master)](https://api.cirrus-ci.com/github/ix-plugin-hub/iocage-plugin-index.svg?task=transmission&branch=master>)
 
-[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=unificontroller&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=unificontroller&branch=test-install-plugins>)
+[![Build Status](https://api.cirrus-ci.com/github/ix-plugin-hub/iocage-plugin-index.svg?task=unificontroller&branch=master)](https://api.cirrus-ci.com/github/ix-plugin-hub/iocage-plugin-index.svg?task=unificontroller&branch=master>)
 
-[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=unificontroller-lts&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=unificontroller-lts&branch=test-install-plugins>)
+[![Build Status](https://api.cirrus-ci.com/github/ix-plugin-hub/iocage-plugin-index.svg?task=unificontroller-lts&branch=master)](https://api.cirrus-ci.com/github/ix-plugin-hub/iocage-plugin-index.svg?task=unificontroller-lts&branch=master>)
 
-[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=vault&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=vault&branch=test-install-plugins>)
+[![Build Status](https://api.cirrus-ci.com/github/ix-plugin-hub/iocage-plugin-index.svg?task=vault&branch=master)](https://api.cirrus-ci.com/github/ix-plugin-hub/iocage-plugin-index.svg?task=vault&branch=master>)
 
-[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=weechat&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=weechat&branch=test-install-plugins>)
+[![Build Status](https://api.cirrus-ci.com/github/ix-plugin-hub/iocage-plugin-index.svg?task=weechat&branch=master)](https://api.cirrus-ci.com/github/ix-plugin-hub/iocage-plugin-index.svg?task=weechat&branch=master>)
 
-[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=xmrig&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=xmrig&branch=test-install-plugins>)
+[![Build Status](https://api.cirrus-ci.com/github/ix-plugin-hub/iocage-plugin-index.svg?task=xmrig&branch=master)](https://api.cirrus-ci.com/github/ix-plugin-hub/iocage-plugin-index.svg?task=xmrig&branch=master>)
 
-[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=zoneminder&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=zoneminder&branch=test-install-plugins>)
+[![Build Status](https://api.cirrus-ci.com/github/ix-plugin-hub/iocage-plugin-index.svg?task=zoneminder&branch=master)](https://api.cirrus-ci.com/github/ix-plugin-hub/iocage-plugin-index.svg?task=zoneminder&branch=master>)
 
-[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=zrepl&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=zrepl&branch=test-install-plugins>)
+[![Build Status](https://api.cirrus-ci.com/github/ix-plugin-hub/iocage-plugin-index.svg?task=zrepl&branch=master)](https://api.cirrus-ci.com/github/ix-plugin-hub/iocage-plugin-index.svg?task=zrepl&branch=master>)
 
-[![Build Status](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=zwavejs2mqtt&branch=test-install-plugins)](https://api.cirrus-ci.com/github/fulder/iocage-plugin-index.svg?task=zwavejs2mqtt&branch=test-install-plugins>)
+[![Build Status](https://api.cirrus-ci.com/github/ix-plugin-hub/iocage-plugin-index.svg?task=zwavejs2mqtt&branch=master)](https://api.cirrus-ci.com/github/ix-plugin-hub/iocage-plugin-index.svg?task=zwavejs2mqtt&branch=master>)
