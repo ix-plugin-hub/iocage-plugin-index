@@ -99,7 +99,7 @@ bazarr_task:
   only_if: "changesInclude('bazarr.json')"
   matrix:
     - freebsd_instance:
-        image_family: freebsd-12-2
+        image_family: freebsd-12-1
   env:
     PLUGIN_FILE: "bazarr.json"
 
@@ -108,7 +108,7 @@ bind_task:
   only_if: "changesInclude('bind.json')"
   matrix:
     - freebsd_instance:
-        image_family: freebsd-12-2
+        image_family: freebsd-11-3
   env:
     PLUGIN_FILE: "bind.json"
 
@@ -117,7 +117,7 @@ calibre-web_task:
   only_if: "changesInclude('calibre-web.json')"
   matrix:
     - freebsd_instance:
-        image_family: freebsd-12-2
+        image_family: freebsd-12-1
   env:
     PLUGIN_FILE: "calibre-web.json"
 
@@ -126,7 +126,7 @@ channels-dvr_task:
   only_if: "changesInclude('channels-dvr.json')"
   matrix:
     - freebsd_instance:
-        image_family: freebsd-12-2
+        image_family: freebsd-11-3
   env:
     PLUGIN_FILE: "channels-dvr.json"
 
@@ -135,7 +135,7 @@ clamav_task:
   only_if: "changesInclude('clamav.json')"
   matrix:
     - freebsd_instance:
-        image_family: freebsd-12-2
+        image_family: freebsd-12-1
   env:
     PLUGIN_FILE: "clamav.json"
 
@@ -144,7 +144,7 @@ deluge-pip_task:
   only_if: "changesInclude('deluge-pip.json')"
   matrix:
     - freebsd_instance:
-        image_family: freebsd-12-2
+        image_family: freebsd-12-1
   env:
     PLUGIN_FILE: "deluge-pip.json"
 
@@ -153,7 +153,7 @@ dnsmasq_task:
   only_if: "changesInclude('dnsmasq.json')"
   matrix:
     - freebsd_instance:
-        image_family: freebsd-12-2
+        image_family: freebsd-11-3
   env:
     PLUGIN_FILE: "dnsmasq.json"
 
@@ -162,7 +162,7 @@ drupal8_task:
   only_if: "changesInclude('drupal8.json')"
   matrix:
     - freebsd_instance:
-        image_family: freebsd-12-2
+        image_family: freebsd-12-1
   env:
     PLUGIN_FILE: "drupal8.json"
 
@@ -171,7 +171,7 @@ duplicati_task:
   only_if: "changesInclude('duplicati.json')"
   matrix:
     - freebsd_instance:
-        image_family: freebsd-12-2
+        image_family: freebsd-11-3
   env:
     PLUGIN_FILE: "duplicati.json"
 
@@ -180,7 +180,7 @@ emby_task:
   only_if: "changesInclude('emby.json')"
   matrix:
     - freebsd_instance:
-        image_family: freebsd-12-2
+        image_family: freebsd-12-1
   env:
     PLUGIN_FILE: "emby.json"
 
@@ -198,7 +198,7 @@ esphome_task:
   only_if: "changesInclude('esphome.json')"
   matrix:
     - freebsd_instance:
-        image_family: freebsd-12-2
+        image_family: freebsd-12-1
   env:
     PLUGIN_FILE: "esphome.json"
 
@@ -207,7 +207,7 @@ famp_task:
   only_if: "changesInclude('famp.json')"
   matrix:
     - freebsd_instance:
-        image_family: freebsd-12-2
+        image_family: freebsd-12-1
   env:
     PLUGIN_FILE: "famp.json"
 
@@ -216,7 +216,7 @@ gitea_task:
   only_if: "changesInclude('gitea.json')"
   matrix:
     - freebsd_instance:
-        image_family: freebsd-12-2
+        image_family: freebsd-12-1
   env:
     PLUGIN_FILE: "gitea.json"
 
@@ -225,7 +225,7 @@ gitlab_task:
   only_if: "changesInclude('gitlab.json')"
   matrix:
     - freebsd_instance:
-        image_family: freebsd-12-2
+        image_family: freebsd-12-1
   env:
     PLUGIN_FILE: "gitlab.json"
 
@@ -234,7 +234,7 @@ gogs_task:
   only_if: "changesInclude('gogs.json')"
   matrix:
     - freebsd_instance:
-        image_family: freebsd-12-2
+        image_family: freebsd-12-1
   env:
     PLUGIN_FILE: "gogs.json"
 
@@ -243,7 +243,7 @@ grafana_task:
   only_if: "changesInclude('grafana.json')"
   matrix:
     - freebsd_instance:
-        image_family: freebsd-12-2
+        image_family: freebsd-12-1
   env:
     PLUGIN_FILE: "grafana.json"
 
@@ -252,7 +252,7 @@ heimdall-dashboard_task:
   only_if: "changesInclude('heimdall-dashboard.json')"
   matrix:
     - freebsd_instance:
-        image_family: freebsd-12-2
+        image_family: freebsd-12-1
   env:
     PLUGIN_FILE: "heimdall-dashboard.json"
 
@@ -261,7 +261,7 @@ homeassistant_task:
   only_if: "changesInclude('homeassistant.json')"
   matrix:
     - freebsd_instance:
-        image_family: freebsd-12-2
+        image_family: freebsd-12-1
   env:
     PLUGIN_FILE: "homeassistant.json"
 
@@ -270,7 +270,7 @@ homebridge_task:
   only_if: "changesInclude('homebridge.json')"
   matrix:
     - freebsd_instance:
-        image_family: freebsd-12-2
+        image_family: freebsd-12-1
   env:
     PLUGIN_FILE: "homebridge.json"
 
@@ -279,7 +279,7 @@ hoobs_task:
   only_if: "changesInclude('hoobs.json')"
   matrix:
     - freebsd_instance:
-        image_family: freebsd-12-2
+        image_family: freebsd-12-1
   env:
     PLUGIN_FILE: "hoobs.json"
 
@@ -288,7 +288,7 @@ i2p_task:
   only_if: "changesInclude('i2p.json')"
   matrix:
     - freebsd_instance:
-        image_family: freebsd-12-2
+        image_family: freebsd-12-1
   env:
     PLUGIN_FILE: "i2p.json"
 
@@ -297,7 +297,7 @@ irssi_task:
   only_if: "changesInclude('irssi.json')"
   matrix:
     - freebsd_instance:
-        image_family: freebsd-12-2
+        image_family: freebsd-11-3
   env:
     PLUGIN_FILE: "irssi.json"
 
@@ -306,7 +306,7 @@ jackett_task:
   only_if: "changesInclude('jackett.json')"
   matrix:
     - freebsd_instance:
-        image_family: freebsd-12-2
+        image_family: freebsd-12-1
   env:
     PLUGIN_FILE: "jackett.json"
 
@@ -315,7 +315,7 @@ jenkins_task:
   only_if: "changesInclude('jenkins.json')"
   matrix:
     - freebsd_instance:
-        image_family: freebsd-12-2
+        image_family: freebsd-12-1
   env:
     PLUGIN_FILE: "jenkins.json"
 
@@ -324,7 +324,7 @@ jenkins-lts_task:
   only_if: "changesInclude('jenkins-lts.json')"
   matrix:
     - freebsd_instance:
-        image_family: freebsd-12-2
+        image_family: freebsd-12-1
   env:
     PLUGIN_FILE: "jenkins-lts.json"
 
@@ -333,7 +333,7 @@ lidarr_task:
   only_if: "changesInclude('lidarr.json')"
   matrix:
     - freebsd_instance:
-        image_family: freebsd-12-2
+        image_family: freebsd-12-1
   env:
     PLUGIN_FILE: "lidarr.json"
 
@@ -342,7 +342,7 @@ madsonic_task:
   only_if: "changesInclude('madsonic.json')"
   matrix:
     - freebsd_instance:
-        image_family: freebsd-12-2
+        image_family: freebsd-12-1
   env:
     PLUGIN_FILE: "madsonic.json"
 
@@ -360,7 +360,7 @@ monica_task:
   only_if: "changesInclude('monica.json')"
   matrix:
     - freebsd_instance:
-        image_family: freebsd-12-2
+        image_family: freebsd-11-3
   env:
     PLUGIN_FILE: "monica.json"
 
@@ -369,7 +369,7 @@ mosquitto_task:
   only_if: "changesInclude('mosquitto.json')"
   matrix:
     - freebsd_instance:
-        image_family: freebsd-12-2
+        image_family: freebsd-12-1
   env:
     PLUGIN_FILE: "mosquitto.json"
 
@@ -387,7 +387,7 @@ netdata_task:
   only_if: "changesInclude('netdata.json')"
   matrix:
     - freebsd_instance:
-        image_family: freebsd-12-2
+        image_family: freebsd-12-1
   env:
     PLUGIN_FILE: "netdata.json"
 
@@ -396,7 +396,7 @@ node-red_task:
   only_if: "changesInclude('node-red.json')"
   matrix:
     - freebsd_instance:
-        image_family: freebsd-12-2
+        image_family: freebsd-12-1
   env:
     PLUGIN_FILE: "node-red.json"
 
@@ -405,7 +405,7 @@ nzbget_task:
   only_if: "changesInclude('nzbget.json')"
   matrix:
     - freebsd_instance:
-        image_family: freebsd-12-2
+        image_family: freebsd-12-1
   env:
     PLUGIN_FILE: "nzbget.json"
 
@@ -414,7 +414,7 @@ openspeedtest-server_task:
   only_if: "changesInclude('openspeedtest-server.json')"
   matrix:
     - freebsd_instance:
-        image_family: freebsd-12-2
+        image_family: freebsd-11-3
   env:
     PLUGIN_FILE: "openspeedtest-server.json"
 
@@ -423,7 +423,7 @@ openvpn_task:
   only_if: "changesInclude('openvpn.json')"
   matrix:
     - freebsd_instance:
-        image_family: freebsd-12-2
+        image_family: freebsd-12-1
   env:
     PLUGIN_FILE: "openvpn.json"
 
@@ -432,7 +432,7 @@ privatebin_task:
   only_if: "changesInclude('privatebin.json')"
   matrix:
     - freebsd_instance:
-        image_family: freebsd-12-2
+        image_family: freebsd-12-1
   env:
     PLUGIN_FILE: "privatebin.json"
 
@@ -441,7 +441,7 @@ qbittorrent_task:
   only_if: "changesInclude('qbittorrent.json')"
   matrix:
     - freebsd_instance:
-        image_family: freebsd-12-2
+        image_family: freebsd-12-1
   env:
     PLUGIN_FILE: "qbittorrent.json"
 
@@ -450,7 +450,7 @@ quasselcore_task:
   only_if: "changesInclude('quasselcore.json')"
   matrix:
     - freebsd_instance:
-        image_family: freebsd-12-2
+        image_family: freebsd-11-3
   env:
     PLUGIN_FILE: "quasselcore.json"
 
@@ -459,7 +459,7 @@ radarr_task:
   only_if: "changesInclude('radarr.json')"
   matrix:
     - freebsd_instance:
-        image_family: freebsd-12-2
+        image_family: freebsd-12-1
   env:
     PLUGIN_FILE: "radarr.json"
 
@@ -468,7 +468,7 @@ rslsync_task:
   only_if: "changesInclude('rslsync.json')"
   matrix:
     - freebsd_instance:
-        image_family: freebsd-12-2
+        image_family: freebsd-12-1
   env:
     PLUGIN_FILE: "rslsync.json"
 
@@ -477,7 +477,7 @@ rtorrent-flood_task:
   only_if: "changesInclude('rtorrent-flood.json')"
   matrix:
     - freebsd_instance:
-        image_family: freebsd-12-2
+        image_family: freebsd-12-1
   env:
     PLUGIN_FILE: "rtorrent-flood.json"
 
@@ -486,7 +486,7 @@ sabnzbd_task:
   only_if: "changesInclude('sabnzbd.json')"
   matrix:
     - freebsd_instance:
-        image_family: freebsd-12-2
+        image_family: freebsd-12-1
   env:
     PLUGIN_FILE: "sabnzbd.json"
 
@@ -495,7 +495,7 @@ sickchill_task:
   only_if: "changesInclude('sickchill.json')"
   matrix:
     - freebsd_instance:
-        image_family: freebsd-12-2
+        image_family: freebsd-12-1
   env:
     PLUGIN_FILE: "sickchill.json"
 
@@ -504,7 +504,7 @@ sonarr_task:
   only_if: "changesInclude('sonarr.json')"
   matrix:
     - freebsd_instance:
-        image_family: freebsd-12-2
+        image_family: freebsd-12-1
   env:
     PLUGIN_FILE: "sonarr.json"
 
@@ -513,7 +513,7 @@ tasmoadmin_task:
   only_if: "changesInclude('tasmoadmin.json')"
   matrix:
     - freebsd_instance:
-        image_family: freebsd-12-2
+        image_family: freebsd-12-1
   env:
     PLUGIN_FILE: "tasmoadmin.json"
 
@@ -522,7 +522,7 @@ tautulli_task:
   only_if: "changesInclude('tautulli.json')"
   matrix:
     - freebsd_instance:
-        image_family: freebsd-12-2
+        image_family: freebsd-12-1
   env:
     PLUGIN_FILE: "tautulli.json"
 
@@ -531,7 +531,7 @@ transmission_task:
   only_if: "changesInclude('transmission.json')"
   matrix:
     - freebsd_instance:
-        image_family: freebsd-12-2
+        image_family: freebsd-12-1
   env:
     PLUGIN_FILE: "transmission.json"
 
@@ -540,7 +540,7 @@ unificontroller_task:
   only_if: "changesInclude('unificontroller.json')"
   matrix:
     - freebsd_instance:
-        image_family: freebsd-12-2
+        image_family: freebsd-11-3
   env:
     PLUGIN_FILE: "unificontroller.json"
 
@@ -549,7 +549,7 @@ unificontroller-lts_task:
   only_if: "changesInclude('unificontroller-lts.json')"
   matrix:
     - freebsd_instance:
-        image_family: freebsd-12-2
+        image_family: freebsd-11-3
   env:
     PLUGIN_FILE: "unificontroller-lts.json"
 
@@ -558,7 +558,7 @@ vault_task:
   only_if: "changesInclude('vault.json')"
   matrix:
     - freebsd_instance:
-        image_family: freebsd-12-2
+        image_family: freebsd-12-1
   env:
     PLUGIN_FILE: "vault.json"
 
@@ -567,7 +567,7 @@ weechat_task:
   only_if: "changesInclude('weechat.json')"
   matrix:
     - freebsd_instance:
-        image_family: freebsd-12-2
+        image_family: freebsd-11-3
   env:
     PLUGIN_FILE: "weechat.json"
 
@@ -576,7 +576,7 @@ xmrig_task:
   only_if: "changesInclude('xmrig.json')"
   matrix:
     - freebsd_instance:
-        image_family: freebsd-12-2
+        image_family: freebsd-11-3
   env:
     PLUGIN_FILE: "xmrig.json"
 
@@ -585,7 +585,7 @@ zoneminder_task:
   only_if: "changesInclude('zoneminder.json')"
   matrix:
     - freebsd_instance:
-        image_family: freebsd-12-2
+        image_family: freebsd-12-1
   env:
     PLUGIN_FILE: "zoneminder.json"
 
@@ -594,7 +594,7 @@ zrepl_task:
   only_if: "changesInclude('zrepl.json')"
   matrix:
     - freebsd_instance:
-        image_family: freebsd-12-2
+        image_family: freebsd-12-1
   env:
     PLUGIN_FILE: "zrepl.json"
 
