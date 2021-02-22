@@ -241,16 +241,6 @@
 		"official": false,
 		"primary_pkg": null
 	},
-	"mineos": {
-		"MANIFEST": "mineos.json",
-		"name": "MineOS",
-		"icon": "https://icons.freenas.org/community-icons/mineos.png",
-		"description": "Set up and manage Minecraft servers.",
-		"official": false,
-		"primary_pkg": null,
-		"category": "entertainment",
-		"homepage": "https://minecraft.codeemo.com/"
-	},
 	"monica": {
 		"MANIFEST": "monica.json",
 		"name": "Monica",
@@ -276,14 +266,24 @@
 		"official": false,
 		"primary_pkg": null
 	},
-	"movienight": {
-		"MANIFEST": "movienight.json",
-		"description": "Single-instance streaming server with chat.",
-		"icon": "https://icons.freenas.org/community-icons/movienight.png",
-		"name": "Movie Night",
-		"official": false,
-		"primary_pkg": null
-	},
+    "movienight": {
+        "MANIFEST": "movienight.json",
+        "description": "Single-instance streaming server with chat.",
+        "icon": "https://icons.freenas.org/community-icons/movienight.png",
+        "name": "Movie Night",
+        "official": false,
+        "primary_pkg": null
+    },
+    "mineos": {
+        "MANIFEST": "mineos.json",
+        "name": "MineOS",
+        "icon": "https://icons.freenas.org/community-icons/mineos.png",
+        "description": "Set up and manage Minecraft servers.",
+        "official": false,
+        "primary_pkg": null,
+        "category": "entertainment",
+        "homepage": "https://minecraft.codeemo.com/"
+    },
 	"netdata": {
 		"MANIFEST": "netdata.json",
 		"description": "Monitor everything in real-time",
