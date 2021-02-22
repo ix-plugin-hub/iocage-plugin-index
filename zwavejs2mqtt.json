@@ -21,14 +21,10 @@
     },
     "pkgs": [
         "bash",
-        "ca_root_nss",
         "curl",
-        "git-lite",
-        "node",
-        "npm",
-        "python",
-        "rsync",
-        "wget"
+        "node14",
+        "npm-node14",
+        "python"
     ],
     "packagesite": "http://pkg.FreeBSD.org/${ABI}/latest",
     "fingerprints": {
@@ -39,5 +35,6 @@
             }
         ]
     },
-    "revision": "0"
+    "plugin_schema": "2",
+    "revision": "1"
 }
