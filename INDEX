@@ -505,7 +505,7 @@
 	},
 	"zwavejs2mqtt": {
 		"MANIFEST": "zwavejs2mqtt.json",
-		"name": "Z-Wave JS to MQTT", WaveJS 
+		"name": "Z-Wave JS to MQTT",
 		"description": "Fully configurable Zwave to MQTT gateway and Control Panel using NodeJS and Vue. This also includes the Z-Wave JS Web Socket Server!",
 		"icon": "https://icons.freenas.org/community-icons/zwavejs2mqtt.png",
 		"primary_pkg": null,
