@@ -171,7 +171,7 @@
 		"description": "Lightweight iOS HomeKit API emulator. Enables adding unsupported devices to HomeKit.",
 		"icon": "https://icons.freenas.org/community-icons/homebridge.png",
 		"name": "Homebridge",
-		"offical": false
+		"official": false
 	},
 	"hoobs": {
 		"MANIFEST": "hoobs.json",
@@ -179,7 +179,7 @@
 		"icon": "https://icons.freenas.org/community-icons/hoobs.png",
 		"name": "HOOBS",
 		"primary_pkg": null,
-		"offical": false
+		"official": false
 	},
 	"i2p": {
 		"MANIFEST": "i2p.json",
@@ -506,7 +506,7 @@
 	"zwavejs2mqtt": {
 		"MANIFEST": "zwavejs2mqtt.json",
 		"name": "Z-Wave JS to MQTT",
-		"description": "Fully configurable Zwave to MQTT gateway and Control Panel using NodeJS and Vue. This also includes the Z-Wave JS Web Socket Server!",
+		"description": "Fully configurable Zwave to MQTT gateway and Control Panel using NodeJS and Vue. This also includes the Z-Wave JS Server!",
 		"icon": "https://icons.freenas.org/community-icons/zwavejs2mqtt.png",
 		"primary_pkg": null,
 		"official": false
