@@ -1,4 +1,12 @@
 {
+    "piwigo": {
+        "MANIFEST": "piwigo.json",
+        "description": "Piwigo is open source photo gallery software for the web. Designed for organisations, teams and individuals.",
+        "icon": "https://icons.freenas.org/community-icons/piwigo.png",
+        "name": "Piwigo Gallery",
+        "official": false,
+        "primary_pkg": null
+    },
     "bind": {
         "MANIFEST": "bind.json",
         "description": "BIND DNS server",
