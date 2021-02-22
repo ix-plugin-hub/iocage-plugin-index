@@ -272,7 +272,9 @@
         "icon": "https://icons.freenas.org/community-icons/movienight.png",
         "name": "Movie Night",
         "official": false,
-        "primary_pkg": null
+        "primary_pkg": null,
+        "category": "entertainment",
+        "homepage": "https://github.com/zorchenhimer/MovieNight"
     },
     "mineos": {
         "MANIFEST": "mineos.json",
