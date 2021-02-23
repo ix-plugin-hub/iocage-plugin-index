@@ -83,15 +83,15 @@ install_template: &INSTALL_PLUGIN
 
     ./plugin/post_install.sh
 
-    if ! [ -x ./plugin/pre_update.sh ]
+    if [ -f ./plugin/pre_update.sh ] && ! [ -x ./plugin/pre_update.sh ]
     then
-      echo "pre_update.sh script not found or not executable"
+      echo "pre_update.sh script not executable"
       exit 1
     fi
 
-    if ! [ -x ./plugin/post_update.sh ]
+    if [ -f ./plugin/post_update.sh ] && ! [ -x ./plugin/post_update.sh ]
     then
-      echo "post_update.sh script not found or not executable"
+      echo "post_update.sh script not executable"
       exit 1
     fi
 
