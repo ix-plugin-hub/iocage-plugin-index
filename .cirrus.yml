@@ -3,7 +3,7 @@ freebsd_instance:
   memory: "1"
 
 install_template: &INSTALL_PLUGIN
-  requirements_script: pkg install -y jq ca_root_nss
+  requirements_script: pkg install --yes jq
   install_script: |
     release=$(jq -r '.release' $PLUGIN_FILE)
     name=$(jq '.name' $PLUGIN_FILE)
@@ -12,6 +12,11 @@ install_template: &INSTALL_PLUGIN
     plugin_repo=$(jq -r '.artifact' $PLUGIN_FILE)
     pkgs=$(jq -r '.pkgs | join(" ")' $PLUGIN_FILE)
     kmods=$(jq -r '.kmods' $PLUGIN_FILE)
+
+    if echo ${packagesite} | grep -q "https"
+    then
+      pkg install -y ca_root_nss
+    fi
 
     pkg_dir=/usr/local/test
     repos_dir="${pkg_dir}/repos"
@@ -77,13 +82,21 @@ install_template: &INSTALL_PLUGIN
     # Cleanup before plugin pkg installation
     if ! echo ${pkgs} | grep -q "git"
     then
-      pkg remove -y git-lite git jq ca_root_nss
-      pkg autoremove -y
+      pkg remove --yes git-lite git jq
+      pkg autoremove --yes
     fi
 
-    echo "Test install plugin pkgs for plugin: $name"
+    echo "Fetching $name pkgs: $pkgs"
+    pkg update
+    pkg fetch --dependencies --yes $pkgs
+
+    if ! echo ${pkgs} | grep -q "ca_root_nss"
+    then
+      pkg remove --force --yes ca_root_nss
+    fi
+
     echo "Installing $name pkgs: $pkgs"
-    pkg install -y $pkgs
+    pkg install --no-repo-update --yes $pkgs
 
     if [ -d "./plugin/overlay" ]
     then
