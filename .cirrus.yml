@@ -11,6 +11,7 @@ install_template: &INSTALL_PLUGIN
     fingerprints=$(jq -r '.fingerprints | keys[]' $PLUGIN_FILE)
     plugin_repo=$(jq -r '.artifact' $PLUGIN_FILE)
     pkgs=$(jq -r '.pkgs | join(" ")' $PLUGIN_FILE)
+    kmods=$(jq -r '.kmods' $PLUGIN_FILE)
 
     pkg_dir=/usr/local/test
     repos_dir="${pkg_dir}/repos"
