@@ -83,14 +83,16 @@ install_template: &INSTALL_PLUGIN
 
     ./plugin/post_install.sh
 
-    if [ -f ./plugin/pre_update.sh ]
+    if ! [ -x ./plugin/pre_update.sh ]
     then
-      ./plugin/pre_update.sh
+      echo "pre_update.sh script not found or not executable"
+      exit 1
     fi
 
-    if [ -f ./plugin/post_update.sh ]
+    if ! [ -x ./plugin/post_update.sh ]
     then
-      ./plugin/post_update.sh
+      echo "post_update.sh script not found or not executable"
+      exit 1
     fi
 
 backuppc_task:
