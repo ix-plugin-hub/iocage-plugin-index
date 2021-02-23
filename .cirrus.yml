@@ -3,7 +3,7 @@ freebsd_instance:
   memory: "1"
 
 install_template: &INSTALL_PLUGIN
-  requirements_script: pkg install -y jq
+  requirements_script: pkg install -y jq ca_root_nss
   install_script: |
     release=$(jq -r '.release' $PLUGIN_FILE)
     name=$(jq '.name' $PLUGIN_FILE)
@@ -76,7 +76,7 @@ install_template: &INSTALL_PLUGIN
     # Cleanup before plugin pkg installation
     if ! echo ${pkgs} | grep -q "git"
     then
-      pkg remove -y git-lite git jq
+      pkg remove -y git-lite git jq ca_root_nss
       pkg autoremove -y
     fi
 
