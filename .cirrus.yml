@@ -56,6 +56,15 @@ install_template: &INSTALL_PLUGIN
       done
     done
 
+    if [ "$kmods" != "null" ]
+    then
+      echo $kmods | jq -r  '.[]' | while IFS='' read kmod
+      do
+        echo "Loading kmod: ${kmod}"
+        kldload -nv ${kmod}
+      done
+    fi
+
     if [ "$(which git)" = "" ]
     then
       pkg install -y git-lite || pkg install -y git
