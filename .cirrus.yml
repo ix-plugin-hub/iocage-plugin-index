@@ -73,10 +73,7 @@ install_template: &INSTALL_PLUGIN
       done
     fi
 
-    if [ "$(which git)" = "" ]
-    then
-      pkg install -y git-lite || pkg install -y git
-    fi
+    pkg install -y git-lite || pkg install -y git
 
     release_branch="$(freebsd-version | cut -d '-' -f1)-RELEASE"
     git clone -b ${release_branch} ${plugin_repo} ./plugin || git clone -b master ${plugin_repo} ./plugin
