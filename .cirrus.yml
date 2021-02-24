@@ -82,12 +82,14 @@ install_template: &INSTALL_PLUGIN
     git clone -b ${release_branch} ${plugin_repo} ./plugin || git clone -b master ${plugin_repo} ./plugin
 
     # Cleanup before plugin pkg installation
-    pkg remove --yes git-lite git jq ca_root_nss
+    pkg remove --yes git-lite git jq
     pkg autoremove --yes
 
     echo "Fetching $name pkgs: $pkgs"
     pkg update
     pkg fetch --dependencies --yes $pkgs
+
+    pkg remove --yes ca_root_nss
 
     echo "Installing $name pkgs: $pkgs"
     pkg install --no-repo-update --yes $pkgs
