@@ -118,7 +118,7 @@ backuppc_task:
   <<: *INSTALL_PLUGIN
   matrix:
     - freebsd_instance:
-        image_family: freebsd-12-2
+        image_family: freebsd-12-1
   env:
     PLUGIN_FILE: "backuppc.json"
 
@@ -142,7 +142,7 @@ calibre-web_task:
   <<: *INSTALL_PLUGIN
   matrix:
     - freebsd_instance:
-        image_family: freebsd-12-2
+        image_family: freebsd-12-1
   env:
     PLUGIN_FILE: "calibre-web.json"
 
@@ -166,7 +166,7 @@ deluge-pip_task:
   <<: *INSTALL_PLUGIN
   matrix:
     - freebsd_instance:
-        image_family: freebsd-12-2
+        image_family: freebsd-12-1
   env:
     PLUGIN_FILE: "deluge-pip.json"
 
@@ -214,7 +214,7 @@ esphome_task:
   <<: *INSTALL_PLUGIN
   matrix:
     - freebsd_instance:
-        image_family: freebsd-11-3
+        image_family: freebsd-12-1
   env:
     PLUGIN_FILE: "esphome.json"
 
@@ -358,7 +358,7 @@ monica_task:
   <<: *INSTALL_PLUGIN
   matrix:
     - freebsd_instance:
-        image_family: freebsd-12-2
+        image_family: freebsd-11-3
   env:
     PLUGIN_FILE: "monica.json"
 
@@ -390,7 +390,7 @@ node-red_task:
   <<: *INSTALL_PLUGIN
   matrix:
     - freebsd_instance:
-        image_family: freebsd-12-2
+        image_family: freebsd-12-1
   env:
     PLUGIN_FILE: "node-red.json"
 
