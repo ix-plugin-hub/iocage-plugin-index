@@ -83,6 +83,7 @@ install_template: &INSTALL_PLUGIN
     # Cleanup before plugin pkg installation
     pkg delete --yes git-lite git jq
     pkg autoremove --yes
+    pkg clean --yes
 
     echo "Fetching $name pkgs: $pkgs"
     pkg update
