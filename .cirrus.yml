@@ -89,7 +89,7 @@ install_template: &INSTALL_PLUGIN
     pkg update
     pkg fetch --dependencies --yes $pkgs
 
-    pkg remove --yes ca_root_nss
+    pkg remove --yes ca_root_nss || true
 
     echo "Installing $name pkgs: $pkgs"
     pkg install --no-repo-update --yes $pkgs
