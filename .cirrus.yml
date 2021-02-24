@@ -3,7 +3,9 @@ freebsd_instance:
   memory: "1"
 
 install_template: &INSTALL_PLUGIN
-  requirements_script: pkg install --yes jq
+  requirements_script: |
+    pkg delete --all --yes
+    pkg install --yes jq
   install_script: |
     release=$(jq -r '.release' $PLUGIN_FILE)
     name=$(jq '.name' $PLUGIN_FILE)
@@ -80,20 +82,12 @@ install_template: &INSTALL_PLUGIN
     git clone -b ${release_branch} ${plugin_repo} ./plugin || git clone -b master ${plugin_repo} ./plugin
 
     # Cleanup before plugin pkg installation
-    if ! echo ${pkgs} | grep -q "git"
-    then
-      pkg remove --yes git-lite git jq
-      pkg autoremove --yes
-    fi
+    pkg remove --yes git-lite git jq ca_root_nss
+    pkg autoremove --yes
 
     echo "Fetching $name pkgs: $pkgs"
     pkg update
     pkg fetch --dependencies --yes $pkgs
-
-    if ! echo ${pkgs} | grep -q "ca_root_nss"
-    then
-      pkg remove --force --yes ca_root_nss
-    fi
 
     echo "Installing $name pkgs: $pkgs"
     pkg install --no-repo-update --yes $pkgs
