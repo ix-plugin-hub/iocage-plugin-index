@@ -1,6 +1,6 @@
 freebsd_instance:
-  cpu: 1
-  memory: "1"
+  cpu: 4
+  memory: "4"
 
 install_template: &INSTALL_PLUGIN
   install_script: .cirrus/install_script.sh
