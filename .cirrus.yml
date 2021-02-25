@@ -4,7 +4,6 @@ freebsd_instance:
 
 install_template: &INSTALL_PLUGIN
   requirements_script: |
-    pkg delete --all --yes
     pkg install --yes jq
   install_script: |
     release=$(jq -r '.release' $PLUGIN_FILE)
@@ -15,15 +14,9 @@ install_template: &INSTALL_PLUGIN
     pkgs=$(jq -r '.pkgs | join(" ")' $PLUGIN_FILE)
     kmods=$(jq -r '.kmods' $PLUGIN_FILE)
 
+    # Clone plugins artifacts
     plugin_dir="./plugin"
-
-    if echo ${packagesite} | grep -q "https"
-    then
-      pkg install -y ca_root_nss
-    fi
-
-    pkg install -y git-lite || pkg install -y git
-
+    pkg install --yes git-lite || pkg install --yes git
     release_branch="$(freebsd-version | cut -d '-' -f1)-RELEASE"
     git clone -b ${release_branch} ${plugin_repo} ${plugin_dir} || git clone -b master ${plugin_repo} ${plugin_dir}
 
@@ -33,7 +26,6 @@ install_template: &INSTALL_PLUGIN
 
     echo "Creating main repos dir: ${repos_dir}"
     mkdir -p $repos_dir
-    export REPOS_DIR=$repos_dir
 
     pkg_conf_path="${repos_dir}/test.conf"
     echo "iocage-plugins: {" > $pkg_conf_path
@@ -80,13 +72,20 @@ install_template: &INSTALL_PLUGIN
       done
     fi
 
-    # Cleanup before plugin pkg installation
-    pkg delete --yes git-lite git jq
+    # Clean up all packages
+    pkg delete --all --yes
     pkg autoremove --yes
     pkg clean --yes
 
+    if echo ${packagesite} | grep -q "https"
+    then
+      pkg install --yes ca_root_nss
+    fi
+
+    # Start using plugin repos
+    export REPOS_DIR=$repos_dir
+
     echo "Fetching $name pkgs: $pkgs"
-    pkg update
     pkg fetch --dependencies --yes $pkgs
 
     pkg delete --yes ca_root_nss || true
