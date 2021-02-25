@@ -3,13 +3,22 @@ freebsd_instance:
   memory: "1"
 
 install_template: &INSTALL_PLUGIN
-  requirements_script: pkg install -y jq
+  requirements_script: |
+    pkg install --yes jq
   install_script: |
     release=$(jq -r '.release' $PLUGIN_FILE)
     name=$(jq '.name' $PLUGIN_FILE)
     packagesite=$(jq '.packagesite' $PLUGIN_FILE)
     fingerprints=$(jq -r '.fingerprints | keys[]' $PLUGIN_FILE)
     plugin_repo=$(jq -r '.artifact' $PLUGIN_FILE)
+    pkgs=$(jq -r '.pkgs | join(" ")' $PLUGIN_FILE)
+    kmods=$(jq -r '.kmods' $PLUGIN_FILE)
+
+    # Clone plugins artifacts
+    plugin_dir="./plugin"
+    pkg install --yes git-lite || pkg install --yes git
+    release_branch="$(freebsd-version | cut -d '-' -f1)-RELEASE"
+    git clone -b ${release_branch} ${plugin_repo} ${plugin_dir} || git clone -b master ${plugin_repo} ${plugin_dir}
 
     pkg_dir=/usr/local/test
     repos_dir="${pkg_dir}/repos"
@@ -17,7 +26,6 @@ install_template: &INSTALL_PLUGIN
 
     echo "Creating main repos dir: ${repos_dir}"
     mkdir -p $repos_dir
-    export REPOS_DIR=$repos_dir
 
     pkg_conf_path="${repos_dir}/test.conf"
     echo "iocage-plugins: {" > $pkg_conf_path
@@ -55,41 +63,54 @@ install_template: &INSTALL_PLUGIN
       done
     done
 
-    echo "Test install plugin pkgs for plugin: $name"
-    pkgs=$(jq -r '.pkgs | join(" ")' $PLUGIN_FILE)
-    echo "Installing $name pkgs: $pkgs"
-    pkg install -y $pkgs
-
-    if [ "$(which git)" = "" ]
+    if [ "$kmods" != "null" ]
     then
-      pkg install -y git-lite || pkg install -y git
+      echo $kmods | jq -r  '.[]' | while IFS='' read kmod
+      do
+        echo "Loading kmod: ${kmod}"
+        kldload -nv ${kmod}
+      done
     fi
 
-    release_branch="$(freebsd-version | cut -d '-' -f1)-RELEASE"
-    git clone -b ${release_branch} ${plugin_repo} ./plugin || git clone -b master ${plugin_repo} ./plugin
+    # Clean up all packages
+    pkg delete --all --yes
+    pkg autoremove --yes
+    pkg clean --yes
 
-    if [ -d "./plugin/overlay" ]
+    if echo ${packagesite} | grep -q "https"
+    then
+      pkg install --yes ca_root_nss
+    fi
+
+    # Start using plugin repos
+    export REPOS_DIR=$repos_dir
+
+    echo "Fetching $name pkgs: $pkgs"
+    pkg fetch --dependencies --yes $pkgs
+
+    pkg delete --yes ca_root_nss || true
+
+    echo "Installing $name pkgs: $pkgs"
+    pkg install --no-repo-update --yes $pkgs
+
+    if [ -d "${plugin_dir}/overlay" ]
     then
       echo "Found overlay folder"
-      cp -r ./plugin/overlay/ /
+      cp -r ${plugin_dir}/overlay/ /
     fi
 
-    if ! echo ${pkgs} | grep -q "git"
+    ${plugin_dir}/post_install.sh
+
+    if [ -f ${plugin_dir}/pre_update.sh ] && ! [ -x ${plugin_dir}/pre_update.sh ]
     then
-      pkg remove -y git-lite git
-      pkg autoremove -y
+      echo "pre_update.sh script not executable"
+      exit 1
     fi
 
-    ./plugin/post_install.sh
-
-    if [ -f ./plugin/pre_update.sh ]
+    if [ -f ${plugin_dir}/post_update.sh ] && ! [ -x ${plugin_dir}/post_update.sh ]
     then
-      ./plugin/pre_update.sh
-    fi
-
-    if [ -f ./plugin/post_update.sh ]
-    then
-      ./plugin/post_update.sh
+      echo "post_update.sh script not executable"
+      exit 1
     fi
 
 backuppc_task:
@@ -97,7 +118,7 @@ backuppc_task:
   only_if: "changesInclude('backuppc.json')"
   matrix:
     - freebsd_instance:
-        image_family: freebsd-12-2
+        image_family: freebsd-12-1
   env:
     PLUGIN_FILE: "backuppc.json"
 
@@ -124,7 +145,7 @@ calibre-web_task:
   only_if: "changesInclude('calibre-web.json')"
   matrix:
     - freebsd_instance:
-        image_family: freebsd-12-2
+        image_family: freebsd-12-1
   env:
     PLUGIN_FILE: "calibre-web.json"
 
@@ -151,7 +172,7 @@ deluge-pip_task:
   only_if: "changesInclude('deluge-pip.json')"
   matrix:
     - freebsd_instance:
-        image_family: freebsd-12-2
+        image_family: freebsd-12-1
   env:
     PLUGIN_FILE: "deluge-pip.json"
 
@@ -205,7 +226,7 @@ esphome_task:
   only_if: "changesInclude('esphome.json')"
   matrix:
     - freebsd_instance:
-        image_family: freebsd-11-3
+        image_family: freebsd-12-1
   env:
     PLUGIN_FILE: "esphome.json"
 
@@ -268,10 +289,6 @@ homeassistant_task:
   only_if: "changesInclude('homeassistant.json')"
   matrix:
     - freebsd_instance:
-        image_family: freebsd-11-2
-    - freebsd_instance:
-        image_family: freebsd-11-3
-    - freebsd_instance:
         image_family: freebsd-12-1
   env:
     PLUGIN_FILE: "homeassistant.json"
@@ -289,8 +306,6 @@ hoobs_task:
   <<: *INSTALL_PLUGIN
   only_if: "changesInclude('hoobs.json')"
   matrix:
-    - freebsd_instance:
-        image_family: freebsd-11-3
     - freebsd_instance:
         image_family: freebsd-12-1
   env:
@@ -373,7 +388,7 @@ monica_task:
   only_if: "changesInclude('monica.json')"
   matrix:
     - freebsd_instance:
-        image_family: freebsd-12-2
+        image_family: freebsd-11-3
   env:
     PLUGIN_FILE: "monica.json"
 
@@ -409,7 +424,7 @@ node-red_task:
   only_if: "changesInclude('node-red.json')"
   matrix:
     - freebsd_instance:
-        image_family: freebsd-12-2
+        image_family: freebsd-12-1
   env:
     PLUGIN_FILE: "node-red.json"
 
