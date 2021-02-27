@@ -309,7 +309,9 @@
 		"icon": "https://icons.freenas.org/community-icons/node-red.png",
 		"primary_pkg": null,
 		"name": "Node-RED",
-		"official": false
+		"official": false,
+		"category": "home-automation",
+		"homepage": "https://nodered.org/"
 	},
 	"nzbget": {
 		"MANIFEST": "nzbget.json",
