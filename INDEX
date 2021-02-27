@@ -262,7 +262,9 @@
 		"icon": "https://icons.freenas.org/community-icons/mosquitto.png",
 		"name": "Mosquitto MQTT",
 		"official": false,
-		"primary_pkg": "mosquitto"
+		"primary_pkg": "mosquitto",
+		"category": "home-automation",
+		"homepage": "https://mosquitto.org/"
 	},
 	"motioneye": {
 		"MANIFEST": "motioneye.json",
