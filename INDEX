@@ -521,6 +521,8 @@
 		"description": "Fully configurable Zwave to MQTT gateway and Control Panel using NodeJS and Vue. This also includes the Z-Wave JS Server!",
 		"icon": "https://icons.freenas.org/community-icons/zwavejs2mqtt.png",
 		"primary_pkg": null,
-		"official": false
+		"official": false,
+		"category": "home-automation",
+		"homepage": "https://zwave-js.github.io/zwavejs2mqtt/#/"
 	}
 }
