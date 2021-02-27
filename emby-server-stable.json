@@ -6,9 +6,7 @@
         "dhcp": 1,
         "allow_raw_sockets": "1"
     },
-    "pkgs": [
-        "emby-server",
-        "ffmpeg",
+    "pkgs": [        
         "mono",
         "libass",
         "fontconfig",
@@ -22,13 +20,15 @@
         "libva",
         "libvpx",
         "libvorbis",
+        "ocl-icd",
         "webp",
         "libx264",
         "x265",
         "dav1d",
         "libzvbi",
         "libraw",
-        "ImageMagick6"
+        "ImageMagick6",
+        "emby-server"
     ],
     "packagesite": "http://pkg.FreeBSD.org/${ABI}/latest",
     "fingerprints": {
