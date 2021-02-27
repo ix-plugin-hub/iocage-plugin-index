@@ -1,6 +1,6 @@
 {
   "name": "homeassistant",
-  "release": "12.1-RELEASE",
+  "release": "12.2-RELEASE",
   "artifact": "https://github.com/tprelog/iocage-homeassistant.git",
   "official": "false",
   "devfs_ruleset": {
@@ -36,7 +36,7 @@
     "wget",
     "zip"
   ],
-  "packagesite": "http://pkg.FreeBSD.org/${ABI}/quarterly",
+  "packagesite": "http://pkg.FreeBSD.org/${ABI}/latest",
   "fingerprints": {
     "plugin-default": [
       {

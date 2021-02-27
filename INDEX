@@ -168,7 +168,9 @@
 		"icon": "https://icons.freenas.org/community-icons/homeassistant.png",
 		"name": "Home Assistant Core",
 		"primary_pkg": null,
-		"official": false
+		"official": false,
+		"category": "home-automation",
+		"homepage": "https://www.home-assistant.io/"
 	},
 	"homebridge": {
 		"MANIFEST": "homebridge.json",
