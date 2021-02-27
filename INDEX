@@ -142,7 +142,9 @@
 		"icon": "https://icons.freenas.org/community-icons/gogs.png",
 		"name": "Gogs",
 		"official": false,
-		"primary_pkg": "gogs"
+		"primary_pkg": "gogs",
+		"category": "development",
+		"homepage": "https://gogs.io/"
 	},
 	"grafana": {
 		"MANIFEST": "grafana.json",
