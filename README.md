@@ -1,3 +1,10 @@
+[plugins-shield]:https://img.shields.io/badge/TrueNAS%20CORE-Community%20Plugins-blue?logo=TrueNAS&style=for-the-badge
+[plugins-link]:https://www.truenas.com/plugins/
+[release-shield]:https://img.shields.io/badge/Default%20Branch-12.2--RELEASE-blue?logo=FreeBSD&logoColor=red&style=for-the-badge
+[release-link]:https://www.freebsd.org/releases/12.2R/relnotes/
+
+[![x][plugins-shield]][plugins-link] [![x][release-shield]][release-link]
+
 ![Validate JSONs](https://github.com/ix-plugin-hub/iocage-plugin-index/workflows/Validate%20JSONs/badge.svg)
 
 # iocage-ix-plugins
