@@ -431,7 +431,9 @@
 		"icon": "https://icons.freenas.org/community-icons/tasmoadmin.png",
 		"name": "TasmoAdmin",
 		"primary_pkg": null,
-		"official": false
+		"official": false,
+		"category": "home-automation",
+		"homepage": "https://github.com/reloxx13/TasmoAdmin#readme"
 	},
 	"tautulli": {
 		"MANIFEST": "tautulli.json",
