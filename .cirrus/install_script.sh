@@ -1,6 +1,21 @@
 #!/bin/sh
 set -e
 
+print_info()
+{
+  echo -e "\033[0;35m${1}\033[0m"
+}
+
+print_success()
+{
+  echo -e "\033[0;32m${1}\033[0m"
+}
+
+print_error()
+{
+  echo -e "\033[0;31m${1}\033[0m"
+}
+
 wait_for_admin_portal()
 {
   exp_ui_url=$1
@@ -10,7 +25,7 @@ wait_for_admin_portal()
   fetch_success=false
   sleep_time=5
 
-  echo -e "\033[0;32Starting to wait for Admin Portal at: ${exp_ui_url}"
+  print_info "Starting to wait for Admin Portal at: ${exp_ui_url}"
   while [ $retry -lt $max_retries ]
   do
     retry=$(expr $retry + 1)
@@ -20,15 +35,15 @@ wait_for_admin_portal()
       break
     fi
 
-    echo -e "\033[0;32Admin Portal fetch failed, sleeping ${sleep_time} seconds, and retrying (${retry}/${max_retries})\033[0m"
+    print_info "Admin Portal fetch failed, sleeping ${sleep_time} seconds, and retrying (${retry}/${max_retries})"
     sleep ${sleep_time}
   done
 
   if ${fetch_success}
   then
-    echo -e "\033[0;32Admin Portal reachable\033[0m"
+    print_success "Admin Portal reachable"
   else
-    echo -e "\033[0;32Could not fetch Admin Portal\033[0m"
+    print_error "Could not fetch Admin Portal"
     exit 1
   fi
 }
@@ -47,7 +62,7 @@ kmods=$(jq -r '.kmods' $PLUGIN_FILE)
 plugin_dir="/usr/local/plugin"
 pkg install --yes git-lite || pkg install --yes git
 release_branch="$(freebsd-version | cut -d '-' -f1)-RELEASE"
-echo -e "\033[0;32Trying to clone ${plugin_repo}, to ${plugin_dir}, using branch: ${release_branch} (with fallback to 'master')\033[0m"
+print_info "Trying to clone ${plugin_repo}, to ${plugin_dir}, using branch: ${release_branch} (with fallback to 'master')"
 git clone -b ${release_branch} ${plugin_repo} ${plugin_dir} || git clone -b master ${plugin_repo} ${plugin_dir}
 
 exp_ui_url=""
@@ -56,10 +71,10 @@ then
   admin_portal=$(jq -r '.adminportal' ${plugin_dir}/ui.json | sed 's/%%IP%%/localhost/')
   if echo $admin_portal | grep -q "http\|localhost"
   then
-    echo -e "\033[0;32Found http or localhost in Admin Portal, will try to fetch it after post_install\033[0m"
+    print_info "Found http or localhost in Admin Portal, will try to fetch it after post_install"
     exp_ui_url=$admin_portal
   else
-    echo -e "\033[0;32Admin Portal does not contain localhost or http. Will skip waiting for admin_portal\033[0m"
+    print_info "Admin Portal does not contain localhost or http. Will skip waiting for admin_portal"
   fi
 fi
 
@@ -67,7 +82,7 @@ pkg_dir=/usr/local/test
 repos_dir="${pkg_dir}/repos"
 fingerprints_dir="${pkg_dir}/fingerprints"
 
-echo -e "\033[0;32Creating main repos dir: ${repos_dir}\033[0m"
+print_info "Creating main repos dir: ${repos_dir}"
 mkdir -p $repos_dir
 
 pkg_conf_path="${repos_dir}/test.conf"
@@ -77,7 +92,7 @@ echo "signature_type: \"fingerprints\"," >> $pkg_conf_path
 echo "fingerprints \"${fingerprints_dir}\"," >> $pkg_conf_path
 echo "enabled: true" >> $pkg_conf_path
 echo "}" >> $pkg_conf_path
-echo -e "\033[0;32Created test pkg config file:"
+print_info "Created test pkg config file:"
 cat $pkg_conf_path
 
 trusted_fingerprints="$fingerprints_dir/trusted"
@@ -90,14 +105,13 @@ do
   repo_count=1
   echo $repo_fingerprints | while IFS='' read f
   do
-    echo -e "\033[0;32Creating fingerprint file for repo:\033[0m"
-    echo $f
+    print_info "Creating fingerprint file for repo: ${f}"
 
     function=$(echo $f | jq -r '.function')
     fingerprint=$(echo $f | jq -r '.fingerprint')
     file_path=${trusted_fingerprints}/${repo_name}_${repo_count}
 
-    echo -e "\033[0;32Creating new fingerprint file: ${file_path}\033[0m"
+    print_info "Creating new fingerprint file: ${file_path}"
 
     echo "function: $function" > ${file_path}
     echo "fingerprint: $fingerprint" >> ${file_path}
@@ -108,16 +122,16 @@ done
 
 if [ "$kmods" != "null" ]
 then
-  echo -e "\033[0;32Found kmods\033[0m"
+  print_info "Plugin kmods set"
   echo $kmods | jq -r  '.[]' | while IFS='' read kmod
   do
-    echo -e "\033[0;32Loading kmod: ${kmod}\033[0m"
+    print_info "Loading kmod: ${kmod}"
     kldload -nv ${kmod}
   done
 fi
 
 # Clean up all packages
-echo -e "\033[0;32Clean up packages before plugin installation\033[0m"
+print_info "Clean up packages before plugin installation"
 pkg delete --all --yes
 pkg autoremove --yes
 pkg clean --yes
@@ -127,25 +141,26 @@ then
   pkg install --yes ca_root_nss
 fi
 
-echo -e "\033[0;32Start using plugin pkg repos\033[0m"
+print_info "Start using plugin pkg repos"
 export REPOS_DIR=$repos_dir
 
-echo -e "\033[0;32Fetching $name pkgs: $pkgs\033[0m"
+print_info "Fetching $name pkgs: $pkgs"
 pkg fetch --dependencies --yes $pkgs
 
 pkg delete --yes ca_root_nss || true
 
-echo -e "\033[0;32Installing $name pkgs: $pkgs\033[0m"
+print_info "Installing $name pkgs: $pkgs"
 pkg install --no-repo-update --yes $pkgs
 
 if [ -d "${plugin_dir}/overlay" ]
 then
-  echo -e "\033[0;32Found overlay folder\033[0m"
+  print_info "Found overlay folder"
   cp -r ${plugin_dir}/overlay/ /
 fi
 
-echo -e "\033[0;32Executing post_install.sh script\033[0m"
+print_info "Executing post_install.sh script"
 ${plugin_dir}/post_install.sh
+print_success "Post install complete"
 
 if [ "${exp_ui_url}" != "" ]
 then
@@ -154,12 +169,12 @@ fi
 
 if [ -f ${plugin_dir}/pre_update.sh ] && ! [ -x ${plugin_dir}/pre_update.sh ]
 then
-  echo -e "\033[0;32pre_update.sh script not executable\033[0m"
+  print_error "pre_update.sh script not executable"
   exit 1
 fi
 
 if [ -f ${plugin_dir}/post_update.sh ] && ! [ -x ${plugin_dir}/post_update.sh ]
 then
-  echo -e "\033[0;32post_update.sh script not executable\033[0m"
+  print_error "post_update.sh script not executable"
   exit 1
 fi
