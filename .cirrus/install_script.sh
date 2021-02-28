@@ -147,6 +147,11 @@ fi
 echo "Executing post_install.sh script"
 ${plugin_dir}/post_install.sh
 
+if [ "${exp_ui_url}" != "" ]
+then
+  wait_for_admin_portal ${exp_ui_url}
+fi
+
 if [ -f ${plugin_dir}/pre_update.sh ] && ! [ -x ${plugin_dir}/pre_update.sh ]
 then
   echo "pre_update.sh script not executable"
@@ -157,9 +162,4 @@ if [ -f ${plugin_dir}/post_update.sh ] && ! [ -x ${plugin_dir}/post_update.sh ]
 then
   echo "post_update.sh script not executable"
   exit 1
-fi
-
-if [ "${exp_ui_url}" != "" ]
-then
-  wait_for_admin_portal ${exp_ui_url}
 fi
