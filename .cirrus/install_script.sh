@@ -10,7 +10,7 @@ wait_for_admin_portal()
   fetch_success=false
   sleep_time=5
 
-  echo "Starting to wait for Admin Portal"
+  echo "Starting to wait for Admin Portal at: ${exp_ui_url}"
   while [ $retry -lt $max_retries ]
   do
     retry=$(expr $retry + 1)
