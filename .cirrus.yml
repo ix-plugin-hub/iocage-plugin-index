@@ -413,7 +413,7 @@ openvpn_task:
   <<: *INSTALL_PLUGIN
   matrix:
     - freebsd_instance:
-        image_family: freebsd-12-1
+        image_family: freebsd-12-2
   env:
     PLUGIN_FILE: "openvpn.json"
 
