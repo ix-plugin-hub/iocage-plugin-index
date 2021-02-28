@@ -3,7 +3,7 @@ set -e
 
 wait_for_admin_portal()
 {
-  expected_ui=$1
+  exp_ui_url=$1
 
   max_retries=10
   retry=0
@@ -48,14 +48,14 @@ pkg install --yes git-lite || pkg install --yes git
 release_branch="$(freebsd-version | cut -d '-' -f1)-RELEASE"
 git clone -b ${release_branch} ${plugin_repo} ${plugin_dir} || git clone -b master ${plugin_repo} ${plugin_dir}
 
-expected_ui=""
+exp_ui_url=""
 if [ -f ${plugin_dir}/ui.json ]
 then
   admin_portal=$(jq -r '.adminportal' ${plugin_dir}/ui.json | sed 's/%%IP%%/localhost/')
   if echo $admin_portal | grep -q "http\|localhost"
   then
     echo "Found http or localhost in adminportal, will try to fetch"
-    expected_ui=$admin_portal
+    exp_ui_url=$admin_portal
   else
     echo "Admin portal does not contain localhost or http. Will skip waiting for admin_portal"
   fi
@@ -154,7 +154,7 @@ then
   exit 1
 fi
 
-if [ "${expected_ui}" != "" ]
+if [ "${exp_ui_url}" != "" ]
 then
-  wait_for_admin_portal ${expected_ui}
+  wait_for_admin_portal ${exp_ui_url}
 fi
