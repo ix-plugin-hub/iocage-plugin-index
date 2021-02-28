@@ -2,7 +2,7 @@
 set -e
 
 pkg install --yes jq
-plugin_file = "../${PLUGIN_FILE}"
+plugin_file="../${PLUGIN_FILE}"
 
 release=$(jq -r '.release' $plugin_file)
 name=$(jq '.name' $plugin_file)
