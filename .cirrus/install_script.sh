@@ -2,15 +2,14 @@
 set -e
 
 pkg install --yes jq
-plugin_file="../${PLUGIN_FILE}"
 
-release=$(jq -r '.release' $plugin_file)
-name=$(jq '.name' $plugin_file)
-packagesite=$(jq '.packagesite' $plugin_file)
-fingerprints=$(jq -r '.fingerprints | keys[]' $plugin_file)
-plugin_repo=$(jq -r '.artifact' $plugin_file)
-pkgs=$(jq -r '.pkgs | join(" ")' $plugin_file)
-kmods=$(jq -r '.kmods' $plugin_file)
+release=$(jq -r '.release' $PLUGIN_FILE)
+name=$(jq '.name' $PLUGIN_FILE)
+packagesite=$(jq '.packagesite' $PLUGIN_FILE)
+fingerprints=$(jq -r '.fingerprints | keys[]' $PLUGIN_FILE)
+plugin_repo=$(jq -r '.artifact' $PLUGIN_FILE)
+pkgs=$(jq -r '.pkgs | join(" ")' $PLUGIN_FILE)
+kmods=$(jq -r '.kmods' $PLUGIN_FILE)
 
 # Clone plugins artifacts
 plugin_dir="./plugin"
