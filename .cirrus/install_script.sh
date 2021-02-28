@@ -1,6 +1,37 @@
 #!/bin/sh
 set -e
 
+wait_for_admin_portal()
+{
+  expected_ui=$1
+
+  max_retries=10
+  retry=0
+  fetch_success=false
+  sleep_time=5
+
+  while [ $retry -lt $max_retries ]
+  do
+    retry=$(expr $retry + 1)
+    if fetch ${admin_portal} 2> /dev/null
+    then
+      fetch_success=true
+      break
+    fi
+    echo "Admin UI fetch failed, sleeping ${sleep_time} seconds, and retrying (${retry}/${max_retries})"
+    sleep ${sleep_time}
+  done
+
+  if $fetch_success
+  then
+    echo "Admin Portal reachable"
+  else
+    echo "Could not fetch Admin Portal"
+    exit 1
+  fi
+}
+
+
 pkg install --yes jq
 
 release=$(jq -r '.release' $PLUGIN_FILE)
@@ -16,6 +47,19 @@ plugin_dir="/usr/local/plugin"
 pkg install --yes git-lite || pkg install --yes git
 release_branch="$(freebsd-version | cut -d '-' -f1)-RELEASE"
 git clone -b ${release_branch} ${plugin_repo} ${plugin_dir} || git clone -b master ${plugin_repo} ${plugin_dir}
+
+expected_ui=""
+if [ -f ${plugin_dir}/ui.json ]
+then
+  admin_portal=$(jq -r '.adminportal' ${plugin_dir}/ui.json | sed 's/%%IP%%/localhost/')
+  if echo $admin_portal | grep -q "http\|localhost"
+  then
+    echo "Found http or localhost in adminportal, will try to fetch"
+    expected_ui=$admin_portal
+  else
+    echo "Admin portal does not contain localhost or http. Will skip waiting for admin_portal"
+  fi
+fi
 
 pkg_dir=/usr/local/test
 repos_dir="${pkg_dir}/repos"
@@ -108,4 +152,9 @@ if [ -f ${plugin_dir}/post_update.sh ] && ! [ -x ${plugin_dir}/post_update.sh ]
 then
   echo "post_update.sh script not executable"
   exit 1
+fi
+
+if [ "${expected_ui}" != "" ]
+then
+  wait_for_admin_portal ${expected_ui}
 fi

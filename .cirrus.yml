@@ -5,46 +5,6 @@ freebsd_instance:
 install_template: &INSTALL_PLUGIN
   install_script: .cirrus/install_script.sh
 
-    if [ -f ./plugin/ui.json ]
-    then
-      admin_portal=$(jq -r '.adminportal' ./plugin/ui.json | sed 's/%%IP%%/localhost/')
-
-      if echo $admin_portal | grep -q "http\|localhost"
-      then
-        echo "Found http or localhost in adminportal, will try to fetch"
-      else
-        echo "Admin portal does not contain localhost or http. Skip fetch"
-        exit 0
-      fi
-
-      max_retries=10
-      retry=0
-      fetch_success=false
-      sleep_time=5
-
-      while [ $retry -lt $max_retries ]
-      do
-        retry=$(expr $retry + 1)
-
-        if fetch ${admin_portal} 2> /dev/null
-        then
-          fetch_success=true
-          break
-        fi
-
-        echo "Admin UI fetch failed, sleeping ${sleep_time} seconds, and retrying (${retry}/${max_retries})"
-        sleep ${sleep_time}
-      done
-
-      if $fetch_success
-      then
-        echo "Admin Portal reachable"
-      else
-        echo "Could not fetch Admin Portal"
-        exit 1
-      fi
-    fi
-
 backuppc_task:
   <<: *INSTALL_PLUGIN
   only_if: "changesInclude('backuppc.json')"
