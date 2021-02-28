@@ -1,4 +1,5 @@
 #!/bin/sh
+set -e
 
 pkg install --yes jq
 plugin_file = "../${PLUGIN_FILE}"
