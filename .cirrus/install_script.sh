@@ -13,16 +13,17 @@ wait_for_admin_portal()
   while [ $retry -lt $max_retries ]
   do
     retry=$(expr $retry + 1)
-    if fetch ${admin_portal} 2> /dev/null
+    if fetch --no-verify-hostname ${exp_ui_url} 2> /dev/null
     then
       fetch_success=true
       break
     fi
+
     echo "Admin UI fetch failed, sleeping ${sleep_time} seconds, and retrying (${retry}/${max_retries})"
     sleep ${sleep_time}
   done
 
-  if $fetch_success
+  if ${fetch_success}
   then
     echo "Admin Portal reachable"
   else
