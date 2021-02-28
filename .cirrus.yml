@@ -47,7 +47,7 @@ install_template: &INSTALL_PLUGIN
 
 backuppc_task:
   <<: *INSTALL_PLUGIN
-  only_if: "changesInclude('backuppc.json', '.cirrus/install_script.sh')"
+  only_if: "changesInclude('backuppc.json')"
   matrix:
     - freebsd_instance:
         image_family: freebsd-12-1
@@ -56,7 +56,7 @@ backuppc_task:
 
 bazarr_task:
   <<: *INSTALL_PLUGIN
-  only_if: "changesInclude('bazarr.json', '.cirrus/install_script.sh')"
+  only_if: "changesInclude('bazarr.json')"
   matrix:
     - freebsd_instance:
         image_family: freebsd-12-1
@@ -65,7 +65,7 @@ bazarr_task:
 
 bind_task:
   <<: *INSTALL_PLUGIN
-  only_if: "changesInclude('bind.json', '.cirrus/install_script.sh')"
+  only_if: "changesInclude('bind.json')"
   matrix:
     - freebsd_instance:
         image_family: freebsd-11-3
@@ -74,7 +74,7 @@ bind_task:
 
 calibre-web_task:
   <<: *INSTALL_PLUGIN
-  only_if: "changesInclude('calibre-web.json', '.cirrus/install_script.sh')"
+  only_if: "changesInclude('calibre-web.json')"
   matrix:
     - freebsd_instance:
         image_family: freebsd-12-2
@@ -83,7 +83,7 @@ calibre-web_task:
 
 channels-dvr_task:
   <<: *INSTALL_PLUGIN
-  only_if: "changesInclude('channels-dvr.json', '.cirrus/install_script.sh')"
+  only_if: "changesInclude('channels-dvr.json')"
   matrix:
     - freebsd_instance:
         image_family: freebsd-11-3
@@ -92,7 +92,7 @@ channels-dvr_task:
 
 clamav_task:
   <<: *INSTALL_PLUGIN
-  only_if: "changesInclude('clamav.json', '.cirrus/install_script.sh')"
+  only_if: "changesInclude('clamav.json')"
   matrix:
     - freebsd_instance:
         image_family: freebsd-12-1
@@ -101,7 +101,7 @@ clamav_task:
 
 deluge-pip_task:
   <<: *INSTALL_PLUGIN
-  only_if: "changesInclude('deluge-pip.json', '.cirrus/install_script.sh')"
+  only_if: "changesInclude('deluge-pip.json')"
   matrix:
     - freebsd_instance:
         image_family: freebsd-12-2
@@ -110,7 +110,7 @@ deluge-pip_task:
 
 dnsmasq_task:
   <<: *INSTALL_PLUGIN
-  only_if: "changesInclude('dnsmasq.json', '.cirrus/install_script.sh')"
+  only_if: "changesInclude('dnsmasq.json')"
   matrix:
     - freebsd_instance:
         image_family: freebsd-11-3
@@ -119,7 +119,7 @@ dnsmasq_task:
 
 drupal8_task:
   <<: *INSTALL_PLUGIN
-  only_if: "changesInclude('drupal8.json', '.cirrus/install_script.sh')"
+  only_if: "changesInclude('drupal8.json')"
   matrix:
     - freebsd_instance:
         image_family: freebsd-12-1
@@ -128,7 +128,7 @@ drupal8_task:
 
 duplicati_task:
   <<: *INSTALL_PLUGIN
-  only_if: "changesInclude('duplicati.json', '.cirrus/install_script.sh')"
+  only_if: "changesInclude('duplicati.json')"
   matrix:
     - freebsd_instance:
         image_family: freebsd-11-3
@@ -137,7 +137,7 @@ duplicati_task:
 
 emby_task:
   <<: *INSTALL_PLUGIN
-  only_if: "changesInclude('emby.json', '.cirrus/install_script.sh')"
+  only_if: "changesInclude('emby.json')"
   matrix:
     - freebsd_instance:
         image_family: freebsd-12-1
@@ -146,7 +146,7 @@ emby_task:
 
 emby-server-stable_task:
   <<: *INSTALL_PLUGIN
-  only_if: "changesInclude('emby-server-stable.json', '.cirrus/install_script.sh')"
+  only_if: "changesInclude('emby-server-stable.json')"
   matrix:
     - freebsd_instance:
         image_family: freebsd-12-2
@@ -155,7 +155,7 @@ emby-server-stable_task:
 
 esphome_task:
   <<: *INSTALL_PLUGIN
-  only_if: "changesInclude('esphome.json', '.cirrus/install_script.sh')"
+  only_if: "changesInclude('esphome.json')"
   matrix:
     - freebsd_instance:
         image_family: freebsd-12-2
@@ -164,7 +164,7 @@ esphome_task:
 
 famp_task:
   <<: *INSTALL_PLUGIN
-  only_if: "changesInclude('famp.json', '.cirrus/install_script.sh')"
+  only_if: "changesInclude('famp.json')"
   matrix:
     - freebsd_instance:
         image_family: freebsd-12-1
@@ -173,7 +173,7 @@ famp_task:
 
 gitea_task:
   <<: *INSTALL_PLUGIN
-  only_if: "changesInclude('gitea.json', '.cirrus/install_script.sh')"
+  only_if: "changesInclude('gitea.json')"
   matrix:
     - freebsd_instance:
         image_family: freebsd-12-1
@@ -182,7 +182,7 @@ gitea_task:
 
 gitlab_task:
   <<: *INSTALL_PLUGIN
-  only_if: "changesInclude('gitlab.json', '.cirrus/install_script.sh')"
+  only_if: "changesInclude('gitlab.json')"
   matrix:
     - freebsd_instance:
         image_family: freebsd-12-1
@@ -191,7 +191,7 @@ gitlab_task:
 
 gogs_task:
   <<: *INSTALL_PLUGIN
-  only_if: "changesInclude('gogs.json', '.cirrus/install_script.sh')"
+  only_if: "changesInclude('gogs.json')"
   matrix:
     - freebsd_instance:
         image_family: freebsd-12-2
@@ -200,7 +200,7 @@ gogs_task:
 
 grafana_task:
   <<: *INSTALL_PLUGIN
-  only_if: "changesInclude('grafana.json', '.cirrus/install_script.sh')"
+  only_if: "changesInclude('grafana.json')"
   matrix:
     - freebsd_instance:
         image_family: freebsd-12-1
@@ -209,7 +209,7 @@ grafana_task:
 
 heimdall-dashboard_task:
   <<: *INSTALL_PLUGIN
-  only_if: "changesInclude('heimdall-dashboard.json', '.cirrus/install_script.sh')"
+  only_if: "changesInclude('heimdall-dashboard.json')"
   matrix:
     - freebsd_instance:
         image_family: freebsd-12-1
@@ -218,7 +218,7 @@ heimdall-dashboard_task:
 
 homeassistant_task:
   <<: *INSTALL_PLUGIN
-  only_if: "changesInclude('homeassistant.json', '.cirrus/install_script.sh')"
+  only_if: "changesInclude('homeassistant.json')"
   matrix:
     - freebsd_instance:
         image_family: freebsd-12-2
@@ -227,7 +227,7 @@ homeassistant_task:
 
 homebridge_task:
   <<: *INSTALL_PLUGIN
-  only_if: "changesInclude('homebridge.json', '.cirrus/install_script.sh')"
+  only_if: "changesInclude('homebridge.json')"
   matrix:
     - freebsd_instance:
         image_family: freebsd-12-1
@@ -236,7 +236,7 @@ homebridge_task:
 
 hoobs_task:
   <<: *INSTALL_PLUGIN
-  only_if: "changesInclude('hoobs.json', '.cirrus/install_script.sh')"
+  only_if: "changesInclude('hoobs.json')"
   matrix:
     - freebsd_instance:
         image_family: freebsd-12-1
@@ -245,7 +245,7 @@ hoobs_task:
 
 i2p_task:
   <<: *INSTALL_PLUGIN
-  only_if: "changesInclude('i2p.json', '.cirrus/install_script.sh')"
+  only_if: "changesInclude('i2p.json')"
   matrix:
     - freebsd_instance:
         image_family: freebsd-12-1
@@ -254,7 +254,7 @@ i2p_task:
 
 irssi_task:
   <<: *INSTALL_PLUGIN
-  only_if: "changesInclude('irssi.json', '.cirrus/install_script.sh')"
+  only_if: "changesInclude('irssi.json')"
   matrix:
     - freebsd_instance:
         image_family: freebsd-11-3
@@ -263,7 +263,7 @@ irssi_task:
 
 jackett_task:
   <<: *INSTALL_PLUGIN
-  only_if: "changesInclude('jackett.json', '.cirrus/install_script.sh')"
+  only_if: "changesInclude('jackett.json')"
   matrix:
     - freebsd_instance:
         image_family: freebsd-12-1
@@ -272,7 +272,7 @@ jackett_task:
 
 jenkins_task:
   <<: *INSTALL_PLUGIN
-  only_if: "changesInclude('jenkins.json', '.cirrus/install_script.sh')"
+  only_if: "changesInclude('jenkins.json')"
   matrix:
     - freebsd_instance:
         image_family: freebsd-12-1
@@ -281,7 +281,7 @@ jenkins_task:
 
 jenkins-lts_task:
   <<: *INSTALL_PLUGIN
-  only_if: "changesInclude('jenkins-lts.json', '.cirrus/install_script.sh')"
+  only_if: "changesInclude('jenkins-lts.json')"
   matrix:
     - freebsd_instance:
         image_family: freebsd-12-1
@@ -290,7 +290,7 @@ jenkins-lts_task:
 
 lidarr_task:
   <<: *INSTALL_PLUGIN
-  only_if: "changesInclude('lidarr.json', '.cirrus/install_script.sh')"
+  only_if: "changesInclude('lidarr.json')"
   matrix:
     - freebsd_instance:
         image_family: freebsd-12-1
@@ -299,7 +299,7 @@ lidarr_task:
 
 madsonic_task:
   <<: *INSTALL_PLUGIN
-  only_if: "changesInclude('madsonic.json', '.cirrus/install_script.sh')"
+  only_if: "changesInclude('madsonic.json')"
   matrix:
     - freebsd_instance:
         image_family: freebsd-12-1
@@ -308,7 +308,7 @@ madsonic_task:
 
 mineos_task:
   <<: *INSTALL_PLUGIN
-  only_if: "changesInclude('mineos.json', '.cirrus/install_script.sh')"
+  only_if: "changesInclude('mineos.json')"
   matrix:
     - freebsd_instance:
         image_family: freebsd-12-2
@@ -317,7 +317,7 @@ mineos_task:
 
 monica_task:
   <<: *INSTALL_PLUGIN
-  only_if: "changesInclude('monica.json', '.cirrus/install_script.sh')"
+  only_if: "changesInclude('monica.json')"
   matrix:
     - freebsd_instance:
         image_family: freebsd-11-3
@@ -326,7 +326,7 @@ monica_task:
 
 mosquitto_task:
   <<: *INSTALL_PLUGIN
-  only_if: "changesInclude('mosquitto.json', '.cirrus/install_script.sh')"
+  only_if: "changesInclude('mosquitto.json')"
   matrix:
     - freebsd_instance:
         image_family: freebsd-12-2
@@ -335,7 +335,7 @@ mosquitto_task:
 
 motioneye_task:
   <<: *INSTALL_PLUGIN
-  only_if: "changesInclude('motioneye.json', '.cirrus/install_script.sh')"
+  only_if: "changesInclude('motioneye.json')"
   matrix:
     - freebsd_instance:
         image_family: freebsd-12-2
@@ -344,7 +344,7 @@ motioneye_task:
 
 netdata_task:
   <<: *INSTALL_PLUGIN
-  only_if: "changesInclude('netdata.json', '.cirrus/install_script.sh')"
+  only_if: "changesInclude('netdata.json')"
   matrix:
     - freebsd_instance:
         image_family: freebsd-12-1
@@ -353,7 +353,7 @@ netdata_task:
 
 node-red_task:
   <<: *INSTALL_PLUGIN
-  only_if: "changesInclude('node-red.json', '.cirrus/install_script.sh')"
+  only_if: "changesInclude('node-red.json')"
   matrix:
     - freebsd_instance:
         image_family: freebsd-12-2
@@ -362,7 +362,7 @@ node-red_task:
 
 nzbget_task:
   <<: *INSTALL_PLUGIN
-  only_if: "changesInclude('nzbget.json', '.cirrus/install_script.sh')"
+  only_if: "changesInclude('nzbget.json')"
   matrix:
     - freebsd_instance:
         image_family: freebsd-12-1
@@ -371,7 +371,7 @@ nzbget_task:
 
 openspeedtest-server_task:
   <<: *INSTALL_PLUGIN
-  only_if: "changesInclude('openspeedtest-server.json', '.cirrus/install_script.sh')"
+  only_if: "changesInclude('openspeedtest-server.json')"
   matrix:
     - freebsd_instance:
         image_family: freebsd-11-3
@@ -380,7 +380,7 @@ openspeedtest-server_task:
 
 openvpn_task:
   <<: *INSTALL_PLUGIN
-  only_if: "changesInclude('openvpn.json', '.cirrus/install_script.sh')"
+  only_if: "changesInclude('openvpn.json')"
   matrix:
     - freebsd_instance:
         image_family: freebsd-12-1
@@ -389,7 +389,7 @@ openvpn_task:
 
 privatebin_task:
   <<: *INSTALL_PLUGIN
-  only_if: "changesInclude('privatebin.json', '.cirrus/install_script.sh')"
+  only_if: "changesInclude('privatebin.json')"
   matrix:
     - freebsd_instance:
         image_family: freebsd-12-1
@@ -398,7 +398,7 @@ privatebin_task:
 
 qbittorrent_task:
   <<: *INSTALL_PLUGIN
-  only_if: "changesInclude('qbittorrent.json', '.cirrus/install_script.sh')"
+  only_if: "changesInclude('qbittorrent.json')"
   matrix:
     - freebsd_instance:
         image_family: freebsd-12-1
@@ -407,7 +407,7 @@ qbittorrent_task:
 
 quasselcore_task:
   <<: *INSTALL_PLUGIN
-  only_if: "changesInclude('quasselcore.json', '.cirrus/install_script.sh')"
+  only_if: "changesInclude('quasselcore.json')"
   matrix:
     - freebsd_instance:
         image_family: freebsd-11-3
@@ -416,7 +416,7 @@ quasselcore_task:
 
 radarr_task:
   <<: *INSTALL_PLUGIN
-  only_if: "changesInclude('radarr.json', '.cirrus/install_script.sh')"
+  only_if: "changesInclude('radarr.json')"
   matrix:
     - freebsd_instance:
         image_family: freebsd-12-1
@@ -425,7 +425,7 @@ radarr_task:
 
 rslsync_task:
   <<: *INSTALL_PLUGIN
-  only_if: "changesInclude('rslsync.json', '.cirrus/install_script.sh')"
+  only_if: "changesInclude('rslsync.json')"
   matrix:
     - freebsd_instance:
         image_family: freebsd-12-1
@@ -434,7 +434,7 @@ rslsync_task:
 
 rtorrent-flood_task:
   <<: *INSTALL_PLUGIN
-  only_if: "changesInclude('rtorrent-flood.json', '.cirrus/install_script.sh')"
+  only_if: "changesInclude('rtorrent-flood.json')"
   matrix:
     - freebsd_instance:
         image_family: freebsd-12-1
@@ -443,7 +443,7 @@ rtorrent-flood_task:
 
 sabnzbd_task:
   <<: *INSTALL_PLUGIN
-  only_if: "changesInclude('sabnzbd.json', '.cirrus/install_script.sh')"
+  only_if: "changesInclude('sabnzbd.json')"
   matrix:
     - freebsd_instance:
         image_family: freebsd-12-1
@@ -452,7 +452,7 @@ sabnzbd_task:
 
 sickchill_task:
   <<: *INSTALL_PLUGIN
-  only_if: "changesInclude('sickchill.json', '.cirrus/install_script.sh')"
+  only_if: "changesInclude('sickchill.json')"
   matrix:
     - freebsd_instance:
         image_family: freebsd-12-1
@@ -461,7 +461,7 @@ sickchill_task:
 
 sonarr_task:
   <<: *INSTALL_PLUGIN
-  only_if: "changesInclude('sonarr.json', '.cirrus/install_script.sh')"
+  only_if: "changesInclude('sonarr.json')"
   matrix:
     - freebsd_instance:
         image_family: freebsd-12-1
@@ -470,7 +470,7 @@ sonarr_task:
 
 tasmoadmin_task:
   <<: *INSTALL_PLUGIN
-  only_if: "changesInclude('tasmoadmin.json', '.cirrus/install_script.sh')"
+  only_if: "changesInclude('tasmoadmin.json')"
   matrix:
     - freebsd_instance:
         image_family: freebsd-12-2
@@ -479,7 +479,7 @@ tasmoadmin_task:
 
 tautulli_task:
   <<: *INSTALL_PLUGIN
-  only_if: "changesInclude('tautulli.json', '.cirrus/install_script.sh')"
+  only_if: "changesInclude('tautulli.json')"
   matrix:
     - freebsd_instance:
         image_family: freebsd-12-2
@@ -488,7 +488,7 @@ tautulli_task:
 
 transmission_task:
   <<: *INSTALL_PLUGIN
-  only_if: "changesInclude('transmission.json', '.cirrus/install_script.sh')"
+  only_if: "changesInclude('transmission.json')"
   matrix:
     - freebsd_instance:
         image_family: freebsd-12-1
@@ -497,7 +497,7 @@ transmission_task:
 
 unificontroller_task:
   <<: *INSTALL_PLUGIN
-  only_if: "changesInclude('unificontroller.json', '.cirrus/install_script.sh')"
+  only_if: "changesInclude('unificontroller.json')"
   matrix:
     - freebsd_instance:
         image_family: freebsd-11-3
@@ -506,7 +506,7 @@ unificontroller_task:
 
 unificontroller-lts_task:
   <<: *INSTALL_PLUGIN
-  only_if: "changesInclude('unificontroller-lts.json', '.cirrus/install_script.sh')"
+  only_if: "changesInclude('unificontroller-lts.json')"
   matrix:
     - freebsd_instance:
         image_family: freebsd-11-3
@@ -515,7 +515,7 @@ unificontroller-lts_task:
 
 vault_task:
   <<: *INSTALL_PLUGIN
-  only_if: "changesInclude('vault.json', '.cirrus/install_script.sh')"
+  only_if: "changesInclude('vault.json')"
   matrix:
     - freebsd_instance:
         image_family: freebsd-12-1
@@ -524,7 +524,7 @@ vault_task:
 
 weechat_task:
   <<: *INSTALL_PLUGIN
-  only_if: "changesInclude('weechat.json', '.cirrus/install_script.sh')"
+  only_if: "changesInclude('weechat.json')"
   matrix:
     - freebsd_instance:
         image_family: freebsd-11-3
@@ -533,7 +533,7 @@ weechat_task:
 
 xmrig_task:
   <<: *INSTALL_PLUGIN
-  only_if: "changesInclude('xmrig.json', '.cirrus/install_script.sh')"
+  only_if: "changesInclude('xmrig.json')"
   matrix:
     - freebsd_instance:
         image_family: freebsd-11-3
@@ -542,7 +542,7 @@ xmrig_task:
 
 zoneminder_task:
   <<: *INSTALL_PLUGIN
-  only_if: "changesInclude('zoneminder.json', '.cirrus/install_script.sh')"
+  only_if: "changesInclude('zoneminder.json')"
   matrix:
     - freebsd_instance:
         image_family: freebsd-12-1
@@ -551,7 +551,7 @@ zoneminder_task:
 
 zrepl_task:
   <<: *INSTALL_PLUGIN
-  only_if: "changesInclude('zrepl.json', '.cirrus/install_script.sh')"
+  only_if: "changesInclude('zrepl.json')"
   matrix:
     - freebsd_instance:
         image_family: freebsd-12-1
@@ -560,7 +560,7 @@ zrepl_task:
 
 zwavejs2mqtt_task:
   <<: *INSTALL_PLUGIN
-  only_if: "changesInclude('zwavejs2mqtt.json', '.cirrus/install_script.sh')"
+  only_if: "changesInclude('zwavejs2mqtt.json')"
   matrix:
     - freebsd_instance:
         image_family: freebsd-12-2
