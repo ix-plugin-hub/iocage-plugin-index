@@ -10,6 +10,7 @@ wait_for_admin_portal()
   fetch_success=false
   sleep_time=5
 
+  echo "Starting to wait for Admin Portal"
   while [ $retry -lt $max_retries ]
   do
     retry=$(expr $retry + 1)
@@ -19,7 +20,7 @@ wait_for_admin_portal()
       break
     fi
 
-    echo "Admin UI fetch failed, sleeping ${sleep_time} seconds, and retrying (${retry}/${max_retries})"
+    echo "Admin Portal fetch failed, sleeping ${sleep_time} seconds, and retrying (${retry}/${max_retries})"
     sleep ${sleep_time}
   done
 
@@ -31,7 +32,6 @@ wait_for_admin_portal()
     exit 1
   fi
 }
-
 
 pkg install --yes jq
 
@@ -47,6 +47,7 @@ kmods=$(jq -r '.kmods' $PLUGIN_FILE)
 plugin_dir="/usr/local/plugin"
 pkg install --yes git-lite || pkg install --yes git
 release_branch="$(freebsd-version | cut -d '-' -f1)-RELEASE"
+ehco "Trying to clone ${plugin_repo}, to ${plugin_dir}, using branch: ${release_branch} (with fallback to 'master')"
 git clone -b ${release_branch} ${plugin_repo} ${plugin_dir} || git clone -b master ${plugin_repo} ${plugin_dir}
 
 exp_ui_url=""
@@ -55,10 +56,10 @@ then
   admin_portal=$(jq -r '.adminportal' ${plugin_dir}/ui.json | sed 's/%%IP%%/localhost/')
   if echo $admin_portal | grep -q "http\|localhost"
   then
-    echo "Found http or localhost in adminportal, will try to fetch"
+    echo "Found http or localhost in Admin Portal, will try to fetch it after post_install"
     exp_ui_url=$admin_portal
   else
-    echo "Admin portal does not contain localhost or http. Will skip waiting for admin_portal"
+    echo "Admin Portal does not contain localhost or http. Will skip waiting for admin_portal"
   fi
 fi
 
@@ -107,6 +108,7 @@ done
 
 if [ "$kmods" != "null" ]
 then
+  echo "Found kmods"
   echo $kmods | jq -r  '.[]' | while IFS='' read kmod
   do
     echo "Loading kmod: ${kmod}"
@@ -115,6 +117,7 @@ then
 fi
 
 # Clean up all packages
+echo "Clean up packages before plugin installation"
 pkg delete --all --yes
 pkg autoremove --yes
 pkg clean --yes
@@ -124,7 +127,7 @@ then
   pkg install --yes ca_root_nss
 fi
 
-# Start using plugin repos
+echo "Start using plugin pkg repos"
 export REPOS_DIR=$repos_dir
 
 echo "Fetching $name pkgs: $pkgs"
@@ -141,6 +144,7 @@ then
   cp -r ${plugin_dir}/overlay/ /
 fi
 
+echo "Executing post_install.sh script"
 ${plugin_dir}/post_install.sh
 
 if [ -f ${plugin_dir}/pre_update.sh ] && ! [ -x ${plugin_dir}/pre_update.sh ]
