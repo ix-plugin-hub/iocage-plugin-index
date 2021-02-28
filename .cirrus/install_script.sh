@@ -5,7 +5,7 @@ wait_for_admin_portal()
 {
   exp_ui_url=$1
 
-  max_retries=10
+  max_retries=5
   retry=0
   fetch_success=false
   sleep_time=5
