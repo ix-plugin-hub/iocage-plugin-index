@@ -39,7 +39,7 @@ mkdir -p "${trusted_fingerprints}"
 
 for repo_name in $fingerprints
 do
-  repo_fingerprints=$(jq -rc '."fingerprints"."'${repo_name}'"[]' $plugin_file)
+  repo_fingerprints=$(jq -rc '."fingerprints"."'${repo_name}'"[]' $PLUGIN_FILE)
 
   repo_count=1
   echo $repo_fingerprints | while IFS='' read f
