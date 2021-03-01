@@ -1,0 +1,578 @@
+freebsd_instance:
+  cpu: 1
+  memory: "1"
+
+install_template: &INSTALL_PLUGIN
+  requirements_script: |
+    pkg install --yes jq
+  install_script: |
+    release=$(jq -r '.release' $PLUGIN_FILE)
+    name=$(jq '.name' $PLUGIN_FILE)
+    packagesite=$(jq '.packagesite' $PLUGIN_FILE)
+    fingerprints=$(jq -r '.fingerprints | keys[]' $PLUGIN_FILE)
+    plugin_repo=$(jq -r '.artifact' $PLUGIN_FILE)
+    pkgs=$(jq -r '.pkgs | join(" ")' $PLUGIN_FILE)
+    kmods=$(jq -r '.kmods' $PLUGIN_FILE)
+
+    # Clone plugins artifacts
+    plugin_dir="./plugin"
+    pkg install --yes git-lite || pkg install --yes git
+    release_branch="$(freebsd-version | cut -d '-' -f1)-RELEASE"
+    git clone -b ${release_branch} ${plugin_repo} ${plugin_dir} || git clone -b master ${plugin_repo} ${plugin_dir}
+
+    pkg_dir=/usr/local/test
+    repos_dir="${pkg_dir}/repos"
+    fingerprints_dir="${pkg_dir}/fingerprints"
+
+    echo "Creating main repos dir: ${repos_dir}"
+    mkdir -p $repos_dir
+
+    pkg_conf_path="${repos_dir}/test.conf"
+    echo "iocage-plugins: {" > $pkg_conf_path
+    echo "url: $packagesite," >> $pkg_conf_path
+    echo "signature_type: \"fingerprints\"," >> $pkg_conf_path
+    echo "fingerprints \"${fingerprints_dir}\"," >> $pkg_conf_path
+    echo "enabled: true" >> $pkg_conf_path
+    echo } >> $pkg_conf_path
+    echo "Created test pkg config file:"
+    cat $pkg_conf_path
+
+    trusted_fingerprints="$fingerprints_dir/trusted"
+    mkdir -p "${trusted_fingerprints}"
+
+    for repo_name in $fingerprints
+    do
+      repo_fingerprints=$(jq -rc '."fingerprints"."'${repo_name}'"[]' $PLUGIN_FILE)
+
+      repo_count=1
+      echo $repo_fingerprints | while IFS='' read f
+      do
+        echo "Creating fingerprint file for repo:"
+        echo $f
+
+        function=$(echo $f | jq -r '.function')
+        fingerprint=$(echo $f | jq -r '.fingerprint')
+        file_path=${trusted_fingerprints}/${repo_name}_${repo_count}
+
+        echo "Creating new fingerprint file: ${file_path}"
+
+        echo "function: $function" > ${file_path}
+        echo "fingerprint: $fingerprint" >> ${file_path}
+
+        repo_count=$(expr $repo_count + 1)
+      done
+    done
+
+    if [ "$kmods" != "null" ]
+    then
+      echo $kmods | jq -r  '.[]' | while IFS='' read kmod
+      do
+        echo "Loading kmod: ${kmod}"
+        kldload -nv ${kmod}
+      done
+    fi
+
+    # Clean up all packages
+    pkg delete --all --yes
+    pkg autoremove --yes
+    pkg clean --yes
+
+    if echo ${packagesite} | grep -q "https"
+    then
+      pkg install --yes ca_root_nss
+    fi
+
+    # Start using plugin repos
+    export REPOS_DIR=$repos_dir
+
+    echo "Fetching $name pkgs: $pkgs"
+    pkg fetch --dependencies --yes $pkgs
+
+    pkg delete --yes ca_root_nss || true
+
+    echo "Installing $name pkgs: $pkgs"
+    pkg install --no-repo-update --yes $pkgs
+
+    if [ -d "${plugin_dir}/overlay" ]
+    then
+      echo "Found overlay folder"
+      cp -r ${plugin_dir}/overlay/ /
+    fi
+
+    ${plugin_dir}/post_install.sh
+
+    if [ -f ${plugin_dir}/pre_update.sh ] && ! [ -x ${plugin_dir}/pre_update.sh ]
+    then
+      echo "pre_update.sh script not executable"
+      exit 1
+    fi
+
+    if [ -f ${plugin_dir}/post_update.sh ] && ! [ -x ${plugin_dir}/post_update.sh ]
+    then
+      echo "post_update.sh script not executable"
+      exit 1
+    fi
+
+backuppc_task:
+  <<: *INSTALL_PLUGIN
+  matrix:
+    - freebsd_instance:
+        image_family: freebsd-12-1
+  env:
+    PLUGIN_FILE: "backuppc.json"
+
+bazarr_task:
+  <<: *INSTALL_PLUGIN
+  matrix:
+    - freebsd_instance:
+        image_family: freebsd-12-1
+  env:
+    PLUGIN_FILE: "bazarr.json"
+
+bind_task:
+  <<: *INSTALL_PLUGIN
+  matrix:
+    - freebsd_instance:
+        image_family: freebsd-11-3
+  env:
+    PLUGIN_FILE: "bind.json"
+
+calibre-web_task:
+  <<: *INSTALL_PLUGIN
+  matrix:
+    - freebsd_instance:
+        image_family: freebsd-12-1
+  env:
+    PLUGIN_FILE: "calibre-web.json"
+
+channels-dvr_task:
+  <<: *INSTALL_PLUGIN
+  matrix:
+    - freebsd_instance:
+        image_family: freebsd-11-3
+  env:
+    PLUGIN_FILE: "channels-dvr.json"
+
+clamav_task:
+  <<: *INSTALL_PLUGIN
+  matrix:
+    - freebsd_instance:
+        image_family: freebsd-12-1
+  env:
+    PLUGIN_FILE: "clamav.json"
+
+deluge-pip_task:
+  <<: *INSTALL_PLUGIN
+  matrix:
+    - freebsd_instance:
+        image_family: freebsd-12-1
+  env:
+    PLUGIN_FILE: "deluge-pip.json"
+
+dnsmasq_task:
+  <<: *INSTALL_PLUGIN
+  matrix:
+    - freebsd_instance:
+        image_family: freebsd-11-3
+  env:
+    PLUGIN_FILE: "dnsmasq.json"
+
+drupal8_task:
+  <<: *INSTALL_PLUGIN
+  matrix:
+    - freebsd_instance:
+        image_family: freebsd-12-1
+  env:
+    PLUGIN_FILE: "drupal8.json"
+
+duplicati_task:
+  <<: *INSTALL_PLUGIN
+  matrix:
+    - freebsd_instance:
+        image_family: freebsd-11-3
+  env:
+    PLUGIN_FILE: "duplicati.json"
+
+emby_task:
+  <<: *INSTALL_PLUGIN
+  matrix:
+    - freebsd_instance:
+        image_family: freebsd-12-1
+  env:
+    PLUGIN_FILE: "emby.json"
+
+emby-server-stable_task:
+  <<: *INSTALL_PLUGIN
+  matrix:
+    - freebsd_instance:
+        image_family: freebsd-12-2
+  env:
+    PLUGIN_FILE: "emby-server-stable.json"
+
+esphome_task:
+  <<: *INSTALL_PLUGIN
+  matrix:
+    - freebsd_instance:
+        image_family: freebsd-12-2
+  env:
+    PLUGIN_FILE: "esphome.json"
+
+famp_task:
+  <<: *INSTALL_PLUGIN
+  matrix:
+    - freebsd_instance:
+        image_family: freebsd-12-1
+  env:
+    PLUGIN_FILE: "famp.json"
+
+gitea_task:
+  <<: *INSTALL_PLUGIN
+  matrix:
+    - freebsd_instance:
+        image_family: freebsd-12-1
+  env:
+    PLUGIN_FILE: "gitea.json"
+
+gitlab_task:
+  <<: *INSTALL_PLUGIN
+  matrix:
+    - freebsd_instance:
+        image_family: freebsd-12-1
+  env:
+    PLUGIN_FILE: "gitlab.json"
+
+gogs_task:
+  <<: *INSTALL_PLUGIN
+  matrix:
+    - freebsd_instance:
+        image_family: freebsd-12-2
+  env:
+    PLUGIN_FILE: "gogs.json"
+
+grafana_task:
+  <<: *INSTALL_PLUGIN
+  matrix:
+    - freebsd_instance:
+        image_family: freebsd-12-1
+  env:
+    PLUGIN_FILE: "grafana.json"
+
+heimdall-dashboard_task:
+  <<: *INSTALL_PLUGIN
+  matrix:
+    - freebsd_instance:
+        image_family: freebsd-12-1
+  env:
+    PLUGIN_FILE: "heimdall-dashboard.json"
+
+homeassistant_task:
+  <<: *INSTALL_PLUGIN
+  matrix:
+    - freebsd_instance:
+        image_family: freebsd-12-2
+  env:
+    PLUGIN_FILE: "homeassistant.json"
+
+homebridge_task:
+  <<: *INSTALL_PLUGIN
+  matrix:
+    - freebsd_instance:
+        image_family: freebsd-12-1
+  env:
+    PLUGIN_FILE: "homebridge.json"
+
+hoobs_task:
+  <<: *INSTALL_PLUGIN
+  matrix:
+    - freebsd_instance:
+        image_family: freebsd-12-1
+  env:
+    PLUGIN_FILE: "hoobs.json"
+
+i2p_task:
+  <<: *INSTALL_PLUGIN
+  matrix:
+    - freebsd_instance:
+        image_family: freebsd-12-1
+  env:
+    PLUGIN_FILE: "i2p.json"
+
+irssi_task:
+  <<: *INSTALL_PLUGIN
+  matrix:
+    - freebsd_instance:
+        image_family: freebsd-11-3
+  env:
+    PLUGIN_FILE: "irssi.json"
+
+jackett_task:
+  <<: *INSTALL_PLUGIN
+  matrix:
+    - freebsd_instance:
+        image_family: freebsd-12-1
+  env:
+    PLUGIN_FILE: "jackett.json"
+
+jenkins_task:
+  <<: *INSTALL_PLUGIN
+  matrix:
+    - freebsd_instance:
+        image_family: freebsd-12-1
+  env:
+    PLUGIN_FILE: "jenkins.json"
+
+jenkins-lts_task:
+  <<: *INSTALL_PLUGIN
+  matrix:
+    - freebsd_instance:
+        image_family: freebsd-12-1
+  env:
+    PLUGIN_FILE: "jenkins-lts.json"
+
+lidarr_task:
+  <<: *INSTALL_PLUGIN
+  matrix:
+    - freebsd_instance:
+        image_family: freebsd-12-1
+  env:
+    PLUGIN_FILE: "lidarr.json"
+
+madsonic_task:
+  <<: *INSTALL_PLUGIN
+  matrix:
+    - freebsd_instance:
+        image_family: freebsd-12-1
+  env:
+    PLUGIN_FILE: "madsonic.json"
+
+mineos_task:
+  <<: *INSTALL_PLUGIN
+  matrix:
+    - freebsd_instance:
+        image_family: freebsd-12-2
+  env:
+    PLUGIN_FILE: "mineos.json"
+
+monica_task:
+  <<: *INSTALL_PLUGIN
+  matrix:
+    - freebsd_instance:
+        image_family: freebsd-11-3
+  env:
+    PLUGIN_FILE: "monica.json"
+
+mosquitto_task:
+  <<: *INSTALL_PLUGIN
+  matrix:
+    - freebsd_instance:
+        image_family: freebsd-12-2
+  env:
+    PLUGIN_FILE: "mosquitto.json"
+
+motioneye_task:
+  <<: *INSTALL_PLUGIN
+  matrix:
+    - freebsd_instance:
+        image_family: freebsd-12-2
+  env:
+    PLUGIN_FILE: "motioneye.json"
+
+netdata_task:
+  <<: *INSTALL_PLUGIN
+  matrix:
+    - freebsd_instance:
+        image_family: freebsd-12-1
+  env:
+    PLUGIN_FILE: "netdata.json"
+
+node-red_task:
+  <<: *INSTALL_PLUGIN
+  matrix:
+    - freebsd_instance:
+        image_family: freebsd-12-2
+  env:
+    PLUGIN_FILE: "node-red.json"
+
+nzbget_task:
+  <<: *INSTALL_PLUGIN
+  matrix:
+    - freebsd_instance:
+        image_family: freebsd-12-1
+  env:
+    PLUGIN_FILE: "nzbget.json"
+
+openspeedtest-server_task:
+  <<: *INSTALL_PLUGIN
+  matrix:
+    - freebsd_instance:
+        image_family: freebsd-11-3
+  env:
+    PLUGIN_FILE: "openspeedtest-server.json"
+
+openvpn_task:
+  <<: *INSTALL_PLUGIN
+  matrix:
+    - freebsd_instance:
+        image_family: freebsd-12-1
+  env:
+    PLUGIN_FILE: "openvpn.json"
+
+privatebin_task:
+  <<: *INSTALL_PLUGIN
+  matrix:
+    - freebsd_instance:
+        image_family: freebsd-12-1
+  env:
+    PLUGIN_FILE: "privatebin.json"
+
+qbittorrent_task:
+  <<: *INSTALL_PLUGIN
+  matrix:
+    - freebsd_instance:
+        image_family: freebsd-12-1
+  env:
+    PLUGIN_FILE: "qbittorrent.json"
+
+quasselcore_task:
+  <<: *INSTALL_PLUGIN
+  matrix:
+    - freebsd_instance:
+        image_family: freebsd-11-3
+  env:
+    PLUGIN_FILE: "quasselcore.json"
+
+radarr_task:
+  <<: *INSTALL_PLUGIN
+  matrix:
+    - freebsd_instance:
+        image_family: freebsd-12-1
+  env:
+    PLUGIN_FILE: "radarr.json"
+
+rslsync_task:
+  <<: *INSTALL_PLUGIN
+  matrix:
+    - freebsd_instance:
+        image_family: freebsd-12-1
+  env:
+    PLUGIN_FILE: "rslsync.json"
+
+rtorrent-flood_task:
+  <<: *INSTALL_PLUGIN
+  matrix:
+    - freebsd_instance:
+        image_family: freebsd-12-1
+  env:
+    PLUGIN_FILE: "rtorrent-flood.json"
+
+sabnzbd_task:
+  <<: *INSTALL_PLUGIN
+  matrix:
+    - freebsd_instance:
+        image_family: freebsd-12-1
+  env:
+    PLUGIN_FILE: "sabnzbd.json"
+
+sickchill_task:
+  <<: *INSTALL_PLUGIN
+  matrix:
+    - freebsd_instance:
+        image_family: freebsd-12-1
+  env:
+    PLUGIN_FILE: "sickchill.json"
+
+sonarr_task:
+  <<: *INSTALL_PLUGIN
+  matrix:
+    - freebsd_instance:
+        image_family: freebsd-12-1
+  env:
+    PLUGIN_FILE: "sonarr.json"
+
+tasmoadmin_task:
+  <<: *INSTALL_PLUGIN
+  matrix:
+    - freebsd_instance:
+        image_family: freebsd-12-2
+  env:
+    PLUGIN_FILE: "tasmoadmin.json"
+
+tautulli_task:
+  <<: *INSTALL_PLUGIN
+  matrix:
+    - freebsd_instance:
+        image_family: freebsd-12-1
+  env:
+    PLUGIN_FILE: "tautulli.json"
+
+transmission_task:
+  <<: *INSTALL_PLUGIN
+  matrix:
+    - freebsd_instance:
+        image_family: freebsd-12-1
+  env:
+    PLUGIN_FILE: "transmission.json"
+
+unificontroller_task:
+  <<: *INSTALL_PLUGIN
+  matrix:
+    - freebsd_instance:
+        image_family: freebsd-11-3
+  env:
+    PLUGIN_FILE: "unificontroller.json"
+
+unificontroller-lts_task:
+  <<: *INSTALL_PLUGIN
+  matrix:
+    - freebsd_instance:
+        image_family: freebsd-11-3
+  env:
+    PLUGIN_FILE: "unificontroller-lts.json"
+
+vault_task:
+  <<: *INSTALL_PLUGIN
+  matrix:
+    - freebsd_instance:
+        image_family: freebsd-12-1
+  env:
+    PLUGIN_FILE: "vault.json"
+
+weechat_task:
+  <<: *INSTALL_PLUGIN
+  matrix:
+    - freebsd_instance:
+        image_family: freebsd-11-3
+  env:
+    PLUGIN_FILE: "weechat.json"
+
+xmrig_task:
+  <<: *INSTALL_PLUGIN
+  matrix:
+    - freebsd_instance:
+        image_family: freebsd-11-3
+  env:
+    PLUGIN_FILE: "xmrig.json"
+
+zoneminder_task:
+  <<: *INSTALL_PLUGIN
+  matrix:
+    - freebsd_instance:
+        image_family: freebsd-12-1
+  env:
+    PLUGIN_FILE: "zoneminder.json"
+
+zrepl_task:
+  <<: *INSTALL_PLUGIN
+  matrix:
+    - freebsd_instance:
+        image_family: freebsd-12-1
+  env:
+    PLUGIN_FILE: "zrepl.json"
+
+zwavejs2mqtt_task:
+  <<: *INSTALL_PLUGIN
+  matrix:
+    - freebsd_instance:
+        image_family: freebsd-12-2
+  env:
+    PLUGIN_FILE: "zwavejs2mqtt.json"
