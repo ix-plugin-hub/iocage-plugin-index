@@ -69,6 +69,15 @@ exp_ui_url=""
 if [ -f ${plugin_dir}/ui.json ]
 then
   admin_portal=$(jq -r '.adminportal' ${plugin_dir}/ui.json | sed 's/%%IP%%/127.0.0.1/')
+  placeholders=$(jq -r '.adminportal_placeholders | keys[]' ${plugin_dir}/ui.json)
+
+  for ph in place_golders
+  do
+    place_holder_value=$(jq -r '."adminportal_placeholders"."'${ph}'"' ${plugin_dir}/ui.json)
+    resolved_default_value=$(jq -r '.options."'${place_holder_value}'".default' ${plugin_dir}/settings.json)
+    admin_portal=$(echo $admin_portal | sed "s/${ph}/${resolved_default_value}/")
+  done
+
   if echo $admin_portal | grep -q "http\|localhost"
   then
     print_info "Found http or localhost in Admin Portal, will try to fetch it after post_install"
