@@ -8,7 +8,7 @@
         "nat_forwards": "tcp(8096:8096)"
     },
     "pkgs": [
-        "emby-server",
+        "emby-server"
     ],
     "packagesite": "http://pkg.FreeBSD.org/${ABI}/latest",
     "fingerprints": {
