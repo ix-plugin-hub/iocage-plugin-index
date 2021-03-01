@@ -29,7 +29,7 @@ wait_for_admin_portal()
   while [ $retry -lt $max_retries ]
   do
     retry=$(expr $retry + 1)
-    if fetch --no-verify-hostname ${exp_ui_url} 2> /dev/null
+    if fetch --no-verify-hostname --no-verify-peer ${exp_ui_url} 2> /dev/null
     then
       fetch_success=true
       break
