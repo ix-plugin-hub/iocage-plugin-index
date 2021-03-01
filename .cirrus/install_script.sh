@@ -68,7 +68,7 @@ git clone -b ${release_branch} ${plugin_repo} ${plugin_dir} || git clone -b mast
 exp_ui_url=""
 if [ -f ${plugin_dir}/ui.json ]
 then
-  admin_portal=$(jq -r '.adminportal' ${plugin_dir}/ui.json | sed 's/%%IP%%/localhost/')
+  admin_portal=$(jq -r '.adminportal' ${plugin_dir}/ui.json | sed 's/%%IP%%/127.0.0.1/')
   if echo $admin_portal | grep -q "http\|localhost"
   then
     print_info "Found http or localhost in Admin Portal, will try to fetch it after post_install"
