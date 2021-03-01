@@ -1,6 +1,6 @@
 {
   "name": "esphome",
-  "release": "12.1-RELEASE",
+  "release": "12.2-RELEASE",
   "artifact": "https://github.com/tprelog/iocage-esphome.git",
   "official": "false",
   "properties": {
@@ -18,7 +18,7 @@
     "python37",
     "py37-pillow"
   ],
-  "packagesite": "http://pkg.FreeBSD.org/${ABI}/quarterly",
+  "packagesite": "http://pkg.FreeBSD.org/${ABI}/latest",
   "fingerprints": {
     "plugin-default": [
       {

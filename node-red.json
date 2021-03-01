@@ -1,6 +1,6 @@
 {
   "name": "node-red",
-  "release": "12.1-RELEASE",
+  "release": "12.2-RELEASE",
   "artifact": "https://github.com/tprelog/iocage-node-red.git",
   "official": "false",
   "properties": { 
@@ -15,7 +15,7 @@
     "python27",
     "python"
   ],
-  "packagesite": "http://pkg.FreeBSD.org/${ABI}/quarterly",
+  "packagesite": "http://pkg.FreeBSD.org/${ABI}/latest",
   "fingerprints": {
     "plugin-default": [
       {

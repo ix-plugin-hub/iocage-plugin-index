@@ -1,14 +1,17 @@
 {
-    "name": "Emby",
+    "name": "movienight",
+    "plugin_schema": "2",
     "release": "12.2-RELEASE",
-    "artifact": "https://github.com/freenas/iocage-plugin-emby.git",
+    "artifact": "https://github.com/zorglube/iocage-plugin-movienight.git",
     "official": false,
     "properties": {
-        "nat": 1,
-        "nat_forwards": "tcp(8096:8096)"
+        "dhcp": 1
     },
     "pkgs": [
-        "emby-server",
+        "bash",
+        "ca_root_nss",
+        "git-lite",
+        "go"
     ],
     "packagesite": "http://pkg.FreeBSD.org/${ABI}/latest",
     "fingerprints": {
@@ -19,5 +22,5 @@
             }
         ]
     },
-    "revision": "1"
+    "revision": 0
 }

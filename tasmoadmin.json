@@ -1,6 +1,6 @@
 {
   "name": "tasmoadmin",
-  "release": "12.1-RELEASE",
+  "release": "12.2-RELEASE",
   "artifact": "https://github.com/tprelog/iocage-tasmoadmin.git", 
   "official": "false",
   "properties": {
@@ -18,7 +18,7 @@
     "php74-zip",
     "svnup"
   ],
-  "packagesite": "http://pkg.FreeBSD.org/${ABI}/quarterly",
+  "packagesite": "http://pkg.FreeBSD.org/${ABI}/latest",
   "fingerprints": {
     "plugin-default": [
       {

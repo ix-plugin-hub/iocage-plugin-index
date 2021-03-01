@@ -1,429 +1,288 @@
 {
-    "bind": {
-        "MANIFEST": "bind.json",
-        "description": "BIND DNS server",
-        "icon": "https://icons.freenas.org/community-icons/bind.png",
-        "name": "Bind DNS",
+	"backuppc": {
+		"MANIFEST": "backuppc.json",
+		"name": "BackupPC",
+		"icon": "https://icons.freenas.org/community-icons/backuppc.png",
+		"description": "Enterprise-grade system for backing up Linux, Windows, and MacOSX computers to a server.",
+		"official": false,
+		"primary_pkg": "backuppc4",
+		"category": "security",
+		"homepage": "http://backuppc.sourceforge.net/"
+	},
+	"bazarr": {
+		"MANIFEST": "bazarr.json",
+		"description": "Bazarr is a companion application to Sonarr and Radarr that manages and downloads subtitles.",
+		"icon": "https://icons.freenas.org/community-icons/bazarr.png",
+		"name": "Bazarr",
+		"official": false,
+		"primary_pkg": null
+	},
+	"bind": {
+		"MANIFEST": "bind.json",
+		"description": "BIND DNS server",
+		"icon": "https://icons.freenas.org/community-icons/bind.png",
+		"name": "Bind DNS",
+		"official": false,
+		"primary_pkg": "bind916"
+	},
+	"calibre-web": {
+		"MANIFEST": "calibre-web.json",
+		"description": "Web app for browsing, reading and downloading eBooks stored in a Calibre database",
+		"icon": "https://icons.freenas.org/community-icons/calibre-web.png",
+		"name": "Calibre-Web",
+		"official": false,
+		"primary_pkg": null
+	},
+	"channels-dvr": {
+		"MANIFEST": "channels-dvr.json",
+		"description": "DVR server for the Channels apps. Makes digital recordings of broadcast television using HDHomeRun network tuners. (Requires Subscription)",
+		"icon": "https://icons.freenas.org/community-icons/channels-dvr.png",
+		"name": "Channels DVR",
+		"official": false,
+		"primary_pkg": ""
+	},
+	"clamav": {
+		"MANIFEST": "clamav.json",
+		"name": "ClamAV",
+		"icon": "https://icons.freenas.org/community-icons/clamav.png",
+		"description": "Open source antivirus engine for detecting trojans, viruses, malware, and other malicious threats.",
+		"official": false,
+		"primary_pkg": "clamav",
+		"category": "security",
+		"homepage": "https://www.clamav.net/"
+	},
+	"deluge-pip": {
+		"MANIFEST": "deluge-pip.json",
+		"description": "Deluge is Python-based Bittorent client.",
+		"icon": "https://icons.freenas.org/community-icons/deluge.png",
+		"name": "Deluge",
+		"official": false,
+		"primary_pkg": ""
+	},
+	"dnsmasq": {
+		"MANIFEST": "dnsmasq.json",
+		"description": "Network infrastructure management for small networks: DNS, DHCP, router advertisement, and network boot.",
+		"icon": "https://icons.freenas.org/community-icons/dnsmasq.svg",
+		"name": "Dnsmasq",
+		"official": false,
+		"primary_pkg": "dnsmasq"
+	},
+	"drupal8": {
+		"MANIFEST": "drupal8.json",
+		"description": "Drupal is an open source platform for building amazing digital experiences.",
+		"icon": "https://icons.freenas.org/community-icons/drupal.png",
+		"name": "Drupal8",
+		"official": false,
+		"primary_pkg": "drupal8"
+	},
+	"duplicati": {
+		"MANIFEST": "duplicati.json",
+		"name": "Duplicati",
+		"description": "Duplicati 2.0 Store securely encrypted backups on cloud storage services!",
+		"official": false,
+		"icon": "https://icons.freenas.org/community-icons/duplicati.png",
+		"primary_pkg": "",
+		"category": "backup"
+	},
+	"emby": {
+		"MANIFEST": "emby.json",
+		"name": "Emby",
+		"icon": "https://icons.freenas.org/community-icons/emby.png",
+		"description": "Home media server to organize, play, and stream audio and video to a variety of devices.",
+		"official": false,
+		"primary_pkg": "emby-server",
+		"category": "entertainment",
+		"homepage": "https://emby.media/"
+	},
+	"emby-server-stable": {
+		"MANIFEST": "emby-server-stable.json",
+		"name": "Emby Server",
+		"icon": "https://icons.freenas.org/community-icons/emby-server-png-128.png",
+		"primary_pkg": null,
+		"description": "Emby brings together your personal videos, music, photos, and live television",
+		"official": false
+	},
+	"esphome": {
+		"MANIFEST": "esphome.json",
+		"name": "ESPHome",
+		"icon": "https://icons.freenas.org/community-icons/esphome.png",
+		"primary_pkg": null,
+		"description": "ESPHome is a system to control your ESP8266/ESP32 by simple yet powerful configuration files and control them remotely through Home Automation systems.",
+		"official": false,
+		"category": "home-automation",
+		"homepage": "https://esphome.io/"
+	},
+	"famp": {
+		"MANIFEST": "famp.json",
+		"description": "FAMP (FreeBSD, Apache, MySQL and PHP) web server",
+		"icon": "https://icons.freenas.org/community-icons/famp.png",
+		"name": "FAMP",
+		"official": false,
+		"primary_pkg": null
+	},
+	"gitea": {
+		"MANIFEST": "gitea.json",
+		"name": "Gitea",
+		"icon": "https://icons.freenas.org/community-icons/gitea.png",
+		"description": "Gitea is a community managed lightweight code hosting solution written in Go.",
+		"official": false,
+		"primary_pkg": "gitea"
+	},
+	"gitlab": {
+		"MANIFEST": "gitlab.json",
+		"name": "GitLab",
+		"icon": "https://icons.freenas.org/community-icons/gitlab.png",
+		"description": "Gitlab CE - Git and CI platform to manage development projects",
+		"official": false,
+		"primary_pkg": "gitlab-ce"
+	},
+	"gogs": {
+		"MANIFEST": "gogs.json",
+		"description": "A painless self-hosted Git service.",
+		"icon": "https://icons.freenas.org/community-icons/gogs.png",
+		"name": "Gogs",
+		"official": false,
+		"primary_pkg": "gogs",
+		"category": "development",
+		"homepage": "https://gogs.io/"
+	},
+	"grafana": {
+		"MANIFEST": "grafana.json",
+		"description": "Grafana allows you to query, visualize, alert on and understand your metrics no matter where they are stored. Create, explore, and share dashboards with your team and foster a data driven culture.",
+		"icon": "https://icons.freenas.org/community-icons/grafana.png",
+		"name": "Grafana (with InfluxDB)",
+		"official": false,
+		"primary_pkg": "grafana6"
+	},
+	"heimdall-dashboard": {
+		"MANIFEST": "heimdall-dashboard.json",
+		"description": "Heimdall Application Dashboard is an elegant solution to organize all your web applications and links onto a single page website.",
+		"icon": "https://icons.freenas.org/community-icons/heimdall-dashboard.png",
+		"name": "Heimdall",
+		"official": false,
+		"primary_pkg": null
+	},
+	"homeassistant": {
+		"MANIFEST": "homeassistant.json",
+		"description": "Open source home automation that puts local control and privacy first.",
+		"icon": "https://icons.freenas.org/community-icons/homeassistant.png",
+		"name": "Home Assistant Core",
+		"primary_pkg": null,
+		"official": false,
+		"category": "home-automation",
+		"homepage": "https://www.home-assistant.io/"
+	},
+	"homebridge": {
+		"MANIFEST": "homebridge.json",
+		"description": "Lightweight iOS HomeKit API emulator. Enables adding unsupported devices to HomeKit.",
+		"icon": "https://icons.freenas.org/community-icons/homebridge.png",
+		"name": "Homebridge",
+		"official": false
+	},
+	"hoobs": {
+		"MANIFEST": "hoobs.json",
+		"description": "HOOBS a Homebridge stack with a interface that simplifies configuration and installing plugins. This adds a process wrapper for Homebridge. It also adds an API that can be used as an endpoint for an application.",
+		"icon": "https://icons.freenas.org/community-icons/hoobs.png",
+		"name": "HOOBS",
+		"primary_pkg": null,
+		"official": false
+	},
+	"i2p": {
+		"MANIFEST": "i2p.json",
+		"name": "I2P",
+		"icon": "https://icons.freenas.org/community-icons/i2p.png",
+		"description": "The Invisible Internet Project (I2P) is an anonymous network layer (implemented as a Mix Network) that allows for censorship-resistant, peer to peer communication.",
+		"official": false,
+		"primary_pkg": "i2p"
+	},
+	"irssi": {
+		"MANIFEST": "irssi.json",
+		"description": "Modular IRC client using a CLI interface.",
+		"icon": "https://icons.freenas.org/community-icons/irssi.png",
+		"name": "irssi",
+		"official": false,
+		"primary_pkg": "irssi"
+	},
+	"jackett": {
+		"MANIFEST": "jackett.json",
+		"description": "API Support for your favorite torrent trackers",
+		"icon": "https://icons.freenas.org/community-icons/jackett.png",
+		"name": "Jackett",
+		"official": false,
+		"primary_pkg": "jackett"
+	},
+	"jenkins": {
+		"MANIFEST": "jenkins.json",
+		"name": "Jenkins",
+		"icon": "https://icons.freenas.org/community-icons/jenkins.png",
+		"description": "Open source build automation software.",
+		"official": false,
+		"primary_pkg": "jenkins",
+		"category": "devops",
+		"homepage": "https://jenkins.io/"
+	},
+	"jenkins-lts": {
+		"MANIFEST": "jenkins-lts.json",
+		"name": "Jenkins (LTS)",
+		"icon": "https://icons.freenas.org/community-icons/jenkins.png",
+		"description": "Open source build automation software. (Long Term Support Version)",
+		"official": false,
+		"primary_pkg": "jenkins-lts",
+		"category": "devops",
+		"homepage": "https://jenkins.io/"
+	},
+	"lidarr": {
+		"MANIFEST": "lidarr.json",
+		"description": "Fork of Sonarr. Automatically download music in the style of Couchpotato.",
+		"icon": "https://raw.githubusercontent.com/lidarr/Lidarr/develop/Logo/128.png",
+		"name": "Lidarr",
+		"official": false,
+		"primary_pkg": "lidarr"
+	},
+	"madsonic": {
+		"MANIFEST": "madsonic.json",
+		"description": "Open source media streaming software and music player.",
+		"icon": "https://icons.freenas.org/community-icons/madsonic.png",
+		"name": "MadSonic",
+		"official": false,
+		"primary_pkg": null
+	},
+	"monica": {
+		"MANIFEST": "monica.json",
+		"name": "Monica",
+		"icon": "https://icons.freenas.org/community-icons/monica.png",
+		"description": "Personal CRM. Remember everything about your friends, family and business relationships.",
+		"official": false,
+		"primary_pkg": null,
+		"homepage": "https://www.monicahq.com"
+	},
+	"mosquitto": {
+		"MANIFEST": "mosquitto.json",
+		"description": "An open source MQTT broker.",
+		"icon": "https://icons.freenas.org/community-icons/mosquitto.png",
+		"name": "Mosquitto MQTT",
+		"official": false,
+		"primary_pkg": "mosquitto",
+		"category": "home-automation",
+		"homepage": "https://mosquitto.org/"
+	},
+	"motioneye": {
+		"MANIFEST": "motioneye.json",
+		"description": "motionEye is a web frontend for the motion daemon, written in Python.",
+		"icon": "https://icons.freenas.org/community-icons/motioneye.png",
+		"name": "MotionEye",
+		"official": false,
+		"primary_pkg": null
+	},
+    "movienight": {
+        "MANIFEST": "movienight.json",
+        "description": "Single-instance streaming server with chat.",
+        "icon": "https://icons.freenas.org/community-icons/movienight.png",
+        "name": "Movie Night",
         "official": false,
-        "primary_pkg": "bind916"
-    },
-    "bazarr": {
-        "MANIFEST": "bazarr.json",
-        "description": "Bazarr is a companion application to Sonarr and Radarr that manages and downloads subtitles.",
-        "icon": "https://icons.freenas.org/community-icons/bazarr.png",
-        "name": "Bazarr",
-        "official": false,
-        "primary_pkg": null
-    },
-    "calibre-web": {
-        "MANIFEST": "calibre-web.json",
-        "description": "Web app for browsing, reading and downloading eBooks stored in a Calibre database",
-        "icon": "https://icons.freenas.org/community-icons/calibre-web.png",
-        "name": "Calibre-Web",
-        "official": false,
-        "primary_pkg": null
-    },
-    "channels-dvr": {
-        "MANIFEST": "channels-dvr.json",
-        "description": "DVR server for the Channels apps. Makes digital recordings of broadcast television using HDHomeRun network tuners. (Requires Subscription)",
-        "icon": "https://icons.freenas.org/community-icons/channels-dvr.png",
-        "name": "Channels DVR",
-        "official": false,
-        "primary_pkg": ""
-    },
-    "deluge-pip": {
-        "MANIFEST": "deluge-pip.json",
-        "description": "Deluge is Python-based Bittorent client.",
-        "icon": "https://icons.freenas.org/community-icons/deluge.png",
-        "name": "Deluge",
-        "official": false,
-        "primary_pkg": ""
-    },
-    "dnsmasq": {
-        "MANIFEST": "dnsmasq.json",
-        "description": "Network infrastructure management for small networks: DNS, DHCP, router advertisement, and network boot.",
-        "icon": "https://icons.freenas.org/community-icons/dnsmasq.svg",
-        "name": "Dnsmasq",
-        "official": false,
-        "primary_pkg": "dnsmasq"
-    },
-    "drupal8": {
-        "MANIFEST": "drupal8.json",
-        "description": "Drupal is an open source platform for building amazing digital experiences.",
-        "icon": "https://icons.freenas.org/community-icons/drupal.png",
-        "name": "Drupal8",
-        "official": false,
-        "primary_pkg": "drupal8"
-    },
-    "duplicati": {
-        "MANIFEST": "duplicati.json",
-        "name": "Duplicati",
-        "description": "Duplicati 2.0 Store securely encrypted backups on cloud storage services!",
-        "official": false,
-        "icon": "https://icons.freenas.org/community-icons/duplicati.png",
-        "primary_pkg": "",
-        "category": "backup"
-    },
-    "emby-server-stable": {
-        "MANIFEST": "emby-server-stable.json",
-        "name": "Emby Server",
-        "icon": "https://icons.freenas.org/community-icons/emby-server-png-128.png",
         "primary_pkg": null,
-        "description": "Emby brings together your personal videos, music, photos, and live television",
-        "official": false
-    },
-    "esphome": {
-        "MANIFEST": "esphome.json",
-        "name": "ESPHome",
-        "icon": "https://icons.freenas.org/community-icons/esphome.png",
-        "primary_pkg": null,
-        "description": "ESPHome is a system to control your ESP8266/ESP32 by simple yet powerful configuration files and control them remotely through Home Automation systems.",
-        "official": false
-    },
-    "famp": {
-        "MANIFEST": "famp.json",
-        "description": "FAMP (FreeBSD, Apache, MySQL and PHP) web server",
-        "icon": "https://icons.freenas.org/community-icons/famp.png",
-        "name": "FAMP",
-        "official": false,
-        "primary_pkg": null
-    },
-    "gitea": {
-        "MANIFEST": "gitea.json",
-        "name": "Gitea",
-        "icon": "https://icons.freenas.org/community-icons/gitea.png",
-        "description": "Gitea is a community managed lightweight code hosting solution written in Go.",
-        "official": false,
-        "primary_pkg": "gitea"
-    },
-    "gitlab": {
-        "MANIFEST": "gitlab.json",
-        "name": "GitLab",
-        "icon": "https://icons.freenas.org/community-icons/gitlab.png",
-        "description": "Gitlab CE - Git and CI platform to manage development projects",
-        "official": false,
-        "primary_pkg": "gitlab-ce"
-    },
-    "gogs": {
-        "MANIFEST": "gogs.json",
-        "description": "A painless self-hosted Git service.",
-        "icon": "https://icons.freenas.org/community-icons/gogs.png",
-        "name": "Gogs",
-        "official": false,
-        "primary_pkg": "gogs"
-    },
-    "grafana": {
-        "MANIFEST": "grafana.json",
-        "description": "Grafana allows you to query, visualize, alert on and understand your metrics no matter where they are stored. Create, explore, and share dashboards with your team and foster a data driven culture.",
-        "icon": "https://icons.freenas.org/community-icons/grafana.png",
-        "name": "Grafana (with InfluxDB)",
-        "official": false,
-        "primary_pkg": "grafana6"
-    },
-    "heimdall-dashboard": {
-        "MANIFEST": "heimdall-dashboard.json",
-        "description": "Heimdall Application Dashboard is an elegant solution to organize all your web applications and links onto a single page website.",
-        "icon": "https://icons.freenas.org/community-icons/heimdall-dashboard.png",
-        "name": "Heimdall",
-        "official": false,
-        "primary_pkg": null
-    },
-    "homeassistant": {
-        "MANIFEST": "homeassistant.json",
-        "description": "Open source home automation that puts local control and privacy first.",
-        "icon": "https://icons.freenas.org/community-icons/homeassistant.png",
-        "name": "Home Assistant Core",
-        "primary_pkg": null,
-        "official": false
-    },
-    "homebridge": {
-        "MANIFEST": "homebridge.json",
-        "description": "Lightweight iOS HomeKit API emulator. Enables adding unsupported devices to HomeKit.",
-        "icon": "https://icons.freenas.org/community-icons/homebridge.png",
-        "name": "Homebridge",
-        "offical": false
-    },
-    "hoobs": {
-        "MANIFEST": "hoobs.json",
-        "description": "HOOBS a Homebridge stack with a interface that simplifies configuration and installing plugins. This adds a process wrapper for Homebridge. It also adds an API that can be used as an endpoint for an application.",
-        "icon": "https://icons.freenas.org/community-icons/hoobs.png",
-        "name": "HOOBS",
-        "primary_pkg": null,
-        "offical": false
-    },
-    "i2p": {
-        "MANIFEST": "i2p.json",
-        "name": "I2P",
-        "icon": "https://icons.freenas.org/community-icons/i2p.png",
-        "description": "The Invisible Internet Project (I2P) is an anonymous network layer (implemented as a Mix Network) that allows for censorship-resistant, peer to peer communication.",
-        "official": false,
-        "primary_pkg": "i2p"
-    },
-    "irssi": {
-        "MANIFEST": "irssi.json",
-        "description": "Modular IRC client using a CLI interface.",
-        "icon": "https://icons.freenas.org/community-icons/irssi.png",
-        "name": "irssi",
-        "official": false,
-        "primary_pkg": "irssi"
-    },
-    "jackett": {
-        "MANIFEST": "jackett.json",
-        "description": "API Support for your favorite torrent trackers",
-        "icon": "https://icons.freenas.org/community-icons/jackett.png",
-        "name": "Jackett",
-        "official": false,
-        "primary_pkg": "jackett"
-    },
-    "lidarr": {
-        "MANIFEST": "lidarr.json",
-        "description": "Fork of Sonarr. Automatically download music in the style of Couchpotato.",
-        "icon": "https://raw.githubusercontent.com/lidarr/Lidarr/develop/Logo/128.png",
-        "name": "Lidarr",
-        "official": false,
-        "primary_pkg": "lidarr"
-    },
-    "madsonic": {
-        "MANIFEST": "madsonic.json",
-        "description": "Open source media streaming software and music player.",
-        "icon": "https://icons.freenas.org/community-icons/madsonic.png",
-        "name": "MadSonic",
-        "official": false,
-        "primary_pkg": null
-    },
-    "monica": {
-        "MANIFEST": "monica.json",
-        "name": "Monica",
-        "icon": "https://icons.freenas.org/community-icons/monica.png",
-        "description": "Personal CRM. Remember everything about your friends, family and business relationships.",
-        "official": false,
-        "primary_pkg": null,
-        "homepage": "https://www.monicahq.com"
-    },
-    "mosquitto": {
-        "MANIFEST": "mosquitto.json",
-        "description": "An open source MQTT broker.",
-        "icon": "https://icons.freenas.org/community-icons/mosquitto.png",
-        "name": "Mosquitto MQTT",
-        "official": false,
-        "primary_pkg": "mosquitto"
-    },
-    "motioneye": {
-        "MANIFEST": "motioneye.json",
-        "description": "motionEye is a web frontend for the motion daemon, written in Python.",
-        "icon": "https://icons.freenas.org/community-icons/motioneye.png",
-        "name": "MotionEye",
-        "official": false,
-        "primary_pkg": null
-    },
-    "netdata": {
-        "MANIFEST": "netdata.json",
-        "description": "Monitor everything in real-time",
-        "icon": "https://icons.freenas.org/community-icons/netdata.png",
-        "primary_pkg": "netdata",
-        "maintainer": "Kris Moore <kris@ixsystems.com>",
-        "name": "Netdata",
-        "official": false
-    },
-    "node-red": {
-        "MANIFEST": "node-red.json",
-        "description": "Node-RED is a programming tool for wiring together hardware devices, APIs and online services in new and interesting ways.",
-        "icon": "https://icons.freenas.org/community-icons/node-red.png",
-        "primary_pkg": null,
-        "name": "Node-RED",
-        "official": false
-    },
-    "nzbget": {
-        "MANIFEST": "nzbget.json",
-        "name": "NZBGet",
-        "primary_pkg": null,
-        "description": "The most efficient usenet downloader.",
-        "icon": "https://icons.freenas.org/community-icons/nzbget.png",
-        "official": false
-    },
-    "openvpn": {
-        "MANIFEST": "openvpn.json",
-        "description": "Virtual private network software to create secure point-to-point connections.",
-        "icon": "https://icons.freenas.org/community-icons/openvpn.png",
-        "name": "OpenVPN Server",
-        "official": false,
-        "primary_pkg": "openvpn"
-    },
-  "openspeedtest-server": {
-    "MANIFEST": "openspeedtest-server.json",
-    "description": "HTML5 Network Speed Test Apllication by OpenSpeedTest.",
-    "icon": "https://icons.freenas.org/community-icons/openspeedtest.png",
-    "name": "OpenSpeedTest",
-    "official": false,
-    "primary_pkg": null
-  },
-    "privatebin": {
-        "MANIFEST": "privatebin.json",
-        "description": "PrivateBin is a minimalist, open source online pastebin where the server has zero knowledge of pasted data.",
-        "icon": "https://icons.freenas.org/community-icons/privatebin.png",
-        "name": "PrivateBin",
-        "official": false,
-        "primary_pkg": "privatebin"
-    },
-    "quasselcore": {
-        "MANIFEST": "quasselcore.json",
-        "description": "Headless IRC Client that supports 24/7 connectivity. Quassel Client can be attached.",
-        "icon": "https://icons.freenas.org/community-icons/quasselcore.png",
-        "name": "Quasselcore",
-        "official": false,
-        "primary_pkg": "quassel-core"
-    },
-    "radarr": {
-        "MANIFEST": "radarr.json",
-        "name": "radarr",
-        "icon": "https://icons.freenas.org/community-icons/radarr.png",
-        "description": "Fork of Sonarr. Automatically download movies in the style of Couchpotato.",
-        "official": false,
-        "primary_pkg": "radarr",
-        "category": "content",
-        "homepage": "https://radarr.video/"
-    },
-    "rslsync": {
-        "MANIFEST": "rslsync.json",
-        "name": "rslsync",
-        "icon": "https://icons.freenas.org/community-icons/rslsync.png",
-        "description": "Resilient, fast and scalable file sync software for enterprises and individuals.",
-        "official": false,
-        "primary_pkg": "null",
-        "category": "content",
-        "homepage": "https://www.resilio.com/"
-    },
-    "rtorrent-flood": {
-        "MANIFEST": "rtorrent-flood.json",
-        "description": "rTorrent with Flood web interface (optionally restricted to OpenVPN).",
-        "icon": "https://icons.freenas.org/community-icons/rtorrent-flood.png",
-        "name": "rtorrent-flood",
-        "official": false,
-        "primary_pkg": "rtorrent"
-    },
-    "sabnzbd": {
-        "MANIFEST": "sabnzbd.json",
-        "description": "Sabznbd is a newsgroup reader.",
-        "icon": "https://icons.freenas.org/community-icons/sabnzbd.png",
-        "name": "Sabnzbd",
-        "official": false,
-        "primary_pkg": "sabnzbdplus"
-    },
-    "sickchill": {
-        "MANIFEST": "sickchill.json",
-        "description": "Automatic video library manager for TV Shows.",
-        "icon": "https://icons.freenas.org/community-icons/sickchill.png",
-        "name": "SickChill",
-        "official": false,
-        "primary_pkg": null
-    },
-    "sonarr": {
-        "MANIFEST": "sonarr.json",
-        "name": "Sonarr",
-        "icon": "https://icons.freenas.org/community-icons/sonarr.png",
-        "description": "Multi-platform app to search, download, and manage TV shows.",
-        "official": false,
-        "primary_pkg": "sonarr",
-        "category": "content",
-        "homepage": "https://sonarr.tv/"
-    },
-    "tasmoadmin": {
-        "MANIFEST": "tasmoadmin.json",
-        "description": "Website to manage devices flashed with Tasmota.",
-        "icon": "https://icons.freenas.org/community-icons/tasmoadmin.png",
-        "name": "TasmoAdmin",
-        "primary_pkg": null,
-        "official": false
-    },
-    "unificontroller": {
-        "MANIFEST": "unificontroller.json",
-        "description": "Software-Defined Networking platform that provides an end-to-end system of network devices across different locations.",
-        "icon": "https://icons.freenas.org/community-icons/unificontroller.png",
-        "name": "unificontroller",
-        "official": false,
-        "primary_pkg": "unifi5"
-    },
-    "unificontroller-lts": {
-        "MANIFEST": "unificontroller-lts.json",
-        "description": "Software-Defined Networking platform that provides an end-to-end system of network devices across different locations. (Long term support version)",
-        "icon": "https://icons.freenas.org/community-icons/unificontroller.png",
-        "name": "unificontroller-lts",
-        "official": false,
-        "primary_pkg": "unifi-lts"
-    },
-    "weechat": {
-        "MANIFEST": "weechat.json",
-        "description": "Fast and light IRC client.",
-        "icon": "https://icons.freenas.org/community-icons/weechat.png",
-        "name": "weechat",
-        "official": false,
-        "primary_pkg": "weechat"
-    },
-    "xmrig": {
-        "MANIFEST": "xmrig.json",
-        "description": "High performance Monero (XMR) CPU miner written in C++.",
-        "icon": "https://icons.freenas.org/community-icons/xmrig.png",
-        "name": "XMRig",
-        "official": false,
-        "primary_pkg": "xmrig"
-    },
-    "zrepl": {
-        "MANIFEST": "zrepl.json",
-        "description": "zrepl is a one-stop, integrated solution for ZFS replication.",
-        "icon": "https://icons.freenas.org/community-icons/zrepl.png",
-        "name": "zrepl",
-        "official": false,
-        "primary_pkg": "zrepl"
-    },
-    "backuppc": {
-        "MANIFEST": "backuppc.json",
-        "name": "BackupPC",
-        "icon": "https://icons.freenas.org/community-icons/backuppc.png",
-        "description": "Enterprise-grade system for backing up Linux, Windows, and MacOSX computers to a server.",
-        "official": false,
-        "primary_pkg": "backuppc4",
-        "category": "security",
-        "homepage": "http://backuppc.sourceforge.net/"
-    },
-    "clamav": {
-        "MANIFEST": "clamav.json",
-        "name": "ClamAV",
-        "icon": "https://icons.freenas.org/community-icons/clamav.png",
-        "description": "Open source antivirus engine for detecting trojans, viruses, malware, and other malicious threats.",
-        "official": false,
-        "primary_pkg": "clamav",
-        "category": "security",
-        "homepage": "https://www.clamav.net/"
-    },
-    "emby": {
-        "MANIFEST": "emby.json",
-        "name": "Emby",
-        "icon": "https://icons.freenas.org/community-icons/emby.png",
-        "description": "Home media server to organize, play, and stream audio and video to a variety of devices.",
-        "official": false,
-        "primary_pkg": "emby-server",
         "category": "entertainment",
-        "homepage": "https://emby.media/"
-    },
-    "jenkins": {
-        "MANIFEST": "jenkins.json",
-        "name": "Jenkins",
-        "icon": "https://icons.freenas.org/community-icons/jenkins.png",
-        "description": "Open source build automation software.",
-        "official": false,
-        "primary_pkg": "jenkins",
-        "category": "devops",
-        "homepage": "https://jenkins.io/"
-    },
-    "jenkins-lts": {
-        "MANIFEST": "jenkins-lts.json",
-        "name": "Jenkins (LTS)",
-        "icon": "https://icons.freenas.org/community-icons/jenkins.png",
-        "description": "Open source build automation software. (Long Term Support Version)",
-        "official": false,
-        "primary_pkg": "jenkins-lts",
-        "category": "devops",
-        "homepage": "https://jenkins.io/"
+        "homepage": "https://github.com/zorchenhimer/MovieNight"
     },
     "mineos": {
         "MANIFEST": "mineos.json",
@@ -435,62 +294,235 @@
         "category": "entertainment",
         "homepage": "https://minecraft.codeemo.com/"
     },
-    "transmission": {
-        "MANIFEST": "transmission.json",
-        "name": "Transmission",
-        "icon": "https://icons.freenas.org/community-icons/transmission.png",
-        "description": "Fast and lightweight BitTorrent client.",
-        "official": false,
-        "primary_pkg": "transmission-daemon",
-        "category": "content",
-        "homepage": "https://transmissionbt.com/"
-    },
-    "tautulli": {
-        "MANIFEST": "tautulli.json",
-        "name": "Tautulli",
-        "icon": "https://icons.freenas.org/community-icons/tautulli.png",
-        "description": "Monitors analytics and notifications for Plex Media Server. (formerly known as PlexPy)",
-        "official": false,
-        "primary_pkg": null,
-        "category": "entertainment",
-        "homepage": "https://tautulli.com/"
-    },
-    "qbittorrent": {
-        "MANIFEST": "qbittorrent.json",
-        "name": "qbittorrent",
-        "icon": "https://icons.freenas.org/community-icons/qbittorrent.png",
-        "description": "Open source Bittorent client written in C++ and QT.",
-        "official": false,
-        "primary_pkg": "qbittorrent-nox",
-        "category": "content",
-        "homepage": "http://qbittorrent.org/"
-    },
-    "vault": {
-        "MANIFEST": "vault.json",
-        "name": "vault",
-        "icon": "https://icons.freenas.org/community-icons/vault.png",
-        "description": "Manage secrets and protect sensitive data.",
-        "official": false,
-        "primary_pkg": "vault",
-        "category": "devops",
-        "homepage": "https://www.vaultproject.io/"
-    },
-    "zoneminder": {
-        "MANIFEST": "zoneminder.json",
-        "name": "Zoneminder",
-        "icon": "https://icons.freenas.org/community-icons/zoneminder.png",
-        "description": "Closed-circuit television management application which supports IP, USB, and analog cameras.",
-        "official": false,
-        "primary_pkg": "zoneminder",
-        "category": "security",
-        "homepage": "https://zoneminder.com/"
-    },
-    "zwavejs2mqtt": {
-        "MANIFEST": "zwavejs2mqtt.json",
-        "name": "Z-Wave JS to MQTT",
-        "description": "Fully configurable Zwave to MQTT gateway and Control Panel using NodeJS and Vue. This also includes the Z-Wave JS Web Socket Server!",
-        "icon": "https://icons.freenas.org/community-icons/zwavejs2mqtt.png",
-        "primary_pkg": null,
-        "official": false
-    }
+	"netdata": {
+		"MANIFEST": "netdata.json",
+		"description": "Monitor everything in real-time",
+		"icon": "https://icons.freenas.org/community-icons/netdata.png",
+		"primary_pkg": "netdata",
+		"maintainer": "Kris Moore <kris@ixsystems.com>",
+		"name": "Netdata",
+		"official": false
+	},
+	"node-red": {
+		"MANIFEST": "node-red.json",
+		"description": "Node-RED is a programming tool for wiring together hardware devices, APIs and online services in new and interesting ways.",
+		"icon": "https://icons.freenas.org/community-icons/node-red.png",
+		"primary_pkg": null,
+		"name": "Node-RED",
+		"official": false,
+		"category": "home-automation",
+		"homepage": "https://nodered.org/"
+	},
+	"nzbget": {
+		"MANIFEST": "nzbget.json",
+		"name": "NZBGet",
+		"primary_pkg": null,
+		"description": "The most efficient usenet downloader.",
+		"icon": "https://icons.freenas.org/community-icons/nzbget.png",
+		"official": false
+	},
+	"openvpn": {
+		"MANIFEST": "openvpn.json",
+		"description": "Virtual private network software to create secure point-to-point connections.",
+		"icon": "https://icons.freenas.org/community-icons/openvpn.png",
+		"name": "OpenVPN Server",
+		"official": false,
+		"primary_pkg": "openvpn"
+	},
+	"openspeedtest-server": {
+		"MANIFEST": "openspeedtest-server.json",
+		"description": "HTML5 Network Speed Test Apllication by OpenSpeedTest.",
+		"icon": "https://icons.freenas.org/community-icons/openspeedtest.png",
+		"name": "OpenSpeedTest",
+		"official": false,
+		"primary_pkg": null
+	},
+	"piwigo": {
+		"MANIFEST": "piwigo.json",
+		"description": "Piwigo is open source photo gallery software for the web. Designed for organisations, teams and individuals.",
+		"icon": "https://icons.freenas.org/community-icons/piwigo.png",
+		"name": "Piwigo Gallery",
+		"official": false,
+		"primary_pkg": null
+	},
+	"privatebin": {
+		"MANIFEST": "privatebin.json",
+		"description": "PrivateBin is a minimalist, open source online pastebin where the server has zero knowledge of pasted data.",
+		"icon": "https://icons.freenas.org/community-icons/privatebin.png",
+		"name": "PrivateBin",
+		"official": false,
+		"primary_pkg": "privatebin"
+	},
+	"qbittorrent": {
+		"MANIFEST": "qbittorrent.json",
+		"name": "qbittorrent",
+		"icon": "https://icons.freenas.org/community-icons/qbittorrent.png",
+		"description": "Open source Bittorent client written in C++ and QT.",
+		"official": false,
+		"primary_pkg": "qbittorrent-nox",
+		"category": "content",
+		"homepage": "http://qbittorrent.org/"
+	},
+	"quasselcore": {
+		"MANIFEST": "quasselcore.json",
+		"description": "Headless IRC Client that supports 24/7 connectivity. Quassel Client can be attached.",
+		"icon": "https://icons.freenas.org/community-icons/quasselcore.png",
+		"name": "Quasselcore",
+		"official": false,
+		"primary_pkg": "quassel-core"
+	},
+	"radarr": {
+		"MANIFEST": "radarr.json",
+		"name": "radarr",
+		"icon": "https://icons.freenas.org/community-icons/radarr.png",
+		"description": "Fork of Sonarr. Automatically download movies in the style of Couchpotato.",
+		"official": false,
+		"primary_pkg": "radarr",
+		"category": "content",
+		"homepage": "https://radarr.video/"
+	},
+	"rslsync": {
+		"MANIFEST": "rslsync.json",
+		"name": "rslsync",
+		"icon": "https://icons.freenas.org/community-icons/rslsync.png",
+		"description": "Resilient, fast and scalable file sync software for enterprises and individuals.",
+		"official": false,
+		"primary_pkg": "null",
+		"category": "content",
+		"homepage": "https://www.resilio.com/"
+	},
+	"rtorrent-flood": {
+		"MANIFEST": "rtorrent-flood.json",
+		"description": "rTorrent with Flood web interface (optionally restricted to OpenVPN).",
+		"icon": "https://icons.freenas.org/community-icons/rtorrent-flood.png",
+		"name": "rtorrent-flood",
+		"official": false,
+		"primary_pkg": "rtorrent"
+	},
+	"sabnzbd": {
+		"MANIFEST": "sabnzbd.json",
+		"description": "Sabznbd is a newsgroup reader.",
+		"icon": "https://icons.freenas.org/community-icons/sabnzbd.png",
+		"name": "Sabnzbd",
+		"official": false,
+		"primary_pkg": "sabnzbdplus"
+	},
+	"sickchill": {
+		"MANIFEST": "sickchill.json",
+		"description": "Automatic video library manager for TV Shows.",
+		"icon": "https://icons.freenas.org/community-icons/sickchill.png",
+		"name": "SickChill",
+		"official": false,
+		"primary_pkg": null
+	},
+	"sonarr": {
+		"MANIFEST": "sonarr.json",
+		"name": "Sonarr",
+		"icon": "https://icons.freenas.org/community-icons/sonarr.png",
+		"description": "Multi-platform app to search, download, and manage TV shows.",
+		"official": false,
+		"primary_pkg": "sonarr",
+		"category": "content",
+		"homepage": "https://sonarr.tv/"
+	},
+	"tasmoadmin": {
+		"MANIFEST": "tasmoadmin.json",
+		"description": "Website to manage devices flashed with Tasmota.",
+		"icon": "https://icons.freenas.org/community-icons/tasmoadmin.png",
+		"name": "TasmoAdmin",
+		"primary_pkg": null,
+		"official": false,
+		"category": "home-automation",
+		"homepage": "https://github.com/reloxx13/TasmoAdmin#readme"
+	},
+	"tautulli": {
+		"MANIFEST": "tautulli.json",
+		"name": "Tautulli",
+		"icon": "https://icons.freenas.org/community-icons/tautulli.png",
+		"description": "Monitors analytics and notifications for Plex Media Server. (formerly known as PlexPy)",
+		"official": false,
+		"primary_pkg": null,
+		"category": "entertainment",
+		"homepage": "https://tautulli.com/"
+	},
+	"transmission": {
+		"MANIFEST": "transmission.json",
+		"name": "Transmission",
+		"icon": "https://icons.freenas.org/community-icons/transmission.png",
+		"description": "Fast and lightweight BitTorrent client.",
+		"official": false,
+		"primary_pkg": "transmission-daemon",
+		"category": "content",
+		"homepage": "https://transmissionbt.com/"
+	},
+	"unificontroller": {
+		"MANIFEST": "unificontroller.json",
+		"description": "Software-Defined Networking platform that provides an end-to-end system of network devices across different locations.",
+		"icon": "https://icons.freenas.org/community-icons/unificontroller.png",
+		"name": "unificontroller",
+		"official": false,
+		"primary_pkg": "unifi5"
+	},
+	"unificontroller-lts": {
+		"MANIFEST": "unificontroller-lts.json",
+		"description": "Software-Defined Networking platform that provides an end-to-end system of network devices across different locations. (Long term support version)",
+		"icon": "https://icons.freenas.org/community-icons/unificontroller.png",
+		"name": "unificontroller-lts",
+		"official": false,
+		"primary_pkg": "unifi-lts"
+	},
+	"vault": {
+		"MANIFEST": "vault.json",
+		"name": "vault",
+		"icon": "https://icons.freenas.org/community-icons/vault.png",
+		"description": "Manage secrets and protect sensitive data.",
+		"official": false,
+		"primary_pkg": "vault",
+		"category": "devops",
+		"homepage": "https://www.vaultproject.io/"
+	},
+	"weechat": {
+		"MANIFEST": "weechat.json",
+		"description": "Fast and light IRC client.",
+		"icon": "https://icons.freenas.org/community-icons/weechat.png",
+		"name": "weechat",
+		"official": false,
+		"primary_pkg": "weechat"
+	},
+	"xmrig": {
+		"MANIFEST": "xmrig.json",
+		"description": "High performance Monero (XMR) CPU miner written in C++.",
+		"icon": "https://icons.freenas.org/community-icons/xmrig.png",
+		"name": "XMRig",
+		"official": false,
+		"primary_pkg": "xmrig"
+	},
+	"zoneminder": {
+		"MANIFEST": "zoneminder.json",
+		"name": "Zoneminder",
+		"icon": "https://icons.freenas.org/community-icons/zoneminder.png",
+		"description": "Closed-circuit television management application which supports IP, USB, and analog cameras.",
+		"official": false,
+		"primary_pkg": "zoneminder",
+		"category": "security",
+		"homepage": "https://zoneminder.com/"
+	},
+	"zrepl": {
+		"MANIFEST": "zrepl.json",
+		"description": "zrepl is a one-stop, integrated solution for ZFS replication.",
+		"icon": "https://icons.freenas.org/community-icons/zrepl.png",
+		"name": "zrepl",
+		"official": false,
+		"primary_pkg": "zrepl"
+	},
+	"zwavejs2mqtt": {
+		"MANIFEST": "zwavejs2mqtt.json",
+		"name": "Z-Wave JS to MQTT",
+		"description": "Fully configurable Zwave to MQTT gateway and Control Panel using NodeJS and Vue. This also includes the Z-Wave JS Server!",
+		"icon": "https://icons.freenas.org/community-icons/zwavejs2mqtt.png",
+		"primary_pkg": null,
+		"official": false,
+		"category": "home-automation",
+		"homepage": "https://zwave-js.github.io/zwavejs2mqtt/#/"
+	}
 }
