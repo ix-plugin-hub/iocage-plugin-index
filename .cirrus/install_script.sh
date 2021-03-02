@@ -33,7 +33,7 @@ wait_for_admin_portal()
   curl_retries_sleep=2
   curl_timeout=5
 
-  print_info "Trying to curl Admin Portal at: ${exp_ui_url}, with ${curl_retires} retries, sleeping ${curl_retries_sleep}"
+  print_info "Trying to curl Admin Portal at: ${exp_ui_url}, with ${curl_retires} retries, sleeping ${curl_retries_sleep} seconds"
 
   if curl \
       --fail \
