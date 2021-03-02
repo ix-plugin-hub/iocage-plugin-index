@@ -5,6 +5,9 @@
 
 [![x][plugins-shield]][plugins-link] [![x][release-shield]][release-link]
 
+
+[![Cirrus CI - Task and Script Build Status](https://img.shields.io/cirrus/github/ix-plugin-hub/iocage-plugin-index?label=Install%20test&logo=cirrus-ci&logoColor=green&style=for-the-badge)](https://cirrus-ci.com/github/ix-plugin-hub/iocage-plugin-index/master)
+
 ![Validate JSONs](https://github.com/ix-plugin-hub/iocage-plugin-index/workflows/Validate%20JSONs/badge.svg)
 
 # iocage-ix-plugins
