@@ -183,7 +183,10 @@ print_success "Post install complete"
 
 print_info "Disable plugins pkg repos"
 unset REPOS_DIR
+
 pkg install --yes curl
+export CURLOPT_SSL_VERIFYPEER=FALSE
+export CURLOPT_SSL_VERIFYHOST=FALSE
 
 if [ "${exp_ui_url}" != "" ]
 then
