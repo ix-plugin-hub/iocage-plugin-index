@@ -18,6 +18,8 @@ print_error()
 
 wait_for_admin_portal()
 {
+  pkg install --yes curl
+
   exp_ui_url=$1
 
   max_retries=20
@@ -29,7 +31,7 @@ wait_for_admin_portal()
   while [ $retry -lt $max_retries ]
   do
     retry=$(expr $retry + 1)
-    if fetch --no-verify-hostname --no-verify-peer ${exp_ui_url} #2> /dev/null
+    if curl --fail --verbose ${exp_ui_url} #2> /dev/null
     then
       fetch_success=true
       break
