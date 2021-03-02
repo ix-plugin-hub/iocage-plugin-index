@@ -37,7 +37,7 @@ calibre-web_task:
   only_if: "changesInclude('calibre-web.json', '.cirrus/install_script.sh')"
   matrix:
     - freebsd_instance:
-        image_family: freebsd-12-1
+        image_family: freebsd-12-2
   env:
     PLUGIN_FILE: "calibre-web.json"
 
@@ -64,7 +64,7 @@ deluge-pip_task:
   only_if: "changesInclude('deluge-pip.json', '.cirrus/install_script.sh')"
   matrix:
     - freebsd_instance:
-        image_family: freebsd-12-1
+        image_family: freebsd-12-2
   env:
     PLUGIN_FILE: "deluge-pip.json"
 
@@ -442,7 +442,7 @@ tautulli_task:
   only_if: "changesInclude('tautulli.json', '.cirrus/install_script.sh')"
   matrix:
     - freebsd_instance:
-        image_family: freebsd-12-1
+        image_family: freebsd-12-2
   env:
     PLUGIN_FILE: "tautulli.json"
 

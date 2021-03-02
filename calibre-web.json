@@ -1,7 +1,7 @@
 {
     "name": "Calibre-Web",
     "plugin_schema": "2",
-    "release": "12.1-RELEASE",
+    "release": "12.2-RELEASE",
     "artifact": "https://github.com/aserrallerios/iocage-plugin-calibre-web.git",
     "pkgs": [
         "git",
@@ -11,6 +11,7 @@
         "py37-setuptools",
         "py37-sqlite3",
         "py37-ldap",
+        "rust",
         "calibre",
         "unrar",
         "ImageMagick7"
