@@ -229,6 +229,7 @@ jackett_task:
         image_family: freebsd-12-1
   env:
     PLUGIN_FILE: "jackett.json"
+    FOLLOW_REDIRECTS: false
 
 jenkins_task:
   <<: *INSTALL_PLUGIN
