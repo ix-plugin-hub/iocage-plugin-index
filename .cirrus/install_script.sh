@@ -34,7 +34,7 @@ wait_for_admin_portal()
   while [ $retry -lt $max_retries ]
   do
     retry=$(expr $retry + 1)
-    if curl --fail --verbose --connect-timeout ${curl_timeout} ${exp_ui_url} #2> /dev/null
+    if curl --fail --verbose --location --connect-timeout ${curl_timeout} ${exp_ui_url} #2> /dev/null
     then
       fetch_success=true
       break
