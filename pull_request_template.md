@@ -6,4 +6,3 @@ Please ensure the following guidelines are met when submitting a new Plugin.
 2. Includes a new icon in the ./icon/ directory
 3. Ensure the submitted icon file is a valid PNG that is 128x128 in size
 4. Add new plugin cirrus task
-5. Update `README.md` "Plugin build status" section with new task badge
