@@ -5,10 +5,8 @@
 
 [![x][plugins-shield]][plugins-link] [![x][release-shield]][release-link]
 
-
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/ix-plugin-hub/iocage-plugin-index/Validate%20JSONs?label=Validate%20JSONs&logo=github&style=for-the-badge)
 [![Cirrus CI - Task and Script Build Status](https://img.shields.io/cirrus/github/ix-plugin-hub/iocage-plugin-index?label=Install%20test&logo=cirrus-ci&logoColor=green&style=for-the-badge)](https://cirrus-ci.com/github/ix-plugin-hub/iocage-plugin-index/master)
-
-![Validate JSONs](https://github.com/ix-plugin-hub/iocage-plugin-index/workflows/Validate%20JSONs/badge.svg)
 
 # iocage-ix-plugins
 Official community created plugins for [FreeNAS](http://www.freenas.org) and [FreeBSD](http://www.freebsd.org)
