@@ -27,29 +27,22 @@ wait_for_admin_portal()
     curl_follow_redirects=""
   fi
 
-  exp_ui_url=$1
+  exp_ui_url=${1}
 
-  max_retries=5
-  retry=0
-  fetch_success=false
-  sleep_time=5
+  curl_retires=5
+  curl_retries_sleep=2
   curl_timeout=5
 
-  print_info "Starting to wait for Admin Portal at: ${exp_ui_url}"
-  while [ $retry -lt $max_retries ]
-  do
-    retry=$(expr $retry + 1)
-    if curl --fail --verbose ${curl_follow_redirects} --connect-timeout ${curl_timeout} ${exp_ui_url} #2> /dev/null
-    then
-      fetch_success=true
-      break
-    fi
+  print_info "Trying to curl Admin Portal at: ${exp_ui_url}, with ${curl_retires} retries, sleeping ${curl_retries_sleep}"
 
-    print_info "Admin Portal fetch failed, sleeping ${sleep_time} seconds, and retrying (${retry}/${max_retries})"
-    sleep ${sleep_time}
-  done
-
-  if ${fetch_success}
+  if curl \
+      --fail \
+      --verbose \
+      ${curl_follow_redirects} \
+      --connect-timeout ${curl_timeout} \
+      --retry ${curl_retires} \
+      --retry-delay ${curl_retries_sleep} \
+      ${exp_ui_url}
   then
     print_success "Admin Portal reachable"
   else
