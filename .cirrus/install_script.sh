@@ -21,15 +21,15 @@ wait_for_admin_portal()
   pkg install --yes curl
   export CURLOPT_SSL_VERIFYPEER=FALSE
   export CURLOPT_SSL_VERIFYHOST=FALSE
-  curl_redirects_follow = "--location"
-  if [ "$FOLLOW_REDIREDTS" == "false" ]
+  curl_follow_redirects="--location"
+  if [ "$FOLLOW_REDIRECTS" == "false" ]
   then
-    curl_redirects_follow = ""
+    curl_follow_redirects=""
   fi
 
   exp_ui_url=$1
 
-  max_retries=20
+  max_retries=5
   retry=0
   fetch_success=false
   sleep_time=5
@@ -39,7 +39,7 @@ wait_for_admin_portal()
   while [ $retry -lt $max_retries ]
   do
     retry=$(expr $retry + 1)
-    if curl --fail --verbose ${curl_redirects_follow} --connect-timeout ${curl_timeout} ${exp_ui_url} #2> /dev/null
+    if curl --fail --verbose ${curl_follow_redirects} --connect-timeout ${curl_timeout} ${exp_ui_url} #2> /dev/null
     then
       fetch_success=true
       break
@@ -182,13 +182,12 @@ pkg install --no-repo-update --yes $pkgs
 
 if [ -d "${plugin_dir}/overlay" ]
 then
-  print_info "Found overlay folder"
+  print_info "Found overlay folder. Will copy '${plugin_dir}/overlay' into root path '/'"
   cp -r ${plugin_dir}/overlay/ /
 fi
 
 print_info "Executing post_install.sh script"
 ${plugin_dir}/post_install.sh
-echo $?
 print_success "Post install complete"
 
 print_info "Disable plugins pkg repos"
