@@ -18,18 +18,23 @@ print_error()
 
 wait_for_admin_portal()
 {
+  pkg install --yes curl
+  export CURLOPT_SSL_VERIFYPEER=FALSE
+  export CURLOPT_SSL_VERIFYHOST=FALSE
+
   exp_ui_url=$1
 
   max_retries=20
   retry=0
   fetch_success=false
   sleep_time=5
+  curl_timeout=5
 
   print_info "Starting to wait for Admin Portal at: ${exp_ui_url}"
   while [ $retry -lt $max_retries ]
   do
     retry=$(expr $retry + 1)
-    if curl --fail --verbose ${exp_ui_url} #2> /dev/null
+    if curl --fail --verbose --connect-timeout ${curl_timeout} ${exp_ui_url} #2> /dev/null
     then
       fetch_success=true
       break
@@ -183,10 +188,6 @@ print_success "Post install complete"
 
 print_info "Disable plugins pkg repos"
 unset REPOS_DIR
-
-pkg install --yes curl
-export CURLOPT_SSL_VERIFYPEER=FALSE
-export CURLOPT_SSL_VERIFYHOST=FALSE
 
 if [ "${exp_ui_url}" != "" ]
 then
