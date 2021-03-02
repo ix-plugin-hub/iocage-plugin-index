@@ -71,14 +71,17 @@ then
   admin_portal=$(jq -r '.adminportal' ${plugin_dir}/ui.json | sed 's/%%IP%%/127.0.0.1/')
   place_holders=$(jq -r '.adminportal_placeholders' ${plugin_dir}/ui.json)
 
-  if [ $place_holders != "null" ]
+  if [ "$place_holders" != "null" ]
   then
+    print_info "Found admin portal placeholders: ${place_holders}"
     ph_keys=$(echo $place_holders | jq -r 'keys[]')
 
     for ph in ${ph_keys}
     do
       place_holder_value=$(jq -r '."adminportal_placeholders"."'${ph}'"' ${plugin_dir}/ui.json)
       resolved_default_value=$(jq -r '.options."'${place_holder_value}'".default' ${plugin_dir}/settings.json)
+
+      print_info "Replacing ${ph} with ${resolved_default_value} in admin_portal UI ${admin_portal}"
       admin_portal=$(echo $admin_portal | sed "s/${ph}/${resolved_default_value}/")
     done
   fi
