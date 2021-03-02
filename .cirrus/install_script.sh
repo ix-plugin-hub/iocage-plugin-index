@@ -18,8 +18,6 @@ print_error()
 
 wait_for_admin_portal()
 {
-  pkg install --yes curl
-
   exp_ui_url=$1
 
   max_retries=20
@@ -180,7 +178,12 @@ fi
 
 print_info "Executing post_install.sh script"
 ${plugin_dir}/post_install.sh
+echo $?
 print_success "Post install complete"
+
+print_info "Disable plugins pkg repos"
+unset REPOS_DIR
+pkg install --yes curl
 
 if [ "${exp_ui_url}" != "" ]
 then
