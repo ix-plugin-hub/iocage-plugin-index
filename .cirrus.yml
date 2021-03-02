@@ -527,4 +527,3 @@ zwavejs2mqtt_task:
         image_family: freebsd-12-2
   env:
     PLUGIN_FILE: "zwavejs2mqtt.json"
-
