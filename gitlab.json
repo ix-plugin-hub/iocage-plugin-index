@@ -1,6 +1,6 @@
 {
   "name": "GitLab",
-  "release": "12.1-RELEASE",
+  "release": "12.2-RELEASE",
   "artifact": "https://github.com/pandorixtech/iocage-plugin-gitlab.git",
   "pkgs": [
     "gitlab-ce",
