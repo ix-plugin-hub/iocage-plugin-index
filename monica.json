@@ -8,7 +8,7 @@
         "pwgen-2.08,2",
         "apache24-2.4.46_1",
         "mysql57-server",
-        "redis5-5.0.10",
+        "redis5",
         "mod_php74",
         "php74-composer-1.10.20",
         "php74-bcmath-7.4.15",
