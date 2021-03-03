@@ -42,6 +42,7 @@ wait_for_admin_portal()
       --connect-timeout ${curl_timeout} \
       --retry ${curl_retires} \
       --retry-delay ${curl_retries_sleep} \
+      --output /dev/null \
       ${exp_ui_url}
   then
     print_success "Admin Portal reachable"
