@@ -19,8 +19,7 @@ print_error()
 wait_for_admin_portal()
 {
   pkg install --yes curl
-  export CURLOPT_SSL_VERIFYPEER=FALSE
-  export CURLOPT_SSL_VERIFYHOST=FALSE
+
   curl_follow_redirects="--location"
   if [ "$FOLLOW_REDIRECTS" == "false" ]
   then
@@ -38,6 +37,7 @@ wait_for_admin_portal()
   if curl \
       --fail \
       --verbose \
+      --insecure \
       ${curl_follow_redirects} \
       --connect-timeout ${curl_timeout} \
       --retry ${curl_retires} \
