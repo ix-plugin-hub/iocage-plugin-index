@@ -425,7 +425,7 @@ sonarr_task:
   only_if: "changesInclude('sonarr.json', '.cirrus/install_script.sh')"
   matrix:
     - freebsd_instance:
-        image_family: freebsd-12-1
+        image_family: freebsd-12-2
   env:
     PLUGIN_FILE: "sonarr.json"
 
