@@ -329,6 +329,7 @@ nzbget_task:
         image_family: freebsd-12-1
   env:
     PLUGIN_FILE: "nzbget.json"
+    ADMIN_UI_USER: "nzbget:tegbzn6789"
 
 openspeedtest-server_task:
   <<: *INSTALL_PLUGIN

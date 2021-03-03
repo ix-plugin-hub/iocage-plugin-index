@@ -26,6 +26,12 @@ wait_for_admin_portal()
     curl_follow_redirects=""
   fi
 
+  curl_user=""
+  if [ "$ADMIN_UI_USER" != "" ]
+  then
+    curl_user="--user ${ADMIN_UI_USER}"
+  fi
+
   exp_ui_url=${1}
 
   curl_retires=5
@@ -44,6 +50,7 @@ wait_for_admin_portal()
       --retry-delay ${curl_retries_sleep} \
       --output /dev/null \
       --silent \
+      ${curl_user} \
       ${exp_ui_url}
   then
     print_success "Admin Portal reachable"
