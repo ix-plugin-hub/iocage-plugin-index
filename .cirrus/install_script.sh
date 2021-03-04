@@ -48,6 +48,7 @@ wait_for_admin_portal()
       --connect-timeout ${curl_timeout} \
       --retry ${curl_retires} \
       --retry-delay ${curl_retries_sleep} \
+      --retry-all-errors \
       --output /dev/null \
       --silent \
       ${curl_user} \
