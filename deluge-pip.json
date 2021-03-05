@@ -1,7 +1,7 @@
 {
     "name": "deluge-pip",
     "plugin_schema": "2",
-    "release": "12.1-RELEASE",
+    "release": "12.2-RELEASE",
     "artifact": "https://github.com/jsegaert/iocage-plugin-deluge-pip.git",
     "properties": {
         "nat":"1",
@@ -12,7 +12,8 @@
         "python37",
         "py37-pip",
         "py37-pillow",
-        "py37-libtorrent-rasterbar"
+        "py37-libtorrent-rasterbar",
+        "rust"
     ],
     "packagesite": "http://pkg.FreeBSD.org/${ABI}/latest",
     "fingerprints": {

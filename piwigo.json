@@ -1,0 +1,38 @@
+{
+    "name": "Piwigo",
+    "plugin_schema": "2",
+    "release": "12.2-RELEASE",
+    "artifact": "https://github.com/AfroUSApl/iocage-plugin-piwigo.git",
+    "official": false,
+    "properties": {
+        "vnet": 1,
+        "dhcp": 1
+    },
+    "pkgs": [
+        "ImageMagick7-nox11",
+        "git",
+        "nginx",
+        "mariadb105-server",
+        "php73",
+        "php73-exif",
+        "php73-filter",
+        "php73-gd",
+        "php73-hash",
+        "php73-mbstring",
+        "php73-mysqli",
+        "php73-json",
+        "php73-session",
+        "php73-zip",
+        "php73-zlib"
+    ],
+    "packagesite": "http://pkg.FreeBSD.org/${ABI}/latest",
+    "fingerprints": {
+        "iocage-plugins": [
+            {
+                "function": "sha256",
+                "fingerprint": "b0170035af3acc5f3f3ae1859dc717101b4e6c1d0a794ad554928ca0cbb2f438"
+            }
+        ]
+    },
+    "revision": "0"
+}
