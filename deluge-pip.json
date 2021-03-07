@@ -13,6 +13,7 @@
         "py37-pip",
         "py37-pillow",
         "py37-libtorrent-rasterbar",
+        "libtorrent-rasterbar",
         "rust"
     ],
     "packagesite": "http://pkg.FreeBSD.org/${ABI}/latest",
