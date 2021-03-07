@@ -6,7 +6,6 @@
     "gitlab-ce",
     "postgresql12-server",
     "postgresql12-contrib",
-    "postgresql12-client",
     "nginx",
     "gtar"
   ],
