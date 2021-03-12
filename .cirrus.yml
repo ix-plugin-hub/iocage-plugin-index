@@ -46,7 +46,7 @@ channels-dvr_task:
   only_if: "changesInclude('channels-dvr.json', '.cirrus/install_script.sh')"
   matrix:
     - freebsd_instance:
-        image_family: freebsd-11-3
+        image_family: freebsd-12-2
   env:
     PLUGIN_FILE: "channels-dvr.json"
 
