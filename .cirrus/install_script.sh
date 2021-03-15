@@ -196,7 +196,7 @@ print_success "Post install complete"
 print_info "Disable plugins pkg repos"
 unset REPOS_DIR
 
-if [ "${exp_ui_url}" != "" ]
+if [ "${exp_ui_url}" != "" ] && [ "$SKIP_UI_CHECK" != "true" ]
 then
   wait_for_admin_portal ${exp_ui_url}
 fi

@@ -375,6 +375,7 @@ quasselcore_task:
         image_family: freebsd-11-3
   env:
     PLUGIN_FILE: "quasselcore.json"
+    SKIP_UI_CHECK: "true"
 
 radarr_task:
   <<: *INSTALL_PLUGIN
