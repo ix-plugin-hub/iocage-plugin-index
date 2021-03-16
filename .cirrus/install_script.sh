@@ -15,7 +15,7 @@ check_service_status()
     if ! echo "${services_before}" | grep -q "${a}"
     then
       echo "Checking if service $a is running"
-      service "${a}" status
+      "${a}" status
     fi
   done
 }
