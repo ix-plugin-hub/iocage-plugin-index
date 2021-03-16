@@ -3,15 +3,31 @@ set -e
 
 pkg install --yes jq
 
-wait_for_services()
+check_service_status()
 {
-  post_install_path=${1}
-  post_install_services=$(cat ${post_install_path} | grep -E "service.*start" | cut -d" " -f2)
-  echo "Checking if post install services are running: ${post_install_services}"
+  services_before=${1}
+  services_after=${2}
 
-  echo $post_install_services | while IFS='' read s
+  echo "Checking if post install services are running"
+
+  echo "${services_after}" | while IFS=' ' read -r a
   do
-    service $s status
+    check_service=true
+    echo "${services_before}" | while IFS=' ' read -r b
+    do
+      if [ "$a" = "$b" ]
+      then
+        echo "Skip checking service $a, was enabled before post_install"
+        check_service=false
+        break
+      fi
+    done
+
+    if ${check_service}
+    then
+      echo "Checking if service $a is running"
+      service $a status
+    fi
   done
 }
 
@@ -108,9 +124,13 @@ then
   cp -r ${plugin_dir}/overlay/ /
 fi
 
+services_before=$(service -e)
+
 ${plugin_dir}/post_install.sh
 
-wait_for_services "${plugin_dir}/post_install.sh"
+services_after=$(service -e)
+
+check_service_status "${services_before}" "${services_after}"
 
 if [ -f ${plugin_dir}/pre_update.sh ] && ! [ -x ${plugin_dir}/pre_update.sh ]
 then
