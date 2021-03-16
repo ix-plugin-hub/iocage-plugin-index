@@ -12,7 +12,7 @@ check_service_status()
 
   echo "${services_after}" | while IFS=' ' read -r a
   do
-    if ! echo "${services_before}" | grep "${a}"
+    if ! echo "${services_before}" | grep -q "${a}"
     then
       echo "Checking if service $a is running"
       service "${a}" status
