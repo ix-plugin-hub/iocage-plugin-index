@@ -3,6 +3,18 @@ set -e
 
 pkg install --yes jq
 
+wait_for_services()
+{
+  post_install_path=${1}
+  post_install_services=$(cat ${post_install_path} | grep -E "service.*start" | cut -d" " -f2)
+  echo "Checking if post install services are running: ${post_install_services}"
+
+  echo $post_install_services | while IFS='' read s
+  do
+    serivce $s status
+  done
+}
+
 release=$(jq -r '.release' $PLUGIN_FILE)
 name=$(jq '.name' $PLUGIN_FILE)
 packagesite=$(jq '.packagesite' $PLUGIN_FILE)
@@ -97,6 +109,8 @@ then
 fi
 
 ${plugin_dir}/post_install.sh
+
+wait_for_services "${plugin_dir}/post_install.sh"
 
 if [ -f ${plugin_dir}/pre_update.sh ] && ! [ -x ${plugin_dir}/pre_update.sh ]
 then
