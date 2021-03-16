@@ -11,7 +11,7 @@ wait_for_services()
 
   echo $post_install_services | while IFS='' read s
   do
-    serivce $s status
+    service $s status
   done
 }
 
