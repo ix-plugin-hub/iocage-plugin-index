@@ -12,12 +12,12 @@ check_service_status()
 
   echo "${services_after}" | while IFS=' ' read -r a
   do
-    if echo "${services_before}" | grep "$a"
+    if echo "${services_before}" | grep "${a}"
     then
       echo "Skip checking service $a, was enabled before post_install"
     else
       echo "Checking if service $a is running"
-      service $a status
+      service "${a}" status
     fi
   done
 }
