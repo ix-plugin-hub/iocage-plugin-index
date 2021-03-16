@@ -1,6 +1,6 @@
 {
     "name": "unificontroller",
-    "release": "11.3-RELEASE",
+    "release": "12.2-RELEASE",
     "artifact": "https://github.com/lbalker/iocage-plugin-unificontroller.git",
     "properties": {
         "nat": 1,
