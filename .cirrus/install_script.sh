@@ -87,15 +87,15 @@ __create_package_config()
   pkg_conf_path="${repos_dir}/test.conf"
   {
     echo "iocage-plugins: {"
-    echo "url: $packagesite,"
+    echo "url: ${packagesite},"
     echo "signature_type: \"fingerprints\","
     echo "fingerprints \"${fingerprints_dir}\","
     echo "enabled: true"
     echo "}"
-  } > $pkg_conf_path
+  } > ${pkg_conf_path}
 
   print_info "Created test pkg config file:"
-  cat $pkg_conf_path
+  cat ${pkg_conf_path}
 }
 
 __create_trusted_fingerprints()
@@ -105,7 +105,7 @@ __create_trusted_fingerprints()
   trusted_fingerprints="$fingerprints_dir/trusted"
   mkdir -p "${trusted_fingerprints}"
 
-  for repo_name in $fingerprints
+  for repo_name in ${fingerprints}
   do
     repo_fingerprints=$(jq -rc '."fingerprints"."'"${repo_name}"'"[]' "${PLUGIN_FILE}")
 
@@ -120,8 +120,8 @@ __create_trusted_fingerprints()
 
       print_info "Creating new fingerprint file: ${file_path}"
 
-      echo "function: $function" > "${file_path}"
-      echo "fingerprint: $fingerprint" >> "${file_path}"
+      echo "function: ${function}" > "${file_path}"
+      echo "fingerprint: ${fingerprint}" >> "${file_path}"
 
       repo_count=$((repo_count + 1))
     done
@@ -168,15 +168,15 @@ install_plugin_packages()
   fi
 
   print_info "Start using plugin pkg repos"
-  export REPOS_DIR=$repos_dir
+  export REPOS_DIR=${repos_dir}
 
   print_info "Fetching ${name} pkgs: ${pkgs}"
-  pkg fetch --dependencies --yes "$pkgs"
+  pkg fetch --dependencies --yes "${pkgs}"
 
   pkg delete --yes ca_root_nss || true
 
   print_info "Installing ${name} pkgs: ${pkgs}"
-  pkg install --no-repo-update --yes "$pkgs"
+  pkg install --no-repo-update --yes "${pkgs}"
 }
 
 copy_overlay_folder()
@@ -212,7 +212,7 @@ wait_for_admin_portal()
     return
   fi
 
-  if [ "$SKIP_UI_CHECK" = "true" ]
+  if [ "${SKIP_UI_CHECK}" = "true" ]
   then
     print_info "SKIP_UI_CHECK variable set to \"true\", skipping admin portal check"
     return
@@ -221,13 +221,13 @@ wait_for_admin_portal()
   pkg install --yes curl
 
   curl_follow_redirects="--location"
-  if [ "$FOLLOW_REDIRECTS" = "false" ]
+  if [ "${FOLLOW_REDIRECTS}" = "false" ]
   then
     curl_follow_redirects=""
   fi
 
   curl_user=""
-  if [ "$ADMIN_UI_USER" != "" ]
+  if [ "${ADMIN_UI_USER}" != "" ]
   then
     curl_user="--user ${ADMIN_UI_USER}"
   fi
