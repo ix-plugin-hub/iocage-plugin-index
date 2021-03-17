@@ -157,12 +157,14 @@ print_info "Creating main repos dir: ${repos_dir}"
 mkdir -p $repos_dir
 
 pkg_conf_path="${repos_dir}/test.conf"
-echo "iocage-plugins: {" > $pkg_conf_path
-echo "url: $packagesite," >> $pkg_conf_path
-echo "signature_type: \"fingerprints\"," >> $pkg_conf_path
-echo "fingerprints \"${fingerprints_dir}\"," >> $pkg_conf_path
-echo "enabled: true" >> $pkg_conf_path
-echo "}" >> $pkg_conf_path
+{
+  echo "iocage-plugins: {"
+  echo "url: $packagesite,"
+  echo "signature_type: \"fingerprints\","
+  echo "fingerprints \"${fingerprints_dir}\","
+  echo "enabled: true"
+  echo "}"
+} > $pkg_conf_path
 print_info "Created test pkg config file:"
 cat $pkg_conf_path
 
