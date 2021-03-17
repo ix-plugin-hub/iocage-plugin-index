@@ -58,9 +58,9 @@ The following `.cirrus.yml` task shows an example of needed YAML section to enab
 
 ### Block variables
 *  `<PLUGIN_NAME>` should equal (and be replaced with) the plugin JSON file name (without the `.json` file suffix)
-* The `freebsd_instance` `image_family` should match the plugin manifest FreeBSD version. Alternatively the `matrix` can be a list of `freebsd_instances` with different versions if multiple FreeBSD versions are supported or needed to be tested
+* The `matrix` -> `freebsd_instance` -> `image_family` should match the plugin manifest FreeBSD version. Alternatively this `matrix` can be a list of `freebsd_instances` with different versions if multiple FreeBSD versions are supported or needed to be tested
 * **required** `env` variables:
-  * `PLUGIN_FILE`: is the file parsed inside the `install_script`
+  * `PLUGIN_FILE`: should equal the plugin manifest file and is the one parsed inside the `install_script`
 * **optional** `env` variables:
   * `ADMIN_UI_USER`: should be used if there is a username/password required to reach the admin UI. Value should have the format: `<username>:<password>`
   * `FOLLOW_REDIRECTS`: if set to `"false"` will not follow redirects to admin UI and threat a 3XX code as success for the admin UI check
