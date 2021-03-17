@@ -104,7 +104,6 @@ __wait_for_service()
 
 pkg install --yes jq
 
-release=$(jq -r '.release' $PLUGIN_FILE)
 name=$(jq '.name' $PLUGIN_FILE)
 packagesite=$(jq '.packagesite' $PLUGIN_FILE)
 fingerprints=$(jq -r '.fingerprints | keys[]' $PLUGIN_FILE)
