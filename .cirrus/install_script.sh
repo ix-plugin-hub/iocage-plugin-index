@@ -86,7 +86,7 @@ __wait_for_service()
   print_info "Starting to wait for service: ${service_path} with ${max_retries} and ${sleep} s. sleep"
 
   try=1
-  while [ ${try} -lt ${max_retries} ]
+  while [ ${try} -le ${max_retries} ]
   do
     print_info "Service status check (${try}/${max_retries})"
     "${service_path}" status && break
@@ -95,7 +95,7 @@ __wait_for_service()
     sleep ${sleep}
   done
 
-  if [ ${try} -eq ${max_retries} ]
+  if [ ${try} -gt ${max_retries} ]
   then
     print_error "Service ${service_path} not started"
     exit 1
