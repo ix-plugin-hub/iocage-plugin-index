@@ -3,7 +3,7 @@ set -e
 
 print_info()
 {
-  echo -e "\033[0;35m$(date "+[%Y-%m-%d %H:%M:%S]")  ${1}\033[0m"
+  echo -e "\033[0;36m$(date "+[%Y-%m-%d %H:%M:%S]")  ${1}\033[0m"
 }
 
 print_success()
