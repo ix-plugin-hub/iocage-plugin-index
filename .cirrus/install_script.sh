@@ -68,14 +68,38 @@ check_service_status()
 
   print_info "Checking if post install services are running"
 
-  echo "${services_after}" | while IFS=' ' read -r a
+  echo "${services_after}" | while IFS=' ' read -r service_path
   do
-    if ! echo "${services_before}" | grep -q "${a}"
+    if ! echo "${services_before}" | grep -q "${service_path}"
     then
-      print_info "Checking if service $a is running"
-      "${a}" status
+      __wait_for_service "${service_path}"
     fi
   done
+}
+
+__wait_for_service()
+{
+  service_path=${1}
+  max_retries=5
+  sleep=2
+
+  print_info "Starting to wait for service: ${service_path} with ${max_retries} and ${sleep} s. sleep"
+
+  try=1
+  while [ ${try} -lt ${max_retries} ]
+  do
+    print_info "Service status check (${try}/${max_retries})"
+    "${service_path}" status && break
+
+    try=$((try+1))
+    sleep ${sleep}
+  done
+
+  if [ ${try} -eq ${max_retries} ]
+  then
+    print_error "Service ${service_path} not started"
+    exit 1
+  fi
 }
 
 pkg install --yes jq
