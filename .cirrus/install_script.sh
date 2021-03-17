@@ -34,9 +34,9 @@ wait_for_admin_portal()
 
   exp_ui_url=${1}
 
-  curl_retires=5
+  curl_retires=8
   curl_retries_sleep=2
-  curl_timeout=5
+  curl_timeout=8
 
   print_info "Trying to curl Admin Portal at: ${exp_ui_url}, with ${curl_retires} retries, sleeping ${curl_retries_sleep} seconds"
 
@@ -59,6 +59,23 @@ wait_for_admin_portal()
     print_error "Could not fetch Admin Portal"
     exit 1
   fi
+}
+
+check_service_status()
+{
+  services_before=${1}
+  services_after=${2}
+
+  print_info "Checking if post install services are running"
+
+  echo "${services_after}" | while IFS=' ' read -r a
+  do
+    if ! echo "${services_before}" | grep -q "${a}"
+    then
+      print_info "Checking if service $a is running"
+      "${a}" status
+    fi
+  done
 }
 
 pkg install --yes jq
@@ -189,11 +206,15 @@ then
   cp -r ${plugin_dir}/overlay/ /
 fi
 
+services_before=$(service -e)
+
 print_info "Executing post_install.sh script"
 ${plugin_dir}/post_install.sh
-
-service ipfw stop || true
+service ipfw stop || true  # stop possible ipfw blocking out cirrus agent communication
 print_success "Post install complete"
+
+services_after=$(service -e)
+check_service_status "${services_before}" "${services_after}"
 
 print_info "Disable plugins pkg repos"
 unset REPOS_DIR
