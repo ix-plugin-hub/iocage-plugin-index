@@ -242,15 +242,15 @@ wait_for_admin_portal()
       --fail \
       --verbose \
       --insecure \
-      "${curl_follow_redirects}" \
+      ${curl_follow_redirects} \
       --connect-timeout ${curl_timeout} \
       --retry ${curl_retires} \
       --retry-delay ${curl_retries_sleep} \
       --retry-all-errors \
       --output /dev/null \
       --silent \
-      "${curl_user}" \
-      "${exp_ui_url}"
+      ${curl_user} \
+      ${exp_ui_url}
   then
     print_success "Admin Portal reachable"
   else
