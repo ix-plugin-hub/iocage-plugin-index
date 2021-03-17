@@ -100,7 +100,7 @@ emby_task:
   only_if: "changesInclude('emby.json', '.cirrus/install_script.sh')"
   matrix:
     - freebsd_instance:
-        image_family: freebsd-12-1
+        image_family: freebsd-12-2
   env:
     PLUGIN_FILE: "emby.json"
 
@@ -229,6 +229,7 @@ jackett_task:
         image_family: freebsd-12-1
   env:
     PLUGIN_FILE: "jackett.json"
+    FOLLOW_REDIRECTS: false
 
 jenkins_task:
   <<: *INSTALL_PLUGIN
@@ -310,7 +311,7 @@ movienight_task:
         image_family: freebsd-12-2
   env:
     PLUGIN_FILE: "movienight.json"
-    
+
 netdata_task:
   <<: *INSTALL_PLUGIN
   only_if: "changesInclude('netdata.json', '.cirrus/install_script.sh')"
@@ -337,6 +338,7 @@ nzbget_task:
         image_family: freebsd-12-1
   env:
     PLUGIN_FILE: "nzbget.json"
+    ADMIN_UI_USER: "nzbget:tegbzn6789"
 
 openspeedtest-server_task:
   <<: *INSTALL_PLUGIN
@@ -355,6 +357,15 @@ openvpn_task:
         image_family: freebsd-12-1
   env:
     PLUGIN_FILE: "openvpn.json"
+
+piwigo_task:
+  <<: *INSTALL_PLUGIN
+  only_if: "changesInclude('piwigo.json', '.cirrus/install_script.sh')"
+  matrix:
+    - freebsd_instance:
+        image_family: freebsd-12-2
+  env:
+    PLUGIN_FILE: "piwigo.json"
 
 privatebin_task:
   <<: *INSTALL_PLUGIN
