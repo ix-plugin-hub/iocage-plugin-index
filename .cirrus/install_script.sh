@@ -68,14 +68,13 @@ get_admin_ui()
     done
   fi
 
-  if echo "${admin_portal}" | grep -q "http\|localhost"
+  if ! echo "${admin_portal}" | grep -q "http\|localhost"
   then
-    print_info "Found http or localhost in Admin Portal, will try to fetch it after post_install"
-    exp_ui_url=${admin_portal}
-  else
     print_info "Admin Portal does not contain localhost or http. Will skip waiting for admin_portal"
+    return
   fi
 
+  exp_ui_url=${admin_portal}
 }
 
 __create_package_config()
