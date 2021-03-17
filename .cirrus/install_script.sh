@@ -3,6 +3,23 @@ set -e
 
 pkg install --yes jq
 
+check_service_status()
+{
+  services_before=${1}
+  services_after=${2}
+
+  echo "Checking if post install services are running"
+
+  echo "${services_after}" | while IFS=' ' read -r a
+  do
+    if ! echo "${services_before}" | grep -q "${a}"
+    then
+      echo "Checking if service $a is running"
+      "${a}" status
+    fi
+  done
+}
+
 release=$(jq -r '.release' $PLUGIN_FILE)
 name=$(jq '.name' $PLUGIN_FILE)
 packagesite=$(jq '.packagesite' $PLUGIN_FILE)
@@ -96,7 +113,13 @@ then
   cp -r ${plugin_dir}/overlay/ /
 fi
 
+services_before=$(service -e)
+
 ${plugin_dir}/post_install.sh
+
+services_after=$(service -e)
+
+check_service_status "${services_before}" "${services_after}"
 
 if [ -f ${plugin_dir}/pre_update.sh ] && ! [ -x ${plugin_dir}/pre_update.sh ]
 then
