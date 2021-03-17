@@ -3,7 +3,7 @@ set -e
 
 print_info()
 {
-  echo -e "\033[0;35m$(date "+[%Y-%m-%d %H:%M:%S]")  ${1}\033[0m"
+  echo -e "\033[0;36m$(date "+[%Y-%m-%d %H:%M:%S]")  ${1}\033[0m"
 }
 
 print_success()
@@ -48,6 +48,7 @@ wait_for_admin_portal()
       --connect-timeout ${curl_timeout} \
       --retry ${curl_retires} \
       --retry-delay ${curl_retries_sleep} \
+      --retry-all-errors \
       --output /dev/null \
       --silent \
       ${curl_user} \
@@ -67,14 +68,38 @@ check_service_status()
 
   print_info "Checking if post install services are running"
 
-  echo "${services_after}" | while IFS=' ' read -r a
+  echo "${services_after}" | while IFS=' ' read -r service_path
   do
-    if ! echo "${services_before}" | grep -q "${a}"
+    if ! echo "${services_before}" | grep -q "${service_path}"
     then
-      print_info "Checking if service $a is running"
-      "${a}" status
+      __wait_for_service "${service_path}"
     fi
   done
+}
+
+__wait_for_service()
+{
+  service_path=${1}
+  max_retries=5
+  sleep=2
+
+  print_info "Starting to wait for service: ${service_path} with ${max_retries} retries and ${sleep} s. sleep"
+
+  try=1
+  while [ ${try} -le ${max_retries} ]
+  do
+    print_info "Service status check (${try}/${max_retries})"
+    "${service_path}" status && break
+
+    try=$((try+1))
+    sleep ${sleep}
+  done
+
+  if [ ${try} -gt ${max_retries} ]
+  then
+    print_error "Service ${service_path} not started"
+    exit 1
+  fi
 }
 
 pkg install --yes jq
@@ -217,10 +242,12 @@ check_service_status "${services_before}" "${services_after}"
 print_info "Disable plugins pkg repos"
 unset REPOS_DIR
 
-if [ "${exp_ui_url}" != "" ]
+if [ "${exp_ui_url}" != "" ] && [ "$SKIP_UI_CHECK" != "true" ]
 then
   wait_for_admin_portal ${exp_ui_url}
 fi
+
+service ipfw stop > /dev/null || true  # stop possible ipfw blocking out cirrus agent communication
 
 if [ -f ${plugin_dir}/pre_update.sh ] && ! [ -x ${plugin_dir}/pre_update.sh ]
 then
