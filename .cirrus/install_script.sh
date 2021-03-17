@@ -171,12 +171,12 @@ install_plugin_packages()
   export REPOS_DIR=${repos_dir}
 
   print_info "Fetching ${name} pkgs: ${pkgs}"
-  pkg fetch --dependencies --yes "${pkgs}"
+  pkg fetch --dependencies --yes ${pkgs}
 
   pkg delete --yes ca_root_nss || true
 
   print_info "Installing ${name} pkgs: ${pkgs}"
-  pkg install --no-repo-update --yes "${pkgs}"
+  pkg install --no-repo-update --yes ${pkgs}
 }
 
 copy_overlay_folder()
