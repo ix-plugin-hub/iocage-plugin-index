@@ -3,17 +3,17 @@ set -e
 
 print_info()
 {
-  echo -e "\033[0;36m$(date "+[%Y-%m-%d %H:%M:%S]")  ${1}\033[0m"
+  printf "\033[0;36m$(date "+[%Y-%m-%d %H:%M:%S]")  %s\033[0m\n" "${1}"
 }
 
 print_success()
 {
-  echo -e "\033[0;32m$(date "+[%Y-%m-%d %H:%M:%S]")  ${1}\033[0m"
+  printf "\033[0;32m$(date "+[%Y-%m-%d %H:%M:%S]")  %s\033[0m\n" "${1}"
 }
 
 print_error()
 {
-  echo -e "\033[0;31m$(date "+[%Y-%m-%d %H:%M:%S]")  ${1}\033[0m"
+  printf "\033[0;31m$(date "+[%Y-%m-%d %H:%M:%S]")  %s\033[0m\n" "${1}"
 }
 
 wait_for_admin_portal()
