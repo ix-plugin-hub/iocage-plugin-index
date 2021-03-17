@@ -236,21 +236,25 @@ wait_for_admin_portal()
   curl_retries_sleep=2
   curl_timeout=8
 
-  print_info "Trying to curl Admin Portal at: ${exp_ui_url}, with ${curl_retires} retries, sleeping ${curl_retries_sleep} seconds"
+  print_info "Trying to curl Admin Portal at: ${exp_ui_url}"
 
-  if curl \
-      --fail \
-      --verbose \
-      --insecure \
-      ${curl_follow_redirects} \
-      --connect-timeout ${curl_timeout} \
-      --retry ${curl_retires} \
-      --retry-delay ${curl_retries_sleep} \
-      --retry-all-errors \
-      --output /dev/null \
-      --silent \
-      ${curl_user} \
-      ${exp_ui_url}
+  curl_args="
+    --fail
+    --verbose
+    --insecure
+    ${curl_follow_redirects}
+    --connect-timeout ${curl_timeout}
+    --retry ${curl_retires}
+    --retry-delay ${curl_retries_sleep}
+    --retry-all-errors
+    --output /dev/null
+    --silent
+    ${curl_user}
+  "
+
+  print_info "Curl args: ${curl_args}"
+
+  if curl "${curl_args}" "${exp_ui_url}"
   then
     print_success "Admin Portal reachable"
   else
