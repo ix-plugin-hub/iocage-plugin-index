@@ -5,6 +5,7 @@ freebsd_instance:
 env:
   HOME: "/root"
   PATH: "/sbin:/bin:/usr/sbin:/usr/bin:/usr/local/sbin:/usr/local/bin:/root/bin"
+  USER: "root"
 
 install_template: &INSTALL_PLUGIN
   install_script: .cirrus/install_script.sh
