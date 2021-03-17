@@ -83,7 +83,7 @@ __wait_for_service()
   max_retries=5
   sleep=2
 
-  print_info "Starting to wait for service: ${service_path} with ${max_retries} and ${sleep} s. sleep"
+  print_info "Starting to wait for service: ${service_path} with ${max_retries} retries and ${sleep} s. sleep"
 
   try=1
   while [ ${try} -le ${max_retries} ]
