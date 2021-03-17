@@ -21,7 +21,7 @@ wait_for_admin_portal()
   pkg install --yes curl
 
   curl_follow_redirects="--location"
-  if [ "$FOLLOW_REDIRECTS" == "false" ]
+  if [ "$FOLLOW_REDIRECTS" = "false" ]
   then
     curl_follow_redirects=""
   fi
