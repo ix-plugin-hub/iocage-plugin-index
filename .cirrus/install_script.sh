@@ -210,11 +210,12 @@ services_before=$(service -e)
 
 print_info "Executing post_install.sh script"
 ${plugin_dir}/post_install.sh
-service ipfw stop || true  # stop possible ipfw blocking out cirrus agent communication
 print_success "Post install complete"
 
 services_after=$(service -e)
 check_service_status "${services_before}" "${services_after}"
+
+service ipfw stop || true  # stop possible ipfw blocking out cirrus agent communication
 
 print_info "Disable plugins pkg repos"
 unset REPOS_DIR
