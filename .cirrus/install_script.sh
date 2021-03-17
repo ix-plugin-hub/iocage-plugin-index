@@ -248,7 +248,7 @@ fi
 
 check_service_status "${services_before}" "${services_after}"
 
-service ipfw stop || true  # stop possible ipfw blocking out cirrus agent communication
+service ipfw stop > /dev/null || true  # stop possible ipfw blocking out cirrus agent communication
 
 if [ -f ${plugin_dir}/pre_update.sh ] && ! [ -x ${plugin_dir}/pre_update.sh ]
 then
