@@ -213,9 +213,6 @@ ${plugin_dir}/post_install.sh
 print_success "Post install complete"
 
 services_after=$(service -e)
-check_service_status "${services_before}" "${services_after}"
-
-service ipfw stop || true  # stop possible ipfw blocking out cirrus agent communication
 
 print_info "Disable plugins pkg repos"
 unset REPOS_DIR
@@ -224,6 +221,10 @@ if [ "${exp_ui_url}" != "" ] && [ "$SKIP_UI_CHECK" != "true" ]
 then
   wait_for_admin_portal ${exp_ui_url}
 fi
+
+check_service_status "${services_before}" "${services_after}"
+
+service ipfw stop || true  # stop possible ipfw blocking out cirrus agent communication
 
 if [ -f ${plugin_dir}/pre_update.sh ] && ! [ -x ${plugin_dir}/pre_update.sh ]
 then
