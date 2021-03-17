@@ -537,6 +537,7 @@ zrepl_task:
         image_family: freebsd-12-1
   env:
     PLUGIN_FILE: "zrepl.json"
+    SKIP_SERVICE_CHECK: "true"
 
 zwavejs2mqtt_task:
   <<: *INSTALL_PLUGIN
