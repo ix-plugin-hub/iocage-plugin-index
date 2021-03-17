@@ -181,11 +181,14 @@ install_plugin_packages()
 
 copy_overlay_folder()
 {
-  if [ -d "${plugin_dir}/overlay" ]
+  if ! [ -d "${plugin_dir}/overlay" ]
   then
-    print_info "Found overlay folder. Will copy '${plugin_dir}/overlay' into root path '/'"
-    cp -r ${plugin_dir}/overlay/ /
+    print_info "No overlay folder found"
+    return
   fi
+
+  print_info "Found overlay folder. Will copy '${plugin_dir}/overlay' into root path '/'"
+  cp -r ${plugin_dir}/overlay/ /
 }
 
 run_post_install()
