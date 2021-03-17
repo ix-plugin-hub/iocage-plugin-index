@@ -259,7 +259,7 @@ wait_for_admin_portal()
   fi
 }
 
-check_service_status()
+check_services_status()
 {
   services_now=$(service -e)
 
@@ -336,7 +336,7 @@ run_post_install
 
 post_install_cleanup
 
-check_service_status
+check_services_status
 
 wait_for_admin_portal
 
