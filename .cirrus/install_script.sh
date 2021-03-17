@@ -43,35 +43,39 @@ clone_plugin_repo()
 
 get_admin_ui()
 {
-  if [ -f ${plugin_dir}/ui.json ]
+  if ! [ -f ${plugin_dir}/ui.json ]
   then
-    ip_address=$(ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0.1')
-    admin_portal=$(jq -r '.adminportal' ${plugin_dir}/ui.json | sed "s/%%IP%%/${ip_address}/")
-    place_holders=$(jq -r '.adminportal_placeholders' ${plugin_dir}/ui.json)
-
-    if [ "${place_holders}" != "null" ]
-    then
-      print_info "Found admin portal placeholders: ${place_holders}"
-      ph_keys=$(echo "${place_holders}" | jq -r 'keys[]')
-
-      for ph in ${ph_keys}
-      do
-        place_holder_value=$(jq -r '."adminportal_placeholders"."'"${ph}"'"' ${plugin_dir}/ui.json)
-        resolved_default_value=$(jq -r '.options."'"${place_holder_value}"'".default' ${plugin_dir}/settings.json)
-
-        print_info "Replacing ${ph} with ${resolved_default_value} in admin_portal UI ${admin_portal}"
-        admin_portal=$(echo "${admin_portal}" | sed "s/${ph}/${resolved_default_value}/")
-      done
-    fi
-
-    if echo "${admin_portal}" | grep -q "http\|localhost"
-    then
-      print_info "Found http or localhost in Admin Portal, will try to fetch it after post_install"
-      exp_ui_url=${admin_portal}
-    else
-      print_info "Admin Portal does not contain localhost or http. Will skip waiting for admin_portal"
-    fi
+    print_info "No ui.json found in repo, will ignore admin portal check"
+    return
   fi
+
+  ip_address=$(ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0.1')
+  admin_portal=$(jq -r '.adminportal' ${plugin_dir}/ui.json | sed "s/%%IP%%/${ip_address}/")
+  place_holders=$(jq -r '.adminportal_placeholders' ${plugin_dir}/ui.json)
+
+  if [ "${place_holders}" != "null" ]
+  then
+    print_info "Found admin portal placeholders: ${place_holders}"
+    ph_keys=$(echo "${place_holders}" | jq -r 'keys[]')
+
+    for ph in ${ph_keys}
+    do
+      place_holder_value=$(jq -r '."adminportal_placeholders"."'"${ph}"'"' ${plugin_dir}/ui.json)
+      resolved_default_value=$(jq -r '.options."'"${place_holder_value}"'".default' ${plugin_dir}/settings.json)
+
+      print_info "Replacing ${ph} with ${resolved_default_value} in admin_portal UI ${admin_portal}"
+      admin_portal=$(echo "${admin_portal}" | sed "s/${ph}/${resolved_default_value}/")
+    done
+  fi
+
+  if echo "${admin_portal}" | grep -q "http\|localhost"
+  then
+    print_info "Found http or localhost in Admin Portal, will try to fetch it after post_install"
+    exp_ui_url=${admin_portal}
+  else
+    print_info "Admin Portal does not contain localhost or http. Will skip waiting for admin_portal"
+  fi
+
 }
 
 __create_package_config()
