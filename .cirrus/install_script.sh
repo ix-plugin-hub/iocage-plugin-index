@@ -93,6 +93,7 @@ __create_package_config()
     echo "enabled: true"
     echo "}"
   } > $pkg_conf_path
+
   print_info "Created test pkg config file:"
   cat $pkg_conf_path
 }
@@ -137,16 +138,18 @@ create_plugin_pkg_repo()
 load_kmods()
 {
   kmods=$(jq -r '.kmods' "${PLUGIN_FILE}")
-
-  if [ "${kmods}" != "null" ]
+  if [ "${kmods}" = "null" ]
   then
-    print_info "Plugin kmods set"
-    echo "${kmods}" | jq -r  '.[]' | while IFS='' read -r kmod
-    do
-      print_info "Loading kmod: ${kmod}"
-      kldload -nv "${kmod}"
-    done
+    print_info "No kmods found for plugin"
+    return
   fi
+
+  print_info "Plugin kmods set"
+  echo "${kmods}" | jq -r  '.[]' | while IFS='' read -r kmod
+  do
+    print_info "Loading kmod: ${kmod}"
+    kldload -nv "${kmod}"
+  done
 }
 
 install_plugin_packages()
