@@ -60,6 +60,23 @@ wait_for_admin_portal()
   fi
 }
 
+check_service_status()
+{
+  services_before=${1}
+  services_after=${2}
+
+  print_info "Checking if post install services are running"
+
+  echo "${services_after}" | while IFS=' ' read -r a
+  do
+    if ! echo "${services_before}" | grep -q "${a}"
+    then
+      print_info "Checking if service $a is running"
+      "${a}" status
+    fi
+  done
+}
+
 pkg install --yes jq
 
 release=$(jq -r '.release' $PLUGIN_FILE)
@@ -188,9 +205,14 @@ then
   cp -r ${plugin_dir}/overlay/ /
 fi
 
+services_before=$(service -e)
+
 print_info "Executing post_install.sh script"
 ${plugin_dir}/post_install.sh
 print_success "Post install complete"
+
+services_after=$(service -e)
+check_service_status "${services_before}" "${services_after}"
 
 print_info "Disable plugins pkg repos"
 unset REPOS_DIR
