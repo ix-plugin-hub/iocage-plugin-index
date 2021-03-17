@@ -11,7 +11,8 @@
         "bash",
         "ca_root_nss",
         "git-lite",
-        "go"
+        "go",
+        "gmake"
     ],
     "packagesite": "http://pkg.FreeBSD.org/${ABI}/latest",
     "fingerprints": {
