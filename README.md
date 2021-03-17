@@ -63,6 +63,6 @@ The following `.cirrus.yml` task shows an example of needed YAML section to enab
   * `PLUGIN_FILE`: should equal the plugin manifest file and is the one parsed inside the `install_script`
 * **optional** `env` variables:
   * `ADMIN_UI_USER`: should be used if there is a username/password required to reach the admin UI. Value should have the format: `<username>:<password>`
-  * `FOLLOW_REDIRECTS`: if set to `"false"` will not follow redirects to admin UI and threat a 3XX code as success for the admin UI check
+  * `FOLLOW_REDIRECTS`: if set to `"false"` will not follow redirects to admin UI and treat a 3XX code as success for the admin UI check
   * `SKIP_UI_CHECK`: if set to `"true"` will skip the admin portal control entirely
   * `SKIP_SERVICE_CHECK`: if set to `"true"` will skip checking if the services started in `post_install` are running
