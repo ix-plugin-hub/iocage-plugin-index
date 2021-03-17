@@ -132,7 +132,7 @@ then
 
     for ph in ${ph_keys}
     do
-      place_holder_value=$(jq -r '."adminportal_placeholders"."'${ph}'"' ${plugin_dir}/ui.json)
+      place_holder_value=$(jq -r '."adminportal_placeholders"."'"${ph}"'"' ${plugin_dir}/ui.json)
       resolved_default_value=$(jq -r '.options."'"${place_holder_value}"'".default' ${plugin_dir}/settings.json)
 
       print_info "Replacing ${ph} with ${resolved_default_value} in admin_portal UI ${admin_portal}"
@@ -176,12 +176,12 @@ do
   repo_fingerprints=$(jq -rc '."fingerprints"."'"${repo_name}"'"[]' "${PLUGIN_FILE}")
 
   repo_count=1
-  echo "${repo_fingerprints}" | while IFS='' read f
+  echo "${repo_fingerprints}" | while IFS='' read -r f
   do
     print_info "Creating fingerprint file for repo: ${f}"
 
-    function=$(echo $f | jq -r '.function')
-    fingerprint=$(echo $f | jq -r '.fingerprint')
+    function=$(echo "${f}" | jq -r '.function')
+    fingerprint=$(echo "${f}" | jq -r '.fingerprint')
     file_path=${trusted_fingerprints}/${repo_name}_${repo_count}
 
     print_info "Creating new fingerprint file: ${file_path}"
@@ -189,14 +189,14 @@ do
     echo "function: $function" > "${file_path}"
     echo "fingerprint: $fingerprint" >> "${file_path}"
 
-    repo_count=$(expr $repo_count + 1)
+    repo_count=$((repo_count + 1))
   done
 done
 
 if [ "${kmods}" != "null" ]
 then
   print_info "Plugin kmods set"
-  echo "${kmods}" | jq -r  '.[]' | while IFS='' read kmod
+  echo "${kmods}" | jq -r  '.[]' | while IFS='' read -r kmod
   do
     print_info "Loading kmod: ${kmod}"
     kldload -nv "${kmod}"
