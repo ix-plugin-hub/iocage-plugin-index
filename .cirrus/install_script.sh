@@ -44,15 +44,15 @@ wait_for_admin_portal()
       --fail \
       --verbose \
       --insecure \
-      ${curl_follow_redirects} \
+      "${curl_follow_redirects}" \
       --connect-timeout ${curl_timeout} \
       --retry ${curl_retires} \
       --retry-delay ${curl_retries_sleep} \
       --retry-all-errors \
       --output /dev/null \
       --silent \
-      ${curl_user} \
-      ${exp_ui_url}
+      "${curl_user}" \
+      "${exp_ui_url}"
   then
     print_success "Admin Portal reachable"
   else
@@ -104,19 +104,19 @@ __wait_for_service()
 
 pkg install --yes jq
 
-name=$(jq '.name' $PLUGIN_FILE)
-packagesite=$(jq '.packagesite' $PLUGIN_FILE)
-fingerprints=$(jq -r '.fingerprints | keys[]' $PLUGIN_FILE)
-plugin_repo=$(jq -r '.artifact' $PLUGIN_FILE)
-pkgs=$(jq -r '.pkgs | join(" ")' $PLUGIN_FILE)
-kmods=$(jq -r '.kmods' $PLUGIN_FILE)
+name=$(jq '.name' "${PLUGIN_FILE}")
+packagesite=$(jq '.packagesite' "${PLUGIN_FILE}")
+fingerprints=$(jq -r '.fingerprints | keys[]' "${PLUGIN_FILE}")
+plugin_repo=$(jq -r '.artifact' "${PLUGIN_FILE}")
+pkgs=$(jq -r '.pkgs | join(" ")' "${PLUGIN_FILE}")
+kmods=$(jq -r '.kmods' "${PLUGIN_FILE}")
 
 # Clone plugins artifacts
 plugin_dir="/usr/local/plugin"
 pkg install --yes git-lite || pkg install --yes git
 release_branch="$(freebsd-version | cut -d '-' -f1)-RELEASE"
 print_info "Trying to clone ${plugin_repo}, to ${plugin_dir}, using branch: ${release_branch} (with fallback to 'master')"
-git clone -b ${release_branch} ${plugin_repo} ${plugin_dir} || git clone -b master ${plugin_repo} ${plugin_dir}
+git clone -b "${release_branch}" "${plugin_repo}" ${plugin_dir} || git clone -b master "${plugin_repo}" ${plugin_dir}
 
 exp_ui_url=""
 if [ -f ${plugin_dir}/ui.json ]
@@ -125,25 +125,25 @@ then
   admin_portal=$(jq -r '.adminportal' ${plugin_dir}/ui.json | sed "s/%%IP%%/${ip_address}/")
   place_holders=$(jq -r '.adminportal_placeholders' ${plugin_dir}/ui.json)
 
-  if [ "$place_holders" != "null" ]
+  if [ "${place_holders}" != "null" ]
   then
     print_info "Found admin portal placeholders: ${place_holders}"
-    ph_keys=$(echo $place_holders | jq -r 'keys[]')
+    ph_keys=$(echo "${place_holders}" | jq -r 'keys[]')
 
     for ph in ${ph_keys}
     do
       place_holder_value=$(jq -r '."adminportal_placeholders"."'${ph}'"' ${plugin_dir}/ui.json)
-      resolved_default_value=$(jq -r '.options."'${place_holder_value}'".default' ${plugin_dir}/settings.json)
+      resolved_default_value=$(jq -r '.options."'"${place_holder_value}"'".default' ${plugin_dir}/settings.json)
 
       print_info "Replacing ${ph} with ${resolved_default_value} in admin_portal UI ${admin_portal}"
-      admin_portal=$(echo $admin_portal | sed "s/${ph}/${resolved_default_value}/")
+      admin_portal=$(echo "${admin_portal}" | sed "s/${ph}/${resolved_default_value}/")
     done
   fi
 
-  if echo $admin_portal | grep -q "http\|localhost"
+  if echo "${admin_portal}" | grep -q "http\|localhost"
   then
     print_info "Found http or localhost in Admin Portal, will try to fetch it after post_install"
-    exp_ui_url=$admin_portal
+    exp_ui_url=${admin_portal}
   else
     print_info "Admin Portal does not contain localhost or http. Will skip waiting for admin_portal"
   fi
@@ -171,10 +171,10 @@ mkdir -p "${trusted_fingerprints}"
 
 for repo_name in $fingerprints
 do
-  repo_fingerprints=$(jq -rc '."fingerprints"."'${repo_name}'"[]' $PLUGIN_FILE)
+  repo_fingerprints=$(jq -rc '."fingerprints"."'"${repo_name}"'"[]' "${PLUGIN_FILE}")
 
   repo_count=1
-  echo $repo_fingerprints | while IFS='' read f
+  echo "${repo_fingerprints}" | while IFS='' read f
   do
     print_info "Creating fingerprint file for repo: ${f}"
 
@@ -184,20 +184,20 @@ do
 
     print_info "Creating new fingerprint file: ${file_path}"
 
-    echo "function: $function" > ${file_path}
-    echo "fingerprint: $fingerprint" >> ${file_path}
+    echo "function: $function" > "${file_path}"
+    echo "fingerprint: $fingerprint" >> "${file_path}"
 
     repo_count=$(expr $repo_count + 1)
   done
 done
 
-if [ "$kmods" != "null" ]
+if [ "${kmods}" != "null" ]
 then
   print_info "Plugin kmods set"
-  echo $kmods | jq -r  '.[]' | while IFS='' read kmod
+  echo "${kmods}" | jq -r  '.[]' | while IFS='' read kmod
   do
     print_info "Loading kmod: ${kmod}"
-    kldload -nv ${kmod}
+    kldload -nv "${kmod}"
   done
 fi
 
@@ -207,7 +207,7 @@ pkg delete --all --yes
 pkg autoremove --yes
 pkg clean --yes
 
-if echo ${packagesite} | grep -q "https"
+if echo "${packagesite}" | grep -q "https"
 then
   pkg install --yes ca_root_nss
 fi
@@ -215,13 +215,13 @@ fi
 print_info "Start using plugin pkg repos"
 export REPOS_DIR=$repos_dir
 
-print_info "Fetching $name pkgs: $pkgs"
-pkg fetch --dependencies --yes $pkgs
+print_info "Fetching ${name} pkgs: $pkgs"
+pkg fetch --dependencies --yes "$pkgs"
 
 pkg delete --yes ca_root_nss || true
 
-print_info "Installing $name pkgs: $pkgs"
-pkg install --no-repo-update --yes $pkgs
+print_info "Installing ${name} pkgs: ${pkgs}"
+pkg install --no-repo-update --yes "$pkgs"
 
 if [ -d "${plugin_dir}/overlay" ]
 then
@@ -243,7 +243,7 @@ unset REPOS_DIR
 
 if [ "${exp_ui_url}" != "" ] && [ "$SKIP_UI_CHECK" != "true" ]
 then
-  wait_for_admin_portal ${exp_ui_url}
+  wait_for_admin_portal "${exp_ui_url}"
 fi
 
 service ipfw stop > /dev/null || true  # stop possible ipfw blocking out cirrus agent communication
