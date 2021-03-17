@@ -211,8 +211,11 @@ print_info "Executing post_install.sh script"
 ${plugin_dir}/post_install.sh
 print_success "Post install complete"
 
-services_after=$(service -e)
-check_service_status "${services_before}" "${services_after}"
+if [ "$SKIP_SERVICE_CHECK" != "true" ]
+then
+  services_after=$(service -e)
+  check_service_status "${services_before}" "${services_after}"
+fi
 
 print_info "Disable plugins pkg repos"
 unset REPOS_DIR
