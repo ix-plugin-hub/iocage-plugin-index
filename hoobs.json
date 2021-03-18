@@ -1,6 +1,6 @@
 {
     "name": "hoobs",
-    "release": "12.1-RELEASE",
+    "release": "12.2-RELEASE",
     "artifact": "https://github.com/rahul-r/iocage-plugin-hoobs.git",
     "pkgs": [
         "python",

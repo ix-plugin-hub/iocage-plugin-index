@@ -1,6 +1,107 @@
 #!/bin/sh
 set -e
 
+print_info()
+{
+  echo -e "\033[0;36m$(date "+[%Y-%m-%d %H:%M:%S]")  ${1}\033[0m"
+}
+
+print_success()
+{
+  echo -e "\033[0;32m$(date "+[%Y-%m-%d %H:%M:%S]")  ${1}\033[0m"
+}
+
+print_error()
+{
+  echo -e "\033[0;31m$(date "+[%Y-%m-%d %H:%M:%S]")  ${1}\033[0m"
+}
+
+wait_for_admin_portal()
+{
+  pkg install --yes curl
+
+  curl_follow_redirects="--location"
+  if [ "$FOLLOW_REDIRECTS" == "false" ]
+  then
+    curl_follow_redirects=""
+  fi
+
+  curl_user=""
+  if [ "$ADMIN_UI_USER" != "" ]
+  then
+    curl_user="--user ${ADMIN_UI_USER}"
+  fi
+
+  exp_ui_url=${1}
+
+  curl_retires=8
+  curl_retries_sleep=2
+  curl_timeout=8
+
+  print_info "Trying to curl Admin Portal at: ${exp_ui_url}, with ${curl_retires} retries, sleeping ${curl_retries_sleep} seconds"
+
+  if curl \
+      --fail \
+      --verbose \
+      --insecure \
+      ${curl_follow_redirects} \
+      --connect-timeout ${curl_timeout} \
+      --retry ${curl_retires} \
+      --retry-delay ${curl_retries_sleep} \
+      --retry-all-errors \
+      --output /dev/null \
+      --silent \
+      ${curl_user} \
+      ${exp_ui_url}
+  then
+    print_success "Admin Portal reachable"
+  else
+    print_error "Could not fetch Admin Portal"
+    exit 1
+  fi
+}
+
+check_service_status()
+{
+  services_before=${1}
+  services_after=${2}
+
+  print_info "Checking if post install services are running"
+
+  echo "${services_after}" | while IFS=' ' read -r service_path
+  do
+    if ! echo "${services_before}" | grep -q "${service_path}"
+    then
+      __wait_for_service "${service_path}"
+    fi
+  done
+}
+
+__wait_for_service()
+{
+  service_path=${1}
+  max_retries=5
+  sleep=2
+
+  print_info "Starting to wait for service: ${service_path} with ${max_retries} retries and ${sleep} s. sleep"
+
+  try=1
+  while [ ${try} -le ${max_retries} ]
+  do
+    print_info "Service status check (${try}/${max_retries})"
+    "${service_path}" status && break
+
+    try=$((try+1))
+    sleep ${sleep}
+  done
+
+  if [ ${try} -gt ${max_retries} ]
+  then
+    print_error "Service ${service_path} not started"
+    exit 1
+  fi
+}
+
 pkg install --yes jq
 
 release=$(jq -r '.release' $PLUGIN_FILE)
@@ -12,16 +113,48 @@ pkgs=$(jq -r '.pkgs | join(" ")' $PLUGIN_FILE)
 kmods=$(jq -r '.kmods' $PLUGIN_FILE)
 
 # Clone plugins artifacts
-plugin_dir="./plugin"
+plugin_dir="/usr/local/plugin"
 pkg install --yes git-lite || pkg install --yes git
 release_branch="$(freebsd-version | cut -d '-' -f1)-RELEASE"
+print_info "Trying to clone ${plugin_repo}, to ${plugin_dir}, using branch: ${release_branch} (with fallback to 'master')"
 git clone -b ${release_branch} ${plugin_repo} ${plugin_dir} || git clone -b master ${plugin_repo} ${plugin_dir}
+
+exp_ui_url=""
+if [ -f ${plugin_dir}/ui.json ]
+then
+  ip_address=$(ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0.1')
+  admin_portal=$(jq -r '.adminportal' ${plugin_dir}/ui.json | sed "s/%%IP%%/${ip_address}/")
+  place_holders=$(jq -r '.adminportal_placeholders' ${plugin_dir}/ui.json)
+
+  if [ "$place_holders" != "null" ]
+  then
+    print_info "Found admin portal placeholders: ${place_holders}"
+    ph_keys=$(echo $place_holders | jq -r 'keys[]')
+
+    for ph in ${ph_keys}
+    do
+      place_holder_value=$(jq -r '."adminportal_placeholders"."'${ph}'"' ${plugin_dir}/ui.json)
+      resolved_default_value=$(jq -r '.options."'${place_holder_value}'".default' ${plugin_dir}/settings.json)
+
+      print_info "Replacing ${ph} with ${resolved_default_value} in admin_portal UI ${admin_portal}"
+      admin_portal=$(echo $admin_portal | sed "s/${ph}/${resolved_default_value}/")
+    done
+  fi
+
+  if echo $admin_portal | grep -q "http\|localhost"
+  then
+    print_info "Found http or localhost in Admin Portal, will try to fetch it after post_install"
+    exp_ui_url=$admin_portal
+  else
+    print_info "Admin Portal does not contain localhost or http. Will skip waiting for admin_portal"
+  fi
+fi
 
 pkg_dir=/usr/local/test
 repos_dir="${pkg_dir}/repos"
 fingerprints_dir="${pkg_dir}/fingerprints"
 
-echo "Creating main repos dir: ${repos_dir}"
+print_info "Creating main repos dir: ${repos_dir}"
 mkdir -p $repos_dir
 
 pkg_conf_path="${repos_dir}/test.conf"
@@ -30,8 +163,8 @@ echo "url: $packagesite," >> $pkg_conf_path
 echo "signature_type: \"fingerprints\"," >> $pkg_conf_path
 echo "fingerprints \"${fingerprints_dir}\"," >> $pkg_conf_path
 echo "enabled: true" >> $pkg_conf_path
-echo } >> $pkg_conf_path
-echo "Created test pkg config file:"
+echo "}" >> $pkg_conf_path
+print_info "Created test pkg config file:"
 cat $pkg_conf_path
 
 trusted_fingerprints="$fingerprints_dir/trusted"
@@ -44,14 +177,13 @@ do
   repo_count=1
   echo $repo_fingerprints | while IFS='' read f
   do
-    echo "Creating fingerprint file for repo:"
-    echo $f
+    print_info "Creating fingerprint file for repo: ${f}"
 
     function=$(echo $f | jq -r '.function')
     fingerprint=$(echo $f | jq -r '.fingerprint')
     file_path=${trusted_fingerprints}/${repo_name}_${repo_count}
 
-    echo "Creating new fingerprint file: ${file_path}"
+    print_info "Creating new fingerprint file: ${file_path}"
 
     echo "function: $function" > ${file_path}
     echo "fingerprint: $fingerprint" >> ${file_path}
@@ -62,14 +194,16 @@ done
 
 if [ "$kmods" != "null" ]
 then
+  print_info "Plugin kmods set"
   echo $kmods | jq -r  '.[]' | while IFS='' read kmod
   do
-    echo "Loading kmod: ${kmod}"
+    print_info "Loading kmod: ${kmod}"
     kldload -nv ${kmod}
   done
 fi
 
 # Clean up all packages
+print_info "Clean up packages before plugin installation"
 pkg delete --all --yes
 pkg autoremove --yes
 pkg clean --yes
@@ -79,33 +213,53 @@ then
   pkg install --yes ca_root_nss
 fi
 
-# Start using plugin repos
+print_info "Start using plugin pkg repos"
 export REPOS_DIR=$repos_dir
 
-echo "Fetching $name pkgs: $pkgs"
+print_info "Fetching $name pkgs: $pkgs"
 pkg fetch --dependencies --yes $pkgs
 
 pkg delete --yes ca_root_nss || true
 
-echo "Installing $name pkgs: $pkgs"
+print_info "Installing $name pkgs: $pkgs"
 pkg install --no-repo-update --yes $pkgs
 
 if [ -d "${plugin_dir}/overlay" ]
 then
-  echo "Found overlay folder"
+  print_info "Found overlay folder. Will copy '${plugin_dir}/overlay' into root path '/'"
   cp -r ${plugin_dir}/overlay/ /
 fi
 
+services_before=$(service -e)
+
+print_info "Executing post_install.sh script"
 ${plugin_dir}/post_install.sh
+print_success "Post install complete"
+
+if [ "$SKIP_SERVICE_CHECK" != "true" ]
+then
+  services_after=$(service -e)
+  check_service_status "${services_before}" "${services_after}"
+fi
+
+print_info "Disable plugins pkg repos"
+unset REPOS_DIR
+
+if [ "${exp_ui_url}" != "" ] && [ "$SKIP_UI_CHECK" != "true" ]
+then
+  wait_for_admin_portal ${exp_ui_url}
+fi
+
+service ipfw stop > /dev/null || true  # stop possible ipfw blocking out cirrus agent communication
 
 if [ -f ${plugin_dir}/pre_update.sh ] && ! [ -x ${plugin_dir}/pre_update.sh ]
 then
-  echo "pre_update.sh script not executable"
+  print_error "pre_update.sh script not executable"
   exit 1
 fi
 
 if [ -f ${plugin_dir}/post_update.sh ] && ! [ -x ${plugin_dir}/post_update.sh ]
 then
-  echo "post_update.sh script not executable"
+  print_error "post_update.sh script not executable"
   exit 1
 fi

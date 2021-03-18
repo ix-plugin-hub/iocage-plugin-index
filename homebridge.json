@@ -1,6 +1,6 @@
 {
     "name": "Homebridge",
-    "release": "12.1-RELEASE",
+    "release": "12.2-RELEASE",
     "artifact": "https://github.com/grimneko/iocage-plugin-homebridge.git",
     "properties": {
         "dhcp": 1
