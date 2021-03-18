@@ -261,6 +261,12 @@ wait_for_admin_portal()
 
 check_services_status()
 {
+  if [ "$SKIP_SERVICE_CHECK" = "true" ]
+  then
+    print_info "SKIP_SERVICE_CHECK variable set to \"true\", skipping service status check"
+    return
+  fi
+
   services_now=$(service -e)
 
   print_info "Checking if post install services are running"
