@@ -6,7 +6,7 @@
         "dhcp": 1,
         "allow_raw_sockets": "1"
     },
-    "pkgs": [        
+    "pkgs": [
         "mono",
         "libass",
         "fontconfig",
