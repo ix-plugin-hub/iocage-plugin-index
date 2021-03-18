@@ -9,7 +9,7 @@
     "py37-libxml2",
     "py37-sqlite3",
     "libxslt",
-    "git",
+    "git-lite",
     "unrar",
     "ffmpeg"
   ],
