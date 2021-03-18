@@ -463,14 +463,6 @@
 		"official": false,
 		"primary_pkg": "unifi5"
 	},
-	"unificontroller-lts": {
-		"MANIFEST": "unificontroller-lts.json",
-		"description": "Software-Defined Networking platform that provides an end-to-end system of network devices across different locations. (Long term support version)",
-		"icon": "https://icons.freenas.org/community-icons/unificontroller.png",
-		"name": "unificontroller-lts",
-		"official": false,
-		"primary_pkg": "unifi-lts"
-	},
 	"vault": {
 		"MANIFEST": "vault.json",
 		"name": "vault",
