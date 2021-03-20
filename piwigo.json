@@ -1,17 +1,29 @@
 {
-    "name": "Zoneminder",
+    "name": "Piwigo",
     "plugin_schema": "2",
     "release": "12.2-RELEASE",
-    "artifact": "https://github.com/freenas/iocage-plugin-zoneminder.git",
+    "artifact": "https://github.com/AfroUSApl/iocage-plugin-piwigo.git",
     "official": false,
     "properties": {
+        "vnet": 1,
         "dhcp": 1
     },
     "pkgs": [
-        "zoneminder",
-        "fcgiwrap",
+        "ImageMagick7-nox11",
+        "git",
         "nginx",
-        "mysql57-server"
+        "mariadb105-server",
+        "php73",
+        "php73-exif",
+        "php73-filter",
+        "php73-gd",
+        "php73-hash",
+        "php73-mbstring",
+        "php73-mysqli",
+        "php73-json",
+        "php73-session",
+        "php73-zip",
+        "php73-zlib"
     ],
     "packagesite": "http://pkg.FreeBSD.org/${ABI}/latest",
     "fingerprints": {

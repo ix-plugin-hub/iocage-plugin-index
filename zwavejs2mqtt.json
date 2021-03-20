@@ -1,22 +1,30 @@
 {
-    "name": "tasmoadmin",
+    "name": "zwavejs2mqtt",
     "release": "12.2-RELEASE",
-    "artifact": "https://github.com/tprelog/iocage-tasmoadmin.git",
+    "artifact": "https://github.com/tprelog/iocage-zwavejs2mqtt.git",
     "official": "false",
+    "devfs_ruleset": {
+        "paths": {
+            "zfs": null,
+            "bpf*": null,
+            "cua*": null
+        },
+        "includes": [
+            "1",
+            "2",
+            "3"
+        ]
+    },
     "properties": {
         "allow_raw_sockets": "1",
         "dhcp": "1"
     },
     "pkgs": [
         "bash",
-        "nginx",
-        "php74",
-        "php74-curl",
-        "php74-filter",
-        "php74-json",
-        "php74-session",
-        "php74-zip",
-        "svnup"
+        "curl",
+        "node14",
+        "npm-node14",
+        "python"
     ],
     "packagesite": "http://pkg.FreeBSD.org/${ABI}/latest",
     "fingerprints": {
@@ -27,5 +35,6 @@
             }
         ]
     },
-    "revision": "0"
+    "plugin_schema": "2",
+    "revision": "1"
 }

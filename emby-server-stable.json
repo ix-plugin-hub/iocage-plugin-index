@@ -1,14 +1,34 @@
 {
     "name": "emby-server-stable",
-    "release": "12.1-RELEASE",
+    "release": "12.2-RELEASE",
     "artifact": "https://github.com/freenas/iocage-plugin-emby.git",
     "properties": {
         "dhcp": 1,
         "allow_raw_sockets": "1"
     },
     "pkgs": [
-        "emby-server",
-        "ffmpeg"
+        "mono",
+        "libass",
+        "fontconfig",
+        "freetype2",
+        "fribidi",
+        "gnutls",
+        "iconv",
+        "opus",
+        "sqlite3",
+        "libtheora",
+        "libva",
+        "libvpx",
+        "libvorbis",
+        "ocl-icd",
+        "webp",
+        "libx264",
+        "x265",
+        "dav1d",
+        "libzvbi",
+        "libraw",
+        "ImageMagick6",
+        "emby-server"
     ],
     "packagesite": "http://pkg.FreeBSD.org/${ABI}/latest",
     "fingerprints": {

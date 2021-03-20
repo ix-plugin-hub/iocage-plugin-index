@@ -1,15 +1,18 @@
 {
-    "name": "CouchPotato",
+    "name": "movienight",
     "plugin_schema": "2",
-    "release": "12.1-RELEASE",
-    "artifact": "https://github.com/freenas/iocage-plugin-couchpotato.git",
+    "release": "12.2-RELEASE",
+    "artifact": "https://github.com/zorglube/iocage-plugin-movienight.git",
     "official": false,
     "properties": {
-        "nat": 1,
-        "nat_forwards": "tcp(5050:5050)"
+        "dhcp": 1
     },
     "pkgs": [
-        "couchpotato"
+        "bash",
+        "ca_root_nss",
+        "git-lite",
+        "go",
+        "gmake"
     ],
     "packagesite": "http://pkg.FreeBSD.org/${ABI}/latest",
     "fingerprints": {
@@ -20,5 +23,5 @@
             }
         ]
     },
-    "revision": "0"
+    "revision": 0
 }
