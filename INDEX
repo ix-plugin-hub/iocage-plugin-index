@@ -313,6 +313,16 @@
 		"category": "home-automation",
 		"homepage": "https://nodered.org/"
 	},
+	"nxfilter": {
+		"MANIFEST": "nxfilter.json",
+		"description": "NxFilter is a light-weight DNS filter.",
+		"icon": "https://icons.freenas.org/community-icons/nxfilter.png",
+		"primary_pkg": null,
+		"name": "NxFilter",
+		"official": false,
+		"category": "networking",
+		"homepage": "https://nxfilter.org/"
+	},
 	"nzbget": {
 		"MANIFEST": "nzbget.json",
 		"name": "NZBGet",
