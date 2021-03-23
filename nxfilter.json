@@ -1,23 +1,23 @@
 {
-  "name": "nxfilter",
-  "release": "12.2-RELEASE",
-  "artifact": "https://github.com/xTITUSMAXIMUSX/iocage-plugin-nxfilter.git",
-  "properties": {
-        "allow_raw_sockets":"1",
-        "boot":"on"
-          },
-  "pkgs": [
+    "name": "nxfilter",
+    "release": "12.2-RELEASE",
+    "artifact": "https://github.com/xTITUSMAXIMUSX/iocage-plugin-nxfilter.git",
+    "properties": {
+        "allow_raw_sockets": "1",
+        "boot": "on"
+    },
+    "pkgs": [
         "curl",
         "openjdk8-jre"
-        ],
-  "packagesite": "http://pkg.FreeBSD.org/${ABI}/latest",
-  "fingerprints": {
-                  "plugin-default": [
-                                  {
-                                  "function": "sha256",
-                                  "fingerprint": "b0170035af3acc5f3f3ae1859dc717101b4e6c1d0a794ad554928ca0cbb2f438"
-                          }
-                        ]
-        },
-        "official": "false"
+    ],
+    "packagesite": "http://pkg.FreeBSD.org/${ABI}/latest",
+    "fingerprints": {
+        "plugin-default": [
+            {
+                "function": "sha256",
+                "fingerprint": "b0170035af3acc5f3f3ae1859dc717101b4e6c1d0a794ad554928ca0cbb2f438"
+            }
+        ]
+    },
+    "official": "false"
 }
