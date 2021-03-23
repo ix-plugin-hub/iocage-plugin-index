@@ -10,7 +10,7 @@
         "curl",
         "openjdk8-jre"
         ],
-  "packagesite": "http://pkg.FreeBSD.org/${ABI}/quarterly",
+  "packagesite": "http://pkg.FreeBSD.org/${ABI}/latest",
   "fingerprints": {
                   "plugin-default": [
                                   {
@@ -19,5 +19,5 @@
                           }
                         ]
         },
-        "official": "Community"
+        "official": "false"
 }
