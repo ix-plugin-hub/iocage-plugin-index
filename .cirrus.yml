@@ -334,6 +334,15 @@ node-red_task:
         image_family: freebsd-12-2
   env:
     PLUGIN_FILE: "node-red.json"
+   
+nxfilter_task:
+  <<: *INSTALL_PLUGIN
+  only_if: "changesInclude('nxfilter.json', '.cirrus/install_script.sh')"
+  matrix:
+    - freebsd_instance:
+        image_family: freebsd-12-2
+  env:
+    PLUGIN_FILE: "nxfilter.json"
 
 nzbget_task:
   <<: *INSTALL_PLUGIN
