@@ -326,6 +326,15 @@ netdata_task:
   env:
     PLUGIN_FILE: "netdata.json"
 
+nexus_task:
+  <<: *INSTALL_PLUGIN
+  only_if: "changesInclude('nexus-oss.json', '.cirrus/install_script.sh')"
+  matrix:
+    - freebsd_instance:
+        image_family: freebsd-12-2
+  env:
+    PLUGIN_FILE: "nexus-oss.json"
+
 node-red_task:
   <<: *INSTALL_PLUGIN
   only_if: "changesInclude('node-red.json', '.cirrus/install_script.sh')"

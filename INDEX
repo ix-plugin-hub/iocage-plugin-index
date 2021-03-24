@@ -303,6 +303,15 @@
 		"name": "Netdata",
 		"official": false
 	},
+    "nexus-oss": {
+        "MANIFEST": "nexus-oss.json",
+        "name": "NexusOSS",
+        "icon": "https://icons.freenas.org/community-icons/nexus-oss.png",
+        "description": "Nexus OSS Repository Manager",
+        "maintainer": "Filippe Spolti <filippespolti@gmail.com>",
+        "official": false,
+        "primary_pkg": null
+    },
 	"node-red": {
 		"MANIFEST": "node-red.json",
 		"description": "Node-RED is a programming tool for wiring together hardware devices, APIs and online services in new and interesting ways.",
