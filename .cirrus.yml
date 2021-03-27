@@ -534,6 +534,15 @@ xmrig_task:
         image_family: freebsd-11-3
   env:
     PLUGIN_FILE: "xmrig.json"
+    
+zoneminder_task:
+  <<: *INSTALL_PLUGIN
+  only_if: "changesInclude('zabbixserver.json', '.cirrus/install_script.sh')"
+  matrix:
+    - freebsd_instance:
+        image_family: freebsd-12-2
+  env:
+    PLUGIN_FILE: "zabbixserver.json"
 
 zoneminder_task:
   <<: *INSTALL_PLUGIN
