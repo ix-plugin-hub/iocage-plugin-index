@@ -535,7 +535,7 @@ xmrig_task:
   env:
     PLUGIN_FILE: "xmrig.json"
     
-zoneminder_task:
+zabbixserver_task:
   <<: *INSTALL_PLUGIN
   only_if: "changesInclude('zabbixserver.json', '.cirrus/install_script.sh')"
   matrix:
