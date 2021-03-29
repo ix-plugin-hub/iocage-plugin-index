@@ -33,7 +33,7 @@ bind_task:
   only_if: "changesInclude('bind.json', '.cirrus/install_script.sh')"
   matrix:
     - freebsd_instance:
-        image_family: freebsd-11-3
+        image_family: freebsd-12-2
   env:
     PLUGIN_FILE: "bind.json"
 
@@ -78,7 +78,7 @@ dnsmasq_task:
   only_if: "changesInclude('dnsmasq.json', '.cirrus/install_script.sh')"
   matrix:
     - freebsd_instance:
-        image_family: freebsd-11-3
+        image_family: freebsd-12-2
   env:
     PLUGIN_FILE: "dnsmasq.json"
 
@@ -96,7 +96,7 @@ duplicati_task:
   only_if: "changesInclude('duplicati.json', '.cirrus/install_script.sh')"
   matrix:
     - freebsd_instance:
-        image_family: freebsd-11-3
+        image_family: freebsd-12-2
   env:
     PLUGIN_FILE: "duplicati.json"
 
@@ -222,7 +222,7 @@ irssi_task:
   only_if: "changesInclude('irssi.json', '.cirrus/install_script.sh')"
   matrix:
     - freebsd_instance:
-        image_family: freebsd-11-3
+        image_family: freebsd-12-2
   env:
     PLUGIN_FILE: "irssi.json"
 
@@ -286,7 +286,7 @@ monica_task:
   only_if: "changesInclude('monica.json', '.cirrus/install_script.sh')"
   matrix:
     - freebsd_instance:
-        image_family: freebsd-11-3
+        image_family: freebsd-12-2
   env:
     PLUGIN_FILE: "monica.json"
 
@@ -368,7 +368,7 @@ openspeedtest-server_task:
   only_if: "changesInclude('openspeedtest-server.json', '.cirrus/install_script.sh')"
   matrix:
     - freebsd_instance:
-        image_family: freebsd-11-3
+        image_family: freebsd-12-2
   env:
     PLUGIN_FILE: "openspeedtest-server.json"
 
@@ -413,7 +413,7 @@ quasselcore_task:
   only_if: "changesInclude('quasselcore.json', '.cirrus/install_script.sh')"
   matrix:
     - freebsd_instance:
-        image_family: freebsd-11-3
+        image_family: freebsd-12-2
   env:
     PLUGIN_FILE: "quasselcore.json"
     SKIP_UI_CHECK: "true"
@@ -522,7 +522,7 @@ weechat_task:
   only_if: "changesInclude('weechat.json', '.cirrus/install_script.sh')"
   matrix:
     - freebsd_instance:
-        image_family: freebsd-11-3
+        image_family: freebsd-12-2
   env:
     PLUGIN_FILE: "weechat.json"
 
@@ -531,7 +531,7 @@ xmrig_task:
   only_if: "changesInclude('xmrig.json', '.cirrus/install_script.sh')"
   matrix:
     - freebsd_instance:
-        image_family: freebsd-11-3
+        image_family: freebsd-12-2
   env:
     PLUGIN_FILE: "xmrig.json"
 
