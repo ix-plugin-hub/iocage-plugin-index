@@ -263,7 +263,7 @@ lidarr_task:
   env:
     PLUGIN_FILE: "lidarr.json"
 
-lidarr_task:
+logitechmediaserver_task:
   <<: *INSTALL_PLUGIN
   only_if: "changesInclude('logitechmediaserver.json', '.cirrus/install_script.sh')"
   matrix:
