@@ -1,6 +1,6 @@
 {
   "name": "Logitechmediaserver",
-  "release": "11.3-RELEASE",
+  "release": "12.2-RELEASE",
   "artifact": "https://github.com/titou386/iocage-plugin-logitechmediaserver.git",
   "properties": {
     "boot": "on",
@@ -21,7 +21,7 @@
     "lame",
     "sox"
     ],
-  "packagesite": "http://pkg.FreeBSD.org/FreeBSD:11:amd64/quarterly",
+  "packagesite": "http://pkg.FreeBSD.org/${ABI}/latest",
   "fingerprints": {
     "plugin-default": [
       {
