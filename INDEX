@@ -158,7 +158,7 @@
   	"name": "Logitech Media Server",
   	"official": false,
   	"primary_pkg": null
-  }
+  },
   "madsonic": {
     "MANIFEST": "madsonic.json",
     "description": "Open source media streaming software and music player.",
