@@ -151,6 +151,14 @@
     "official": false,
     "primary_pkg": "jackett"
   },
+  "logitechmediaserver": {
+  	"MANIFEST": "logitechmediaserver.json",
+  	"description": "Logitech Media Server (formerly SlimServer, SqueezeCenter and Squeezebox Server) is a streaming audio server supported by Logitech (formerly Slim Devices).",
+  	"icon": "https://github.com/titou386/iocage-plugin-index/raw/11.3-RELEASE/icons/logitechmediaserver.png",
+  	"name": "Logitech Media Server",
+  	"official": false,
+  	"primary_pkg": null
+  }
   "madsonic": {
     "MANIFEST": "madsonic.json",
     "description": "Open source media streaming software and music player.",
