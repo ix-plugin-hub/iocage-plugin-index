@@ -1,11 +1,11 @@
 {
-    "name": "Emby",
+    "name": "Emby NAT Server",
     "release": "12.2-RELEASE",
     "artifact": "https://github.com/freenas/iocage-plugin-emby.git",
     "official": false,
     "properties": {
         "nat": 1,
-        "nat_forwards": "tcp(8096:8096)"
+        "nat_forwards": "tcp(8096:8096)","tcp(8920:8920)"
     },
     "pkgs": [
         "emby-server"
@@ -19,5 +19,5 @@
             }
         ]
     },
-    "revision": "1"
+    "revision": "2"
 }
