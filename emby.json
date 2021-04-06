@@ -8,7 +8,8 @@
         "nat_forwards": "tcp(8096:8096)"
     },
     "pkgs": [
-        "emby-server"
+        "emby-server",
+        "ffmpeg"
     ],
     "packagesite": "http://pkg.FreeBSD.org/${ABI}/latest",
     "fingerprints": {
@@ -19,5 +20,5 @@
             }
         ]
     },
-    "revision": "1"
+    "revision": "2"
 }
