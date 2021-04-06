@@ -28,6 +28,7 @@
         "libzvbi",
         "libraw",
         "ImageMagick6",
+        "ffmpeg",
         "emby-server"
     ],
     "packagesite": "http://pkg.FreeBSD.org/${ABI}/latest",
@@ -39,6 +40,6 @@
             }
         ]
     },
-    "revision": "0",
+    "revision": "1",
     "official": false
 }
