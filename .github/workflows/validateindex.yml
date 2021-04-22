@@ -1,14 +1,22 @@
 name: Validate JSONs
 
-on: [pull_request]
+on: [push, pull_request]
 
 jobs:
   verify-json-validation:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
-      - name: Validate JSON
-        uses: docker://orrosenblatt/validate-json-action:latest
-        env:
-          INPUT_SCHEMA: ./index.schema
-          INPUT_JSONS: ./INDEX
+    - uses: actions/checkout@v1
+
+    - name: Set up Python 3.9
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.9
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install jsonschema
+
+    - name: Validate JSON
+      run: jsonschema -i ./INDEX ./index.schema
