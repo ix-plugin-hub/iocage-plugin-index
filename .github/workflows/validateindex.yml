@@ -25,11 +25,15 @@ jobs:
       run: |
         wget https://raw.githubusercontent.com/iocage/iocage/master/iocage_lib/plugin_manifest.json -O plugin_manifest.schema
         for p in *.json
+        res=0
         do
           if ! jsonschema -i "$p" plugin_manifest.schema
           then
             echo "Plugin $p" failed
+            res=1
           fi
         done
+
+        exit res
 
 
