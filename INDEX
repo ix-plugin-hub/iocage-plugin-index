@@ -1,6 +1,6 @@
 {
 	"backuppc": {
-		"MANIFEST2": "backuppc.json",
+		"MANIFEST": "backuppc.json",
 		"name": "BackupPC",
 		"icon": "https://icons.freenas.org/community-icons/backuppc.png",
 		"description": "Enterprise-grade system for backing up Linux, Windows, and MacOSX computers to a server.",
@@ -177,7 +177,8 @@
 		"description": "Lightweight iOS HomeKit API emulator. Enables adding unsupported devices to HomeKit.",
 		"icon": "https://icons.freenas.org/community-icons/homebridge.png",
 		"name": "Homebridge",
-		"official": false
+		"official": false,
+		"primary_pkg": ""
 	},
 	"hoobs": {
 		"MANIFEST": "hoobs.json",
