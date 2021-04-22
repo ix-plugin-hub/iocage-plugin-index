@@ -23,10 +23,13 @@ jobs:
 
     - name: Validate plugin JSONs
       run: |
-        wget https://raw.githubusercontent.com/iocage/iocage/master/iocage_lib/plugin_manifest.json
+        wget https://raw.githubusercontent.com/iocage/iocage/master/iocage_lib/plugin_manifest.json -O plugin_manifest.schema
         for p in *.json
         do
-          jsonschema -i "$p" plugin_manifest.json
+          if ! jsonschema -i "$p" plugin_manifest.schema
+          then
+            echo "Plugin $p" failed
+          fi
         done
 
 
