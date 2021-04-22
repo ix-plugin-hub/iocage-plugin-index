@@ -21,4 +21,12 @@ jobs:
     - name: Validate INDEX JSON
       run: jsonschema -i ./INDEX ./index.schema
 
+    - name: Validate plugin JSONs
+      run: |
+        wget https://raw.githubusercontent.com/iocage/iocage/master/iocage_lib/plugin_manifest.json
+        for p in *.json
+        do
+          jsonschema -i "$p" plugin_manifest.json
+        done
+
 
