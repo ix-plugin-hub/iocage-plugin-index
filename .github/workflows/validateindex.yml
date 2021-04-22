@@ -35,6 +35,6 @@ jobs:
           fi
         done
 
-        exit res
+        exit $res
 
 
