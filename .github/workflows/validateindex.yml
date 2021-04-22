@@ -31,7 +31,7 @@ jobs:
           if ! jsonschema -i "$p" plugin_manifest.schema
           then
             echo "Plugin $p" failed
-            res=1
+            ((res=res+1))
           fi
         done
 

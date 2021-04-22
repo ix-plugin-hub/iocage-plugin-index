@@ -2,7 +2,7 @@
     "name": "bind",
     "release": "12.2-RELEASE",
     "artifact": "https://github.com/pandorixtech/iocage-plugin-bind.git",
-    "official": "false",
+    "official": false,
     "properties": {
         "nat": 1,
         "nat_forwards": "udp(53:53)"
