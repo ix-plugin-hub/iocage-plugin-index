@@ -9,7 +9,7 @@
         ]
     },
     "name": "Lidarr",
-    "official": "false",
+    "official": false,
     "packagesite": "http://pkg.FreeBSD.org/${ABI}/latest",
     "pkgs": [
         "lidarr"

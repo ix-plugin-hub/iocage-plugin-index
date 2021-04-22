@@ -2,7 +2,7 @@
     "name": "homeassistant",
     "release": "12.2-RELEASE",
     "artifact": "https://github.com/tprelog/iocage-homeassistant.git",
-    "official": "false",
+    "official": false,
     "devfs_ruleset": {
         "paths": {
             "zfs": null,
