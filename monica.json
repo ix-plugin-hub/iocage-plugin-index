@@ -1,6 +1,6 @@
 {
     "name": "monica",
-    "plugin_schema": 2,
+    "plugin_schema": "2",
     "release": "11.3-RELEASE",
     "artifact": "https://github.com/aoyono/iocage-plugin-monica.git",
     "pkgs": [
@@ -42,5 +42,5 @@
         ]
     },
     "official": false,
-    "revision": 0
+    "revision": "0"
 }
