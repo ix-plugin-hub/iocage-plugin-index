@@ -1,6 +1,6 @@
 {
 	"backuppc": {
-		"MANIFEST": "backuppc.json",
+		"MANIFEST2": "backuppc.json",
 		"name": "BackupPC",
 		"icon": "https://icons.freenas.org/community-icons/backuppc.png",
 		"description": "Enterprise-grade system for backing up Linux, Windows, and MacOSX computers to a server.",
