@@ -2,7 +2,7 @@
     "name": "deluge-pip",
     "plugin_schema": "2",
     "release": "12.2-RELEASE",
-    "artifact": "https://github.com/jsegaert/iocage-plugin-deluge-pip.git",
+    "artifact": "https://github.com/Richardgriff/iocage-plugin-deluge-pip.git",
     "properties": {
         "nat": "1",
         "nat_forwards": "tcp(8112:8112)"
