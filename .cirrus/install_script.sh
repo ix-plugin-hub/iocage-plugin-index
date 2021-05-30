@@ -43,6 +43,13 @@ clone_plugin_repo()
 
 get_admin_ui()
 {
+  if [ "${OVERRIDE_ADMIN_UI}" != "" ]
+  then
+    print_info "OVERRIDE_ADMIN_UI variable set, will use it for admin portal check"
+    exp_ui_url="${OVERRIDE_ADMIN_UI}"
+    return
+  fi
+
   if ! [ -f ${plugin_dir}/ui.json ]
   then
     print_info "No ui.json found in repo, will ignore admin portal check"
