@@ -30,6 +30,7 @@
         "libxml2",
         "libxslt",
         "pkgconf",
+        "python3",
         "python38",
         "py38-sqlite3",
         "sudo",

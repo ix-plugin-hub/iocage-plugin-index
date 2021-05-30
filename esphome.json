@@ -15,6 +15,7 @@
         "gcc",
         "gmake",
         "pkgconf",
+        "python3",
         "python38",
         "py38-pillow"
     ],
