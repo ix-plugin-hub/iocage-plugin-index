@@ -9,8 +9,8 @@
     },
     "pkgs": [
         "lang/python",
-        "py37-sqlite3",
-        "py37-openssl",
+        "py38-sqlite3",
+        "py38-openssl",
         "security/ca_root_nss",
         "git"
     ],
