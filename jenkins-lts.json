@@ -8,8 +8,7 @@
         "nat_forwards": "tcp(80:8686)"
     },
     "pkgs": [
-        "jenkins-lts",
-        "nginx"
+        "jenkins-lts"
     ],
     "packagesite": "http://pkg.FreeBSD.org/${ABI}/latest",
     "fingerprints": {
