@@ -15,8 +15,8 @@
         "gcc",
         "gmake",
         "pkgconf",
-        "python37",
-        "py37-pillow"
+        "python38",
+        "py38-pillow"
     ],
     "packagesite": "http://pkg.FreeBSD.org/${ABI}/latest",
     "fingerprints": {
