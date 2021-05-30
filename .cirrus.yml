@@ -18,7 +18,7 @@ jenkins_task:
         image_family: freebsd-12-2
   env:
     PLUGIN_FILE: "jenkins.json"
-    OVERRIDE_ADMIN_UI: "http://%%%%IP%%%%:8080/login"
+    OVERRIDE_ADMIN_UI: 'http://%%IP%%:8080/login'
 
 jenkins-lts_task:
   <<: *INSTALL_PLUGIN
@@ -28,4 +28,4 @@ jenkins-lts_task:
         image_family: freebsd-12-2
   env:
     PLUGIN_FILE: "jenkins-lts.json"
-    OVERRIDE_ADMIN_UI: "http://%%%%IP%%%%:8080/login"
+    OVERRIDE_ADMIN_UI: 'http://%%IP%%:8080/login'
