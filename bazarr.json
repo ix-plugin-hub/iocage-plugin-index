@@ -4,6 +4,7 @@
     "release": "12.2-RELEASE",
     "artifact": "https://github.com/fulder/iocage-plugin-bazarr",
     "pkgs": [
+        "python3",
         "python38",
         "py38-pip",
         "py38-libxml2",
