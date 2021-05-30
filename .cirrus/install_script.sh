@@ -49,7 +49,7 @@ get_admin_ui()
   then
     print_info "OVERRIDE_ADMIN_UI variable set, will use it for admin portal check"
     echo "${OVERRIDE_ADMIN_UI}"
-    exp_ui_url=$(echo "${OVERRIDE_ADMIN_UI}" | sed "s/%%IP%%/${ip_address}/")
+    exp_ui_url=$(echo "${OVERRIDE_ADMIN_UI}" | sed "s/<IP>/${ip_address}/")
     return
   fi
 
