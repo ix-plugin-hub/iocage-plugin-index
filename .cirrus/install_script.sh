@@ -43,10 +43,12 @@ clone_plugin_repo()
 
 get_admin_ui()
 {
+  ip_address=$(ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0.1')
+
   if [ "${OVERRIDE_ADMIN_UI}" != "" ]
   then
     print_info "OVERRIDE_ADMIN_UI variable set, will use it for admin portal check"
-    exp_ui_url="${OVERRIDE_ADMIN_UI}"
+    exp_ui_url=$(echo "${OVERRIDE_ADMIN_UI}" | sed "s/%%IP%%/${ip_address}/")
     return
   fi
 
@@ -56,7 +58,6 @@ get_admin_ui()
     return
   fi
 
-  ip_address=$(ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0.1')
   admin_portal=$(jq -r '.adminportal' ${plugin_dir}/ui.json | sed "s/%%IP%%/${ip_address}/")
   place_holders=$(jq -r '.adminportal_placeholders' ${plugin_dir}/ui.json)
 
