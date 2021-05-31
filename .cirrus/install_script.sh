@@ -283,7 +283,7 @@ __wait_for_service()
 {
   service_path=${1}
   max_retries=5
-  sleep=5
+  sleep=2
 
   print_info "Starting to wait for service: ${service_path} with ${max_retries} retries and ${sleep} s. sleep"
 
