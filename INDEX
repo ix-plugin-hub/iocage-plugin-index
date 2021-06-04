@@ -41,6 +41,14 @@
 		"official": false,
 		"primary_pkg": ""
 	},
+	"chia": {
+		"MANIFEST": "chia.json",
+		"description": "A new blockchain and smart transaction platform that is easier to use, more efficient, and secure.",
+		"icon": "https://icons.freenas.org/community-icons/chia.png",
+		"name": "Chia",
+		"official": false,
+		"primary_pkg": ""
+	},
 	"clamav": {
 		"MANIFEST": "clamav.json",
 		"name": "ClamAV",
