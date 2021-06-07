@@ -1,6 +1,5 @@
 {
     "name": "OpenVPN",
-    "plugin_schema": "2",
     "release": "12.2-RELEASE",
     "artifact": "https://github.com/gitbulb/iocage-plugin-openvpn.git",
     "pkgs": [

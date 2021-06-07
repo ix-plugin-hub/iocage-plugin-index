@@ -1,6 +1,5 @@
 {
   "name": "nexus-oss",
-  "plugin_schema": "2",
   "release": "12.2-RELEASE",
   "artifact": "https://github.com/rebasing-xyz/iocage-nexus-oss.git",
   "official": false,
