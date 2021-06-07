@@ -1,23 +1,26 @@
 {
-    "name": "jenkins",
+    "name": "zabbix server",
     "release": "12.2-RELEASE",
-    "artifact": "https://github.com/freenas/iocage-plugin-jenkins.git",
-    "official": false,
+    "artifact": "https://github.com/xTITUSMAXIMUSX/iocage-plugin-zabbix5-server.git",
     "properties": {
-        "nat": 1,
-        "nat_forwards": "tcp(8080:8080)"
+        "allow_raw_sockets": "1",
+        "boot": "on"
     },
     "pkgs": [
-        "jenkins"
+        "zabbix5-server",
+        "zabbix5-agent",
+        "zabbix5-frontend",
+        "nginx",
+        "mysql57-server"
     ],
     "packagesite": "http://pkg.FreeBSD.org/${ABI}/latest",
     "fingerprints": {
-        "iocage-plugins": [
+        "plugin-default": [
             {
                 "function": "sha256",
                 "fingerprint": "b0170035af3acc5f3f3ae1859dc717101b4e6c1d0a794ad554928ca0cbb2f438"
             }
         ]
     },
-    "revision": "0"
+    "official": "false"
 }

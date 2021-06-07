@@ -12,12 +12,12 @@
         "nat_forwards": "tcp(8443:8443),tcp(25565:25565),tcp(25566:25566),tcp(25567:25567),tcp(25568:25568),tcp(25569:25569),tcp(25570:25570)"
     },
     "pkgs": [
-        "py37-rdiff-backup",
+        "py38-rdiff-backup",
         "screen",
         "rsync",
         "gmake",
         "git-lite",
-        "python37",
+        "python38",
         "node",
         "npm",
         "openjdk11-jre",
