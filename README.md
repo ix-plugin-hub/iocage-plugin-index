@@ -66,3 +66,4 @@ The following `.cirrus.yml` task shows an example of needed YAML section to enab
   * `FOLLOW_REDIRECTS` if set to `"false"` will not follow redirects to admin UI and treat a 3XX code as success for the admin portal UI check
   * `SKIP_UI_CHECK` if set to `"true"` will skip the admin portal UI check entirely
   * `SKIP_SERVICE_CHECK` if set to `"true"` will skip checking if the services started in `post_install` are running
+  * `OVERRIDE_ADMIN_UI` check this UI URL after plugin installation instead of the URL specified in plugin `ui.json`

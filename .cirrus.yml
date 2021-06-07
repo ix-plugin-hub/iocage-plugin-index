@@ -253,6 +253,7 @@ jenkins_task:
         image_family: freebsd-12-2
   env:
     PLUGIN_FILE: "jenkins.json"
+    OVERRIDE_ADMIN_UI: "http://<IP>:8080/login"
 
 jenkins-lts_task:
   <<: *INSTALL_PLUGIN
@@ -262,6 +263,7 @@ jenkins-lts_task:
         image_family: freebsd-12-2
   env:
     PLUGIN_FILE: "jenkins-lts.json"
+    OVERRIDE_ADMIN_UI: "http://<IP>:8080/login"
 
 lidarr_task:
   <<: *INSTALL_PLUGIN
@@ -352,7 +354,7 @@ node-red_task:
         image_family: freebsd-12-2
   env:
     PLUGIN_FILE: "node-red.json"
-   
+
 nxfilter_task:
   <<: *INSTALL_PLUGIN
   only_if: "changesInclude('nxfilter.json', '.cirrus/install_script.sh')"
