@@ -23,7 +23,7 @@ jobs:
 
     - name: Validate plugins JSONs
       run: |
-        wget https://raw.githubusercontent.com/iocage/iocage/master/iocage_lib/plugin_manifest.json -O plugin_manifest.schema
+        wget https://raw.githubusercontent.com/fulder/iocage/plugin-schema-fixes/iocage_lib/plugin_manifest.json -O plugin_manifest.schema
 
         res=0
         for p in *.json
