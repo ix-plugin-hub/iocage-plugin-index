@@ -55,6 +55,15 @@ channels-dvr_task:
   env:
     PLUGIN_FILE: "channels-dvr.json"
 
+chia_task:
+  <<: *INSTALL_PLUGIN
+  only_if: "changesInclude('chia.json', '.cirrus/install_script.sh')"
+  matrix:
+    - freebsd_instance:
+        image_family: freebsd-12-2
+  env:
+    PLUGIN_FILE: "chia.json"
+
 clamav_task:
   <<: *INSTALL_PLUGIN
   only_if: "changesInclude('clamav.json', '.cirrus/install_script.sh')"
