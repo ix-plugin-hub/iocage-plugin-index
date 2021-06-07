@@ -245,6 +245,15 @@ jackett_task:
     PLUGIN_FILE: "jackett.json"
     FOLLOW_REDIRECTS: "false"
 
+jdownloader_task:
+  <<: *INSTALL_PLUGIN
+  only_if: "changesInclude('jdownloader.json', '.cirrus/install_script.sh')"
+  matrix:
+    - freebsd_instance:
+        image_family: freebsd-12-2
+  env:
+    PLUGIN_FILE: "jdownloader.json"
+
 jenkins_task:
   <<: *INSTALL_PLUGIN
   only_if: "changesInclude('jenkins.json', '.cirrus/install_script.sh')"
