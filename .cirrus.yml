@@ -283,6 +283,15 @@ lidarr_task:
   env:
     PLUGIN_FILE: "lidarr.json"
 
+logitechmediaserver_task:
+  <<: *INSTALL_PLUGIN
+  only_if: "changesInclude('logitechmediaserver.json', '.cirrus/install_script.sh')"
+  matrix:
+    - freebsd_instance:
+        image_family: freebsd-12-2
+  env:
+    PLUGIN_FILE: "logitechmediaserver.json"
+
 madsonic_task:
   <<: *INSTALL_PLUGIN
   only_if: "changesInclude('madsonic.json', '.cirrus/install_script.sh')"
