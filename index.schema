@@ -29,7 +29,7 @@
           "type": "boolean"
         },
         "primary_pkg": {
-          "type": "string"
+          "type": ["string", "null"]
         },
         "category": {
           "type": "string"
