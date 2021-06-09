@@ -2,7 +2,7 @@
     "name": "zwavejs2mqtt",
     "release": "12.2-RELEASE",
     "artifact": "https://github.com/tprelog/iocage-zwavejs2mqtt.git",
-    "official": "false",
+    "official": false,
     "devfs_ruleset": {
         "paths": {
             "zfs": null,
@@ -35,6 +35,5 @@
             }
         ]
     },
-    "plugin_schema": "2",
-    "revision": "1"
+    "revision": 1
 }

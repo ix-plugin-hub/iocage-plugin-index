@@ -1,6 +1,5 @@
 {
     "name": "Chia-Blockchain",
-    "plugin_schema": "2",
     "release": "12.2-RELEASE",
     "artifact": "https://github.com/kmoore134/iocage-plugin-chia.git",
     "official": false,
@@ -39,5 +38,5 @@
             }
         ]
     },
-    "revision": "0"
+    "revision": 0
 }

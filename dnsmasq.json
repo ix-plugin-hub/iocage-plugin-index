@@ -1,6 +1,5 @@
 {
     "name": "Dnsmasq",
-    "plugin_schema": "2",
     "release": "12.2-RELEASE",
     "artifact": "https://github.com/timsavage/iocage-plugin-dnsmasq.git",
     "properties": {
@@ -20,5 +19,5 @@
         ]
     },
     "official": false,
-    "revision": "0"
+    "revision": 0
 }

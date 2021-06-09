@@ -1,6 +1,5 @@
 {
     "name": "weechat",
-    "plugin_schema": "2",
     "release": "12.2-RELEASE",
     "artifact": "https://github.com/freenas/iocage-plugin-weechat.git",
     "properties": {
@@ -19,5 +18,5 @@
         ]
     },
     "official": false,
-    "revision": "0"
+    "revision": 0
 }

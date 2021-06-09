@@ -2,7 +2,7 @@
     "name": "esphome",
     "release": "12.2-RELEASE",
     "artifact": "https://github.com/tprelog/iocage-esphome.git",
-    "official": "false",
+    "official": false,
     "properties": {
         "allow_raw_sockets": "1",
         "dhcp": "1"
@@ -28,6 +28,5 @@
             }
         ]
     },
-    "plugin_schema": "2",
-    "revision": "0"
+    "revision": 0
 }

@@ -2,7 +2,7 @@
     "name": "mosquitto",
     "release": "12.2-RELEASE",
     "artifact": "https://github.com/tprelog/iocage-mosquitto.git",
-    "official": "false",
+    "official": false,
     "properties": {
         "priority": "98",
         "allow_raw_sockets": "1",
@@ -20,5 +20,5 @@
             }
         ]
     },
-    "revision": "0"
+    "revision": 0
 }

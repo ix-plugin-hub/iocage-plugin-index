@@ -185,7 +185,8 @@
 		"description": "Lightweight iOS HomeKit API emulator. Enables adding unsupported devices to HomeKit.",
 		"icon": "https://icons.freenas.org/community-icons/homebridge.png",
 		"name": "Homebridge",
-		"official": false
+		"official": false,
+		"primary_pkg": null
 	},
 	"hoobs": {
 		"MANIFEST": "hoobs.json",

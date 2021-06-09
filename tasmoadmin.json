@@ -2,7 +2,7 @@
     "name": "tasmoadmin",
     "release": "12.2-RELEASE",
     "artifact": "https://github.com/tprelog/iocage-tasmoadmin.git",
-    "official": "false",
+    "official": false,
     "properties": {
         "allow_raw_sockets": "1",
         "dhcp": "1"
@@ -27,5 +27,5 @@
             }
         ]
     },
-    "revision": "0"
+    "revision": 0
 }

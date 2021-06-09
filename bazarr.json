@@ -1,6 +1,5 @@
 {
     "name": "bazarr",
-    "plugin_schema": "2",
     "release": "12.2-RELEASE",
     "artifact": "https://github.com/fulder/iocage-plugin-bazarr",
     "pkgs": [
@@ -23,5 +22,5 @@
             }
         ]
     },
-    "official": "false"
+    "official": false
 }
