@@ -1,27 +1,23 @@
 {
-    "name": "Tautulli",
+    "name": "nxfilter",
     "release": "12.2-RELEASE",
-    "artifact": "https://github.com/arcooke/iocage-plugin-tautulli.git",
-    "official": false,
+    "artifact": "https://github.com/xTITUSMAXIMUSX/iocage-plugin-nxfilter.git",
     "properties": {
-        "nat": 1,
-        "nat_forwards": "tcp(8181:8181)"
+        "allow_raw_sockets": "1",
+        "boot": "on"
     },
     "pkgs": [
-        "lang/python",
-        "py38-sqlite3",
-        "py38-openssl",
-        "security/ca_root_nss",
-        "git"
+        "curl",
+        "openjdk8-jre"
     ],
     "packagesite": "http://pkg.FreeBSD.org/${ABI}/latest",
     "fingerprints": {
-        "iocage-plugins": [
+        "plugin-default": [
             {
                 "function": "sha256",
                 "fingerprint": "b0170035af3acc5f3f3ae1859dc717101b4e6c1d0a794ad554928ca0cbb2f438"
             }
         ]
     },
-    "revision": 0
+    "official": false
 }

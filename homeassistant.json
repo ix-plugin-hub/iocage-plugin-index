@@ -1,50 +1,49 @@
 {
-  "name": "homeassistant",
-  "release": "12.2-RELEASE",
-  "artifact": "https://github.com/tprelog/iocage-homeassistant.git",
-  "official": "false",
-  "devfs_ruleset": {
-    "paths": {
-      "zfs": null,
-      "bpf*": null,
-      "cua*": null
+    "name": "homeassistant",
+    "release": "12.2-RELEASE",
+    "artifact": "https://github.com/tprelog/iocage-homeassistant.git",
+    "official": false,
+    "devfs_ruleset": {
+        "paths": {
+            "zfs": null,
+            "bpf*": null,
+            "cua*": null
+        },
+        "includes": [
+            "1",
+            "2",
+            "3"
+        ]
     },
-    "includes": [
-      "1",
-      "2",
-      "3"
-    ]
-  },
-  "properties": {
-    "allow_raw_sockets": "1",
-    "dhcp": "1"
-  },
-  "pkgs": [
-    "autoconf",
-    "bash",
-    "ca_root_nss",
-    "curl",
-    "ffmpeg",
-    "gcc",
-    "gmake",
-    "libxml2",
-    "libxslt",
-    "pkgconf",
-    "python38",
-    "py38-sqlite3",
-    "sudo",
-    "wget",
-    "zip"
-  ],
-  "packagesite": "http://pkg.FreeBSD.org/${ABI}/latest",
-  "fingerprints": {
-    "plugin-default": [
-      {
-        "function": "sha256",
-        "fingerprint": "b0170035af3acc5f3f3ae1859dc717101b4e6c1d0a794ad554928ca0cbb2f438"
-      }
-    ]
-  },
-  "plugin_schema": "2",
-  "revision": "1"
+    "properties": {
+        "allow_raw_sockets": "1",
+        "dhcp": "1"
+    },
+    "pkgs": [
+        "autoconf",
+        "bash",
+        "ca_root_nss",
+        "curl",
+        "ffmpeg",
+        "gcc",
+        "gmake",
+        "libxml2",
+        "libxslt",
+        "pkgconf",
+        "python38",
+        "py38-sqlite3",
+        "sudo",
+        "wget",
+        "zip"
+    ],
+    "packagesite": "http://pkg.FreeBSD.org/${ABI}/latest",
+    "fingerprints": {
+        "plugin-default": [
+            {
+                "function": "sha256",
+                "fingerprint": "b0170035af3acc5f3f3ae1859dc717101b4e6c1d0a794ad554928ca0cbb2f438"
+            }
+        ]
+    },
+    "revision": 1
 }

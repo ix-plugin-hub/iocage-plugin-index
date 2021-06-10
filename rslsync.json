@@ -1,6 +1,6 @@
 {
     "name": "rslsync",
-    "release": "12.1-RELEASE",
+    "release": "12.2-RELEASE",
     "artifact": "https://github.com/brianannis/iocage-plugin-rslsync.git",
     "properties": {
         "nat": 1,
@@ -19,5 +19,5 @@
         ]
     },
     "official": false,
-    "revision": "0"
+    "revision": 0
 }

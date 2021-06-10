@@ -1,32 +1,32 @@
 {
-  "name": "esphome",
-  "release": "12.2-RELEASE",
-  "artifact": "https://github.com/tprelog/iocage-esphome.git",
-  "official": "false",
-  "properties": {
-    "allow_raw_sockets": "1",
-    "dhcp": "1"
-  },
-  "pkgs": [
-    "autoconf",
-    "bash",
-    "ca_root_nss",
-    "curl",
-    "gcc",
-    "gmake",
-    "pkgconf",
-    "python37",
-    "py37-pillow"
-  ],
-  "packagesite": "http://pkg.FreeBSD.org/${ABI}/latest",
-  "fingerprints": {
-    "plugin-default": [
-      {
-        "function": "sha256",
-        "fingerprint": "b0170035af3acc5f3f3ae1859dc717101b4e6c1d0a794ad554928ca0cbb2f438"
-      }
-    ]
-  },
-  "plugin_schema": "2",
-  "revision": "0"
+    "name": "esphome",
+    "release": "12.2-RELEASE",
+    "artifact": "https://github.com/tprelog/iocage-esphome.git",
+    "official": false,
+    "properties": {
+        "allow_raw_sockets": "1",
+        "dhcp": "1"
+    },
+    "pkgs": [
+        "autoconf",
+        "bash",
+        "ca_root_nss",
+        "curl",
+        "gcc",
+        "gmake",
+        "pkgconf",
+        "python3",
+        "python38",
+        "py38-pillow"
+    ],
+    "packagesite": "http://pkg.FreeBSD.org/${ABI}/latest",
+    "fingerprints": {
+        "plugin-default": [
+            {
+                "function": "sha256",
+                "fingerprint": "b0170035af3acc5f3f3ae1859dc717101b4e6c1d0a794ad554928ca0cbb2f438"
+            }
+        ]
+    },
+    "revision": 0
 }
