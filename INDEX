@@ -512,7 +512,7 @@
 	"urbackup": {
 		"MANIFEST": "urbackup.json",
 		"name": "UrBackup",
-		"icon": "urbackup.png",
+		"icon": "https://icons.freenas.org/community-icons/urbackup.png",
 		"description": "UrBackup is an easy to setup Open Source client/server backup system, that through a combination of image and file backups accomplishes both data safety and a fast restoration time.",
 		"official": false,
 		"primary_pkg": "urbackup-server",
