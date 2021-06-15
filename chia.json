@@ -1,18 +1,33 @@
 {
-    "name": "Tautulli",
+    "name": "Chia-Blockchain",
     "release": "12.2-RELEASE",
-    "artifact": "https://github.com/arcooke/iocage-plugin-tautulli.git",
+    "artifact": "https://github.com/kmoore134/iocage-plugin-chia.git",
     "official": false,
     "properties": {
         "nat": 1,
-        "nat_forwards": "tcp(8181:8181)"
+        "nat_forwards": "tcp(8444:8444)"
     },
     "pkgs": [
-        "lang/python",
-        "py38-sqlite3",
-        "py38-openssl",
-        "security/ca_root_nss",
-        "git"
+	"bash",
+        "cmake",
+        "gcc",
+        "gcc9",
+        "gmake",
+	"git",
+	"node",
+	"npm",
+	"openssl",
+	"py38-cffi",
+	"py38-maturin",
+	"py38-pip",
+	"py38-setuptools",
+	"py38-sqlite3",
+	"py38-virtualenv",
+	"py38-wheel",
+	"python",
+	"python38",
+	"rust",
+	"tmux"
     ],
     "packagesite": "http://pkg.FreeBSD.org/${ABI}/latest",
     "fingerprints": {

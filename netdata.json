@@ -2,7 +2,7 @@
     "name": "netdata",
     "release": "12.2-RELEASE",
     "artifact": "https://github.com/kmoore134/iocage-netdata.git",
-    "official": "false",
+    "official": false,
     "properties": {
         "mount_devfs": 1,
         "mount_fdescfs": 1,
@@ -29,6 +29,5 @@
             }
         ]
     },
-    "plugin_schema": "2",
-    "revision": "0"
+    "revision": 0
 }

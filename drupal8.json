@@ -1,6 +1,5 @@
 {
     "name": "drupal8",
-    "plugin_schema": "2",
     "release": "12.2-RELEASE",
     "artifact": "https://github.com/SumGuyV5/iocage-plugin-drupal8.git",
     "pkgs": [

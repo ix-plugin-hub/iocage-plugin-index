@@ -1,18 +1,17 @@
 {
     "name": "SickChill",
-    "plugin_schema": "2",
     "release": "12.2-RELEASE",
     "artifact": "https://github.com/ix-plugin-hub/iocage-plugin-sickchill.git",
     "pkgs": [
         "git",
         "python3",
-        "python37",
-        "py37-pip",
-        "py37-setuptools",
-        "py37-sqlite3",
+        "python38",
+        "py38-pip",
+        "py38-setuptools",
+        "py38-sqlite3",
+        "py38-pillow",
         "unrar",
         "ca_root_nss",
-        "py37-pillow",
         "libmediainfo",
         "libxslt"
     ],
@@ -30,5 +29,5 @@
         ]
     },
     "official": false,
-    "revision": "0"
+    "revision": 0
 }

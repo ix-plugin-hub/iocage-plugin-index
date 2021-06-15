@@ -1,6 +1,5 @@
 {
     "name": "qbittorrent",
-    "plugin_schema": "2",
     "release": "12.2-RELEASE",
     "artifact": "https://github.com/freenas/iocage-plugin-qbittorrent.git",
     "official": false,
@@ -20,5 +19,5 @@
             }
         ]
     },
-    "revision": "0"
+    "revision": 0
 }

@@ -6,9 +6,35 @@ jobs:
   verify-json-validation:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
-      - name: Validate JSON
-        uses: docker://orrosenblatt/validate-json-action:latest
-        env:
-          INPUT_SCHEMA: ./index.schema
-          INPUT_JSONS: ./INDEX
+    - uses: actions/checkout@v1
+
+    - name: Set up Python 3.9
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.9
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install jsonschema
+
+    - name: Validate INDEX JSON
+      run: jsonschema -i ./INDEX ./index.schema
+
+    - name: Validate plugins JSONs
+      run: |
+        wget https://raw.githubusercontent.com/iocage/iocage/master/iocage_lib/plugin_manifest.json -O plugin_manifest.schema
+
+        res=0
+        for p in *.json
+        do
+          if ! jsonschema -i "$p" plugin_manifest.schema
+          then
+            echo "Plugin $p" failed
+            ((res=res+1))
+          fi
+        done
+
+        exit $res
+
+

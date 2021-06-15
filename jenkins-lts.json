@@ -5,11 +5,10 @@
     "official": false,
     "properties": {
         "nat": 1,
-        "nat_forwards": "tcp(80:8686)"
+        "nat_forwards": "tcp(8080:8080)"
     },
     "pkgs": [
-        "jenkins-lts",
-        "nginx"
+        "jenkins-lts"
     ],
     "packagesite": "http://pkg.FreeBSD.org/${ABI}/latest",
     "fingerprints": {
@@ -20,5 +19,5 @@
             }
         ]
     },
-    "revision": "0"
+    "revision": 0
 }

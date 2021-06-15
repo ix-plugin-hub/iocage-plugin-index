@@ -9,11 +9,10 @@
         ]
     },
     "name": "Lidarr",
-    "official": "false",
+    "official": false,
     "packagesite": "http://pkg.FreeBSD.org/${ABI}/latest",
     "pkgs": [
         "lidarr"
     ],
-    "plugin_schema": "2",
     "release": "12.2-RELEASE"
 }

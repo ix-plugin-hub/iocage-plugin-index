@@ -2,7 +2,7 @@
     "name": "esphome",
     "release": "12.2-RELEASE",
     "artifact": "https://github.com/tprelog/iocage-esphome.git",
-    "official": "false",
+    "official": false,
     "properties": {
         "allow_raw_sockets": "1",
         "dhcp": "1"
@@ -15,8 +15,9 @@
         "gcc",
         "gmake",
         "pkgconf",
-        "python37",
-        "py37-pillow"
+        "python3",
+        "python38",
+        "py38-pillow"
     ],
     "packagesite": "http://pkg.FreeBSD.org/${ABI}/latest",
     "fingerprints": {
@@ -27,6 +28,5 @@
             }
         ]
     },
-    "plugin_schema": "2",
-    "revision": "0"
+    "revision": 0
 }

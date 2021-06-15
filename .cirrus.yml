@@ -33,7 +33,7 @@ bind_task:
   only_if: "changesInclude('bind.json', '.cirrus/install_script.sh')"
   matrix:
     - freebsd_instance:
-        image_family: freebsd-11-3
+        image_family: freebsd-12-2
   env:
     PLUGIN_FILE: "bind.json"
 
@@ -54,6 +54,15 @@ channels-dvr_task:
         image_family: freebsd-12-2
   env:
     PLUGIN_FILE: "channels-dvr.json"
+
+chia_task:
+  <<: *INSTALL_PLUGIN
+  only_if: "changesInclude('chia.json', '.cirrus/install_script.sh')"
+  matrix:
+    - freebsd_instance:
+        image_family: freebsd-12-2
+  env:
+    PLUGIN_FILE: "chia.json"
 
 clamav_task:
   <<: *INSTALL_PLUGIN
@@ -78,7 +87,7 @@ dnsmasq_task:
   only_if: "changesInclude('dnsmasq.json', '.cirrus/install_script.sh')"
   matrix:
     - freebsd_instance:
-        image_family: freebsd-11-3
+        image_family: freebsd-12-2
   env:
     PLUGIN_FILE: "dnsmasq.json"
 
@@ -96,7 +105,7 @@ duplicati_task:
   only_if: "changesInclude('duplicati.json', '.cirrus/install_script.sh')"
   matrix:
     - freebsd_instance:
-        image_family: freebsd-11-3
+        image_family: freebsd-12-2
   env:
     PLUGIN_FILE: "duplicati.json"
 
@@ -222,7 +231,7 @@ irssi_task:
   only_if: "changesInclude('irssi.json', '.cirrus/install_script.sh')"
   matrix:
     - freebsd_instance:
-        image_family: freebsd-11-3
+        image_family: freebsd-12-2
   env:
     PLUGIN_FILE: "irssi.json"
 
@@ -236,6 +245,15 @@ jackett_task:
     PLUGIN_FILE: "jackett.json"
     FOLLOW_REDIRECTS: "false"
 
+jdownloader_task:
+  <<: *INSTALL_PLUGIN
+  only_if: "changesInclude('jdownloader.json', '.cirrus/install_script.sh')"
+  matrix:
+    - freebsd_instance:
+        image_family: freebsd-12-2
+  env:
+    PLUGIN_FILE: "jdownloader.json"
+
 jenkins_task:
   <<: *INSTALL_PLUGIN
   only_if: "changesInclude('jenkins.json', '.cirrus/install_script.sh')"
@@ -244,6 +262,7 @@ jenkins_task:
         image_family: freebsd-12-2
   env:
     PLUGIN_FILE: "jenkins.json"
+    OVERRIDE_ADMIN_UI: "http://<IP>:8080/login"
 
 jenkins-lts_task:
   <<: *INSTALL_PLUGIN
@@ -253,6 +272,7 @@ jenkins-lts_task:
         image_family: freebsd-12-2
   env:
     PLUGIN_FILE: "jenkins-lts.json"
+    OVERRIDE_ADMIN_UI: "http://<IP>:8080/login"
 
 lidarr_task:
   <<: *INSTALL_PLUGIN
@@ -262,6 +282,15 @@ lidarr_task:
         image_family: freebsd-12-2
   env:
     PLUGIN_FILE: "lidarr.json"
+
+logitechmediaserver_task:
+  <<: *INSTALL_PLUGIN
+  only_if: "changesInclude('logitechmediaserver.json', '.cirrus/install_script.sh')"
+  matrix:
+    - freebsd_instance:
+        image_family: freebsd-12-2
+  env:
+    PLUGIN_FILE: "logitechmediaserver.json"
 
 madsonic_task:
   <<: *INSTALL_PLUGIN
@@ -286,7 +315,7 @@ monica_task:
   only_if: "changesInclude('monica.json', '.cirrus/install_script.sh')"
   matrix:
     - freebsd_instance:
-        image_family: freebsd-11-3
+        image_family: freebsd-12-2
   env:
     PLUGIN_FILE: "monica.json"
 
@@ -343,7 +372,7 @@ node-red_task:
         image_family: freebsd-12-2
   env:
     PLUGIN_FILE: "node-red.json"
-   
+
 nxfilter_task:
   <<: *INSTALL_PLUGIN
   only_if: "changesInclude('nxfilter.json', '.cirrus/install_script.sh')"
@@ -368,7 +397,7 @@ openspeedtest-server_task:
   only_if: "changesInclude('openspeedtest-server.json', '.cirrus/install_script.sh')"
   matrix:
     - freebsd_instance:
-        image_family: freebsd-11-3
+        image_family: freebsd-12-2
   env:
     PLUGIN_FILE: "openspeedtest-server.json"
 
@@ -413,7 +442,7 @@ quasselcore_task:
   only_if: "changesInclude('quasselcore.json', '.cirrus/install_script.sh')"
   matrix:
     - freebsd_instance:
-        image_family: freebsd-11-3
+        image_family: freebsd-12-2
   env:
     PLUGIN_FILE: "quasselcore.json"
     SKIP_UI_CHECK: "true"
@@ -531,7 +560,7 @@ weechat_task:
   only_if: "changesInclude('weechat.json', '.cirrus/install_script.sh')"
   matrix:
     - freebsd_instance:
-        image_family: freebsd-11-3
+        image_family: freebsd-12-2
   env:
     PLUGIN_FILE: "weechat.json"
 
@@ -540,9 +569,18 @@ xmrig_task:
   only_if: "changesInclude('xmrig.json', '.cirrus/install_script.sh')"
   matrix:
     - freebsd_instance:
-        image_family: freebsd-11-3
+        image_family: freebsd-12-2
   env:
     PLUGIN_FILE: "xmrig.json"
+    
+zabbixserver_task:
+  <<: *INSTALL_PLUGIN
+  only_if: "changesInclude('zabbixserver.json', '.cirrus/install_script.sh')"
+  matrix:
+    - freebsd_instance:
+        image_family: freebsd-12-2
+  env:
+    PLUGIN_FILE: "zabbixserver.json"
 
 zoneminder_task:
   <<: *INSTALL_PLUGIN

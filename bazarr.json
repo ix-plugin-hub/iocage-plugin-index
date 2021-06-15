@@ -1,13 +1,13 @@
 {
     "name": "bazarr",
-    "plugin_schema": "2",
     "release": "12.2-RELEASE",
     "artifact": "https://github.com/fulder/iocage-plugin-bazarr",
     "pkgs": [
-        "python37",
-        "py37-pip",
-        "py37-libxml2",
-        "py37-sqlite3",
+        "python3",
+        "python38",
+        "py38-pip",
+        "py38-libxml2",
+        "py38-sqlite3",
         "libxslt",
         "git-lite",
         "unrar",
@@ -22,5 +22,5 @@
             }
         ]
     },
-    "official": "false"
+    "official": false
 }
