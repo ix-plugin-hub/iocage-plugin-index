@@ -2,6 +2,10 @@
     "name": "jackett",
     "release": "12.2-RELEASE",
     "artifact": "https://github.com/fulder/iocage-plugin-jackett.git",
+    "properties": {
+        "nat": 1,
+        "nat_forwards": "tcp(9117:9117)"
+    },
     "pkgs": [
         "jackett",
         "libiconv"
