@@ -537,6 +537,15 @@ unificontroller_task:
   env:
     PLUGIN_FILE: "unificontroller.json"
 
+urbackup_task:
+  <<: *INSTALL_PLUGIN
+  only_if: "changesInclude('urbackup.json', '.cirrus/install_script.sh')"
+  matrix:
+    - freebsd_instance:
+        image_family: freebsd-12-2
+  env:
+    PLUGIN_FILE: "urbackup.json"
+
 vault_task:
   <<: *INSTALL_PLUGIN
   only_if: "changesInclude('vault.json', '.cirrus/install_script.sh')"
