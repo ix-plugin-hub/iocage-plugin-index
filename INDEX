@@ -311,6 +311,16 @@
 		"category": "entertainment",
 		"homepage": "https://github.com/zorchenhimer/MovieNight"
 	},
+	"n8n": {
+		"MANIFEST": "n8n.json",
+		"description": "Extendable workflow automation",
+		"icon": "https://icons.freenas.org/community-icons/n8n.png",
+		"name": "n8n",
+		"official": false,
+		"primary_pkg": null,
+		"category": "entertainment",
+		"homepage": "https://n8n.io/"
+	},
 	"mineos": {
 		"MANIFEST": "mineos.json",
 		"name": "MineOS",
