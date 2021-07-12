@@ -10,7 +10,6 @@
         "py38-setuptools",
         "py38-sqlite3",
         "py38-pillow",
-        "py38-cryptography",
         "py38-virtualenv",
         "unrar",
         "ca_root_nss",
