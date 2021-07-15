@@ -168,7 +168,7 @@
 		"icon": "https://icons.freenas.org/community-icons/graylog.png",
 		"name": "Graylog)",
 		"official": false,
-		"primary_pkg": null,
+		"primary_pkg": graylog,
 		"homepage": "https://www.graylog.org/"
 	},
 	"heimdall-dashboard": {
