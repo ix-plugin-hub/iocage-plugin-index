@@ -166,9 +166,9 @@
 		"MANIFEST": "graylog.json",
 		"description": "Seamless log data collection, faster analysis, and the answers you need when you need them.",
 		"icon": "https://icons.freenas.org/community-icons/graylog.png",
-		"name": "Graylog)",
+		"name": "Graylog",
 		"official": false,
-		"primary_pkg": graylog,
+		"primary_pkg": "graylog",
 		"homepage": "https://www.graylog.org/"
 	},
 	"heimdall-dashboard": {
