@@ -7,8 +7,11 @@
         "boot": "on"
     },
     "pkgs": [
-        "curl",
-        "openjdk8-jre"
+        "graylog",
+        "elasticsearch6",
+        "mongodb44",
+        "pwgen",
+        "p5-Digest-SHA"
     ],
     "packagesite": "http://pkg.FreeBSD.org/${ABI}/latest",
     "fingerprints": {
