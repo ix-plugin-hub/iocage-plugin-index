@@ -162,6 +162,14 @@
 		"official": false,
 		"primary_pkg": "grafana6"
 	},
+	"graylog": {
+		"MANIFEST": "graylog.json",
+		"description": "Seamless log data collection, faster analysis, and the answers you need when you need them.",
+		"icon": "https://icons.freenas.org/community-icons/graylog.png",
+		"name": "Graylog)",
+		"official": false,
+		"homepage": "https://www.graylog.org/"
+	},
 	"heimdall-dashboard": {
 		"MANIFEST": "heimdall-dashboard.json",
 		"description": "Heimdall Application Dashboard is an elegant solution to organize all your web applications and links onto a single page website.",

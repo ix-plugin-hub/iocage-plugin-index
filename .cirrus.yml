@@ -181,6 +181,15 @@ grafana_task:
   env:
     PLUGIN_FILE: "grafana.json"
 
+graylog_task:
+  <<: *INSTALL_PLUGIN
+  only_if: "changesInclude('graylog.json', '.cirrus/install_script.sh')"
+  matrix:
+    - freebsd_instance:
+        image_family: freebsd-12-2
+  env:
+    PLUGIN_FILE: "graylog.json"
+
 heimdall-dashboard_task:
   <<: *INSTALL_PLUGIN
   only_if: "changesInclude('heimdall-dashboard.json', '.cirrus/install_script.sh')"
