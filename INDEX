@@ -162,6 +162,15 @@
 		"official": false,
 		"primary_pkg": "grafana6"
 	},
+	"graylog": {
+		"MANIFEST": "graylog.json",
+		"description": "Seamless log data collection, faster analysis, and the answers you need when you need them.",
+		"icon": "https://icons.freenas.org/community-icons/graylog.png",
+		"name": "Graylog",
+		"official": false,
+		"primary_pkg": "graylog",
+		"homepage": "https://www.graylog.org/"
+	},
 	"heimdall-dashboard": {
 		"MANIFEST": "heimdall-dashboard.json",
 		"description": "Heimdall Application Dashboard is an elegant solution to organize all your web applications and links onto a single page website.",
@@ -310,6 +319,16 @@
 		"primary_pkg": null,
 		"category": "entertainment",
 		"homepage": "https://github.com/zorchenhimer/MovieNight"
+	},
+	"n8n": {
+		"MANIFEST": "n8n.json",
+		"description": "Extendable workflow automation",
+		"icon": "https://icons.freenas.org/community-icons/n8n.png",
+		"name": "n8n",
+		"official": false,
+		"primary_pkg": null,
+		"category": "entertainment",
+		"homepage": "https://n8n.io/"
 	},
 	"mineos": {
 		"MANIFEST": "mineos.json",
@@ -508,6 +527,16 @@
 		"name": "unificontroller",
 		"official": false,
 		"primary_pkg": "unifi5"
+	},
+	"urbackup": {
+		"MANIFEST": "urbackup.json",
+		"name": "UrBackup",
+		"icon": "https://icons.freenas.org/community-icons/urbackup.png",
+		"description": "UrBackup is an easy to setup Open Source client/server backup system, that through a combination of image and file backups accomplishes both data safety and a fast restoration time.",
+		"official": false,
+		"primary_pkg": "urbackup-server",
+		"category": "security",
+		"homepage": "https://www.urbackup.org/"
 	},
 	"vault": {
 		"MANIFEST": "vault.json",

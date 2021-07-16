@@ -17,10 +17,9 @@
         "gmake",
         "git-lite",
         "python38",
-        "python3",
         "node",
         "npm",
-        "openjdk11-jre",
+        "openjdk16",
         "wget",
         "bash"
     ],
