@@ -3,8 +3,7 @@
     "release": "12.2-RELEASE",
     "artifact": "https://github.com/kennedyoliveira/iocage-redis-plugin",
     "properties": {
-        "dhcp": 1,
-        "boot": "on"
+        "dhcp": 1
     },
     "pkgs": [
         "gmake",
