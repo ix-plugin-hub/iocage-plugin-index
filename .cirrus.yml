@@ -473,6 +473,15 @@ radarr_task:
         image_family: freebsd-12-2
   env:
     PLUGIN_FILE: "radarr.json"
+    
+redis_task:
+  <<: *INSTALL_PLUGIN
+  only_if: "changesInclude('redis.json', '.cirrus/install_script.sh')"
+  matrix:
+    - freebsd_instance:
+        image_family: freebsd-12-2
+  env:
+    PLUGIN_FILE: "redis.json"
 
 rslsync_task:
   <<: *INSTALL_PLUGIN
