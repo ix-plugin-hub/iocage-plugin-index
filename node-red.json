@@ -10,8 +10,8 @@
     "pkgs": [
         "bash",
         "gmake",
-        "node10",
-        "npm-node10",
+        "node14",
+        "npm-node14",
         "python27",
         "python"
     ],
