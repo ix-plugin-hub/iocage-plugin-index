@@ -446,6 +446,16 @@
 		"category": "content",
 		"homepage": "https://radarr.video/"
 	},
+	"redis": {
+		"MANIFEST": "redis.json",
+		"name": "radarr",
+		"icon": "https://icons.freenas.org/community-icons/redis.png",
+		"description": "Redis is an open source (BSD licensed), in-memory data structure store, used as a database, cache, and message broker. Redis provides data structures such as strings, hashes, lists, sets, sorted sets with range queries, bitmaps, hyperloglogs, geospatial indexes, and streams.",
+		"official": false,
+		"primary_pkg": "null",
+		"category": "content",
+		"homepage": "https://redis.io/"
+	},
 	"rslsync": {
 		"MANIFEST": "rslsync.json",
 		"name": "rslsync",
