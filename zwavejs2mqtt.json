@@ -22,9 +22,11 @@
     "pkgs": [
         "bash",
         "curl",
-        "node14",
-        "npm-node14",
-        "python"
+        "jq",
+        "node",
+        "npm",
+        "python",
+        "yarn"
     ],
     "packagesite": "http://pkg.FreeBSD.org/${ABI}/latest",
     "fingerprints": {
@@ -35,5 +37,5 @@
             }
         ]
     },
-    "revision": 1
+    "revision": 2
 }

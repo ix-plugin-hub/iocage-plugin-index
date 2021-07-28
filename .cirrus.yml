@@ -181,6 +181,15 @@ grafana_task:
   env:
     PLUGIN_FILE: "grafana.json"
 
+graylog_task:
+  <<: *INSTALL_PLUGIN
+  only_if: "changesInclude('graylog.json', '.cirrus/install_script.sh')"
+  matrix:
+    - freebsd_instance:
+        image_family: freebsd-12-2
+  env:
+    PLUGIN_FILE: "graylog.json"
+
 heimdall-dashboard_task:
   <<: *INSTALL_PLUGIN
   only_if: "changesInclude('heimdall-dashboard.json', '.cirrus/install_script.sh')"
@@ -345,6 +354,15 @@ movienight_task:
         image_family: freebsd-12-2
   env:
     PLUGIN_FILE: "movienight.json"
+    
+n8n_task:
+  <<: *INSTALL_PLUGIN
+  only_if: "changesInclude('n8n.json', '.cirrus/install_script.sh')"
+  matrix:
+    - freebsd_instance:
+        image_family: freebsd-12-2
+  env:
+    PLUGIN_FILE: "n8n.json"
 
 netdata_task:
   <<: *INSTALL_PLUGIN
@@ -536,6 +554,15 @@ unificontroller_task:
         image_family: freebsd-12-2
   env:
     PLUGIN_FILE: "unificontroller.json"
+
+urbackup_task:
+  <<: *INSTALL_PLUGIN
+  only_if: "changesInclude('urbackup.json', '.cirrus/install_script.sh')"
+  matrix:
+    - freebsd_instance:
+        image_family: freebsd-12-2
+  env:
+    PLUGIN_FILE: "urbackup.json"
 
 vault_task:
   <<: *INSTALL_PLUGIN
