@@ -11,13 +11,13 @@
         "autoconf",
         "bash",
         "ca_root_nss",
-        "curl",
         "gcc",
         "gmake",
+        "hash",
         "pkgconf",
-        "python3",
         "python38",
-        "py38-pillow"
+        "py38-pillow",
+        "rust"
     ],
     "packagesite": "http://pkg.FreeBSD.org/${ABI}/latest",
     "fingerprints": {
