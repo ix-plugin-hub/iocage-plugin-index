@@ -9,7 +9,7 @@
         "py38-libxml2",
         "py38-sqlite3",
         "libxslt",
-        "git-lite",
+        "unzip",
         "unrar",
         "ffmpeg"
     ],
