@@ -65,16 +65,6 @@ channels-dvr_task:
   env:
     PLUGIN_FILE: "channels-dvr.json"
 
-# Disabled due to Cirrus-CI automatic crypto mining suspension mechanism
-#chia_task:
-#  <<: *INSTALL_PLUGIN
-#  only_if: "changesInclude('chia.json', '.cirrus/install_script.sh')"
-#  matrix:
-#    - freebsd_instance:
-#        image_family: freebsd-12-2
-#  env:
-#    PLUGIN_FILE: "chia.json"
-
 clamav_task:
   <<: *INSTALL_PLUGIN
   only_if: "changesInclude('clamav.json', '.cirrus/install_script.sh')"
@@ -601,16 +591,6 @@ weechat_task:
         image_family: freebsd-12-2
   env:
     PLUGIN_FILE: "weechat.json"
-
-# Disabled due to Cirrus-CI automatic crypto mining suspension mechanism
-#xmrig_task:
-#  <<: *INSTALL_PLUGIN
-#  only_if: "changesInclude('xmrig.json', '.cirrus/install_script.sh')"
-#  matrix:
-#    - freebsd_instance:
-#        image_family: freebsd-12-2
-#  env:
-#    PLUGIN_FILE: "xmrig.json"
     
 zabbixserver_task:
   <<: *INSTALL_PLUGIN
