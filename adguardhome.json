@@ -8,7 +8,6 @@
     ],
     "properties": {
         "dhcp": 1,
-        "boot": "on"
     },
     "packagesite": "http://pkg.FreeBSD.org/${ABI}/latest",
     "fingerprints": {
