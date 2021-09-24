@@ -7,8 +7,7 @@
         "adguardhome"
     ],
     "properties": {
-        "dhcp": 1,
-        "boot": "on"
+        "dhcp": 1
     },
     "packagesite": "http://pkg.FreeBSD.org/${ABI}/latest",
     "fingerprints": {
@@ -21,3 +20,4 @@
     },
     "revision": 0
 }
+
