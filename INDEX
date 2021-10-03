@@ -611,5 +611,15 @@
 		"official": false,
 		"category": "home-automation",
 		"homepage": "https://zwave-js.github.io/zwavejs2mqtt/#/"
-	}
+	},
+	"shinobi": {
+        "MANIFEST": "shinobi.json",
+        "name": "Shinobi",
+        "icon": "https://www.trueos.org/iocage-icons/shinobi.png",
+        "description": "Shinobi is Open Source, written in Node.js, and real easy to use. It is the future of CCTV and NVR for developers and end-users alike. It is catered to by professionals and most importantly by the one who created it.",
+        "official": false,
+        "primary_pkg": null,
+        "category": "security",
+        "homepage": "https://shinobi.video/"
+    }
 }
