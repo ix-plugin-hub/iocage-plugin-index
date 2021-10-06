@@ -32,6 +32,7 @@
         "pkgconf",
         "python38",
         "py38-sqlite3",
+        "rust",
         "sudo",
         "wget",
         "zip"
