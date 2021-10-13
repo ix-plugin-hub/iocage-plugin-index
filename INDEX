@@ -1,5 +1,5 @@
 {	
-        "adguardhome": {
+	"adguardhome": {
 		"MANIFEST": "adguardhome.json",
 		"name": "AdGuardHome",
 		"icon": "https://icons.freenas.org/community-icons/adguardhome.png",
