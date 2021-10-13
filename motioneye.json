@@ -8,8 +8,7 @@
         "nat_forwards": "tcp(8765:8765)"
     },
     "pkgs": [
-        "python37",
-        "py37-pip",
+        "python27",
         "motion",
         "ffmpeg",
         "v4l-utils",
