@@ -10,6 +10,16 @@ env:
 install_template: &INSTALL_PLUGIN
   install_script: .cirrus/install_script.sh
 
+adguardhome_task:
+  <<: *INSTALL_PLUGIN
+  only_if: "changesInclude('adguardhome.json', '.cirrus/install_script.sh')"
+  matrix:
+    - freebsd_instance:
+        image_family: freebsd-12-2
+  env:
+    PLUGIN_FILE: "adguardhome.json"
+    ADMIN_UI_USER: "admin:admin"
+
 backuppc_task:
   <<: *INSTALL_PLUGIN
   only_if: "changesInclude('backuppc.json', '.cirrus/install_script.sh')"

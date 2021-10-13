@@ -1,4 +1,14 @@
-{
+{	
+	"adguardhome": {
+		"MANIFEST": "adguardhome.json",
+		"name": "AdGuardHome",
+		"icon": "https://icons.freenas.org/community-icons/adguardhome.png",
+		"description": "AdGuard Home is a network-wide software for blocking ads & tracking.",
+		"official": false,
+		"primary_pkg": "adguardhome",
+		"category": "networking",
+		"homepage": "https://github.com/AdguardTeam/AdGuardHome"
+	},
 	"backuppc": {
 		"MANIFEST": "backuppc.json",
 		"name": "BackupPC",
