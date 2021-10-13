@@ -27,11 +27,13 @@
         "ffmpeg",
         "gcc",
         "gmake",
+        "libjpeg-turbo",
         "libxml2",
         "libxslt",
         "pkgconf",
         "python38",
         "py38-sqlite3",
+        "rust",
         "sudo",
         "wget",
         "zip"

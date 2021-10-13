@@ -170,7 +170,7 @@
 		"icon": "https://icons.freenas.org/community-icons/grafana.png",
 		"name": "Grafana (with InfluxDB)",
 		"official": false,
-		"primary_pkg": "grafana6"
+		"primary_pkg": "grafana8"
 	},
 	"graylog": {
 		"MANIFEST": "graylog.json",
