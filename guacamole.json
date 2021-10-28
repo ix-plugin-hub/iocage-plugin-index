@@ -1,0 +1,26 @@
+{
+    "name": "guacamole",
+    "release": "12.2-RELEASE",
+    "artifact": "https://github.com/leandroscardua/iocage-plugin-guacamole.git",
+    "official": false,
+    "pkgs": [
+        "guacamole-server",
+        "guacamole-client",
+        "mysql80-server",
+        "mysql-connector-java"
+    ],
+    "properties": {
+        "nat": 1,
+        "nat_forwards": "tcp(8085:8085)"
+    },
+    "packagesite": "http://pkg.FreeBSD.org/${ABI}/latest",
+    "fingerprints": {
+        "iocage-plugins": [
+            {
+                "function": "sha256",
+                "fingerprint": "b0170035af3acc5f3f3ae1859dc717101b4e6c1d0a794ad554928ca0cbb2f438"
+            }
+        ]
+    },
+    "revision": 0
+}

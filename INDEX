@@ -181,6 +181,15 @@
 		"primary_pkg": "graylog",
 		"homepage": "https://www.graylog.org/"
 	},
+	"guacamole": {
+		"MANIFEST": "guacamole.json",
+		"description": "Apache Guacamole is a clientless remote desktop gateway. It supports standard protocols like VNC, RDP, and SSH.",
+		"icon": "https://icons.freenas.org/community-icons/guacamole.png",
+		"name": "Guacamole",
+		"official": false,
+		"primary_pkg": "guacamole-client",
+		"homepage": "https://guacamole.apache.org/"
+	},
 	"heimdall-dashboard": {
 		"MANIFEST": "heimdall-dashboard.json",
 		"description": "Heimdall Application Dashboard is an elegant solution to organize all your web applications and links onto a single page website.",
