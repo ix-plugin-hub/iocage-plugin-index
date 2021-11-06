@@ -23,10 +23,10 @@
         "bash",
         "curl",
         "jq",
-        "node",
-        "npm",
+        "node14",
+        "npm-node14",
         "python",
-        "yarn"
+        "yarn-node14"
     ],
     "packagesite": "http://pkg.FreeBSD.org/${ABI}/latest",
     "fingerprints": {
