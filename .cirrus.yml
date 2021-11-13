@@ -311,7 +311,7 @@ madsonic_task:
   env:
     PLUGIN_FILE: "madsonic.json"
 
-madsonic_task:
+mariadb_task:
   <<: *INSTALL_PLUGIN
   only_if: "changesInclude('mariadb.json', '.cirrus/install_script.sh')"
   matrix:
