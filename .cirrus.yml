@@ -311,6 +311,15 @@ madsonic_task:
   env:
     PLUGIN_FILE: "madsonic.json"
 
+madsonic_task:
+  <<: *INSTALL_PLUGIN
+  only_if: "changesInclude('mariadb.json', '.cirrus/install_script.sh')"
+  matrix:
+    - freebsd_instance:
+        image_family: freebsd-12-2
+  env:
+    PLUGIN_FILE: "mariadb.json"
+
 mineos_task:
   <<: *INSTALL_PLUGIN
   only_if: "changesInclude('mineos.json', '.cirrus/install_script.sh')"
