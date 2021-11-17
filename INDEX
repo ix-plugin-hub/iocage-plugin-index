@@ -293,6 +293,16 @@
 		"official": false,
 		"primary_pkg": null
 	},
+	"mariadb": {
+		"MANIFEST": "mariadb.json",
+		"name": "MariaDB Server",
+		"description": "The open source relational database. No additional services included - KISS!",
+		"icon": "https://icons.freenas.org/community-icons/mariadb.png",
+		"primary_pkg": "mariadb105-server",
+		"official": false,
+		"category": "server",
+		"homepage": "https://mariadb.org/"
+	},
 	"monica": {
 		"MANIFEST": "monica.json",
 		"name": "Monica",
