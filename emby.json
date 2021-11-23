@@ -5,10 +5,11 @@
     "official": false,
     "properties": {
         "nat": 1,
-        "nat_forwards": "tcp(8096:8096)"
+        "nat_forwards": "tcp(8096:8096),tcp(8920:8920)"
     },
     "pkgs": [
-        "emby-server"
+        "emby-server",
+        "ffmpeg"
     ],
     "packagesite": "http://pkg.FreeBSD.org/${ABI}/latest",
     "fingerprints": {
@@ -19,5 +20,5 @@
             }
         ]
     },
-    "revision": "1"
+    "revision": 1
 }

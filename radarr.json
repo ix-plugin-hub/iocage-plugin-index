@@ -1,6 +1,6 @@
 {
     "name": "radarr",
-    "release": "12.1-RELEASE",
+    "release": "12.2-RELEASE",
     "artifact": "https://github.com/freenas/iocage-plugin-radarr.git",
     "official": false,
     "properties": {
@@ -19,5 +19,5 @@
             }
         ]
     },
-    "revision": "0"
+    "revision": 0
 }

@@ -1,4 +1,14 @@
-{
+{	
+	"adguardhome": {
+		"MANIFEST": "adguardhome.json",
+		"name": "AdGuardHome",
+		"icon": "https://icons.freenas.org/community-icons/adguardhome.png",
+		"description": "AdGuard Home is a network-wide software for blocking ads & tracking.",
+		"official": false,
+		"primary_pkg": "adguardhome",
+		"category": "networking",
+		"homepage": "https://github.com/AdguardTeam/AdGuardHome"
+	},
 	"backuppc": {
 		"MANIFEST": "backuppc.json",
 		"name": "BackupPC",
@@ -38,6 +48,14 @@
 		"description": "DVR server for the Channels apps. Makes digital recordings of broadcast television using HDHomeRun network tuners. (Requires Subscription)",
 		"icon": "https://icons.freenas.org/community-icons/channels-dvr.png",
 		"name": "Channels DVR",
+		"official": false,
+		"primary_pkg": ""
+	},
+	"chia": {
+		"MANIFEST": "chia.json",
+		"description": "A new blockchain and smart transaction platform that is easier to use, more efficient, and secure.",
+		"icon": "https://icons.freenas.org/community-icons/chia.png",
+		"name": "Chia",
 		"official": false,
 		"primary_pkg": ""
 	},
@@ -152,7 +170,25 @@
 		"icon": "https://icons.freenas.org/community-icons/grafana.png",
 		"name": "Grafana (with InfluxDB)",
 		"official": false,
-		"primary_pkg": "grafana6"
+		"primary_pkg": "grafana8"
+	},
+	"graylog": {
+		"MANIFEST": "graylog.json",
+		"description": "Seamless log data collection, faster analysis, and the answers you need when you need them.",
+		"icon": "https://icons.freenas.org/community-icons/graylog.png",
+		"name": "Graylog",
+		"official": false,
+		"primary_pkg": "graylog",
+		"homepage": "https://www.graylog.org/"
+	},
+	"guacamole": {
+		"MANIFEST": "guacamole.json",
+		"description": "Apache Guacamole is a clientless remote desktop gateway. It supports standard protocols like VNC, RDP, and SSH.",
+		"icon": "https://icons.freenas.org/community-icons/guacamole.png",
+		"name": "Guacamole",
+		"official": false,
+		"primary_pkg": "guacamole-client",
+		"homepage": "https://guacamole.apache.org/"
 	},
 	"heimdall-dashboard": {
 		"MANIFEST": "heimdall-dashboard.json",
@@ -177,7 +213,8 @@
 		"description": "Lightweight iOS HomeKit API emulator. Enables adding unsupported devices to HomeKit.",
 		"icon": "https://icons.freenas.org/community-icons/homebridge.png",
 		"name": "Homebridge",
-		"official": false
+		"official": false,
+		"primary_pkg": null
 	},
 	"hoobs": {
 		"MANIFEST": "hoobs.json",
@@ -211,6 +248,14 @@
 		"official": false,
 		"primary_pkg": "jackett"
 	},
+	"jdownloader": {
+		"MANIFEST": "jdownloader.json",
+		"description": "JDownloader is a free, open-source download management tool with a huge community of developers that makes downloading as easy and fast as it should be. Users can start, stop or pause downloads, set bandwith limitations, auto-extract archives and much more. It's an easy-to-extend framework that can save hours of your valuable time every day!",
+		"icon": "https://icons.freenas.org/community-icons/jdownloader.png",
+		"name": "JDownloader",
+		"official": false,
+		"primary_pkg": null
+	},
 	"jenkins": {
 		"MANIFEST": "jenkins.json",
 		"name": "Jenkins",
@@ -239,6 +284,16 @@
 		"official": false,
 		"primary_pkg": "lidarr"
 	},
+	"logitechmediaserver": {
+		"MANIFEST": "logitechmediaserver.json",
+		"description": "Logitech Media Server (formerly SlimServer, SqueezeCenter and Squeezebox Server) is a streaming audio server supported by Logitech (formerly Slim Devices).",
+		"icon": "https://github.com/ix-plugin-hub/iocage-plugin-index/raw/master/icons/logitechmediaserver.png",
+		"name": "Logitech Media Server",
+		"official": false,
+		"primary_pkg": null,
+		"category": "entertainment",
+		"homepage": "https://forums.slimdevices.com/"
+	},
 	"madsonic": {
 		"MANIFEST": "madsonic.json",
 		"description": "Open source media streaming software and music player.",
@@ -246,6 +301,16 @@
 		"name": "MadSonic",
 		"official": false,
 		"primary_pkg": null
+	},
+	"mariadb": {
+		"MANIFEST": "mariadb.json",
+		"name": "MariaDB Server",
+		"description": "The open source relational database. No additional services included - KISS!",
+		"icon": "https://icons.freenas.org/community-icons/mariadb.png",
+		"primary_pkg": "mariadb105-server",
+		"official": false,
+		"category": "server",
+		"homepage": "https://mariadb.org/"
 	},
 	"monica": {
 		"MANIFEST": "monica.json",
@@ -284,6 +349,16 @@
 		"category": "entertainment",
 		"homepage": "https://github.com/zorchenhimer/MovieNight"
 	},
+	"n8n": {
+		"MANIFEST": "n8n.json",
+		"description": "Extendable workflow automation",
+		"icon": "https://icons.freenas.org/community-icons/n8n.png",
+		"name": "n8n",
+		"official": false,
+		"primary_pkg": null,
+		"category": "entertainment",
+		"homepage": "https://n8n.io/"
+	},
 	"mineos": {
 		"MANIFEST": "mineos.json",
 		"name": "MineOS",
@@ -303,6 +378,15 @@
 		"name": "Netdata",
 		"official": false
 	},
+    "nexus-oss": {
+        "MANIFEST": "nexus-oss.json",
+        "name": "NexusOSS",
+        "icon": "https://icons.freenas.org/community-icons/nexus-oss.png",
+        "description": "Nexus OSS Repository Manager",
+        "maintainer": "Filippe Spolti <filippespolti@gmail.com>",
+        "official": false,
+        "primary_pkg": null
+    },
 	"node-red": {
 		"MANIFEST": "node-red.json",
 		"description": "Node-RED is a programming tool for wiring together hardware devices, APIs and online services in new and interesting ways.",
@@ -312,6 +396,16 @@
 		"official": false,
 		"category": "home-automation",
 		"homepage": "https://nodered.org/"
+	},
+	"nxfilter": {
+		"MANIFEST": "nxfilter.json",
+		"description": "NxFilter is a light-weight DNS filter.",
+		"icon": "https://icons.freenas.org/community-icons/nxfilter.png",
+		"primary_pkg": null,
+		"name": "NxFilter",
+		"official": false,
+		"category": "networking",
+		"homepage": "https://nxfilter.org/"
 	},
 	"nzbget": {
 		"MANIFEST": "nzbget.json",
@@ -380,6 +474,16 @@
 		"primary_pkg": "radarr",
 		"category": "content",
 		"homepage": "https://radarr.video/"
+	},
+	"redis": {
+		"MANIFEST": "redis.json",
+		"name": "Redis",
+		"icon": "https://icons.freenas.org/community-icons/redis.png",
+		"description": "Redis is an open source (BSD licensed), in-memory data structure store, used as a database, cache, and message broker. Redis provides data structures such as strings, hashes, lists, sets, sorted sets with range queries, bitmaps, hyperloglogs, geospatial indexes, and streams.",
+		"official": false,
+		"primary_pkg": "null",
+		"category": "content",
+		"homepage": "https://redis.io/"
 	},
 	"rslsync": {
 		"MANIFEST": "rslsync.json",
@@ -463,13 +567,15 @@
 		"official": false,
 		"primary_pkg": "unifi5"
 	},
-	"unificontroller-lts": {
-		"MANIFEST": "unificontroller-lts.json",
-		"description": "Software-Defined Networking platform that provides an end-to-end system of network devices across different locations. (Long term support version)",
-		"icon": "https://icons.freenas.org/community-icons/unificontroller.png",
-		"name": "unificontroller-lts",
+	"urbackup": {
+		"MANIFEST": "urbackup.json",
+		"name": "UrBackup",
+		"icon": "https://icons.freenas.org/community-icons/urbackup.png",
+		"description": "UrBackup is an easy to setup Open Source client/server backup system, that through a combination of image and file backups accomplishes both data safety and a fast restoration time.",
 		"official": false,
-		"primary_pkg": "unifi-lts"
+		"primary_pkg": "urbackup-server",
+		"category": "security",
+		"homepage": "https://www.urbackup.org/"
 	},
 	"vault": {
 		"MANIFEST": "vault.json",
@@ -496,6 +602,16 @@
 		"name": "XMRig",
 		"official": false,
 		"primary_pkg": "xmrig"
+	},
+	"zabbixserver": {
+		"MANIFEST": "zabbixserver.json",
+		"name": "Zabbix Server",
+		"icon": "https://icons.freenas.org/community-icons/zabbix.png",
+		"description": "Zabbix is an open-source monitoring software tool for diverse IT components, including networks, servers, virtual machines (VMs) and cloud services",
+		"official": false,
+		"primary_pkg": "zabbix5-server",
+		"category": "management",
+		"homepage": "https://www.zabbix.com/"
 	},
 	"zoneminder": {
 		"MANIFEST": "zoneminder.json",
