@@ -19,7 +19,7 @@
         "python38",
         "node",
         "npm",
-        "openjdk16",
+        "openjdk17",
         "wget",
         "bash"
     ],
