@@ -549,6 +549,14 @@
 		"category": "entertainment",
 		"homepage": "https://tautulli.com/"
 	},
+	"torr-server": {
+		"MANIFEST": "torr-server.json",
+		"name": "TorrServer",
+		"primary_pkg": "Git branch - Master",
+		"icon": "http://raw.githubusercontent.com/filka96/TorrServer/master/web/public/android-chrome-512x512.png",
+		"description": "TorrServer",
+		"official": false
+	},
 	"transmission": {
 		"MANIFEST": "transmission.json",
 		"name": "Transmission",
@@ -640,13 +648,5 @@
 		"official": false,
 		"category": "home-automation",
 		"homepage": "https://zwave-js.github.io/zwavejs2mqtt/#/"
-	},
-	"torr-server": {
-		"MANIFEST": "torr-server.json",
-		"name": "TorrServer",
-		"primary_pkg": "Git branch - Master",
-		"icon": "http://raw.githubusercontent.com/filka96/TorrServer/master/web/public/android-chrome-512x512.png",
-		"description": "TorrServer",
-		"official": false
 	}
 }
