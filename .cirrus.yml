@@ -565,6 +565,15 @@ tautulli_task:
   env:
     PLUGIN_FILE: "tautulli.json"
 
+torr_server_task:
+  <<: *INSTALL_PLUGIN
+  only_if: "changesInclude('torr-server.json', '.cirrus/install_script.sh')"
+  matrix:
+    - freebsd_instance:
+        image_family: freebsd-12-2
+  env:
+    PLUGIN_FILE: "torr-server.json"
+
 transmission_task:
   <<: *INSTALL_PLUGIN
   only_if: "changesInclude('transmission.json', '.cirrus/install_script.sh')"
