@@ -549,6 +549,14 @@
 		"category": "entertainment",
 		"homepage": "https://tautulli.com/"
 	},
+	"torr-server": {
+		"MANIFEST": "torr-server.json",
+		"name": "TorrServer",
+		"primary_pkg": "",
+		"icon": "https://icons.freenas.org/community-icons/torr-server.png",
+		"description": "TorrServer",
+		"official": false
+	},
 	"transmission": {
 		"MANIFEST": "transmission.json",
 		"name": "Transmission",
