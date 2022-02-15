@@ -14,6 +14,7 @@
         "name": "Bazarr",
         "official": false,
         "primary_pkg": null
+        "homepage": https://www.bazarr.media/
     },
     "calibre-web": {
         "MANIFEST": "calibre-web.json",
@@ -22,6 +23,7 @@
         "name": "Calibre-Web",
         "official": false,
         "primary_pkg": null
+	      "homepage": https://github.com/janeczku/calibre-web
     },
     "channels-dvr": {
         "MANIFEST": "channels-dvr.json",
@@ -30,6 +32,7 @@
         "name": "Channels DVR",
         "official": false,
         "primary_pkg": ""
+        "homepage": https://getchannels.com/dvr-server/
     },
     "deluge-pip": {
         "MANIFEST": "deluge-pip.json",
@@ -38,6 +41,7 @@
         "name": "Deluge",
         "official": false,
         "primary_pkg": ""
+        "homepage": https://deluge-torrent.org/
     },
     "dnsmasq": {
         "MANIFEST": "dnsmasq.json",
@@ -46,6 +50,7 @@
         "name": "Dnsmasq",
         "official": false,
         "primary_pkg": "dnsmasq"
+        "homepage": https://thekelleys.org.uk/dnsmasq/doc.html
     },
     "drupal8": {
         "MANIFEST": "drupal8.json",
@@ -54,6 +59,7 @@
         "name": "Drupal8",
         "official": false,
         "primary_pkg": "drupal8"
+        "homepage": https://www.drupal.org/8
     },
     "duplicati": {
         "MANIFEST": "duplicati.json",
@@ -63,6 +69,7 @@
         "icon": "https://icons.freenas.org/community-icons/duplicati.png",
         "primary_pkg": "",
         "category": "backup"
+        "homepage": https://www.duplicati.com/
     },
     "emby-server-stable": {
         "MANIFEST": "emby-server-stable.json",
@@ -71,6 +78,7 @@
         "primary_pkg": null,
         "description": "Emby brings together your personal videos, music, photos, and live television",
         "official": false
+        "homepage": https://emby.media/download.html
     },
     "esphome": {
         "MANIFEST": "esphome.json",
@@ -95,6 +103,7 @@
         "description": "Gitea is a community managed lightweight code hosting solution written in Go.",
         "official": false,
         "primary_pkg": "gitea"
+        "homepage": https://gitea.io/en-us/
     },
     "gitlab": {
         "MANIFEST": "gitlab.json",
@@ -103,6 +112,7 @@
         "description": "Gitlab CE - Git and CI platform to manage development projects",
         "official": false,
         "primary_pkg": "gitlab-ce"
+        "homepage": https://about.gitlab.com/
     },
     "gogs": {
         "MANIFEST": "gogs.json",
@@ -119,6 +129,7 @@
         "name": "Grafana (with InfluxDB)",
         "official": false,
         "primary_pkg": "grafana6"
+        "homepage": https://grafana.com/grafana/download
     },
     "heimdall-dashboard": {
         "MANIFEST": "heimdall-dashboard.json",
@@ -142,6 +153,7 @@
         "icon": "https://icons.freenas.org/community-icons/homebridge.png",
         "name": "Homebridge",
         "offical": false
+        "homepage": https://homebridge.io/
     },
     "hoobs": {
         "MANIFEST": "hoobs.json",
@@ -158,6 +170,7 @@
         "description": "The Invisible Internet Project (I2P) is an anonymous network layer (implemented as a Mix Network) that allows for censorship-resistant, peer to peer communication.",
         "official": false,
         "primary_pkg": "i2p"
+        "homepage": https://geti2p.net/en/
     },
     "irssi": {
         "MANIFEST": "irssi.json",
@@ -166,6 +179,7 @@
         "name": "irssi",
         "official": false,
         "primary_pkg": "irssi"
+        "homepage": https://irssi.org/download/
     },
     "jackett": {
         "MANIFEST": "jackett.json",
@@ -174,6 +188,7 @@
         "name": "Jackett",
         "official": false,
         "primary_pkg": "jackett"
+        "homepage": https://github.com/Jackett/Jackett
     },
     "madsonic": {
         "MANIFEST": "madsonic.json",
@@ -231,6 +246,7 @@
         "name": "OpenVPN Server",
         "official": false,
         "primary_pkg": "openvpn"
+        "homepage": https://openvpn.net/
     },
   "openspeedtest-server": {
     "MANIFEST": "openspeedtest-server.json",
@@ -239,6 +255,7 @@
     "name": "OpenSpeedTest",
     "official": false,
     "primary_pkg": null
+
   },
     "privatebin": {
         "MANIFEST": "privatebin.json",
@@ -247,6 +264,7 @@
         "name": "PrivateBin",
         "official": false,
         "primary_pkg": "privatebin"
+        "homepage": https://privatebin.info/
     },
     "quasselcore": {
         "MANIFEST": "quasselcore.json",
@@ -255,6 +273,7 @@
         "name": "Quasselcore",
         "official": false,
         "primary_pkg": "quassel-core"
+        "homepage": https://quassel-irc.org/downloads
     },
     "radarr": {
         "MANIFEST": "radarr.json",
@@ -283,6 +302,7 @@
         "name": "rtorrent-flood",
         "official": false,
         "primary_pkg": "rtorrent"
+        "homepage": https://github.com/jesec/flood
     },
     "sabnzbd": {
         "MANIFEST": "sabnzbd.json",
@@ -291,6 +311,7 @@
         "name": "Sabnzbd",
         "official": false,
         "primary_pkg": "sabnzbdplus"
+        "homepage": https://sabnzbd.org/
     },
     "sickchill": {
         "MANIFEST": "sickchill.json",
@@ -299,6 +320,7 @@
         "name": "SickChill",
         "official": false,
         "primary_pkg": null
+        "homepage": https://sickchill.github.io/
     },
     "sonarr": {
         "MANIFEST": "sonarr.json",
@@ -341,6 +363,7 @@
         "name": "weechat",
         "official": false,
         "primary_pkg": "weechat"
+        "homepage": https://weechat.org/
     },
     "xmrig": {
         "MANIFEST": "xmrig.json",
@@ -349,6 +372,7 @@
         "name": "XMRig",
         "official": false,
         "primary_pkg": "xmrig"
+        "homepage": https://xmrig.com/
     },
     "zrepl": {
         "MANIFEST": "zrepl.json",
@@ -357,6 +381,7 @@
         "name": "zrepl",
         "official": false,
         "primary_pkg": "zrepl"
+        "homepage": https://zrepl.github.io/
     },
     "backuppc": {
         "MANIFEST": "backuppc.json",
@@ -396,7 +421,7 @@
         "official": false,
         "primary_pkg": "emby-server",
         "category": "entertainment",
-        "homepage": "https://emby.media/"
+        "homepage": "https://emby.media/download.html"
     },
     "jenkins": {
         "MANIFEST": "jenkins.json",
