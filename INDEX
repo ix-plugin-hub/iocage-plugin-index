@@ -447,6 +447,14 @@
 		"official": false,
 		"primary_pkg": "privatebin"
 	},
+	"prowlarr": {
+		"MANIFEST": "prowlarr.json",
+		"description": "Indexer for torrent and usenet trackers.",
+		"icon": "https://icons.freenas.org/community-icons/prowlarr.png",
+		"name": "Prowlarr",
+		"official": false,
+		"primary_pkg": "prowlarr"
+	},
 	"qbittorrent": {
 		"MANIFEST": "qbittorrent.json",
 		"name": "qbittorrent",
