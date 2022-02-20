@@ -1,5 +1,4 @@
 {
-<<<<<<< HEAD
     "name": "homeassistant",
     "release": "12.2-RELEASE",
     "artifact": "https://github.com/tprelog/iocage-homeassistant.git",
