@@ -23,7 +23,7 @@
         "name": "Calibre-Web",
         "official": false,
         "primary_pkg": null
-	      "homepage": https://github.com/janeczku/calibre-web
+	"homepage": https://github.com/janeczku/calibre-web
     },
     "channels-dvr": {
         "MANIFEST": "channels-dvr.json",
@@ -255,7 +255,6 @@
     "name": "OpenSpeedTest",
     "official": false,
     "primary_pkg": null
-
   },
     "privatebin": {
         "MANIFEST": "privatebin.json",
