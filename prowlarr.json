@@ -1,15 +1,15 @@
 {
-    "name": "radarr",
-    "release": "12.2-RELEASE",
-    "artifact": "https://github.com/freenas/iocage-plugin-radarr.git",
+    "name": "Prowlarr",
+    "release": "12.3-RELEASE",
+    "artifact": "https://github.com/jasker5183/iocage-plugin-prowlarr.git",
     "official": false,
     "properties": {
         "allow_mlock": 1,
         "nat": 1,
-        "nat_forwards": "tcp(7878:7878)"
+        "nat_forwards": "tcp(9696:9696)"
     },
     "pkgs": [
-        "radarr"
+        "prowlarr"
     ],
     "packagesite": "http://pkg.FreeBSD.org/${ABI}/latest",
     "fingerprints": {

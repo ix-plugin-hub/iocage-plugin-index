@@ -31,6 +31,8 @@
         "libxml2",
         "libxslt",
         "pkgconf",
+        "python39",
+        "py39-sqlite3",
         "python38",
         "py38-sqlite3",
         "rust",

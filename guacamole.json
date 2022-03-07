@@ -1,16 +1,18 @@
 {
-    "name": "radarr",
+    "name": "guacamole",
     "release": "12.2-RELEASE",
-    "artifact": "https://github.com/freenas/iocage-plugin-radarr.git",
+    "artifact": "https://github.com/leandroscardua/iocage-plugin-guacamole.git",
     "official": false,
-    "properties": {
-        "allow_mlock": 1,
-        "nat": 1,
-        "nat_forwards": "tcp(7878:7878)"
-    },
     "pkgs": [
-        "radarr"
+        "guacamole-server",
+        "guacamole-client",
+        "mysql80-server",
+        "mysql-connector-java"
     ],
+    "properties": {
+        "nat": 1,
+        "nat_forwards": "tcp(8085:8085)"
+    },
     "packagesite": "http://pkg.FreeBSD.org/${ABI}/latest",
     "fingerprints": {
         "iocage-plugins": [

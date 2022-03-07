@@ -181,6 +181,15 @@
 		"primary_pkg": "graylog",
 		"homepage": "https://www.graylog.org/"
 	},
+	"guacamole": {
+		"MANIFEST": "guacamole.json",
+		"description": "Apache Guacamole is a clientless remote desktop gateway. It supports standard protocols like VNC, RDP, and SSH.",
+		"icon": "https://icons.freenas.org/community-icons/guacamole.png",
+		"name": "Guacamole",
+		"official": false,
+		"primary_pkg": "guacamole-client",
+		"homepage": "https://guacamole.apache.org/"
+	},
 	"heimdall-dashboard": {
 		"MANIFEST": "heimdall-dashboard.json",
 		"description": "Heimdall Application Dashboard is an elegant solution to organize all your web applications and links onto a single page website.",
@@ -293,6 +302,16 @@
 		"official": false,
 		"primary_pkg": null
 	},
+	"mariadb": {
+		"MANIFEST": "mariadb.json",
+		"name": "MariaDB Server",
+		"description": "The open source relational database. No additional services included - KISS!",
+		"icon": "https://icons.freenas.org/community-icons/mariadb.png",
+		"primary_pkg": "mariadb105-server",
+		"official": false,
+		"category": "server",
+		"homepage": "https://mariadb.org/"
+	},
 	"monica": {
 		"MANIFEST": "monica.json",
 		"name": "Monica",
@@ -359,15 +378,15 @@
 		"name": "Netdata",
 		"official": false
 	},
-    "nexus-oss": {
-        "MANIFEST": "nexus-oss.json",
-        "name": "NexusOSS",
-        "icon": "https://icons.freenas.org/community-icons/nexus-oss.png",
-        "description": "Nexus OSS Repository Manager",
-        "maintainer": "Filippe Spolti <filippespolti@gmail.com>",
-        "official": false,
-        "primary_pkg": null
-    },
+    	"nexus-oss": {
+        	"MANIFEST": "nexus-oss.json",
+        	"name": "NexusOSS",
+        	"icon": "https://icons.freenas.org/community-icons/nexus-oss.png",
+        	"description": "Nexus OSS Repository Manager",
+        	"maintainer": "Filippe Spolti <filippespolti@gmail.com>",
+        	"official": false,
+        	"primary_pkg": null
+    	},
 	"node-red": {
 		"MANIFEST": "node-red.json",
 		"description": "Node-RED is a programming tool for wiring together hardware devices, APIs and online services in new and interesting ways.",
@@ -427,6 +446,14 @@
 		"name": "PrivateBin",
 		"official": false,
 		"primary_pkg": "privatebin"
+	},
+	"prowlarr": {
+		"MANIFEST": "prowlarr.json",
+		"description": "Indexer for torrent and usenet trackers.",
+		"icon": "https://icons.freenas.org/community-icons/prowlarr.png",
+		"name": "Prowlarr",
+		"official": false,
+		"primary_pkg": "prowlarr"
 	},
 	"qbittorrent": {
 		"MANIFEST": "qbittorrent.json",
@@ -529,6 +556,14 @@
 		"primary_pkg": null,
 		"category": "entertainment",
 		"homepage": "https://tautulli.com/"
+	},
+	"torr-server": {
+		"MANIFEST": "torr-server.json",
+		"name": "TorrServer",
+		"primary_pkg": "",
+		"icon": "https://icons.freenas.org/community-icons/torr-server.png",
+		"description": "TorrServer",
+		"official": false
 	},
 	"transmission": {
 		"MANIFEST": "transmission.json",
