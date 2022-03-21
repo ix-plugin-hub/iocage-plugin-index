@@ -196,7 +196,8 @@
 		"icon": "https://icons.freenas.org/community-icons/heimdall-dashboard.png",
 		"name": "Heimdall",
 		"official": false,
-		"primary_pkg": null
+		"primary_pkg": null,
+		"homepage": "https://heimdall.site/"
 	},
 	"homeassistant": {
 		"MANIFEST": "homeassistant.json",
