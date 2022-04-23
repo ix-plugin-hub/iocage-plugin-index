@@ -1,6 +1,6 @@
 {
     "name": "zwavejs2mqtt",
-    "release": "12.2-RELEASE",
+    "release": "12.3-RELEASE",
     "artifact": "https://github.com/tprelog/iocage-zwavejs2mqtt.git",
     "official": false,
     "devfs_ruleset": {

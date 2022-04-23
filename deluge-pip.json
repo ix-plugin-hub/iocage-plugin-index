@@ -1,6 +1,6 @@
 {
     "name": "deluge-pip",
-    "release": "12.2-RELEASE",
+    "release": "12.3-RELEASE",
     "artifact": "https://github.com/jsegaert/iocage-plugin-deluge-pip.git",
     "properties": {
         "nat": "1",
@@ -24,4 +24,4 @@
         ]
     },
     "official": false
-} 
+}

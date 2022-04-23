@@ -1,33 +1,33 @@
 {
-  "name": "Logitechmediaserver",
-  "release": "12.2-RELEASE",
-  "artifact": "https://github.com/titou386/iocage-plugin-logitechmediaserver.git",
-  "properties": {
-    "boot": "on",
-    "dhcp": "on"
-	  },
-  "pkgs": [
-    "perl5",
-    "p5-libwww",
-    "p5-Font-FreeType",
-    "p5-Data-Dump",
-    "p5-Net-SSLeay",
-    "p5-Crypt-OpenSSL-RSA",
-    "p5-IO-Socket-SSL",
-    "bash",
-    "curl",
-    "flac",
-    "lame",
-    "sox"
-    ],
-  "packagesite": "http://pkg.FreeBSD.org/${ABI}/latest",
-  "fingerprints": {
-    "plugin-default": [
-      {
-        "function": "sha256",
-        "fingerprint": "b0170035af3acc5f3f3ae1859dc717101b4e6c1d0a794ad554928ca0cbb2f438"
-        }
-      ]
+    "name": "Logitechmediaserver",
+    "release": "12.3-RELEASE",
+    "artifact": "https://github.com/titou386/iocage-plugin-logitechmediaserver.git",
+    "properties": {
+        "boot": "on",
+        "dhcp": "on"
     },
-  "official": false
+    "pkgs": [
+        "perl5",
+        "p5-libwww",
+        "p5-Font-FreeType",
+        "p5-Data-Dump",
+        "p5-Net-SSLeay",
+        "p5-Crypt-OpenSSL-RSA",
+        "p5-IO-Socket-SSL",
+        "bash",
+        "curl",
+        "flac",
+        "lame",
+        "sox"
+    ],
+    "packagesite": "http://pkg.FreeBSD.org/${ABI}/latest",
+    "fingerprints": {
+        "plugin-default": [
+            {
+                "function": "sha256",
+                "fingerprint": "b0170035af3acc5f3f3ae1859dc717101b4e6c1d0a794ad554928ca0cbb2f438"
+            }
+        ]
+    },
+    "official": false
 }

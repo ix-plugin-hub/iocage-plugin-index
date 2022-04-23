@@ -1,6 +1,6 @@
 {
     "name": "nzbget",
-    "release": "12.2-RELEASE",
+    "release": "12.3-RELEASE",
     "artifact": "https://github.com/Pauwelz/iocage-plugin-nzbget.git",
     "properties": {
         "nat": 1,
