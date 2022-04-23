@@ -1,6 +1,6 @@
 {
     "name": "jackett",
-    "release": "12.2-RELEASE",
+    "release": "12.3-RELEASE",
     "artifact": "https://github.com/fulder/iocage-plugin-jackett.git",
     "properties": {
         "nat": 1,

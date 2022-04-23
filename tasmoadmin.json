@@ -1,6 +1,6 @@
 {
     "name": "tasmoadmin",
-    "release": "12.2-RELEASE",
+    "release": "12.3-RELEASE",
     "artifact": "https://github.com/tprelog/iocage-tasmoadmin.git",
     "official": false,
     "properties": {

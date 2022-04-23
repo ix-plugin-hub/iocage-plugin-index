@@ -1,6 +1,6 @@
 {
     "name": "drupal8",
-    "release": "12.2-RELEASE",
+    "release": "12.3-RELEASE",
     "artifact": "https://github.com/SumGuyV5/iocage-plugin-drupal8.git",
     "pkgs": [
         "php74-zlib",
