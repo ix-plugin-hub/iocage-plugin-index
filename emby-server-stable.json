@@ -1,6 +1,6 @@
 {
     "name": "emby-server-stable",
-    "release": "12.2-RELEASE",
+    "release": "12.3-RELEASE",
     "artifact": "https://github.com/freenas/iocage-plugin-emby.git",
     "properties": {
         "dhcp": 1,

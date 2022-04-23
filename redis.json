@@ -1,6 +1,6 @@
 {
     "name": "Redis",
-    "release": "12.2-RELEASE",
+    "release": "12.3-RELEASE",
     "artifact": "https://github.com/kennedyoliveira/iocage-redis-plugin",
     "properties": {
         "dhcp": 1

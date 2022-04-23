@@ -1,32 +1,23 @@
 {
-    "name": "zwavejs2mqtt",
+    "name": "esphome",
     "release": "12.3-RELEASE",
-    "artifact": "https://github.com/tprelog/iocage-zwavejs2mqtt.git",
+    "artifact": "https://github.com/tprelog/iocage-esphome.git",
     "official": false,
-    "devfs_ruleset": {
-        "paths": {
-            "zfs": null,
-            "bpf*": null,
-            "cua*": null
-        },
-        "includes": [
-            "1",
-            "2",
-            "3"
-        ]
-    },
     "properties": {
         "allow_raw_sockets": "1",
         "dhcp": "1"
     },
     "pkgs": [
+        "autoconf",
         "bash",
-        "curl",
-        "jq",
-        "node14",
-        "npm-node14",
-        "python",
-        "yarn-node14"
+        "ca_root_nss",
+        "gcc",
+        "gmake",
+        "hash",
+        "pkgconf",
+        "python38",
+        "py38-pillow",
+        "rust"
     ],
     "packagesite": "http://pkg.FreeBSD.org/${ABI}/latest",
     "fingerprints": {
@@ -37,5 +28,5 @@
             }
         ]
     },
-    "revision": 2
+    "revision": 0
 }

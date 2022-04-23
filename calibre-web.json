@@ -1,6 +1,6 @@
 {
     "name": "Calibre-Web",
-    "release": "12.2-RELEASE",
+    "release": "12.3-RELEASE",
     "artifact": "https://github.com/aserrallerios/iocage-plugin-calibre-web.git",
     "pkgs": [
         "git",
