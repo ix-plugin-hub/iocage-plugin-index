@@ -20,6 +20,15 @@ adguardhome_task:
     PLUGIN_FILE: "adguardhome.json"
     ADMIN_UI_USER: "admin:admin"
 
+amule_task:
+  <<: *INSTALL_PLUGIN
+  only_if: "changesInclude('amule.json', '.cirrus/install_script.sh')"
+  matrix:
+    - freebsd_instance:
+        image_family: freebsd-12-2
+  env:
+    PLUGIN_FILE: "amule.json"
+
 backuppc_task:
   <<: *INSTALL_PLUGIN
   only_if: "changesInclude('backuppc.json', '.cirrus/install_script.sh')"
