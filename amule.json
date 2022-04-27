@@ -1,10 +1,11 @@
 {
   "name": "amule",
   "plugin_schema": "2",
-  "release": "12.2-RELEASE",
+  "release": "12.3-RELEASE",
   "artifact": "https://github.com/alberanid/iocage-plugin-amule.git",
   "properties": {
-    "boot": 1
+    "nat": 1,
+    "nat_forwards": "tcp(4711:4711),tcp(4712:4712)"
   },
   "pkgs": [
     "amule"
