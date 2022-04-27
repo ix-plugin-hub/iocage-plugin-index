@@ -1,5 +1,5 @@
 {
-    "artifact": "https://github.com/IgorC-test/P5-freenas.git",
+    "artifact": "https://github.com/IgorC-test/iocage-plugin-archiware-p5.git",
     "devfs_ruleset": {
         "includes": [],
         "paths": {
