@@ -28,6 +28,7 @@ amule_task:
         image_family: freebsd-12-2
   env:
     PLUGIN_FILE: "amule.json"
+    SKIP_SERVICE_CHECK: "true"
 
 backuppc_task:
   <<: *INSTALL_PLUGIN
