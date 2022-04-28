@@ -9,6 +9,16 @@
 		"category": "networking",
 		"homepage": "https://github.com/AdguardTeam/AdGuardHome"
 	},
+	"amule": {
+		"MANIFEST": "amule.json",
+		"name": "aMule",
+		"icon": "https://icons.freenas.org/community-icons/amule.png",
+		"description": "aMule is an eMule-like client for the eD2k and Kademlia networks, supporting multiple platforms.",
+		"official": false,
+		"primary_pkg": "amule",
+		"category": "content",
+		"homepage": "http://www.amule.org/"
+	},
 	"backuppc": {
 		"MANIFEST": "backuppc.json",
 		"name": "BackupPC",
