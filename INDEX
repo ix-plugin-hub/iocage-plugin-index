@@ -18,6 +18,16 @@
 		"primary_pkg": "amule",
 		"category": "content",
 		"homepage": "http://www.amule.org/"
+	},    
+	"archiwarep5": {
+		"MANIFEST": "archiwarep5.json",
+		"name": "Archiware P5",
+		"icon": "https://icons.freenas.org/community-icons/archiwarep5.png",
+		"description": "Archiwares P5 Software Suite is a platform-agnostic data management software for archiving, backup and cloning. The browser-based interface comprises four modules, which use different methods to secure and restore data: P5 Synchronize: Clones data to create a failover solution for time critical setups, P5 Backup: Produces security copies of files for a quick restore, Backup2Go: Backs up desktop and laptop data to disk and P5 Archive: Migrates data offline for long-term storage.",
+		"official": false,
+		"primary_pkg": "archiwarep5",
+		"category": "backup",
+		"homepage": "http://www.archiware.com/"
 	},
 	"backuppc": {
 		"MANIFEST": "backuppc.json",
