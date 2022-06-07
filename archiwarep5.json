@@ -1,0 +1,46 @@
+{
+    "artifact": "https://github.com/IgorC-test/iocage-plugin-archiware-p5.git",
+    "devfs_ruleset": {
+        "includes": [],
+        "paths": {
+            "ch0": null,
+            "nsa0": null,
+            "pass0": null,
+            "pass1": null,
+            "pass2": null,
+            "pass3": null,
+            "pass4": null,
+            "pass5": null,
+            "pass6": null,
+            "pass7": null,
+            "sa0": null,
+            "xpt0": null,
+            "zfs": null
+        }
+    },
+    "fingerprints": {
+        "iocage-plugins": [
+            {
+                "fingerprint": "b0170035af3acc5f3f3ae1859dc717101b4e6c1d0a794ad554928ca0cbb2f438",
+                "function": "sha256"
+            }
+        ]
+    },
+    "name": "ArchiwareP5",
+    "official": false,
+    "packagesite": "http://pkg.FreeBSD.org/${ABI}/latest",
+    "pkgs": [],
+    "properties": {
+        "mount_devfs": "1",
+        "mount_procfs": "1",
+        "mount_fdescfs": "1",
+        "allow_mount": "1",
+        "allow_mount_devfs": "1",
+        "allow_mount_procfs": "1",        
+        "allow_raw_sockets": "1",
+        "dhcp": "1",
+        "securelevel": "0",
+        "enforce_statfs": "0"
+    },
+    "release": "12.3-RELEASE"
+}
