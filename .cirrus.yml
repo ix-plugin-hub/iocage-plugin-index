@@ -335,7 +335,7 @@ mineos_task:
   only_if: "changesInclude('mineos.json', '.cirrus/install_script.sh')"
   matrix:
     - freebsd_instance:
-        image_family: freebsd-12-2
+        image_family: freebsd-12-3
   env:
     PLUGIN_FILE: "mineos.json"
 
