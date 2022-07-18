@@ -1,15 +1,15 @@
 {
     "name": "Calibre-Web",
-    "release": "12.2-RELEASE",
+    "release": "13.1-RELEASE",
     "artifact": "https://github.com/aserrallerios/iocage-plugin-calibre-web.git",
     "pkgs": [
         "git",
         "python3",
-        "python38",
-        "py38-pip",
-        "py38-setuptools",
-        "py38-sqlite3",
-        "py38-ldap",
+        "python39",
+        "py39-pip",
+        "py39-setuptools",
+        "py39-sqlite3",
+        "py39-ldap",
         "rust",
         "calibre",
         "unrar",
@@ -29,5 +29,5 @@
         ]
     },
     "official": false,
-    "revision": 0
+    "revision": 131
 }
