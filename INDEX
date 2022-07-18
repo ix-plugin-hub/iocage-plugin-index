@@ -126,9 +126,9 @@
 		"MANIFEST": "emby.json",
 		"name": "Emby",
 		"icon": "https://icons.freenas.org/community-icons/emby.png",
-		"description": "Beta branch of Emby, the home media server to organize, play, and stream audio and video to a variety of devices.",
+		"description": "Beta branch of Emby, the home media server to organize, play, and stream audio and video to a variety of devices! Uses Nat.",
 		"official": false,
-		"primary_pkg": "emby-server-devl",
+		"primary_pkg": "emby-server-devel",
 		"category": "entertainment",
 		"homepage": "https://emby.media/"
 	},
@@ -137,7 +137,7 @@
 		"name": "Emby Server",
 		"icon": "https://icons.freenas.org/community-icons/emby-server-png-128.png",
 		"primary_pkg": "emby-server",
-		"description": "Stable branch of Emby, which brings together your personal videos, music, photos, and live television",
+		"description": "Stable branch of Emby, which brings together your personal videos, music, photos, and live television! Uses VNET.",
 		"official": false,
 		"category": "entertainment",
 		"homepage": "https://emby.media/"
