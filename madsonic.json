@@ -1,25 +1,25 @@
 {
-  "name": "MadSonic",
-  "release": "12.1-RELEASE",
-  "artifact": "https://github.com/freenas/iocage-plugin-madsonic.git",
-  "properties": {
-    "nat": 1,
-    "nat_forwards": "tcp(4040:4040)"
-  },
-  "pkgs": [
-    "openjdk8-jre",
-    "ca_root_nss",
-    "ffmpeg"
-  ],
-  "packagesite": "http://pkg.FreeBSD.org/${ABI}/latest",
-  "fingerprints": {
-    "iocage-plugins": [
-      {
-        "function": "sha256",
-        "fingerprint": "b0170035af3acc5f3f3ae1859dc717101b4e6c1d0a794ad554928ca0cbb2f438"
-      }
-    ]
-  },
-  "official": false,
-  "revision": "0"
+    "name": "MadSonic",
+    "release": "12.2-RELEASE",
+    "artifact": "https://github.com/freenas/iocage-plugin-madsonic.git",
+    "properties": {
+        "nat": 1,
+        "nat_forwards": "tcp(4040:4040)"
+    },
+    "pkgs": [
+        "openjdk8-jre",
+        "ca_root_nss",
+        "ffmpeg"
+    ],
+    "packagesite": "http://pkg.FreeBSD.org/${ABI}/latest",
+    "fingerprints": {
+        "iocage-plugins": [
+            {
+                "function": "sha256",
+                "fingerprint": "b0170035af3acc5f3f3ae1859dc717101b4e6c1d0a794ad554928ca0cbb2f438"
+            }
+        ]
+    },
+    "official": false,
+    "revision": 0
 }

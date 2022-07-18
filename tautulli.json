@@ -1,16 +1,12 @@
 {
     "name": "Tautulli",
-    "release": "12.1-RELEASE",
-    "artifact": "https://github.com/arcooke/iocage-plugin-tautulli.git",
+    "release": "12.2-RELEASE",
+    "artifact": "https://github.com/dropsignal/iocage-plugin-tautulli.git",
     "official": false,
-    "properties": {
-        "nat": 1,
-        "nat_forwards": "tcp(8181:8181)"
-    },
     "pkgs": [
         "lang/python",
-        "py37-sqlite3",
-        "py37-openssl",
+        "py38-sqlite3",
+        "py38-openssl",
         "security/ca_root_nss",
         "git"
     ],
@@ -23,5 +19,5 @@
             }
         ]
     },
-    "revision": "0"
+    "revision": 0
 }

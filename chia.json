@@ -1,0 +1,44 @@
+{
+    "name": "Chia-Blockchain",
+    "release": "12.2-RELEASE",
+    "artifact": "https://github.com/kmoore134/iocage-plugin-chia.git",
+    "official": false,
+    "properties": {
+        "nat": 1,
+        "nat_forwards": "tcp(8444:8444)"
+    },
+    "pkgs": [
+	"bash",
+        "cmake",
+        "gcc",
+        "gcc9",
+        "gmake",
+	"git",
+	"node",
+	"npm",
+	"openssl",
+	"pybind11",
+	"py38-cffi",
+	"py38-maturin",
+	"py38-pip",
+	"py38-pybind11",
+	"py38-setuptools",
+	"py38-sqlite3",
+	"py38-virtualenv",
+	"py38-wheel",
+	"python",
+	"python38",
+	"rust",
+	"tmux"
+    ],
+    "packagesite": "http://pkg.FreeBSD.org/${ABI}/latest",
+    "fingerprints": {
+        "iocage-plugins": [
+            {
+                "function": "sha256",
+                "fingerprint": "b0170035af3acc5f3f3ae1859dc717101b4e6c1d0a794ad554928ca0cbb2f438"
+            }
+        ]
+    },
+    "revision": 0
+}

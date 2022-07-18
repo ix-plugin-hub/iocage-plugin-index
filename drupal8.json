@@ -1,32 +1,33 @@
 {
-	"name": "drupal8",
-	"plugin_schema": "2",
-	"release": "12.1-RELEASE",
-	"artifact": "https://github.com/SumGuyV5/iocage-plugin-drupal8.git",
-	"pkgs": [
-		"php74-zlib",
-		"mysql57-server",
-		"mysql57-client",
-		"php74-mysqli",
-		"php74-pdo_mysql",
-		"php74-curl",
-		"php74-gd",
-		"php74-extensions",
-		"php74",
-		"apache24",
-		"mod_php74",
-		"drupal8",
-		"drush-php74"
-	],
-	"properties": {
-		"dhcp": 1
-	},
-	"packagesite": "http://pkg.FreeBSD.org/${ABI}/latest",
-	"fingerprints": {
-		"plugin-default": [{
-			"function": "sha256",
-			"fingerprint": "b0170035af3acc5f3f3ae1859dc717101b4e6c1d0a794ad554928ca0cbb2f438"
-		}]
-	},
-	"official": false
+    "name": "drupal8",
+    "release": "12.2-RELEASE",
+    "artifact": "https://github.com/SumGuyV5/iocage-plugin-drupal8.git",
+    "pkgs": [
+        "php74-zlib",
+        "mysql57-server",
+        "mysql57-client",
+        "php74-mysqli",
+        "php74-pdo_mysql",
+        "php74-curl",
+        "php74-gd",
+        "php74-extensions",
+        "php74",
+        "apache24",
+        "mod_php74",
+        "drupal8",
+        "drush-php74"
+    ],
+    "properties": {
+        "dhcp": 1
+    },
+    "packagesite": "http://pkg.FreeBSD.org/${ABI}/latest",
+    "fingerprints": {
+        "plugin-default": [
+            {
+                "function": "sha256",
+                "fingerprint": "b0170035af3acc5f3f3ae1859dc717101b4e6c1d0a794ad554928ca0cbb2f438"
+            }
+        ]
+    },
+    "official": false
 }

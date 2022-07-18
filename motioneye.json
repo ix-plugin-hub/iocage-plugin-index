@@ -1,7 +1,6 @@
 {
     "name": "motioneye",
-    "plugin_schema": "2",
-    "release": "11.3-RELEASE",
+    "release": "12.2-RELEASE",
     "artifact": "https://github.com/cilix-lab/iocage-plugin-motioneye.git",
     "official": false,
     "properties": {
@@ -10,7 +9,6 @@
     },
     "pkgs": [
         "python27",
-        "py27-pip",
         "motion",
         "ffmpeg",
         "v4l-utils",
@@ -26,5 +24,5 @@
             }
         ]
     },
-    "revision": "0"
+    "revision": 1
 }
