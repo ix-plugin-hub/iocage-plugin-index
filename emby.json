@@ -5,7 +5,7 @@
     "official": false,
     "properties": {
         "nat": 1,
-        "nat_forwards": "tcp(8096:8096),tcp(8920:8920)"
+        "nat_forwards": "tcp(8096:8096),tcp(8920:8920)",
         "allow_mlock": 1,
         "ip6": "inherit"
     },
