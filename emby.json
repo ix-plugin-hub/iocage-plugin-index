@@ -1,5 +1,5 @@
 {
-    "name": "Emby-Beta",
+    "name": "Emby Server Beta",
     "release": "13.1-RELEASE",
     "artifact": "https://github.com/freenas/iocage-plugin-emby.git",
     "official": false,
@@ -26,7 +26,6 @@
         "libzvbi",
         "libraw",
         "ImageMagick6",
-        "tesseract",
         "intel-media-sdk",
         "libunwind",
         "libinotify",
