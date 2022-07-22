@@ -5,7 +5,7 @@
     "official": false,
     "properties": {
         "dhcp": 1,
-        "allow_raw_sockets": "1"
+        "allow_raw_sockets": "1",
         "allow_mlock": 1
     },
     "pkgs": [
