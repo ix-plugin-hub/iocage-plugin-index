@@ -4,8 +4,8 @@
     "artifact": "https://github.com/LukePulverenti/iocage-plugin-emby.git",
     "official": false,
     "properties": {
-        "dhcp": 1,
-        "allow_raw_sockets": "1",
+        "nat": 1,
+        "nat_forwards": "tcp(8096:8096),tcp(8920:8920)"
         "allow_mlock": 1,
         "ip6": "inherit"
     },
