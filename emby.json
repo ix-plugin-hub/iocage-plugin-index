@@ -6,7 +6,8 @@
     "properties": {
         "dhcp": 1,
         "allow_raw_sockets": "1",
-        "allow_mlock": 1
+        "allow_mlock": 1,
+        "ip6": inherit
     },
     "pkgs": [
         "libass", 
