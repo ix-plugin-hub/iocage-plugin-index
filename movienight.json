@@ -1,6 +1,6 @@
 {
     "name": "movienight",
-    "release": "12.2-RELEASE",
+    "release": "12.3-RELEASE",
     "artifact": "https://github.com/zorglube/iocage-plugin-movienight.git",
     "official": false,
     "properties": {
@@ -11,7 +11,8 @@
         "ca_root_nss",
         "git-lite",
         "go",
-        "gmake"
+        "gmake",
+        "jq"
     ],
     "packagesite": "http://pkg.FreeBSD.org/${ABI}/latest",
     "fingerprints": {
