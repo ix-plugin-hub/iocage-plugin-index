@@ -1,7 +1,7 @@
 {
     "name": "Emby Server Beta",
     "release": "13.1-RELEASE",
-    "artifact": "https://github.com/freenas/iocage-plugin-emby.git",
+    "artifact": "https://github.com/LukePulverenti/iocage-plugin-emby",
     "official": false,
     "properties": {
         "dhcp": 1,
