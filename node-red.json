@@ -12,7 +12,6 @@
         "gmake",
         "node14",
         "npm-node14",
-        "python27",
         "python"
     ],
     "packagesite": "http://pkg.FreeBSD.org/${ABI}/latest",
