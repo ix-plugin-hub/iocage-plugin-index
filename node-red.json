@@ -10,8 +10,8 @@
     "pkgs": [
         "bash",
         "gmake",
-        "node14",
-        "npm-node14",
+        "node16",
+        "npm-node16",
         "python"
     ],
     "packagesite": "http://pkg.FreeBSD.org/${ABI}/latest",
