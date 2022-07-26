@@ -170,7 +170,7 @@ gogs_task:
   only_if: "changesInclude('gogs.json', '.cirrus/install_script.sh')"
   matrix:
     - freebsd_instance:
-        image_family: freebsd-12-2
+        image_family: freebsd-13-1
   env:
     PLUGIN_FILE: "gogs.json"
 
@@ -215,7 +215,7 @@ homeassistant_task:
   only_if: "changesInclude('homeassistant.json', '.cirrus/install_script.sh')"
   matrix:
     - freebsd_instance:
-        image_family: freebsd-12-2
+        image_family: freebsd-13-1
   env:
     PLUGIN_FILE: "homeassistant.json"
 
@@ -353,7 +353,7 @@ mosquitto_task:
   only_if: "changesInclude('mosquitto.json', '.cirrus/install_script.sh')"
   matrix:
     - freebsd_instance:
-        image_family: freebsd-12-2
+        image_family: freebsd-13-1
   env:
     PLUGIN_FILE: "mosquitto.json"
 
@@ -407,7 +407,7 @@ node-red_task:
   only_if: "changesInclude('node-red.json', '.cirrus/install_script.sh')"
   matrix:
     - freebsd_instance:
-        image_family: freebsd-12-2
+        image_family: freebsd-13-1
   env:
     PLUGIN_FILE: "node-red.json"
 
@@ -562,7 +562,7 @@ tasmoadmin_task:
   only_if: "changesInclude('tasmoadmin.json', '.cirrus/install_script.sh')"
   matrix:
     - freebsd_instance:
-        image_family: freebsd-12-2
+        image_family: freebsd-13-1
   env:
     PLUGIN_FILE: "tasmoadmin.json"
 
@@ -662,6 +662,6 @@ zwavejs2mqtt_task:
   only_if: "changesInclude('zwavejs2mqtt.json', '.cirrus/install_script.sh')"
   matrix:
     - freebsd_instance:
-        image_family: freebsd-12-2
+        image_family: freebsd-13-1
   env:
     PLUGIN_FILE: "zwavejs2mqtt.json"

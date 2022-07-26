@@ -1,6 +1,6 @@
 {
     "name": "node-red",
-    "release": "12.3-RELEASE",
+    "release": "13.1-RELEASE",
     "artifact": "https://github.com/tprelog/iocage-node-red.git",
     "official": false,
     "properties": {
@@ -10,9 +10,8 @@
     "pkgs": [
         "bash",
         "gmake",
-        "node14",
-        "npm-node14",
-        "python27",
+        "node16",
+        "npm-node16",
         "python"
     ],
     "packagesite": "http://pkg.FreeBSD.org/${ABI}/latest",
