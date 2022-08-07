@@ -7,7 +7,7 @@
     },
     "pkgs": [
         "dnsmasq",
-        "python36"
+        "python39"
     ],
     "packagesite": "http://pkg.FreeBSD.org/${ABI}/latest",
     "fingerprints": {
