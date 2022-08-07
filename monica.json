@@ -1,6 +1,6 @@
 {
     "name": "monica",
-    "release": "12.3-RELEASE",
+    "release": "13.1-RELEASE",
     "artifact": "https://github.com/aoyono/iocage-plugin-monica.git",
     "pkgs": [
         "git-lite",
