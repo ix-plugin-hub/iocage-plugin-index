@@ -15,8 +15,8 @@
         "gmake",
         "hash",
         "pkgconf",
-        "python38",
-        "py38-pillow",
+        "python39",
+        "py39-pillow",
         "rust"
     ],
     "packagesite": "http://pkg.FreeBSD.org/${ABI}/latest",
