@@ -3,8 +3,9 @@
     "release": "13.1-RELEASE",
     "artifact": "https://github.com/freenas/iocage-plugin-emby.git",
     "properties": {
+        "allow_mlock": 1,
         "dhcp": 1,
-        "allow_raw_sockets": "1"
+        "allow_raw_sockets": 1,
     },
     "pkgs": [
         "mono",
