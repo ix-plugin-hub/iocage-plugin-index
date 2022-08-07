@@ -1,6 +1,6 @@
 {
     "name": "xmrig",
-    "release": "12.3-RELEASE",
+    "release": "13.1-RELEASE",
     "artifact": "https://github.com/freenas/iocage-plugin-xmrig.git",
     "properties": {
         "nat": 1
