@@ -7,7 +7,7 @@
         "pwgen",
         "apache24",
         "mysql57-server",
-        "redis5",
+        "redis",
         "mod_php74",
         "php74-composer",
         "php74-bcmath",
