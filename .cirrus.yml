@@ -128,15 +128,6 @@ emby-server-stable_task:
   env:
     PLUGIN_FILE: "emby-server-stable.json"
 
-esphome_task:
-  <<: *INSTALL_PLUGIN
-  only_if: "changesInclude('esphome.json', '.cirrus/install_script.sh')"
-  matrix:
-    - freebsd_instance:
-        image_family: freebsd-13-1
-  env:
-    PLUGIN_FILE: "esphome.json"
-
 famp_task:
   <<: *INSTALL_PLUGIN
   only_if: "changesInclude('famp.json', '.cirrus/install_script.sh')"
