@@ -16,10 +16,8 @@
         "php80-exif",
         "php80-filter",
         "php80-gd",
-        "php80-hash",
         "php80-mbstring",
         "php80-mysqli",
-        "php80-json",
         "php80-session",
         "php80-zip",
         "php80-zlib"
