@@ -7,9 +7,9 @@
         "rtorrent",
         "openvpn",
         "git",
-        "python2",
+        "python3",
         "node",
-        "npm"
+        "npm-node18"
     ],
     "properties": {
         "allow_raw_sockets": 1,
