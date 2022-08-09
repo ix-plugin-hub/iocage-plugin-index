@@ -3,11 +3,11 @@
     "release": "13.1-RELEASE",
     "artifact": "https://github.com/rahul-r/iocage-plugin-hoobs.git",
     "pkgs": [
-        "python",
+        "python3",
         "perl5",
         "sudo",
         "node",
-        "npm",
+        "npm-node18",
         "dbus",
         "avahi-libdns",
         "gcc",
