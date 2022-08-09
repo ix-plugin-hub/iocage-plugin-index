@@ -146,14 +146,14 @@ famp_task:
 #  env:
 #    PLUGIN_FILE: "gitea.json"
 
-#gitlab_task:
-#  <<: *INSTALL_PLUGIN
-#  only_if: "changesInclude('gitlab.json', '.cirrus/install_script.sh')"
-#  matrix:
-#    - freebsd_instance:
-#        image_family: freebsd-13-1
-#  env:
-#    PLUGIN_FILE: "gitlab.json"
+gitlab_task:
+  <<: *INSTALL_PLUGIN
+  only_if: "changesInclude('gitlab.json', '.cirrus/install_script.sh')"
+  matrix:
+    - freebsd_instance:
+        image_family: freebsd-13-1
+  env:
+    PLUGIN_FILE: "gitlab.json"
 
 gogs_task:
   <<: *INSTALL_PLUGIN
