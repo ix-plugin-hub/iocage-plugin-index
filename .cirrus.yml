@@ -10,15 +10,15 @@ env:
 install_template: &INSTALL_PLUGIN
   install_script: .cirrus/install_script.sh
 
-#adguardhome_task:
-#  <<: *INSTALL_PLUGIN
-#  only_if: "changesInclude('adguardhome.json', '.cirrus/install_script.sh')"
-#  matrix:
-#    - freebsd_instance:
-#        image_family: freebsd-13-1
-#  env:
-#    PLUGIN_FILE: "adguardhome.json"
-#    ADMIN_UI_USER: "admin:admin"
+adguardhome_task:
+  <<: *INSTALL_PLUGIN
+  only_if: "changesInclude('adguardhome.json', '.cirrus/install_script.sh')"
+  matrix:
+    - freebsd_instance:
+        image_family: freebsd-13-1
+  env:
+    PLUGIN_FILE: "adguardhome.json"
+    ADMIN_UI_USER: "admin:admin"
 
 backuppc_task:
   <<: *INSTALL_PLUGIN
@@ -47,23 +47,23 @@ bind_task:
   env:
     PLUGIN_FILE: "bind.json"
 
-#calibre-web_task:
-#  <<: *INSTALL_PLUGIN
-#  only_if: "changesInclude('calibre-web.json', '.cirrus/install_script.sh')"
-#  matrix:
-#    - freebsd_instance:
-#        image_family: freebsd-13-1
-#  env:
-#    PLUGIN_FILE: "calibre-web.json"
+calibre-web_task:
+  <<: *INSTALL_PLUGIN
+  only_if: "changesInclude('calibre-web.json', '.cirrus/install_script.sh')"
+  matrix:
+    - freebsd_instance:
+        image_family: freebsd-13-1
+  env:
+    PLUGIN_FILE: "calibre-web.json"
 
-#channels-dvr_task:
-#  <<: *INSTALL_PLUGIN
-#  only_if: "changesInclude('channels-dvr.json', '.cirrus/install_script.sh')"
-#  matrix:
-#    - freebsd_instance:
-#        image_family: freebsd-13-1
-#  env:
-#    PLUGIN_FILE: "channels-dvr.json"
+channels-dvr_task:
+  <<: *INSTALL_PLUGIN
+  only_if: "changesInclude('channels-dvr.json', '.cirrus/install_script.sh')"
+  matrix:
+    - freebsd_instance:
+        image_family: freebsd-13-1
+  env:
+    PLUGIN_FILE: "channels-dvr.json"
 
 clamav_task:
   <<: *INSTALL_PLUGIN
@@ -137,14 +137,14 @@ famp_task:
   env:
     PLUGIN_FILE: "famp.json"
 
-#gitea_task:
-#  <<: *INSTALL_PLUGIN
-#  only_if: "changesInclude('gitea.json', '.cirrus/install_script.sh')"
-#  matrix:
-#    - freebsd_instance:
-#        image_family: freebsd-13-1
-#  env:
-#    PLUGIN_FILE: "gitea.json"
+gitea_task:
+  <<: *INSTALL_PLUGIN
+  only_if: "changesInclude('gitea.json', '.cirrus/install_script.sh')"
+  matrix:
+    - freebsd_instance:
+        image_family: freebsd-13-1
+  env:
+    PLUGIN_FILE: "gitea.json"
 
 gitlab_task:
   <<: *INSTALL_PLUGIN
@@ -164,23 +164,23 @@ gogs_task:
   env:
     PLUGIN_FILE: "gogs.json"
 
-#grafana_task:
-#  <<: *INSTALL_PLUGIN
-#  only_if: "changesInclude('grafana.json', '.cirrus/install_script.sh')"
-#  matrix:
-#    - freebsd_instance:
-#        image_family: freebsd-13-1
-#  env:
-#    PLUGIN_FILE: "grafana.json"
+grafana_task:
+  <<: *INSTALL_PLUGIN
+  only_if: "changesInclude('grafana.json', '.cirrus/install_script.sh')"
+  matrix:
+    - freebsd_instance:
+        image_family: freebsd-13-1
+  env:
+    PLUGIN_FILE: "grafana.json"
 
-#graylog_task:
-#  <<: *INSTALL_PLUGIN
-#  only_if: "changesInclude('graylog.json', '.cirrus/install_script.sh')"
-#  matrix:
-#    - freebsd_instance:
-#        image_family: freebsd-13-1
-#  env:
-#    PLUGIN_FILE: "graylog.json"
+graylog_task:
+  <<: *INSTALL_PLUGIN
+  only_if: "changesInclude('graylog.json', '.cirrus/install_script.sh')"
+  matrix:
+    - freebsd_instance:
+        image_family: freebsd-13-1
+  env:
+    PLUGIN_FILE: "graylog.json"
 
 guacamole_task:
   <<: *INSTALL_PLUGIN
@@ -264,25 +264,25 @@ jdownloader_task:
   env:
     PLUGIN_FILE: "jdownloader.json"
 
-#jenkins_task:
-#  <<: *INSTALL_PLUGIN
-#  only_if: "changesInclude('jenkins.json', '.cirrus/install_script.sh')"
-#  matrix:
-#    - freebsd_instance:
-#        image_family: freebsd-13-1
-#  env:
-#    PLUGIN_FILE: "jenkins.json"
-#    OVERRIDE_ADMIN_UI: "http://<IP>:8080/login"
+jenkins_task:
+  <<: *INSTALL_PLUGIN
+  only_if: "changesInclude('jenkins.json', '.cirrus/install_script.sh')"
+  matrix:
+    - freebsd_instance:
+        image_family: freebsd-13-1
+  env:
+    PLUGIN_FILE: "jenkins.json"
+    OVERRIDE_ADMIN_UI: "http://<IP>:8080/login"
 
-#jenkins-lts_task:
-#  <<: *INSTALL_PLUGIN
-#  only_if: "changesInclude('jenkins-lts.json', '.cirrus/install_script.sh')"
-#  matrix:
-#    - freebsd_instance:
-#        image_family: freebsd-13-1
-#  env:
-#    PLUGIN_FILE: "jenkins-lts.json"
-#    OVERRIDE_ADMIN_UI: "http://<IP>:8080/login"
+jenkins-lts_task:
+  <<: *INSTALL_PLUGIN
+  only_if: "changesInclude('jenkins-lts.json', '.cirrus/install_script.sh')"
+  matrix:
+    - freebsd_instance:
+        image_family: freebsd-13-1
+  env:
+    PLUGIN_FILE: "jenkins-lts.json"
+    OVERRIDE_ADMIN_UI: "http://<IP>:8080/login"
 
 lidarr_task:
   <<: *INSTALL_PLUGIN
@@ -293,14 +293,14 @@ lidarr_task:
   env:
     PLUGIN_FILE: "lidarr.json"
 
-#logitechmediaserver_task:
-#  <<: *INSTALL_PLUGIN
-#  only_if: "changesInclude('logitechmediaserver.json', '.cirrus/install_script.sh')"
-#  matrix:
-#    - freebsd_instance:
-#        image_family: freebsd-13-1
-#  env:
-#    PLUGIN_FILE: "logitechmediaserver.json"
+logitechmediaserver_task:
+  <<: *INSTALL_PLUGIN
+  only_if: "changesInclude('logitechmediaserver.json', '.cirrus/install_script.sh')"
+  matrix:
+    - freebsd_instance:
+        image_family: freebsd-13-1
+  env:
+    PLUGIN_FILE: "logitechmediaserver.json"
 
 madsonic_task:
   <<: *INSTALL_PLUGIN
@@ -347,14 +347,14 @@ mosquitto_task:
   env:
     PLUGIN_FILE: "mosquitto.json"
 
-#motioneye_task:
-#  <<: *INSTALL_PLUGIN
-#  only_if: "changesInclude('motioneye.json', '.cirrus/install_script.sh')"
-#  matrix:
-#    - freebsd_instance:
-#        image_family: freebsd-13-1
-#  env:
-#    PLUGIN_FILE: "motioneye.json"
+motioneye_task:
+  <<: *INSTALL_PLUGIN
+  only_if: "changesInclude('motioneye.json', '.cirrus/install_script.sh')"
+  matrix:
+    - freebsd_instance:
+        image_family: freebsd-13-1
+  env:
+    PLUGIN_FILE: "motioneye.json"
 
 movienight_task:
   <<: *INSTALL_PLUGIN
