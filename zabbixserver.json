@@ -1,7 +1,7 @@
 {
     "name": "zabbix server",
-    "release": "12.3-RELEASE",
-    "artifact": "https://github.com/xTITUSMAXIMUSX/iocage-plugin-zabbix5-server.git",
+    "release": "13.1-RELEASE",
+    "artifact": "https://github.com/xTITUSMAXIMUSX/iocage-plugin-zabbix6-server.git",
     "properties": {
         "allow_raw_sockets": "1",
         "boot": "on"

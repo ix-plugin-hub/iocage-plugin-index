@@ -1,13 +1,13 @@
 {
     "name": "monica",
-    "release": "12.3-RELEASE",
+    "release": "13.1-RELEASE",
     "artifact": "https://github.com/aoyono/iocage-plugin-monica.git",
     "pkgs": [
         "git-lite",
         "pwgen",
         "apache24",
         "mysql57-server",
-        "redis5",
+        "redis",
         "mod_php74",
         "php74-composer",
         "php74-bcmath",

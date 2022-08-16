@@ -1,11 +1,11 @@
 {
     "name": "GitLab",
-    "release": "12.3-RELEASE",
+    "release": "13.1-RELEASE",
     "artifact": "https://github.com/pandorixtech/iocage-plugin-gitlab.git",
     "pkgs": [
         "gitlab-ce",
-        "postgresql12-server",
-        "postgresql12-contrib",
+        "postgresql13-server",
+        "postgresql13-contrib",
         "nginx",
         "gtar"
     ],
