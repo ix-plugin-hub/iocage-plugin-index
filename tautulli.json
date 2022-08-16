@@ -1,12 +1,12 @@
 {
     "name": "Tautulli",
-    "release": "12.2-RELEASE",
+    "release": "13.1-RELEASE",
     "artifact": "https://github.com/dropsignal/iocage-plugin-tautulli.git",
     "official": false,
     "pkgs": [
         "lang/python",
-        "py38-sqlite3",
-        "py38-openssl",
+        "py39-sqlite3",
+        "py39-openssl",
         "security/ca_root_nss",
         "git"
     ],

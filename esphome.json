@@ -1,17 +1,23 @@
 {
-    "name": "graylog",
-    "release": "13.1-RELEASE",
-    "artifact": "https://github.com/xTITUSMAXIMUSX/iocage-plugin-graylog.git",
+    "name": "esphome",
+    "release": "12.3-RELEASE",
+    "artifact": "https://github.com/tprelog/iocage-esphome.git",
+    "official": false,
     "properties": {
         "allow_raw_sockets": "1",
-        "boot": "on"
+        "dhcp": "1"
     },
     "pkgs": [
-        "graylog",
-        "elasticsearch6",
-        "mongodb44",
-        "pwgen",
-        "p5-Digest-SHA"
+        "autoconf",
+        "bash",
+        "ca_root_nss",
+        "gcc",
+        "gmake",
+        "hash",
+        "pkgconf",
+        "python38",
+        "py38-pillow",
+        "rust"
     ],
     "packagesite": "http://pkg.FreeBSD.org/${ABI}/latest",
     "fingerprints": {
@@ -22,5 +28,5 @@
             }
         ]
     },
-    "official": false
+    "revision": 0
 }
