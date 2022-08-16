@@ -1,15 +1,15 @@
 {
     "name": "rtorrent-flood",
-    "release": "12.3-RELEASE",
+    "release": "13.1-RELEASE",
     "artifact": "https://github.com/pierrickrouxel/iocage-plugin-rtorrent-flood.git",
     "pkgs": [
         "tmux",
         "rtorrent",
         "openvpn",
         "git",
-        "python2",
+        "python3",
         "node",
-        "npm"
+        "npm-node18"
     ],
     "properties": {
         "allow_raw_sockets": 1,

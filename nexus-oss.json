@@ -1,6 +1,6 @@
 {
     "name": "nexus-oss",
-    "release": "12.3-RELEASE",
+    "release": "13.1-RELEASE",
     "artifact": "https://github.com/rebasing-xyz/iocage-nexus-oss.git",
     "official": false,
     "properties": {

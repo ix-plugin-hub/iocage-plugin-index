@@ -1,6 +1,6 @@
 {
     "name": "deluge-pip",
-    "release": "12.3-RELEASE",
+    "release": "13.1-RELEASE",
     "artifact": "https://github.com/jsegaert/iocage-plugin-deluge-pip.git",
     "properties": {
         "nat": "1",
@@ -8,10 +8,10 @@
     },
     "pkgs": [
         "ca_root_nss",
-        "python38",
-        "py38-pip",
-        "py38-pillow",
-        "py38-libtorrent-rasterbar",
+        "python39",
+        "py39-pip",
+        "py39-pillow",
+        "py39-libtorrent-rasterbar",
         "rust"
     ],
     "packagesite": "http://pkg.FreeBSD.org/${ABI}/latest",
