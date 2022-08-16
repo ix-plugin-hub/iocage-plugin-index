@@ -20,6 +20,16 @@ adguardhome_task:
     PLUGIN_FILE: "adguardhome.json"
     ADMIN_UI_USER: "admin:admin"
 
+amule_task:
+  <<: *INSTALL_PLUGIN
+  only_if: "changesInclude('amule.json', '.cirrus/install_script.sh')"
+  matrix:
+    - freebsd_instance:
+        image_family: freebsd-12-3
+  env:
+    PLUGIN_FILE: "amule.json"
+    SKIP_SERVICE_CHECK: "true"
+
 backuppc_task:
   <<: *INSTALL_PLUGIN
   only_if: "changesInclude('backuppc.json', '.cirrus/install_script.sh')"
@@ -127,15 +137,6 @@ emby-server-stable_task:
         image_family: freebsd-12-2
   env:
     PLUGIN_FILE: "emby-server-stable.json"
-
-esphome_task:
-  <<: *INSTALL_PLUGIN
-  only_if: "changesInclude('esphome.json', '.cirrus/install_script.sh')"
-  matrix:
-    - freebsd_instance:
-        image_family: freebsd-12-2
-  env:
-    PLUGIN_FILE: "esphome.json"
 
 famp_task:
   <<: *INSTALL_PLUGIN
@@ -334,7 +335,7 @@ mineos_task:
   only_if: "changesInclude('mineos.json', '.cirrus/install_script.sh')"
   matrix:
     - freebsd_instance:
-        image_family: freebsd-12-2
+        image_family: freebsd-12-3
   env:
     PLUGIN_FILE: "mineos.json"
 
