@@ -1,11 +1,11 @@
 {
     "name": "Emby Server Beta",
     "release": "13.1-RELEASE",
-    "artifact": "https://github.com/LukePulverenti/iocage-plugin-emby.git",
+    "artifact": "https://github.com/freenas/iocage-plugin-emby.git",
     "official": false,
     "properties": {
-        "nat": 1,
-        "nat_forwards": "tcp(8096:8096),tcp(8920:8920)",
+        "dhcp": 1,
+        "allow_raw_sockets": "1",
         "allow_mlock": 1,
         "ip6": "inherit"
     },
