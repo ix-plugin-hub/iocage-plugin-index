@@ -1,12 +1,13 @@
 {
     "name": "Sonarr",
-    "release": "12.2-RELEASE",
+    "release": "13.1-RELEASE",
     "artifact": "https://github.com/freenas/iocage-plugin-sonarr.git",
     "official": false,
     "pkgs": [
         "sonarr"
     ],
     "properties": {
+        "allow_mlock": 1,
         "allow_sysvipc": 1,
         "nat": 1,
         "nat_forwards": "tcp(8989:8989)"

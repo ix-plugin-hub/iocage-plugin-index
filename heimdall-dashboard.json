@@ -1,12 +1,12 @@
 {
     "name": "heimdall-dashboard",
-    "release": "12.2-RELEASE",
+    "release": "13.1-RELEASE",
     "artifact": "https://github.com/jsegaert/iocage-plugin-heimdall.git",
     "properties": {
         "dhcp": "1"
     },
     "pkgs": [
-        "git-tiny",
+        "git-lite",
         "nginx",
         "php80",
         "php80-ctype",

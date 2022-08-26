@@ -1,6 +1,6 @@
 {
     "name": "mosquitto",
-    "release": "12.2-RELEASE",
+    "release": "13.1-RELEASE",
     "artifact": "https://github.com/tprelog/iocage-mosquitto.git",
     "official": false,
     "properties": {
