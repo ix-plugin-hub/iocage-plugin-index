@@ -1,6 +1,6 @@
 {
     "name": "netdata",
-    "release": "12.2-RELEASE",
+    "release": "13.1-RELEASE",
     "artifact": "https://github.com/kmoore134/iocage-netdata.git",
     "official": false,
     "properties": {

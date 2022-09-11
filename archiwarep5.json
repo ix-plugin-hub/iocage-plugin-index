@@ -1,5 +1,5 @@
 {
-    "artifact": "https://github.com/IgorC-test/iocage-plugin-archiware-p5.git",
+    "artifact": "https://github.com/IgorC-test/iocage-plugin-archiware-p5-truenas13.git",
     "devfs_ruleset": {
         "includes": [],
         "paths": {
@@ -42,5 +42,5 @@
         "securelevel": "0",
         "enforce_statfs": "0"
     },
-    "release": "12.3-RELEASE"
+    "release": "13.1-RELEASE"
 }

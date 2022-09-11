@@ -1,6 +1,6 @@
 {
     "name": "unificontroller",
-    "release": "12.2-RELEASE",
+    "release": "13.1-RELEASE",
     "artifact": "https://github.com/lbalker/iocage-plugin-unificontroller.git",
     "properties": {
         "nat": 1,
@@ -9,7 +9,7 @@
     "pkgs": [
         "unifi7"
     ],
-    "packagesite": "https://pkg.FreeBSD.org/${ABI}/latest",
+    "packagesite": "http://pkg.FreeBSD.org/${ABI}/latest",
     "fingerprints": {
         "iocage-plugins": [
             {

@@ -4,6 +4,7 @@
     "artifact": "https://github.com/freenas/iocage-plugin-emby.git",
     "official": false,
     "properties": {
+        "allow_mlock": 1,
         "dhcp": 1,
         "allow_raw_sockets": "1",
         "allow_mlock": 1,
