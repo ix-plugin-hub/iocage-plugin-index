@@ -210,15 +210,6 @@ heimdall-dashboard_task:
   env:
     PLUGIN_FILE: "heimdall-dashboard.json"
 
-homeassistant_task:
-  <<: *INSTALL_PLUGIN
-  only_if: "changesInclude('homeassistant.json', '.cirrus/install_script.sh')"
-  matrix:
-    - freebsd_instance:
-        image_family: freebsd-13-1
-  env:
-    PLUGIN_FILE: "homeassistant.json"
-
 homebridge_task:
   <<: *INSTALL_PLUGIN
   only_if: "changesInclude('homebridge.json', '.cirrus/install_script.sh')"

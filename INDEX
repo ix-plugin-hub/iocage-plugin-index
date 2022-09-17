@@ -198,16 +198,6 @@
 		"official": false,
 		"primary_pkg": null
 	},
-	"homeassistant": {
-		"MANIFEST": "homeassistant.json",
-		"description": "Open source home automation that puts local control and privacy first.",
-		"icon": "https://icons.freenas.org/community-icons/homeassistant.png",
-		"name": "Home Assistant Core",
-		"primary_pkg": null,
-		"official": false,
-		"category": "home-automation",
-		"homepage": "https://www.home-assistant.io/"
-	},
 	"homebridge": {
 		"MANIFEST": "homebridge.json",
 		"description": "Lightweight iOS HomeKit API emulator. Enables adding unsupported devices to HomeKit.",
