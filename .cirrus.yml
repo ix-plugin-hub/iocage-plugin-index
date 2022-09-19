@@ -512,6 +512,16 @@ redis_task:
   env:
     PLUGIN_FILE: "redis.json"
 
+readarr_task:
+  <<: *INSTALL_PLUGIN
+  only_if: "changesInclude('readarr.json', '.cirrus/install_script.sh')"
+  matrix:
+    - freebsd_instance:
+        image_family: freebsd-13-1
+  env:
+    PLUGIN_FILE: "readarr.json"
+
+
 rslsync_task:
   <<: *INSTALL_PLUGIN
   only_if: "changesInclude('rslsync.json', '.cirrus/install_script.sh')"

@@ -493,6 +493,16 @@
 		"category": "content",
 		"homepage": "https://redis.io/"
 	},
+	"readarr": {
+		"MANIFEST": "readarr.json",
+		"name": "readarr",
+		"icon": "https://icons.freenas.org/community-icons/readarr.png",
+		"description": "Sonarr for Ebooks. Automatically download books in the style of Couchpotato.",
+		"official": false,
+		"primary_pkg": "readarr",
+		"category": "content",
+		"homepage": "https://readarr.com"
+	},
 	"rslsync": {
 		"MANIFEST": "rslsync.json",
 		"name": "rslsync",
