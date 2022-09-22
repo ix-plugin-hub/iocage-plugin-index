@@ -625,7 +625,7 @@
 		"icon": "https://icons.freenas.org/community-icons/zabbix.png",
 		"description": "Zabbix is an open-source monitoring software tool for diverse IT components, including networks, servers, virtual machines (VMs) and cloud services",
 		"official": false,
-		"primary_pkg": "zabbix5-server",
+		"primary_pkg": "zabbix6-server",
 		"category": "management",
 		"homepage": "https://www.zabbix.com/"
 	},
