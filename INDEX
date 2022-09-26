@@ -198,16 +198,6 @@
 		"official": false,
 		"primary_pkg": null
 	},
-	"homeassistant": {
-		"MANIFEST": "homeassistant.json",
-		"description": "Open source home automation that puts local control and privacy first.",
-		"icon": "https://icons.freenas.org/community-icons/homeassistant.png",
-		"name": "Home Assistant Core",
-		"primary_pkg": null,
-		"official": false,
-		"category": "home-automation",
-		"homepage": "https://www.home-assistant.io/"
-	},
 	"homebridge": {
 		"MANIFEST": "homebridge.json",
 		"description": "Lightweight iOS HomeKit API emulator. Enables adding unsupported devices to HomeKit.",
@@ -646,15 +636,5 @@
 		"name": "zrepl",
 		"official": false,
 		"primary_pkg": "zrepl"
-	},
-	"zwavejs2mqtt": {
-		"MANIFEST": "zwavejs2mqtt.json",
-		"name": "Z-Wave JS to MQTT",
-		"description": "Fully configurable Zwave to MQTT gateway and Control Panel using NodeJS and Vue. This also includes the Z-Wave JS Server!",
-		"icon": "https://icons.freenas.org/community-icons/zwavejs2mqtt.png",
-		"primary_pkg": null,
-		"official": false,
-		"category": "home-automation",
-		"homepage": "https://zwave-js.github.io/zwavejs2mqtt/#/"
 	}
 }
