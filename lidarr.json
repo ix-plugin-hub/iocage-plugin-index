@@ -19,6 +19,5 @@
         "nat": 1,
         "nat_forwards": "tcp(8686:8686)"
     },
-
     "release": "13.1-RELEASE"
 }
