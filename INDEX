@@ -114,21 +114,23 @@
 	},
 	"emby": {
 		"MANIFEST": "emby.json",
-		"name": "Emby",
+		"name": "Emby Server - Beta",
 		"icon": "https://icons.freenas.org/community-icons/emby.png",
-		"description": "Home media server to organize, play, and stream audio and video to a variety of devices.",
+		"description": "Beta branch of Emby, the home media server to organize, play, and stream audio and video to a variety of devices!",
 		"official": false,
-		"primary_pkg": "emby-server",
+		"primary_pkg": "emby-server-devel",
 		"category": "entertainment",
 		"homepage": "https://emby.media/"
 	},
 	"emby-server-stable": {
 		"MANIFEST": "emby-server-stable.json",
-		"name": "Emby Server",
+		"name": "Emby Server - Stable",
 		"icon": "https://icons.freenas.org/community-icons/emby-server-png-128.png",
-		"primary_pkg": null,
-		"description": "Emby brings together your personal videos, music, photos, and live television",
-		"official": false
+		"primary_pkg": "emby-server",
+		"description": "Stable branch of Emby, which brings together your personal videos, music, photos, and live television!",
+		"official": false,
+		"category": "entertainment",
+		"homepage": "https://emby.media/"
 	},
 	"famp": {
 		"MANIFEST": "famp.json",
