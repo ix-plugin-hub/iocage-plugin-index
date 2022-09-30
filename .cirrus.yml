@@ -147,6 +147,15 @@ famp_task:
   env:
     PLUGIN_FILE: "famp.json"
 
+flaresolverr_task:
+  <<: *INSTALL_PLUGIN
+  only_if: "changesInclude('flaresolverr.json', '.cirrus/install_script.sh')"
+  matrix:
+    - freebsd_instance:
+        image_family: freebsd-13-1
+  env:
+    PLUGIN_FILE: "flaresolverr.json"
+
 gitea_task:
   <<: *INSTALL_PLUGIN
   only_if: "changesInclude('gitea.json', '.cirrus/install_script.sh')"
