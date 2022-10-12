@@ -1,0 +1,20 @@
+{
+    "artifact": "https://github.com/pigfrown/iocage-plugin-flaresolverr.git",
+    "fingerprints": {
+        "iocage-plugins": [
+            {
+                "fingerprint": "b0170035af3acc5f3f3ae1859dc717101b4e6c1d0a794ad554928ca0cbb2f438",
+                "function": "sha256"
+            }
+        ]
+    },
+    "name": "FlareSolverr",
+    "official": false,
+    "packagesite": "http://pkg.FreeBSD.org/${ABI}/latest",
+    "pkgs": [
+        "git",
+	"chromium",
+	"npm-node16"
+    ],
+    "release": "13.1-RELEASE"
+}

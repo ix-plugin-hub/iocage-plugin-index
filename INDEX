@@ -140,6 +140,14 @@
 		"official": false,
 		"primary_pkg": null
 	},
+	"FlareSolverr": {
+		"MANIFEST": "flaresolverr.json",
+		"description": "FlareSolverr is a proxy server to bypass Cloudflare and DDoS-GUARD protection", 
+		"icon": "https://icons.freenas.org/community-icons/flaresolverr.png",
+		"name": "FlareSolverr",
+		"official": false,
+		"primary_pkg": null
+	},
 	"gitea": {
 		"MANIFEST": "gitea.json",
 		"name": "Gitea",
