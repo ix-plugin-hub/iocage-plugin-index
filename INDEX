@@ -114,27 +114,37 @@
 	},
 	"emby": {
 		"MANIFEST": "emby.json",
-		"name": "Emby",
+		"name": "Emby Server - Beta",
 		"icon": "https://icons.freenas.org/community-icons/emby.png",
-		"description": "Home media server to organize, play, and stream audio and video to a variety of devices.",
+		"description": "Beta branch of Emby, the home media server to organize, play, and stream audio and video to a variety of devices!",
 		"official": false,
-		"primary_pkg": "emby-server",
+		"primary_pkg": "emby-server-devel",
 		"category": "entertainment",
 		"homepage": "https://emby.media/"
 	},
 	"emby-server-stable": {
 		"MANIFEST": "emby-server-stable.json",
-		"name": "Emby Server",
+		"name": "Emby Server - Stable",
 		"icon": "https://icons.freenas.org/community-icons/emby-server-png-128.png",
-		"primary_pkg": null,
-		"description": "Emby brings together your personal videos, music, photos, and live television",
-		"official": false
+		"primary_pkg": "emby-server",
+		"description": "Stable branch of Emby, which brings together your personal videos, music, photos, and live television!",
+		"official": false,
+		"category": "entertainment",
+		"homepage": "https://emby.media/"
 	},
 	"famp": {
 		"MANIFEST": "famp.json",
 		"description": "FAMP (FreeBSD, Apache, MySQL and PHP) web server",
 		"icon": "https://icons.freenas.org/community-icons/famp.png",
 		"name": "FAMP",
+		"official": false,
+		"primary_pkg": null
+	},
+	"FlareSolverr": {
+		"MANIFEST": "flaresolverr.json",
+		"description": "FlareSolverr is a proxy server to bypass Cloudflare and DDoS-GUARD protection", 
+		"icon": "https://icons.freenas.org/community-icons/flaresolverr.png",
+		"name": "FlareSolverr",
 		"official": false,
 		"primary_pkg": null
 	},
@@ -197,16 +207,6 @@
 		"name": "Heimdall",
 		"official": false,
 		"primary_pkg": null
-	},
-	"homeassistant": {
-		"MANIFEST": "homeassistant.json",
-		"description": "Open source home automation that puts local control and privacy first.",
-		"icon": "https://icons.freenas.org/community-icons/homeassistant.png",
-		"name": "Home Assistant Core",
-		"primary_pkg": null,
-		"official": false,
-		"category": "home-automation",
-		"homepage": "https://www.home-assistant.io/"
 	},
 	"homebridge": {
 		"MANIFEST": "homebridge.json",
@@ -493,6 +493,16 @@
 		"category": "content",
 		"homepage": "https://redis.io/"
 	},
+	"readarr": {
+		"MANIFEST": "readarr.json",
+		"name": "readarr",
+		"icon": "https://icons.freenas.org/community-icons/readarr.png",
+		"description": "Sonarr for Ebooks. Automatically download books in the style of Couchpotato.",
+		"official": false,
+		"primary_pkg": "readarr",
+		"category": "content",
+		"homepage": "https://readarr.com"
+	},
 	"rslsync": {
 		"MANIFEST": "rslsync.json",
 		"name": "rslsync",
@@ -646,15 +656,5 @@
 		"name": "zrepl",
 		"official": false,
 		"primary_pkg": "zrepl"
-	},
-	"zwavejs2mqtt": {
-		"MANIFEST": "zwavejs2mqtt.json",
-		"name": "Z-Wave JS to MQTT",
-		"description": "Fully configurable Zwave to MQTT gateway and Control Panel using NodeJS and Vue. This also includes the Z-Wave JS Server!",
-		"icon": "https://icons.freenas.org/community-icons/zwavejs2mqtt.png",
-		"primary_pkg": null,
-		"official": false,
-		"category": "home-automation",
-		"homepage": "https://zwave-js.github.io/zwavejs2mqtt/#/"
 	}
 }
