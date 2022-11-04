@@ -12,9 +12,11 @@
         "nginx",
         "php80",
         "php80-curl",
+        "php80-dom",
         "php80-filter",
         "php80-mbstring",
         "php80-session",
+        "php80-xml",
         "php80-zip"
     ],
     "packagesite": "http://pkg.FreeBSD.org/${ABI}/latest",
