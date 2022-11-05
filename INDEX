@@ -431,6 +431,15 @@
 		"official": false,
 		"primary_pkg": null
 	},
+	"paperless-ngx": {
+		"MANIFEST": "paperless-ngx.json",
+		"description": "Paperless-ngx is a document management system that transforms your physical documents into a searchable online archive.",
+		"icon": "https://icons.freenas.org/community-icons/paperless-ngx.png",
+		"name": "Paperless-ngx",
+		"official": false,
+		"primary_pkg": null,
+		"homepage": "https://paperless-ngx.readthedocs.io/en/latest/index.html"
+	},
 	"piwigo": {
 		"MANIFEST": "piwigo.json",
 		"description": "Piwigo is open source photo gallery software for the web. Designed for organisations, teams and individuals.",
