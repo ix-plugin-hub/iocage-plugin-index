@@ -10,8 +10,7 @@
 		"x265",
 		"node",
 		"npm",
-		"mysql57-server",
-		"mysql57-client"
+		"mariadb105-server-10.5.17_1"
 	],
 	"packagesite": "http://pkg.FreeBSD.org/${ABI}/latest",
 	"fingerprints": {
