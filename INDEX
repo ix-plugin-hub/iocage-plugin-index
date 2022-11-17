@@ -615,7 +615,7 @@
 	"shinobi": {
         "MANIFEST": "shinobi.json",
         "name": "Shinobi",
-        "icon": "https://www.trueos.org/iocage-icons/shinobi.png",
+        "icon": "https://icons.freenas.org/community-icons/shinobi.png",
         "description": "Shinobi is Open Source, written in Node.js, and real easy to use. It is the future of CCTV and NVR for developers and end-users alike. It is catered to by professionals and most importantly by the one who created it.",
         "official": false,
         "primary_pkg": null,
