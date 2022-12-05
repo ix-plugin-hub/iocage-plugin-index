@@ -42,5 +42,6 @@
         "securelevel": "0",
         "enforce_statfs": "0"
     },
-    "release": "12.3-RELEASE"
+    "release": "12.3-RELEASE",
+    "revision": 0
 }
