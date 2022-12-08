@@ -164,16 +164,6 @@
 		"official": false,
 		"primary_pkg": "gitlab-ce"
 	},
-	"gogs": {
-		"MANIFEST": "gogs.json",
-		"description": "A painless self-hosted Git service.",
-		"icon": "https://icons.freenas.org/community-icons/gogs.png",
-		"name": "Gogs",
-		"official": false,
-		"primary_pkg": "gogs",
-		"category": "development",
-		"homepage": "https://gogs.io/"
-	},
 	"grafana": {
 		"MANIFEST": "grafana.json",
 		"description": "Grafana allows you to query, visualize, alert on and understand your metrics no matter where they are stored. Create, explore, and share dashboards with your team and foster a data driven culture.",
@@ -321,16 +311,6 @@
 		"primary_pkg": null,
 		"homepage": "https://www.monicahq.com"
 	},
-	"mosquitto": {
-		"MANIFEST": "mosquitto.json",
-		"description": "An open source MQTT broker.",
-		"icon": "https://icons.freenas.org/community-icons/mosquitto.png",
-		"name": "Mosquitto MQTT",
-		"official": false,
-		"primary_pkg": "mosquitto",
-		"category": "home-automation",
-		"homepage": "https://mosquitto.org/"
-	},
 	"motioneye": {
 		"MANIFEST": "motioneye.json",
 		"description": "motionEye is a web frontend for the motion daemon, written in Python.",
@@ -387,16 +367,6 @@
         	"official": false,
         	"primary_pkg": null
     	},
-	"node-red": {
-		"MANIFEST": "node-red.json",
-		"description": "Node-RED is a programming tool for wiring together hardware devices, APIs and online services in new and interesting ways.",
-		"icon": "https://icons.freenas.org/community-icons/node-red.png",
-		"primary_pkg": null,
-		"name": "Node-RED",
-		"official": false,
-		"category": "home-automation",
-		"homepage": "https://nodered.org/"
-	},
 	"nxfilter": {
 		"MANIFEST": "nxfilter.json",
 		"description": "NxFilter is a light-weight DNS filter.",
@@ -546,16 +516,6 @@
 		"primary_pkg": "sonarr",
 		"category": "content",
 		"homepage": "https://sonarr.tv/"
-	},
-	"tasmoadmin": {
-		"MANIFEST": "tasmoadmin.json",
-		"description": "Website to manage devices flashed with Tasmota.",
-		"icon": "https://icons.freenas.org/community-icons/tasmoadmin.png",
-		"name": "TasmoAdmin",
-		"primary_pkg": null,
-		"official": false,
-		"category": "home-automation",
-		"homepage": "https://github.com/reloxx13/TasmoAdmin#readme"
 	},
 	"tautulli": {
 		"MANIFEST": "tautulli.json",
