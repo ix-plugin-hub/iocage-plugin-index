@@ -358,15 +358,15 @@
 		"name": "Netdata",
 		"official": false
 	},
-    	"nexus-oss": {
-        	"MANIFEST": "nexus-oss.json",
-        	"name": "NexusOSS",
-        	"icon": "https://icons.freenas.org/community-icons/nexus-oss.png",
-        	"description": "Nexus OSS Repository Manager",
-        	"maintainer": "Filippe Spolti <filippespolti@gmail.com>",
-        	"official": false,
-        	"primary_pkg": null
-    	},
+	"nexus-oss": {
+		"MANIFEST": "nexus-oss.json",
+		"name": "NexusOSS",
+		"icon": "https://icons.freenas.org/community-icons/nexus-oss.png",
+		"description": "Nexus OSS Repository Manager",
+		"maintainer": "Filippe Spolti <filippespolti@gmail.com>",
+		"official": false,
+		"primary_pkg": null
+	},
 	"nxfilter": {
 		"MANIFEST": "nxfilter.json",
 		"description": "NxFilter is a light-weight DNS filter.",
