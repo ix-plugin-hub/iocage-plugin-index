@@ -174,15 +174,6 @@ gitlab_task:
   env:
     PLUGIN_FILE: "gitlab.json"
 
-gogs_task:
-  <<: *INSTALL_PLUGIN
-  only_if: "changesInclude('gogs.json', '.cirrus/install_script.sh')"
-  matrix:
-    - freebsd_instance:
-        image_family: freebsd-13-1
-  env:
-    PLUGIN_FILE: "gogs.json"
-
 grafana_task:
   <<: *INSTALL_PLUGIN
   only_if: "changesInclude('grafana.json', '.cirrus/install_script.sh')"
@@ -348,15 +339,6 @@ monica_task:
   env:
     PLUGIN_FILE: "monica.json"
 
-mosquitto_task:
-  <<: *INSTALL_PLUGIN
-  only_if: "changesInclude('mosquitto.json', '.cirrus/install_script.sh')"
-  matrix:
-    - freebsd_instance:
-        image_family: freebsd-13-1
-  env:
-    PLUGIN_FILE: "mosquitto.json"
-
 motioneye_task:
   <<: *INSTALL_PLUGIN
   only_if: "changesInclude('motioneye.json', '.cirrus/install_script.sh')"
@@ -401,15 +383,6 @@ nexus_task:
         image_family: freebsd-12-2
   env:
     PLUGIN_FILE: "nexus-oss.json"
-
-node-red_task:
-  <<: *INSTALL_PLUGIN
-  only_if: "changesInclude('node-red.json', '.cirrus/install_script.sh')"
-  matrix:
-    - freebsd_instance:
-        image_family: freebsd-13-1
-  env:
-    PLUGIN_FILE: "node-red.json"
 
 nxfilter_task:
   <<: *INSTALL_PLUGIN
@@ -566,15 +539,6 @@ sonarr_task:
         image_family: freebsd-12-2
   env:
     PLUGIN_FILE: "sonarr.json"
-
-tasmoadmin_task:
-  <<: *INSTALL_PLUGIN
-  only_if: "changesInclude('tasmoadmin.json', '.cirrus/install_script.sh')"
-  matrix:
-    - freebsd_instance:
-        image_family: freebsd-13-1
-  env:
-    PLUGIN_FILE: "tasmoadmin.json"
 
 tautulli_task:
   <<: *INSTALL_PLUGIN
