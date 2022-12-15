@@ -89,7 +89,7 @@ deluge-pip_task:
   only_if: "changesInclude('deluge-pip.json', '.cirrus/install_script.sh')"
   matrix:
     - freebsd_instance:
-        image_family: freebsd-12-2
+        image_family: freebsd-13-1
   env:
     PLUGIN_FILE: "deluge-pip.json"
 

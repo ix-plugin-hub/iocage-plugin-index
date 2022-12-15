@@ -5,6 +5,7 @@
     "pkgs": [
         "grafana8",
         "influxdb",
+        "collectd5",
         "curl"
     ],
     "properties": {
