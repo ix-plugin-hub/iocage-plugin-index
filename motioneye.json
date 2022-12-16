@@ -9,12 +9,14 @@
         "nat_forwards": "tcp(8765:8765)"
     },
     "pkgs": [
-        "python27",
+        "curl",
+        "python3",
+        "python311",
+        "gcc",
         "motion",
         "ffmpeg",
         "v4l-utils",
-        "jpeg-turbo",
-        "curl"
+        "jpeg-turbo"
     ],
     "packagesite": "http://pkg.FreeBSD.org/${ABI}/latest",
     "fingerprints": {
