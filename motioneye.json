@@ -12,7 +12,7 @@
     "pkgs": [
         "curl",
         "python3",
-        "python311",
+        "python39",
         "gcc",
         "motion",
         "ffmpeg",
