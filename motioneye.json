@@ -10,6 +10,7 @@
         "nat_forwards": "tcp(8765:8765)"
     },
     "pkgs": [
+        "bash",
         "curl",
         "python3",
         "python39",
