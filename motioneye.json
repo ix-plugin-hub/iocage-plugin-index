@@ -2,8 +2,7 @@
     "name": "motioneye",
     "plugin_schema": "2",
     "release": "13.1-RELEASE",
-    "branch": "python3",
-    "artifact": "https://github.com/Baenwort/iocage-plugin-motioneye.git",
+    "artifact": "https://github.com/Baenwort/iocage-plugin-motioneye-python3.git",
     "official": false,
     "properties": {
         "nat": 1,
