@@ -2,19 +2,22 @@
     "name": "motioneye",
     "plugin_schema": "2",
     "release": "13.1-RELEASE",
-    "artifact": "https://github.com/Baenwort/iocage-plugin-motioneye.git",
+    "artifact": "https://github.com/Baenwort/iocage-plugin-motioneye-python3.git",
     "official": false,
     "properties": {
         "nat": 1,
         "nat_forwards": "tcp(8765:8765)"
     },
     "pkgs": [
-        "python27",
+        "bash",
+        "curl",
+        "python3",
+        "python39",
+        "gcc",
         "motion",
         "ffmpeg",
         "v4l-utils",
-        "jpeg-turbo",
-        "curl"
+        "jpeg-turbo"
     ],
     "packagesite": "http://pkg.FreeBSD.org/${ABI}/latest",
     "fingerprints": {
@@ -25,5 +28,5 @@
             }
         ]
     },
-    "revision": 2
+    "revision": 3
 }
