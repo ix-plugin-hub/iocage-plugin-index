@@ -467,6 +467,15 @@ quasselcore_task:
     PLUGIN_FILE: "quasselcore.json"
     SKIP_UI_CHECK: "true"
 
+rabbitmq_task:
+  <<: *INSTALL_PLUGIN
+  only_if: "changesInclude('rabbitmq.json', '.cirrus/install_script.sh')"
+  matrix:
+    - freebsd_instance:
+        image_family: freebsd-13-1
+  env:
+    PLUGIN_FILE: "rabbitmq.json"
+
 radarr_task:
   <<: *INSTALL_PLUGIN
   only_if: "changesInclude('radarr.json', '.cirrus/install_script.sh')"
