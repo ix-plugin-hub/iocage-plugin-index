@@ -443,6 +443,16 @@
 		"official": false,
 		"primary_pkg": "quassel-core"
 	},
+	"rabbitmq": {
+		"MANIFEST": "rabbitmq.json",
+		"name": "rabbitmq",
+		"icon": "https://icons.freenas.org/community-icons/rabbitmq.png",
+		"description": "RabbitMQ is a popular open source message broker.",
+		"official": false,
+		"primary_pkg": "rabbitmq",
+		"category": "content",
+		"homepage": "https://rabbitmq.com/"
+	},
 	"radarr": {
 		"MANIFEST": "radarr.json",
 		"name": "radarr",
