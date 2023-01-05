@@ -6,7 +6,8 @@
         "rabbitmq"
     ],
     "properties": {
-        "dhcp": 1
+        "nat": 1,
+        "nat_forwards": "tcp(5672:5672),tcp(15672:15672)"
     },
     "packagesite": "http://pkg.FreeBSD.org/${ABI}/latest",
     "fingerprints": {
