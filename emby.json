@@ -1,16 +1,39 @@
 {
-    "name": "Emby",
+    "name": "Emby Server Beta",
     "release": "13.1-RELEASE",
     "artifact": "https://github.com/freenas/iocage-plugin-emby.git",
     "official": false,
     "properties": {
+        "dhcp": 1,
+        "allow_raw_sockets": "1",
         "allow_mlock": 1,
-        "nat": 1,
-        "nat_forwards": "tcp(8096:8096),tcp(8920:8920)"
+        "ip6": "inherit"
     },
     "pkgs": [
-        "emby-server",
-        "ffmpeg"
+        "libass", 
+        "fontconfig",
+        "freetype2",
+        "fribidi",
+        "gnutls",
+        "iconv",
+        "opus",
+        "sqlite3",
+        "libtheora",
+        "libva",
+        "ocl-icd",
+        "libvorbis",
+        "webp",
+        "libzvbi",
+        "libraw",
+        "ImageMagick6",
+        "intel-media-sdk",
+        "libunwind",
+        "libinotify",
+        "openssl",
+        "icu",
+        "krb5",
+        "tesseract",
+        "emby-server-devel"
     ],
     "packagesite": "http://pkg.FreeBSD.org/${ABI}/latest",
     "fingerprints": {
@@ -21,5 +44,5 @@
             }
         ]
     },
-    "revision": 1
+    "revision": 2
 }

@@ -114,27 +114,37 @@
 	},
 	"emby": {
 		"MANIFEST": "emby.json",
-		"name": "Emby",
+		"name": "Emby Server - Beta",
 		"icon": "https://icons.freenas.org/community-icons/emby.png",
-		"description": "Home media server to organize, play, and stream audio and video to a variety of devices.",
+		"description": "Beta branch of Emby, the home media server to organize, play, and stream audio and video to a variety of devices!",
 		"official": false,
-		"primary_pkg": "emby-server",
+		"primary_pkg": "emby-server-devel",
 		"category": "entertainment",
 		"homepage": "https://emby.media/"
 	},
 	"emby-server-stable": {
 		"MANIFEST": "emby-server-stable.json",
-		"name": "Emby Server",
+		"name": "Emby Server - Stable",
 		"icon": "https://icons.freenas.org/community-icons/emby-server-png-128.png",
-		"primary_pkg": null,
-		"description": "Emby brings together your personal videos, music, photos, and live television",
-		"official": false
+		"primary_pkg": "emby-server",
+		"description": "Stable branch of Emby, which brings together your personal videos, music, photos, and live television!",
+		"official": false,
+		"category": "entertainment",
+		"homepage": "https://emby.media/"
 	},
 	"famp": {
 		"MANIFEST": "famp.json",
 		"description": "FAMP (FreeBSD, Apache, MySQL and PHP) web server",
 		"icon": "https://icons.freenas.org/community-icons/famp.png",
 		"name": "FAMP",
+		"official": false,
+		"primary_pkg": null
+	},
+	"FlareSolverr": {
+		"MANIFEST": "flaresolverr.json",
+		"description": "FlareSolverr is a proxy server to bypass Cloudflare and DDoS-GUARD protection", 
+		"icon": "https://icons.freenas.org/community-icons/flaresolverr.png",
+		"name": "FlareSolverr",
 		"official": false,
 		"primary_pkg": null
 	},
@@ -153,16 +163,6 @@
 		"description": "Gitlab CE - Git and CI platform to manage development projects",
 		"official": false,
 		"primary_pkg": "gitlab-ce"
-	},
-	"gogs": {
-		"MANIFEST": "gogs.json",
-		"description": "A painless self-hosted Git service.",
-		"icon": "https://icons.freenas.org/community-icons/gogs.png",
-		"name": "Gogs",
-		"official": false,
-		"primary_pkg": "gogs",
-		"category": "development",
-		"homepage": "https://gogs.io/"
 	},
 	"grafana": {
 		"MANIFEST": "grafana.json",
@@ -197,16 +197,6 @@
 		"name": "Heimdall",
 		"official": false,
 		"primary_pkg": null
-	},
-	"homeassistant": {
-		"MANIFEST": "homeassistant.json",
-		"description": "Open source home automation that puts local control and privacy first.",
-		"icon": "https://icons.freenas.org/community-icons/homeassistant.png",
-		"name": "Home Assistant Core",
-		"primary_pkg": null,
-		"official": false,
-		"category": "home-automation",
-		"homepage": "https://www.home-assistant.io/"
 	},
 	"homebridge": {
 		"MANIFEST": "homebridge.json",
@@ -321,16 +311,6 @@
 		"primary_pkg": null,
 		"homepage": "https://www.monicahq.com"
 	},
-	"mosquitto": {
-		"MANIFEST": "mosquitto.json",
-		"description": "An open source MQTT broker.",
-		"icon": "https://icons.freenas.org/community-icons/mosquitto.png",
-		"name": "Mosquitto MQTT",
-		"official": false,
-		"primary_pkg": "mosquitto",
-		"category": "home-automation",
-		"homepage": "https://mosquitto.org/"
-	},
 	"motioneye": {
 		"MANIFEST": "motioneye.json",
 		"description": "motionEye is a web frontend for the motion daemon, written in Python.",
@@ -378,24 +358,14 @@
 		"name": "Netdata",
 		"official": false
 	},
-    	"nexus-oss": {
-        	"MANIFEST": "nexus-oss.json",
-        	"name": "NexusOSS",
-        	"icon": "https://icons.freenas.org/community-icons/nexus-oss.png",
-        	"description": "Nexus OSS Repository Manager",
-        	"maintainer": "Filippe Spolti <filippespolti@gmail.com>",
-        	"official": false,
-        	"primary_pkg": null
-    	},
-	"node-red": {
-		"MANIFEST": "node-red.json",
-		"description": "Node-RED is a programming tool for wiring together hardware devices, APIs and online services in new and interesting ways.",
-		"icon": "https://icons.freenas.org/community-icons/node-red.png",
-		"primary_pkg": null,
-		"name": "Node-RED",
+	"nexus-oss": {
+		"MANIFEST": "nexus-oss.json",
+		"name": "NexusOSS",
+		"icon": "https://icons.freenas.org/community-icons/nexus-oss.png",
+		"description": "Nexus OSS Repository Manager",
+		"maintainer": "Filippe Spolti <filippespolti@gmail.com>",
 		"official": false,
-		"category": "home-automation",
-		"homepage": "https://nodered.org/"
+		"primary_pkg": null
 	},
 	"nxfilter": {
 		"MANIFEST": "nxfilter.json",
@@ -493,6 +463,16 @@
 		"category": "content",
 		"homepage": "https://redis.io/"
 	},
+	"readarr": {
+		"MANIFEST": "readarr.json",
+		"name": "readarr",
+		"icon": "https://icons.freenas.org/community-icons/readarr.png",
+		"description": "Sonarr for Ebooks. Automatically download books in the style of Couchpotato.",
+		"official": false,
+		"primary_pkg": "readarr",
+		"category": "content",
+		"homepage": "https://readarr.com"
+	},
 	"rslsync": {
 		"MANIFEST": "rslsync.json",
 		"name": "rslsync",
@@ -536,16 +516,6 @@
 		"primary_pkg": "sonarr",
 		"category": "content",
 		"homepage": "https://sonarr.tv/"
-	},
-	"tasmoadmin": {
-		"MANIFEST": "tasmoadmin.json",
-		"description": "Website to manage devices flashed with Tasmota.",
-		"icon": "https://icons.freenas.org/community-icons/tasmoadmin.png",
-		"name": "TasmoAdmin",
-		"primary_pkg": null,
-		"official": false,
-		"category": "home-automation",
-		"homepage": "https://github.com/reloxx13/TasmoAdmin#readme"
 	},
 	"tautulli": {
 		"MANIFEST": "tautulli.json",
@@ -625,7 +595,7 @@
 		"icon": "https://icons.freenas.org/community-icons/zabbix.png",
 		"description": "Zabbix is an open-source monitoring software tool for diverse IT components, including networks, servers, virtual machines (VMs) and cloud services",
 		"official": false,
-		"primary_pkg": "zabbix5-server",
+		"primary_pkg": "zabbix6-server",
 		"category": "management",
 		"homepage": "https://www.zabbix.com/"
 	},
@@ -646,15 +616,5 @@
 		"name": "zrepl",
 		"official": false,
 		"primary_pkg": "zrepl"
-	},
-	"zwavejs2mqtt": {
-		"MANIFEST": "zwavejs2mqtt.json",
-		"name": "Z-Wave JS to MQTT",
-		"description": "Fully configurable Zwave to MQTT gateway and Control Panel using NodeJS and Vue. This also includes the Z-Wave JS Server!",
-		"icon": "https://icons.freenas.org/community-icons/zwavejs2mqtt.png",
-		"primary_pkg": null,
-		"official": false,
-		"category": "home-automation",
-		"homepage": "https://zwave-js.github.io/zwavejs2mqtt/#/"
 	}
 }

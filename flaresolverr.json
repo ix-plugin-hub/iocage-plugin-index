@@ -1,5 +1,5 @@
 {
-    "artifact": "https://github.com/dropsignal/iocage-plugin-lidarr.git",
+    "artifact": "https://github.com/pigfrown/iocage-plugin-flaresolverr.git",
     "fingerprints": {
         "iocage-plugins": [
             {
@@ -8,16 +8,13 @@
             }
         ]
     },
-    "name": "Lidarr",
+    "name": "FlareSolverr",
     "official": false,
     "packagesite": "http://pkg.FreeBSD.org/${ABI}/latest",
     "pkgs": [
-        "lidarr"
+        "git",
+	"chromium",
+	"npm-node16"
     ],
-    "properties": {
-        "allow_mlock": 1,
-        "nat": 1,
-        "nat_forwards": "tcp(8686:8686)"
-    },
     "release": "13.1-RELEASE"
 }

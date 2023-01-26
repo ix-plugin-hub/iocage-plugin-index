@@ -1,25 +1,19 @@
 {
-    "name": "tasmoadmin",
+    "name": "readarr",
     "release": "13.1-RELEASE",
-    "artifact": "https://github.com/tprelog/iocage-tasmoadmin.git",
+    "artifact": "https://github.com/pigfrown/iocage-plugin-readarr.git",
     "official": false,
     "properties": {
-        "allow_raw_sockets": "1",
-        "dhcp": "1"
+        "allow_mlock": 1,
+        "nat": 1,
+        "nat_forwards": "tcp(8787:8787)"
     },
     "pkgs": [
-        "bash",
-        "nginx",
-        "php80",
-        "php80-curl",
-        "php80-filter",
-        "php80-mbstring",
-        "php80-session",
-        "php80-zip"
+        "readarr"
     ],
     "packagesite": "http://pkg.FreeBSD.org/${ABI}/latest",
     "fingerprints": {
-        "plugin-default": [
+        "iocage-plugins": [
             {
                 "function": "sha256",
                 "fingerprint": "b0170035af3acc5f3f3ae1859dc717101b4e6c1d0a794ad554928ca0cbb2f438"
