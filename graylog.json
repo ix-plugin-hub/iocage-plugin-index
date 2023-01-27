@@ -8,7 +8,7 @@
     },
     "pkgs": [
         "graylog",
-        "elasticsearch6",
+        "elasticsearch7",
         "mongodb44",
         "pwgen",
         "p5-Digest-SHA"
