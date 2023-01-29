@@ -9,7 +9,7 @@
     "pkgs": [
         "graylog",
         "elasticsearch7",
-        "mongodb44",
+        "mongodb50",
         "pwgen",
         "p5-Digest-SHA"
     ],
