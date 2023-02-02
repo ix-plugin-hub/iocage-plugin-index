@@ -1,0 +1,30 @@
+{
+    "name": "photoprism",
+    "release": "12.4-RELEASE",
+    "artifact": "https://github.com/oridyn/iocage-plugin-photoprism",
+    "official": false,
+    "properties": {
+        "vnet": 1,
+        "dhcp": 1
+    },
+    "pkgs": [
+        "avahi-app",
+        "ffmpeg",
+        "graphics/darktable",
+        "graphics/rawtherapee",
+        "libheif",
+        "mariadb106-server",
+        "nginx",
+        "p5-Image-ExifTool"
+    ],
+    "packagesite": "http://pkg.FreeBSD.org/${ABI}/latest",
+    "fingerprints": {
+        "iocage-plugins": [
+            {
+                "function": "sha256",
+                "fingerprint": "b0170035af3acc5f3f3ae1859dc717101b4e6c1d0a794ad554928ca0cbb2f438"
+            }
+        ]
+    },
+    "revision": 0
+}

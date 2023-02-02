@@ -401,6 +401,14 @@
 		"official": false,
 		"primary_pkg": null
 	},
+	"photoprism": {
+		"MANIFEST": "photoprism.json",
+		"description": "PhotoPrism® is an AI-Powered Photos App for the Decentralized Web. It makes use of the latest technologies to tag and find pictures automatically without getting in your way.",
+		"icon": "https://icons.freenas.org/community-icons/photoprism.png",
+		"name": "photoprism",
+		"official": false,
+		"primary_pkg": null
+	},
 	"piwigo": {
 		"MANIFEST": "piwigo.json",
 		"description": "Piwigo is open source photo gallery software for the web. Designed for organisations, teams and individuals.",
