@@ -9,7 +9,7 @@
 [![Cirrus CI - Task and Script Build Status](https://img.shields.io/cirrus/github/ix-plugin-hub/iocage-plugin-index?label=Install%20test&logo=cirrus-ci&logoColor=green&style=for-the-badge)](https://cirrus-ci.com/github/ix-plugin-hub/iocage-plugin-index/master)
 
 # iocage-ix-plugins
-Official community created plugins for [TrueNAS](https://www.truenas.com/) and [FreeBSD](http://www.freebsd.org)
+Community created plugins for [TrueNAS](https://www.truenas.com/) and [FreeBSD](http://www.freebsd.org)
 
 # Creating Plugins
 Add a plugin JSON file to this repo along with an appropriate icon in the [icons directory](icons/).
