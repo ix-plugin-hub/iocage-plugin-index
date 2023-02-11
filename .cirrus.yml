@@ -265,6 +265,15 @@ jdownloader_task:
   env:
     PLUGIN_FILE: "jdownloader.json"
 
+jellyfin_task:
+  <<: *INSTALL_PLUGIN
+  only_if: "changesInclude('jellyfin.json', '.cirrus/install_script.sh')"
+  matrix:
+    - freebsd_instance:
+        image_family: freebsd-13-1
+  env:
+    PLUGIN_FILE: "jellyfin.json"
+
 jenkins_task:
   <<: *INSTALL_PLUGIN
   only_if: "changesInclude('jenkins.json', '.cirrus/install_script.sh')"

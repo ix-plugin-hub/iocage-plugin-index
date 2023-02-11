@@ -1,0 +1,27 @@
+{
+    "name": "Jellyfin Server",
+    "release": "13.1-RELEASE",
+    "artifact": "https://github.com/spz2k9/iocage-plugin-jellyfin.git",
+    "official": false,
+    "properties": {
+        "dhcp": 1,
+        "allow_raw_sockets": "1",
+        "allow_mlock": 1,
+        "ip6": "inherit"
+    },
+    "pkgs": [
+        "libva-utils",
+        "libva-intel-media-driver",
+        "python"
+    ],
+    "packagesite": "http://pkg.FreeBSD.org/${ABI}/latest",
+    "fingerprints": {
+        "iocage-plugins": [
+            {
+                "function": "sha256",
+                "fingerprint": "b0170035af3acc5f3f3ae1859dc717101b4e6c1d0a794ad554928ca0cbb2f438"
+            }
+        ]
+    },
+    "revision": 2
+}
