@@ -9,6 +9,16 @@
         "allow_mlock": 1,
         "ip6": "inherit"
     },
+    "devfs_ruleset": {
+        "paths": {
+            "bpf*": null,
+            "dri*": null,
+            "dri/*": null,
+            "drm*": null,
+            "drm/*": null
+        },
+        "includes": []
+    },
     "pkgs": [
         "libva-utils",
         "libva-intel-media-driver",
