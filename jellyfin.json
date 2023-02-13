@@ -12,7 +12,7 @@
     "pkgs": [
         "libva-utils",
         "libva-intel-media-driver",
-        "python"
+        "python39"
     ],
     "packagesite": "http://pkg.FreeBSD.org/${ABI}/latest",
     "fingerprints": {
