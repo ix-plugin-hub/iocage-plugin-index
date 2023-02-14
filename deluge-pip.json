@@ -1,5 +1,6 @@
 {
     "name": "deluge-pip",
+    "plugin_schema": "2",
     "release": "13.1-RELEASE",
     "artifact": "https://github.com/jsegaert/iocage-plugin-deluge-pip.git",
     "properties": {
@@ -9,10 +10,21 @@
     "pkgs": [
         "ca_root_nss",
         "python39",
-        "py39-pip",
+        "py39-boost-libs",
+        "py39-chardet",
+        "py39-distro",
+        "py39-mako",
         "py39-pillow",
-        "py39-libtorrent-rasterbar",
-        "rust"
+        "py39-pip",
+        "py39-twisted",
+        "py39-rencode",
+        "py39-setproctitle",
+        "py39-xdg",
+        "b2",
+        "libtorrent-rasterbar",
+        "portdowngrade",
+        "rust",
+        "subversion"
     ],
     "packagesite": "http://pkg.FreeBSD.org/${ABI}/latest",
     "fingerprints": {

@@ -89,7 +89,7 @@ deluge-pip_task:
   only_if: "changesInclude('deluge-pip.json', '.cirrus/install_script.sh')"
   matrix:
     - freebsd_instance:
-        image_family: freebsd-12-2
+        image_family: freebsd-13-1
   env:
     PLUGIN_FILE: "deluge-pip.json"
 
@@ -173,15 +173,6 @@ gitlab_task:
         image_family: freebsd-12-2
   env:
     PLUGIN_FILE: "gitlab.json"
-
-gogs_task:
-  <<: *INSTALL_PLUGIN
-  only_if: "changesInclude('gogs.json', '.cirrus/install_script.sh')"
-  matrix:
-    - freebsd_instance:
-        image_family: freebsd-13-1
-  env:
-    PLUGIN_FILE: "gogs.json"
 
 grafana_task:
   <<: *INSTALL_PLUGIN
@@ -348,15 +339,6 @@ monica_task:
   env:
     PLUGIN_FILE: "monica.json"
 
-mosquitto_task:
-  <<: *INSTALL_PLUGIN
-  only_if: "changesInclude('mosquitto.json', '.cirrus/install_script.sh')"
-  matrix:
-    - freebsd_instance:
-        image_family: freebsd-13-1
-  env:
-    PLUGIN_FILE: "mosquitto.json"
-
 motioneye_task:
   <<: *INSTALL_PLUGIN
   only_if: "changesInclude('motioneye.json', '.cirrus/install_script.sh')"
@@ -402,15 +384,6 @@ nexus_task:
   env:
     PLUGIN_FILE: "nexus-oss.json"
 
-node-red_task:
-  <<: *INSTALL_PLUGIN
-  only_if: "changesInclude('node-red.json', '.cirrus/install_script.sh')"
-  matrix:
-    - freebsd_instance:
-        image_family: freebsd-13-1
-  env:
-    PLUGIN_FILE: "node-red.json"
-
 nxfilter_task:
   <<: *INSTALL_PLUGIN
   only_if: "changesInclude('nxfilter.json', '.cirrus/install_script.sh')"
@@ -447,6 +420,15 @@ openvpn_task:
         image_family: freebsd-12-2
   env:
     PLUGIN_FILE: "openvpn.json"
+
+photoprism_task:
+  <<: *INSTALL_PLUGIN
+  only_if: "changesInclude('photoprism.json', '.cirrus/install_script.sh')"
+  matrix:
+    - freebsd_instance:
+        image_family: freebsd-13-1
+  env:
+    PLUGIN_FILE: "photoprism.json"
 
 piwigo_task:
   <<: *INSTALL_PLUGIN
@@ -493,6 +475,15 @@ quasselcore_task:
   env:
     PLUGIN_FILE: "quasselcore.json"
     SKIP_UI_CHECK: "true"
+
+rabbitmq_task:
+  <<: *INSTALL_PLUGIN
+  only_if: "changesInclude('rabbitmq.json', '.cirrus/install_script.sh')"
+  matrix:
+    - freebsd_instance:
+        image_family: freebsd-13-1
+  env:
+    PLUGIN_FILE: "rabbitmq.json"
 
 radarr_task:
   <<: *INSTALL_PLUGIN
@@ -566,15 +557,6 @@ sonarr_task:
         image_family: freebsd-12-2
   env:
     PLUGIN_FILE: "sonarr.json"
-
-tasmoadmin_task:
-  <<: *INSTALL_PLUGIN
-  only_if: "changesInclude('tasmoadmin.json', '.cirrus/install_script.sh')"
-  matrix:
-    - freebsd_instance:
-        image_family: freebsd-13-1
-  env:
-    PLUGIN_FILE: "tasmoadmin.json"
 
 tautulli_task:
   <<: *INSTALL_PLUGIN

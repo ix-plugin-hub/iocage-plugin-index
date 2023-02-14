@@ -10,7 +10,7 @@
         "mysql80-server",
         "zabbix6-server",
         "zabbix6-agent",
-        "zabbix6-frontend-php74",
+        "zabbix6-frontend-php81",
         "nginx"
     ],
     "packagesite": "http://pkg.FreeBSD.org/${ABI}/latest",
