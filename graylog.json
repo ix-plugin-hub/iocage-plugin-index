@@ -1,19 +1,17 @@
 {
-    "name": "node-red",
-    "release": "12.2-RELEASE",
-    "artifact": "https://github.com/tprelog/iocage-node-red.git",
-    "official": false,
+    "name": "graylog",
+    "release": "13.1-RELEASE",
+    "artifact": "https://github.com/xTITUSMAXIMUSX/iocage-plugin-graylog.git",
     "properties": {
         "allow_raw_sockets": "1",
-        "dhcp": "1"
+        "boot": "on"
     },
     "pkgs": [
-        "bash",
-        "gmake",
-        "node10",
-        "npm-node10",
-        "python27",
-        "python"
+        "graylog",
+        "elasticsearch7",
+        "mongodb50",
+        "pwgen",
+        "p5-Digest-SHA"
     ],
     "packagesite": "http://pkg.FreeBSD.org/${ABI}/latest",
     "fingerprints": {
@@ -24,5 +22,5 @@
             }
         ]
     },
-    "revision": 0
+    "official": false
 }

@@ -1,6 +1,6 @@
 {
     "name": "UrBackup",
-    "release": "12.2-RELEASE",
+    "release": "13.1-RELEASE",
     "artifact": "https://github.com/Tostis/iocage-plugin-urbackup",
     "pkgs": [
         "urbackup-server"

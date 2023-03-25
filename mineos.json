@@ -1,6 +1,6 @@
 {
     "name": "mineos",
-    "release": "12.2-RELEASE",
+    "release": "13.1-RELEASE",
     "artifact": "https://github.com/jsegaert/iocage-plugin-mineos.git",
     "official": false,
     "properties": {
@@ -11,16 +11,15 @@
         "nat_forwards": "tcp(8443:8443),tcp(25565:25565),tcp(25566:25566),tcp(25567:25567),tcp(25568:25568),tcp(25569:25569),tcp(25570:25570)"
     },
     "pkgs": [
-        "py38-rdiff-backup",
+        "py39-rdiff-backup",
         "screen",
         "rsync",
         "gmake",
         "git-lite",
-        "python38",
-        "python3",
+        "python39",
         "node",
         "npm",
-        "openjdk11-jre",
+        "openjdk17",
         "wget",
         "bash"
     ],

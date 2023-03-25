@@ -1,4 +1,24 @@
 {
+	"adguardhome": {
+		"MANIFEST": "adguardhome.json",
+		"name": "AdGuardHome",
+		"icon": "https://icons.freenas.org/community-icons/adguardhome.png",
+		"description": "AdGuard Home is a network-wide software for blocking ads & tracking.",
+		"official": false,
+		"primary_pkg": "adguardhome",
+		"category": "networking",
+		"homepage": "https://github.com/AdguardTeam/AdGuardHome"
+	},
+	"archiwarep5": {
+		"MANIFEST": "archiwarep5.json",
+		"name": "Archiware P5",
+		"icon": "https://icons.freenas.org/community-icons/archiwarep5.png",
+		"description": "Archiwares P5 Software Suite is a platform-agnostic data management software for archiving, backup and cloning. The browser-based interface comprises four modules, which use different methods to secure and restore data: P5 Synchronize: Clones data to create a failover solution for time critical setups, P5 Backup: Produces security copies of files for a quick restore, Backup2Go: Backs up desktop and laptop data to disk and P5 Archive: Migrates data offline for long-term storage.",
+		"official": false,
+		"primary_pkg": "archiwarep5",
+		"category": "backup",
+		"homepage": "http://www.archiware.com/"
+	},
 	"backuppc": {
 		"MANIFEST": "backuppc.json",
 		"name": "BackupPC",
@@ -94,37 +114,37 @@
 	},
 	"emby": {
 		"MANIFEST": "emby.json",
-		"name": "Emby",
+		"name": "Emby Server - Beta",
 		"icon": "https://icons.freenas.org/community-icons/emby.png",
-		"description": "Home media server to organize, play, and stream audio and video to a variety of devices.",
+		"description": "Beta branch of Emby, the home media server to organize, play, and stream audio and video to a variety of devices!",
 		"official": false,
-		"primary_pkg": "emby-server",
+		"primary_pkg": "emby-server-devel",
 		"category": "entertainment",
 		"homepage": "https://emby.media/"
 	},
 	"emby-server-stable": {
 		"MANIFEST": "emby-server-stable.json",
-		"name": "Emby Server",
+		"name": "Emby Server - Stable",
 		"icon": "https://icons.freenas.org/community-icons/emby-server-png-128.png",
-		"primary_pkg": null,
-		"description": "Emby brings together your personal videos, music, photos, and live television",
-		"official": false
-	},
-	"esphome": {
-		"MANIFEST": "esphome.json",
-		"name": "ESPHome",
-		"icon": "https://icons.freenas.org/community-icons/esphome.png",
-		"primary_pkg": null,
-		"description": "ESPHome is a system to control your ESP8266/ESP32 by simple yet powerful configuration files and control them remotely through Home Automation systems.",
+		"primary_pkg": "emby-server",
+		"description": "Stable branch of Emby, which brings together your personal videos, music, photos, and live television!",
 		"official": false,
-		"category": "home-automation",
-		"homepage": "https://esphome.io/"
+		"category": "entertainment",
+		"homepage": "https://emby.media/"
 	},
 	"famp": {
 		"MANIFEST": "famp.json",
 		"description": "FAMP (FreeBSD, Apache, MySQL and PHP) web server",
 		"icon": "https://icons.freenas.org/community-icons/famp.png",
 		"name": "FAMP",
+		"official": false,
+		"primary_pkg": null
+	},
+	"FlareSolverr": {
+		"MANIFEST": "flaresolverr.json",
+		"description": "FlareSolverr is a proxy server to bypass Cloudflare and DDoS-GUARD protection", 
+		"icon": "https://icons.freenas.org/community-icons/flaresolverr.png",
+		"name": "FlareSolverr",
 		"official": false,
 		"primary_pkg": null
 	},
@@ -144,23 +164,31 @@
 		"official": false,
 		"primary_pkg": "gitlab-ce"
 	},
-	"gogs": {
-		"MANIFEST": "gogs.json",
-		"description": "A painless self-hosted Git service.",
-		"icon": "https://icons.freenas.org/community-icons/gogs.png",
-		"name": "Gogs",
-		"official": false,
-		"primary_pkg": "gogs",
-		"category": "development",
-		"homepage": "https://gogs.io/"
-	},
 	"grafana": {
 		"MANIFEST": "grafana.json",
 		"description": "Grafana allows you to query, visualize, alert on and understand your metrics no matter where they are stored. Create, explore, and share dashboards with your team and foster a data driven culture.",
 		"icon": "https://icons.freenas.org/community-icons/grafana.png",
 		"name": "Grafana (with InfluxDB)",
 		"official": false,
-		"primary_pkg": "grafana6"
+		"primary_pkg": "grafana8"
+	},
+	"graylog": {
+		"MANIFEST": "graylog.json",
+		"description": "Seamless log data collection, faster analysis, and the answers you need when you need them.",
+		"icon": "https://icons.freenas.org/community-icons/graylog.png",
+		"name": "Graylog",
+		"official": false,
+		"primary_pkg": "graylog",
+		"homepage": "https://www.graylog.org/"
+	},
+	"guacamole": {
+		"MANIFEST": "guacamole.json",
+		"description": "Apache Guacamole is a clientless remote desktop gateway. It supports standard protocols like VNC, RDP, and SSH.",
+		"icon": "https://icons.freenas.org/community-icons/guacamole.png",
+		"name": "Guacamole",
+		"official": false,
+		"primary_pkg": "guacamole-client",
+		"homepage": "https://guacamole.apache.org/"
 	},
 	"heimdall-dashboard": {
 		"MANIFEST": "heimdall-dashboard.json",
@@ -169,16 +197,6 @@
 		"name": "Heimdall",
 		"official": false,
 		"primary_pkg": null
-	},
-	"homeassistant": {
-		"MANIFEST": "homeassistant.json",
-		"description": "Open source home automation that puts local control and privacy first.",
-		"icon": "https://icons.freenas.org/community-icons/homeassistant.png",
-		"name": "Home Assistant Core",
-		"primary_pkg": null,
-		"official": false,
-		"category": "home-automation",
-		"homepage": "https://www.home-assistant.io/"
 	},
 	"homebridge": {
 		"MANIFEST": "homebridge.json",
@@ -228,6 +246,14 @@
 		"official": false,
 		"primary_pkg": null
 	},
+        "jellyfin": {
+                "MANIFEST": "jellyfin.json",
+                "description": "Jellyfin is a Free Software Media System that puts you in control of managing and streaming your media. It is an alternative to the proprietary Emby and Plex, to provide media from a dedicated server to end-user devices via multiple apps.",
+                "icon": "https://icons.freenas.org/community-icons/jellyfin.png",
+                "name": "Jellyfin",
+                "official": false,
+                "primary_pkg": null
+        },
 	"jenkins": {
 		"MANIFEST": "jenkins.json",
 		"name": "Jenkins",
@@ -274,6 +300,16 @@
 		"official": false,
 		"primary_pkg": null
 	},
+	"mariadb": {
+		"MANIFEST": "mariadb.json",
+		"name": "MariaDB Server",
+		"description": "The open source relational database. No additional services included - KISS!",
+		"icon": "https://icons.freenas.org/community-icons/mariadb.png",
+		"primary_pkg": "mariadb105-server",
+		"official": false,
+		"category": "server",
+		"homepage": "https://mariadb.org/"
+	},
 	"monica": {
 		"MANIFEST": "monica.json",
 		"name": "Monica",
@@ -282,16 +318,6 @@
 		"official": false,
 		"primary_pkg": null,
 		"homepage": "https://www.monicahq.com"
-	},
-	"mosquitto": {
-		"MANIFEST": "mosquitto.json",
-		"description": "An open source MQTT broker.",
-		"icon": "https://icons.freenas.org/community-icons/mosquitto.png",
-		"name": "Mosquitto MQTT",
-		"official": false,
-		"primary_pkg": "mosquitto",
-		"category": "home-automation",
-		"homepage": "https://mosquitto.org/"
 	},
 	"motioneye": {
 		"MANIFEST": "motioneye.json",
@@ -310,6 +336,16 @@
 		"primary_pkg": null,
 		"category": "entertainment",
 		"homepage": "https://github.com/zorchenhimer/MovieNight"
+	},
+	"n8n": {
+		"MANIFEST": "n8n.json",
+		"description": "Extendable workflow automation",
+		"icon": "https://icons.freenas.org/community-icons/n8n.png",
+		"name": "n8n",
+		"official": false,
+		"primary_pkg": null,
+		"category": "entertainment",
+		"homepage": "https://n8n.io/"
 	},
 	"mineos": {
 		"MANIFEST": "mineos.json",
@@ -330,24 +366,14 @@
 		"name": "Netdata",
 		"official": false
 	},
-    "nexus-oss": {
-        "MANIFEST": "nexus-oss.json",
-        "name": "NexusOSS",
-        "icon": "https://icons.freenas.org/community-icons/nexus-oss.png",
-        "description": "Nexus OSS Repository Manager",
-        "maintainer": "Filippe Spolti <filippespolti@gmail.com>",
-        "official": false,
-        "primary_pkg": null
-    },
-	"node-red": {
-		"MANIFEST": "node-red.json",
-		"description": "Node-RED is a programming tool for wiring together hardware devices, APIs and online services in new and interesting ways.",
-		"icon": "https://icons.freenas.org/community-icons/node-red.png",
-		"primary_pkg": null,
-		"name": "Node-RED",
+	"nexus-oss": {
+		"MANIFEST": "nexus-oss.json",
+		"name": "NexusOSS",
+		"icon": "https://icons.freenas.org/community-icons/nexus-oss.png",
+		"description": "Nexus OSS Repository Manager",
+		"maintainer": "Filippe Spolti <filippespolti@gmail.com>",
 		"official": false,
-		"category": "home-automation",
-		"homepage": "https://nodered.org/"
+		"primary_pkg": null
 	},
 	"nxfilter": {
 		"MANIFEST": "nxfilter.json",
@@ -383,6 +409,14 @@
 		"official": false,
 		"primary_pkg": null
 	},
+	"photoprism": {
+		"MANIFEST": "photoprism.json",
+		"description": "PhotoPrism® is an AI-Powered Photos App for the Decentralized Web. It makes use of the latest technologies to tag and find pictures automatically without getting in your way.",
+		"icon": "https://icons.freenas.org/community-icons/photoprism.png",
+		"name": "photoprism",
+		"official": false,
+		"primary_pkg": null
+	},
 	"piwigo": {
 		"MANIFEST": "piwigo.json",
 		"description": "Piwigo is open source photo gallery software for the web. Designed for organisations, teams and individuals.",
@@ -398,6 +432,14 @@
 		"name": "PrivateBin",
 		"official": false,
 		"primary_pkg": "privatebin"
+	},
+	"prowlarr": {
+		"MANIFEST": "prowlarr.json",
+		"description": "Indexer for torrent and usenet trackers.",
+		"icon": "https://icons.freenas.org/community-icons/prowlarr.png",
+		"name": "Prowlarr",
+		"official": false,
+		"primary_pkg": "prowlarr"
 	},
 	"qbittorrent": {
 		"MANIFEST": "qbittorrent.json",
@@ -417,6 +459,16 @@
 		"official": false,
 		"primary_pkg": "quassel-core"
 	},
+	"rabbitmq": {
+		"MANIFEST": "rabbitmq.json",
+		"name": "rabbitmq",
+		"icon": "https://icons.freenas.org/community-icons/rabbitmq.png",
+		"description": "RabbitMQ is a popular open source message broker.",
+		"official": false,
+		"primary_pkg": "rabbitmq",
+		"category": "content",
+		"homepage": "https://rabbitmq.com/"
+	},
 	"radarr": {
 		"MANIFEST": "radarr.json",
 		"name": "radarr",
@@ -426,6 +478,26 @@
 		"primary_pkg": "radarr",
 		"category": "content",
 		"homepage": "https://radarr.video/"
+	},
+	"redis": {
+		"MANIFEST": "redis.json",
+		"name": "Redis",
+		"icon": "https://icons.freenas.org/community-icons/redis.png",
+		"description": "Redis is an open source (BSD licensed), in-memory data structure store, used as a database, cache, and message broker. Redis provides data structures such as strings, hashes, lists, sets, sorted sets with range queries, bitmaps, hyperloglogs, geospatial indexes, and streams.",
+		"official": false,
+		"primary_pkg": "null",
+		"category": "content",
+		"homepage": "https://redis.io/"
+	},
+	"readarr": {
+		"MANIFEST": "readarr.json",
+		"name": "readarr",
+		"icon": "https://icons.freenas.org/community-icons/readarr.png",
+		"description": "Sonarr for Ebooks. Automatically download books in the style of Couchpotato.",
+		"official": false,
+		"primary_pkg": "readarr",
+		"category": "content",
+		"homepage": "https://readarr.com"
 	},
 	"rslsync": {
 		"MANIFEST": "rslsync.json",
@@ -471,16 +543,6 @@
 		"category": "content",
 		"homepage": "https://sonarr.tv/"
 	},
-	"tasmoadmin": {
-		"MANIFEST": "tasmoadmin.json",
-		"description": "Website to manage devices flashed with Tasmota.",
-		"icon": "https://icons.freenas.org/community-icons/tasmoadmin.png",
-		"name": "TasmoAdmin",
-		"primary_pkg": null,
-		"official": false,
-		"category": "home-automation",
-		"homepage": "https://github.com/reloxx13/TasmoAdmin#readme"
-	},
 	"tautulli": {
 		"MANIFEST": "tautulli.json",
 		"name": "Tautulli",
@@ -490,6 +552,14 @@
 		"primary_pkg": null,
 		"category": "entertainment",
 		"homepage": "https://tautulli.com/"
+	},
+	"torr-server": {
+		"MANIFEST": "torr-server.json",
+		"name": "TorrServer",
+		"primary_pkg": "",
+		"icon": "https://icons.freenas.org/community-icons/torr-server.png",
+		"description": "TorrServer",
+		"official": false
 	},
 	"transmission": {
 		"MANIFEST": "transmission.json",
@@ -551,7 +621,7 @@
 		"icon": "https://icons.freenas.org/community-icons/zabbix.png",
 		"description": "Zabbix is an open-source monitoring software tool for diverse IT components, including networks, servers, virtual machines (VMs) and cloud services",
 		"official": false,
-		"primary_pkg": "zabbix5-server",
+		"primary_pkg": "zabbix6-server",
 		"category": "management",
 		"homepage": "https://www.zabbix.com/"
 	},
@@ -572,15 +642,5 @@
 		"name": "zrepl",
 		"official": false,
 		"primary_pkg": "zrepl"
-	},
-	"zwavejs2mqtt": {
-		"MANIFEST": "zwavejs2mqtt.json",
-		"name": "Z-Wave JS to MQTT",
-		"description": "Fully configurable Zwave to MQTT gateway and Control Panel using NodeJS and Vue. This also includes the Z-Wave JS Server!",
-		"icon": "https://icons.freenas.org/community-icons/zwavejs2mqtt.png",
-		"primary_pkg": null,
-		"official": false,
-		"category": "home-automation",
-		"homepage": "https://zwave-js.github.io/zwavejs2mqtt/#/"
 	}
 }

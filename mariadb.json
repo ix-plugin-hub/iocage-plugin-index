@@ -1,23 +1,16 @@
 {
-    "name": "esphome",
-    "release": "12.2-RELEASE",
-    "artifact": "https://github.com/tprelog/iocage-esphome.git",
+    "name": "MariaDB",
+    "plugin_schema": 2,
+    "release": "13.1-RELEASE",
+    "artifact": "https://github.com/m1ch/iocage-plugin-mariadb.git",
     "official": false,
     "properties": {
-        "allow_raw_sockets": "1",
-        "dhcp": "1"
+        "allow_raw_sockets": 1,
+        "dhcp": 0
     },
     "pkgs": [
-        "autoconf",
-        "bash",
-        "ca_root_nss",
-        "curl",
-        "gcc",
-        "gmake",
-        "pkgconf",
-        "python3",
-        "python38",
-        "py38-pillow"
+        "mariadb105-server",
+        "mariadb105-client"
     ],
     "packagesite": "http://pkg.FreeBSD.org/${ABI}/latest",
     "fingerprints": {

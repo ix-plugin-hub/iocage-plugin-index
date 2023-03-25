@@ -1,13 +1,13 @@
 {
     "name": "famp",
-    "release": "12.2-RELEASE",
+    "release": "13.1-RELEASE",
     "artifact": "https://github.com/fulder/iocage-plugin-famp.git",
     "pkgs": [
         "apache24",
         "mysql80-server",
-        "php74",
-        "php74-mysqli",
-        "mod_php74"
+        "php80",
+        "php80-mysqli",
+        "mod_php80"
     ],
     "packagesite": "http://pkg.FreeBSD.org/${ABI}/latest",
     "fingerprints": {

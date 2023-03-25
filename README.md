@@ -1,6 +1,6 @@
 [plugins-shield]:https://img.shields.io/badge/TrueNAS%20CORE-Community%20Plugins-blue?logo=TrueNAS&style=for-the-badge
 [plugins-link]:https://www.truenas.com/plugins/
-[release-shield]:https://img.shields.io/badge/Default%20Branch-12.2--RELEASE-blue?logo=FreeBSD&logoColor=red&style=for-the-badge
+[release-shield]:https://img.shields.io/badge/Default%20Branch-13.1--RELEASE-blue?logo=FreeBSD&logoColor=red&style=for-the-badge
 [release-link]:https://www.freebsd.org/releases/12.2R/relnotes/
 
 [![x][plugins-shield]][plugins-link] [![x][release-shield]][release-link]
@@ -9,7 +9,7 @@
 [![Cirrus CI - Task and Script Build Status](https://img.shields.io/cirrus/github/ix-plugin-hub/iocage-plugin-index?label=Install%20test&logo=cirrus-ci&logoColor=green&style=for-the-badge)](https://cirrus-ci.com/github/ix-plugin-hub/iocage-plugin-index/master)
 
 # iocage-ix-plugins
-Official community created plugins for [FreeNAS](http://www.freenas.org) and [FreeBSD](http://www.freebsd.org)
+Community created plugins for [TrueNAS](https://www.truenas.com/) and [FreeBSD](http://www.freebsd.org)
 
 # Creating Plugins
 Add a plugin JSON file to this repo along with an appropriate icon in the [icons directory](icons/).

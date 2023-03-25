@@ -1,17 +1,19 @@
 {
-    "name": "gogs",
-    "release": "12.2-RELEASE",
-    "artifact": "https://github.com/tprelog/iocage-gogs.git",
+    "name": "Prowlarr",
+    "release": "13.1-RELEASE",
+    "artifact": "https://github.com/jasker5183/iocage-plugin-prowlarr.git",
     "official": false,
     "properties": {
-        "dhcp": "1"
+        "allow_mlock": 1,
+        "nat": 1,
+        "nat_forwards": "tcp(9696:9696)"
     },
     "pkgs": [
-        "gogs"
+        "prowlarr"
     ],
     "packagesite": "http://pkg.FreeBSD.org/${ABI}/latest",
     "fingerprints": {
-        "plugin-default": [
+        "iocage-plugins": [
             {
                 "function": "sha256",
                 "fingerprint": "b0170035af3acc5f3f3ae1859dc717101b4e6c1d0a794ad554928ca0cbb2f438"

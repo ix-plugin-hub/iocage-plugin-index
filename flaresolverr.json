@@ -1,0 +1,27 @@
+{
+    "artifact": "https://github.com/pigfrown/iocage-plugin-flaresolverr.git",
+    "fingerprints": {
+        "iocage-plugins": [
+            {
+                "fingerprint": "b0170035af3acc5f3f3ae1859dc717101b4e6c1d0a794ad554928ca0cbb2f438",
+                "function": "sha256"
+            }
+        ]
+    },
+    "name": "FlareSolverr",
+    "official": false,
+    "packagesite": "http://pkg.FreeBSD.org/${ABI}/latest",
+    "pkgs": [
+        "git",
+        "chromium",
+        "python39",
+        "py39-pip",
+        "py39-bottle",
+        "py39-waitress",
+        "py39-selenium",
+        "py39-requests",
+        "py39-websockets",
+        "xorg-vfbserver"
+    ],
+    "release": "13.1-RELEASE"
+}
