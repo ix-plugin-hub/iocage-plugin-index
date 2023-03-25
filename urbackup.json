@@ -3,7 +3,8 @@
     "release": "13.1-RELEASE",
     "artifact": "https://github.com/Tostis/iocage-plugin-urbackup",
     "pkgs": [
-        "urbackup-server"
+        "wget",
+		"curl"
     ],
     "properties": {
         "nat": 1,
@@ -19,5 +20,5 @@
         ]
     },
     "official": false,
-    "revision": 0
+    "revision": 1
 }
