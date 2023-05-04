@@ -22,7 +22,8 @@
     "pkgs": [
         "libva-utils",
         "libva-intel-media-driver",
-        "python39"
+        "python39",
+        "jellyfin"
     ],
     "packagesite": "http://pkg.FreeBSD.org/${ABI}/latest",
     "fingerprints": {
