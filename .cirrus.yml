@@ -657,3 +657,12 @@ zrepl_task:
   env:
     PLUGIN_FILE: "zrepl.json"
     SKIP_SERVICE_CHECK: "true"
+
+photoview_task:
+  <<: *INSTALL_PLUGIN
+  only_if: "changesInclude('photoview.json', '.cirrus/install_script.sh')"
+  matrix:
+    - freebsd_instance:
+        image_family: freebsd-13-2
+  env:
+    PLUGIN_FILE: "photoview.json"
