@@ -1,0 +1,31 @@
+{
+    "name": "photoview",                                                        //The name of the Plugin and resulting Jail
+    "plugin_schema": "2",                                                       //The Plugin schema version
+    "release": "13.2-RELEASE",                                                  //FreeBSD version (not significantly newer than host)
+    "artifact": "https://github.com/hellvesper/iocage-plugin-photoview.git",    //The Git repository containing the Plugin
+    "properties": {                                                             //Jail properties that can be overridden by the user
+        "dhcp": 1
+    },
+"pkgs": [                                                                       //FreeBSD packages to be installed, one per line
+    "go",
+    "git",
+    "node19",
+    "npm-node19",
+    "pkgconf",
+    "mariadb106-server",
+    "ffmpeg",               // streamable video processing [optional]
+    "darktable",            // raw photo formats support [optional]
+    "dlib-cpp",
+    "lapack cblas",
+],
+"packagesite": "https://pkg.FreeBSD.org/${ABI}/latest",                         //The package site, latest, quarterly, or self-hosted
+"fingerprints": {
+    "iocage-plugins": [
+        {
+            "function": "sha256",
+            "fingerprint": "b0170035af3acc5f3f3ae1859dc717101b4e6c1d0a794ad554928ca0cbb2f438"       //The checksum of the FreeBSD port
+        }
+    ]
+},
+    "revision": "0"       //Internal version number
+}
