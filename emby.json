@@ -41,7 +41,7 @@
         "openjpeg",
         "orc",
         "pango",
-        "tiff"
+        "tiff",
         "tesseract",
         "emby-server-devel"
     ],
