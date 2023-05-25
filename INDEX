@@ -417,6 +417,14 @@
 		"official": false,
 		"primary_pkg": null
 	},
+	"photoview": {
+		"MANIFEST": "photoview.json",
+		"description": "Photoview is a simple and user-friendly photo gallery that's made for photographers and aims to provide an easy and fast way to navigate directories, with thousands of high-resolution photos.",
+		"icon": "https://icons.freenas.org/community-icons/photoview.png",
+		"name": "photoview",
+		"official": false,
+		"primary_pkg": null
+	},
 	"piwigo": {
 		"MANIFEST": "piwigo.json",
 		"description": "Piwigo is open source photo gallery software for the web. Designed for organisations, teams and individuals.",
