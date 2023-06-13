@@ -347,16 +347,6 @@
 		"category": "entertainment",
 		"homepage": "https://n8n.io/"
 	},
-	"mineos": {
-		"MANIFEST": "mineos.json",
-		"name": "MineOS",
-		"icon": "https://icons.freenas.org/community-icons/mineos.png",
-		"description": "Set up and manage Minecraft servers.",
-		"official": false,
-		"primary_pkg": null,
-		"category": "entertainment",
-		"homepage": "https://minecraft.codeemo.com/"
-	},
 	"netdata": {
 		"MANIFEST": "netdata.json",
 		"description": "Monitor everything in real-time",
