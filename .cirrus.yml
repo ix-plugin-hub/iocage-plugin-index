@@ -330,15 +330,6 @@ mariadb_task:
   env:
     PLUGIN_FILE: "mariadb.json"
 
-mineos_task:
-  <<: *INSTALL_PLUGIN
-  only_if: "changesInclude('mineos.json', '.cirrus/install_script.sh')"
-  matrix:
-    - freebsd_instance:
-        image_family: freebsd-12-3
-  env:
-    PLUGIN_FILE: "mineos.json"
-
 monica_task:
   <<: *INSTALL_PLUGIN
   only_if: "changesInclude('monica.json', '.cirrus/install_script.sh')"
