@@ -13,8 +13,15 @@
     "packagesite": "http://pkg.FreeBSD.org/${ABI}/latest",
     "pkgs": [
         "git",
-	"chromium",
-	"npm-node16"
+        "chromium",
+        "python39",
+        "py39-pip",
+        "py39-bottle",
+        "py39-waitress",
+        "py39-selenium",
+        "py39-requests",
+        "py39-websockets",
+        "xorg-vfbserver"
     ],
     "release": "13.1-RELEASE"
 }

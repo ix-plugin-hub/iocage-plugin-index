@@ -164,16 +164,6 @@
 		"official": false,
 		"primary_pkg": "gitlab-ce"
 	},
-	"gogs": {
-		"MANIFEST": "gogs.json",
-		"description": "A painless self-hosted Git service.",
-		"icon": "https://icons.freenas.org/community-icons/gogs.png",
-		"name": "Gogs",
-		"official": false,
-		"primary_pkg": "gogs",
-		"category": "development",
-		"homepage": "https://gogs.io/"
-	},
 	"grafana": {
 		"MANIFEST": "grafana.json",
 		"description": "Grafana allows you to query, visualize, alert on and understand your metrics no matter where they are stored. Create, explore, and share dashboards with your team and foster a data driven culture.",
@@ -256,6 +246,14 @@
 		"official": false,
 		"primary_pkg": null
 	},
+        "jellyfin": {
+                "MANIFEST": "jellyfin.json",
+                "description": "Jellyfin is a Free Software Media System that puts you in control of managing and streaming your media. It is an alternative to the proprietary Emby and Plex, to provide media from a dedicated server to end-user devices via multiple apps.",
+                "icon": "https://icons.freenas.org/community-icons/jellyfin.png",
+                "name": "Jellyfin",
+                "official": false,
+                "primary_pkg": null
+        },
 	"jenkins": {
 		"MANIFEST": "jenkins.json",
 		"name": "Jenkins",
@@ -321,16 +319,6 @@
 		"primary_pkg": null,
 		"homepage": "https://www.monicahq.com"
 	},
-	"mosquitto": {
-		"MANIFEST": "mosquitto.json",
-		"description": "An open source MQTT broker.",
-		"icon": "https://icons.freenas.org/community-icons/mosquitto.png",
-		"name": "Mosquitto MQTT",
-		"official": false,
-		"primary_pkg": "mosquitto",
-		"category": "home-automation",
-		"homepage": "https://mosquitto.org/"
-	},
 	"motioneye": {
 		"MANIFEST": "motioneye.json",
 		"description": "motionEye is a web frontend for the motion daemon, written in Python.",
@@ -359,16 +347,6 @@
 		"category": "entertainment",
 		"homepage": "https://n8n.io/"
 	},
-	"mineos": {
-		"MANIFEST": "mineos.json",
-		"name": "MineOS",
-		"icon": "https://icons.freenas.org/community-icons/mineos.png",
-		"description": "Set up and manage Minecraft servers.",
-		"official": false,
-		"primary_pkg": null,
-		"category": "entertainment",
-		"homepage": "https://minecraft.codeemo.com/"
-	},
 	"netdata": {
 		"MANIFEST": "netdata.json",
 		"description": "Monitor everything in real-time",
@@ -378,24 +356,14 @@
 		"name": "Netdata",
 		"official": false
 	},
-    	"nexus-oss": {
-        	"MANIFEST": "nexus-oss.json",
-        	"name": "NexusOSS",
-        	"icon": "https://icons.freenas.org/community-icons/nexus-oss.png",
-        	"description": "Nexus OSS Repository Manager",
-        	"maintainer": "Filippe Spolti <filippespolti@gmail.com>",
-        	"official": false,
-        	"primary_pkg": null
-    	},
-	"node-red": {
-		"MANIFEST": "node-red.json",
-		"description": "Node-RED is a programming tool for wiring together hardware devices, APIs and online services in new and interesting ways.",
-		"icon": "https://icons.freenas.org/community-icons/node-red.png",
-		"primary_pkg": null,
-		"name": "Node-RED",
+	"nexus-oss": {
+		"MANIFEST": "nexus-oss.json",
+		"name": "NexusOSS",
+		"icon": "https://icons.freenas.org/community-icons/nexus-oss.png",
+		"description": "Nexus OSS Repository Manager",
+		"maintainer": "Filippe Spolti <filippespolti@gmail.com>",
 		"official": false,
-		"category": "home-automation",
-		"homepage": "https://nodered.org/"
+		"primary_pkg": null
 	},
 	"nxfilter": {
 		"MANIFEST": "nxfilter.json",
@@ -439,6 +407,21 @@
 		"official": false,
 		"primary_pkg": null,
 		"homepage": "https://paperless-ngx.readthedocs.io/en/latest/index.html"
+	"photoprism": {
+		"MANIFEST": "photoprism.json",
+		"description": "PhotoPrism® is an AI-Powered Photos App for the Decentralized Web. It makes use of the latest technologies to tag and find pictures automatically without getting in your way.",
+		"icon": "https://icons.freenas.org/community-icons/photoprism.png",
+		"name": "photoprism",
+		"official": false,
+		"primary_pkg": null
+	},
+	"photoview": {
+		"MANIFEST": "photoview.json",
+		"description": "Photoview is a simple and user-friendly photo gallery that's made for photographers and aims to provide an easy and fast way to navigate directories, with thousands of high-resolution photos.",
+		"icon": "https://icons.freenas.org/community-icons/photoview.png",
+		"name": "photoview",
+		"official": false,
+		"primary_pkg": null
 	},
 	"piwigo": {
 		"MANIFEST": "piwigo.json",
@@ -481,6 +464,16 @@
 		"name": "Quasselcore",
 		"official": false,
 		"primary_pkg": "quassel-core"
+	},
+	"rabbitmq": {
+		"MANIFEST": "rabbitmq.json",
+		"name": "rabbitmq",
+		"icon": "https://icons.freenas.org/community-icons/rabbitmq.png",
+		"description": "RabbitMQ is a popular open source message broker.",
+		"official": false,
+		"primary_pkg": "rabbitmq",
+		"category": "content",
+		"homepage": "https://rabbitmq.com/"
 	},
 	"radarr": {
 		"MANIFEST": "radarr.json",
@@ -555,16 +548,6 @@
 		"primary_pkg": "sonarr",
 		"category": "content",
 		"homepage": "https://sonarr.tv/"
-	},
-	"tasmoadmin": {
-		"MANIFEST": "tasmoadmin.json",
-		"description": "Website to manage devices flashed with Tasmota.",
-		"icon": "https://icons.freenas.org/community-icons/tasmoadmin.png",
-		"name": "TasmoAdmin",
-		"primary_pkg": null,
-		"official": false,
-		"category": "home-automation",
-		"homepage": "https://github.com/reloxx13/TasmoAdmin#readme"
 	},
 	"tautulli": {
 		"MANIFEST": "tautulli.json",
