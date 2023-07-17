@@ -32,6 +32,7 @@
         "gnupg",
         "py39-pyinotify",
         "py39-sqlite3",
+	"py39-django42",
 	"libxml2",
 	"libxslt",
         "expect"
