@@ -33,6 +33,8 @@
         "py39-pyinotify",
         "py39-sqlite3",
 	"py39-django42",
+	"py39-celery",
+	"py39-nltk",
 	"libxml2",
 	"libxslt",
         "expect"
