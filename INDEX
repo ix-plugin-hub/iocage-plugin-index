@@ -399,6 +399,15 @@
 		"official": false,
 		"primary_pkg": null
 	},
+	"paperless-ngx": {
+		"MANIFEST": "paperless-ngx.json",
+		"description": "Paperless-ngx is a document management system that transforms your physical documents into a searchable online archive.",
+		"icon": "https://icons.freenas.org/community-icons/paperless-ngx.png",
+		"name": "Paperless-ngx",
+		"official": false,
+		"primary_pkg": null,
+		"homepage": "https://paperless-ngx.readthedocs.io/en/latest/index.html"
+        },
 	"photoprism": {
 		"MANIFEST": "photoprism.json",
 		"description": "PhotoPrism® is an AI-Powered Photos App for the Decentralized Web. It makes use of the latest technologies to tag and find pictures automatically without getting in your way.",

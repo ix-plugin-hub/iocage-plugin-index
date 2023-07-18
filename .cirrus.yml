@@ -421,6 +421,15 @@ openvpn_task:
   env:
     PLUGIN_FILE: "openvpn.json"
 
+paperless-ngx_task:
+  <<: *INSTALL_PLUGIN
+  only_if: "changesInclude('paperless-ngx.json', '.cirrus/install_script.sh')"
+  matrix:
+    - freebsd_instance:
+        image_family: freebsd-13-1
+  env:
+    PLUGIN_FILE: "paperless-ngx.json"
+
 photoprism_task:
   <<: *INSTALL_PLUGIN
   only_if: "changesInclude('photoprism.json', '.cirrus/install_script.sh')"
