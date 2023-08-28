@@ -1,6 +1,6 @@
 {
     "name": "Grafana",
-    "release": "13.1-RELEASE",
+    "release": "13.2-RELEASE",
     "artifact": "https://github.com/MalteHillmann/iocage-plugin-grafana.git",
     "pkgs": [
         "grafana8",

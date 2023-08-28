@@ -1,6 +1,6 @@
 {
     "name": "channels-dvr",
-    "release": "13.1-RELEASE",
+    "release": "13.2-RELEASE",
     "artifact": "https://github.com/fancybits/iocage-plugin-channels-dvr.git",
     "properties": {
         "nat": 1,

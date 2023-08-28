@@ -1,6 +1,6 @@
 {
     "name": "JDownloader",
-    "release": "13.1-RELEASE",
+    "release": "13.2-RELEASE",
     "artifact": "https://github.com/kennedyoliveira/iocage-jdownloader-plugin",
     "properties": {
         "boot": "on",

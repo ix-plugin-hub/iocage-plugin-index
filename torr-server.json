@@ -1,7 +1,7 @@
 {
     "name": "TorrServer",
     "plugin_schema": "2",
-    "release": "13.1-RELEASE",
+    "release": "13.2-RELEASE",
     "artifact": "https://github.com/filka96/iocage-plugin-TorrServer.git",
     "properties": {
         "boot": 1,

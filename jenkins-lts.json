@@ -1,6 +1,6 @@
 {
     "name": "jenkins-lts",
-    "release": "13.1-RELEASE",
+    "release": "13.2-RELEASE",
     "artifact": "https://github.com/freenas/iocage-plugin-jenkins-lts.git",
     "official": false,
     "properties": {

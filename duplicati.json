@@ -1,6 +1,6 @@
 {
     "name": "duplicati",
-    "release": "13.1-RELEASE",
+    "release": "13.2-RELEASE",
     "artifact": "https://github.com/rexit1982/iocage-plugin-duplicati.git",
     "properties": {
         "dhcp": 1
