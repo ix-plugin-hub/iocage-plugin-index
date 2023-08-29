@@ -1,6 +1,6 @@
 {
     "name": "sabnzbd",
-    "release": "13.2-RELEASE",
+    "release": "13.1-RELEASE",
     "artifact": "https://github.com/ConorBeh/iocage-plugin-sabnzbd.git",
     "properties": {
         "nat": 1,

@@ -1,6 +1,6 @@
 {
     "name": "Zoneminder",
-    "release": "13.2-RELEASE",
+    "release": "13.1-RELEASE",
     "artifact": "https://github.com/freenas/iocage-plugin-zoneminder.git",
     "official": false,
     "properties": {
