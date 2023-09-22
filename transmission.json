@@ -8,8 +8,7 @@
         "nat_forwards": "tcp(9091:9091)"
     },
     "pkgs": [
-        "transmission-daemon",
-        "transmission-web"
+        "transmission-daemon"
     ],
     "packagesite": "http://pkg.FreeBSD.org/${ABI}/latest",
     "fingerprints": {
