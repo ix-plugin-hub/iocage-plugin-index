@@ -1,6 +1,6 @@
 {
     "name": "Jellyfin Server",
-    "release": "13.1-RELEASE",
+    "release": "13.2-RELEASE",
     "artifact": "https://github.com/spz2k9/iocage-plugin-jellyfin.git",
     "official": false,
     "properties": {

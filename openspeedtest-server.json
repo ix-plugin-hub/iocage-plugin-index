@@ -1,6 +1,6 @@
 {
     "name": "OpenSpeedTest-Server",
-    "release": "13.1-RELEASE",
+    "release": "13.2-RELEASE",
     "artifact": "https://github.com/openspeedtest/iocage-plugin-OpenSpeedTest-Server.git",
     "properties": {
         "nat": 1,

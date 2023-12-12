@@ -1,6 +1,6 @@
 {
     "name": "graylog",
-    "release": "13.1-RELEASE",
+    "release": "13.2-RELEASE",
     "artifact": "https://github.com/xTITUSMAXIMUSX/iocage-plugin-graylog.git",
     "properties": {
         "allow_raw_sockets": "1",

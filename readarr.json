@@ -1,6 +1,6 @@
 {
     "name": "readarr",
-    "release": "13.1-RELEASE",
+    "release": "13.2-RELEASE",
     "artifact": "https://github.com/pigfrown/iocage-plugin-readarr.git",
     "official": false,
     "properties": {

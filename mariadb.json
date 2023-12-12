@@ -1,7 +1,7 @@
 {
     "name": "MariaDB",
     "plugin_schema": 2,
-    "release": "13.1-RELEASE",
+    "release": "13.2-RELEASE",
     "artifact": "https://github.com/m1ch/iocage-plugin-mariadb.git",
     "official": false,
     "properties": {

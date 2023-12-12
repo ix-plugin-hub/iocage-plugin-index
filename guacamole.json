@@ -1,6 +1,6 @@
 {
     "name": "guacamole",
-    "release": "13.1-RELEASE",
+    "release": "13.2-RELEASE",
     "artifact": "https://github.com/leandroscardua/iocage-plugin-guacamole.git",
     "official": false,
     "pkgs": [

@@ -1,7 +1,7 @@
 {
     "name": "paperless-ngx", 
     "plugin_schema": "2",
-    "release": "13.1-RELEASE",
+    "release": "13.2-RELEASE",
     "artifact": "https://github.com/tornadoracer/iocage-plugin-paperless-ngx.git",
     "properties": {
         "dhcp": 1

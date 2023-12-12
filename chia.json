@@ -1,6 +1,6 @@
 {
     "name": "Chia-Blockchain",
-    "release": "13.1-RELEASE",
+    "release": "13.2-RELEASE",
     "artifact": "https://github.com/kmoore134/iocage-plugin-chia.git",
     "official": false,
     "properties": {
