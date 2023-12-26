@@ -1,6 +1,6 @@
 {
     "name": "Jellyfin Server",
-    "release": "13.1-RELEASE",
+    "release": "13.2-RELEASE",
     "artifact": "https://github.com/spz2k9/iocage-plugin-jellyfin.git",
     "official": false,
     "properties": {
@@ -22,7 +22,8 @@
     "pkgs": [
         "libva-utils",
         "libva-intel-media-driver",
-        "python39"
+        "python39",
+        "jellyfin"
     ],
     "packagesite": "http://pkg.FreeBSD.org/${ABI}/latest",
     "fingerprints": {
@@ -33,5 +34,5 @@
             }
         ]
     },
-    "revision": 2
+    "revision": 3
 }

@@ -1,6 +1,6 @@
 {
     "name": "movienight",
-    "release": "13.1-RELEASE",
+    "release": "13.2-RELEASE",
     "artifact": "https://github.com/zorglube/iocage-plugin-movienight.git",
     "official": false,
     "properties": {

@@ -1,6 +1,6 @@
 {
     "name": "Prowlarr",
-    "release": "13.1-RELEASE",
+    "release": "13.2-RELEASE",
     "artifact": "https://github.com/jasker5183/iocage-plugin-prowlarr.git",
     "official": false,
     "properties": {

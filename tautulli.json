@@ -1,6 +1,6 @@
 {
     "name": "Tautulli",
-    "release": "13.1-RELEASE",
+    "release": "13.2-RELEASE",
     "artifact": "https://github.com/dropsignal/iocage-plugin-tautulli.git",
     "official": false,
     "pkgs": [

@@ -1,6 +1,6 @@
 {
     "name": "nxfilter",
-    "release": "13.1-RELEASE",
+    "release": "13.2-RELEASE",
     "artifact": "https://github.com/xTITUSMAXIMUSX/iocage-plugin-nxfilter.git",
     "properties": {
         "allow_raw_sockets": "1",

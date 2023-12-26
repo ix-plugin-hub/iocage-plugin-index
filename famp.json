@@ -1,6 +1,6 @@
 {
     "name": "famp",
-    "release": "13.1-RELEASE",
+    "release": "13.2-RELEASE",
     "artifact": "https://github.com/fulder/iocage-plugin-famp.git",
     "pkgs": [
         "apache24",

@@ -1,0 +1,52 @@
+{
+    "name": "paperless-ngx", 
+    "plugin_schema": "2",
+    "release": "13.2-RELEASE",
+    "artifact": "https://github.com/tornadoracer/iocage-plugin-paperless-ngx.git",
+    "properties": {
+        "dhcp": 1
+    },
+    "pkgs": [
+        "py39-pip",
+        "py39-pikepdf",
+	"py39-scikit-learn",
+        "liberation-fonts-ttf",
+        "imagemagick7",
+        "zbar",
+        "unpaper",
+        "icc-profiles-adobe-cs4",
+        "qpdf",
+        "leptonica",
+        "pngquant",
+        "lzlib",
+        "tesseract",
+        "redis",
+        "git",
+        "mysql80-client",
+        "mysql80-server",
+        "py39-psycopg2",
+        "cmake",
+        "py39-scipy",
+        "gcc",
+        "rust",
+        "gnupg",
+        "py39-pyinotify",
+        "py39-sqlite3",
+	"py39-django42",
+	"py39-celery",
+	"py39-nltk",
+	"libxml2",
+	"libxslt",
+        "expect"
+    ],
+    "packagesite": "http://pkg.FreeBSD.org/${ABI}/latest",
+    "fingerprints": {
+        "iocage-plugins": [
+            {
+                "function": "sha256",
+                "fingerprint": "b0170035af3acc5f3f3ae1859dc717101b4e6c1d0a794ad554928ca0cbb2f438"
+            }
+        ]
+    },
+    "revision": 0
+}

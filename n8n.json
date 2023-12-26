@@ -1,7 +1,7 @@
 {
     "name": "n8n",
     "artifact": "https://github.com/kennedyoliveira/iocage-n8n-plugin",
-    "release": "13.1-RELEASE",
+    "release": "13.2-RELEASE",
     "properties": {
         "nat": 1,
         "nat_forwards": "tcp(5678:5678)",

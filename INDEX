@@ -347,16 +347,6 @@
 		"category": "entertainment",
 		"homepage": "https://n8n.io/"
 	},
-	"mineos": {
-		"MANIFEST": "mineos.json",
-		"name": "MineOS",
-		"icon": "https://icons.freenas.org/community-icons/mineos.png",
-		"description": "Set up and manage Minecraft servers.",
-		"official": false,
-		"primary_pkg": null,
-		"category": "entertainment",
-		"homepage": "https://minecraft.codeemo.com/"
-	},
 	"netdata": {
 		"MANIFEST": "netdata.json",
 		"description": "Monitor everything in real-time",
@@ -409,11 +399,28 @@
 		"official": false,
 		"primary_pkg": null
 	},
+	"paperless-ngx": {
+		"MANIFEST": "paperless-ngx.json",
+		"description": "Paperless-ngx is a document management system that transforms your physical documents into a searchable online archive.",
+		"icon": "https://icons.freenas.org/community-icons/paperless-ngx.png",
+		"name": "Paperless-ngx",
+		"official": false,
+		"primary_pkg": null,
+		"homepage": "https://paperless-ngx.readthedocs.io/en/latest/index.html"
+        },
 	"photoprism": {
 		"MANIFEST": "photoprism.json",
 		"description": "PhotoPrism® is an AI-Powered Photos App for the Decentralized Web. It makes use of the latest technologies to tag and find pictures automatically without getting in your way.",
 		"icon": "https://icons.freenas.org/community-icons/photoprism.png",
 		"name": "photoprism",
+		"official": false,
+		"primary_pkg": null
+	},
+	"photoview": {
+		"MANIFEST": "photoview.json",
+		"description": "Photoview is a simple and user-friendly photo gallery that's made for photographers and aims to provide an easy and fast way to navigate directories, with thousands of high-resolution photos.",
+		"icon": "https://icons.freenas.org/community-icons/photoview.png",
+		"name": "photoview",
 		"official": false,
 		"primary_pkg": null
 	},

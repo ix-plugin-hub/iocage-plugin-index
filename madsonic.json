@@ -1,6 +1,6 @@
 {
     "name": "MadSonic",
-    "release": "13.1-RELEASE",
+    "release": "13.2-RELEASE",
     "artifact": "https://github.com/freenas/iocage-plugin-madsonic.git",
     "properties": {
         "nat": 1,

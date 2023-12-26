@@ -330,15 +330,6 @@ mariadb_task:
   env:
     PLUGIN_FILE: "mariadb.json"
 
-mineos_task:
-  <<: *INSTALL_PLUGIN
-  only_if: "changesInclude('mineos.json', '.cirrus/install_script.sh')"
-  matrix:
-    - freebsd_instance:
-        image_family: freebsd-12-3
-  env:
-    PLUGIN_FILE: "mineos.json"
-
 monica_task:
   <<: *INSTALL_PLUGIN
   only_if: "changesInclude('monica.json', '.cirrus/install_script.sh')"
@@ -430,6 +421,15 @@ openvpn_task:
   env:
     PLUGIN_FILE: "openvpn.json"
 
+paperless-ngx_task:
+  <<: *INSTALL_PLUGIN
+  only_if: "changesInclude('paperless-ngx.json', '.cirrus/install_script.sh')"
+  matrix:
+    - freebsd_instance:
+        image_family: freebsd-13-1
+  env:
+    PLUGIN_FILE: "paperless-ngx.json"
+
 photoprism_task:
   <<: *INSTALL_PLUGIN
   only_if: "changesInclude('photoprism.json', '.cirrus/install_script.sh')"
@@ -438,6 +438,15 @@ photoprism_task:
         image_family: freebsd-13-1
   env:
     PLUGIN_FILE: "photoprism.json"
+
+photoview_task:
+  <<: *INSTALL_PLUGIN
+  only_if: "changesInclude('photoview.json', '.cirrus/install_script.sh')"
+  matrix:
+    - freebsd_instance:
+        image_family: freebsd-13-2
+  env:
+    PLUGIN_FILE: "photoview.json"
 
 piwigo_task:
   <<: *INSTALL_PLUGIN
