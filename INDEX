@@ -532,6 +532,16 @@
 		"official": false,
 		"primary_pkg": "sabnzbdplus"
 	},
+	"shinobi": {
+        "MANIFEST": "shinobi.json",
+        "name": "Shinobi",
+        "icon": "https://icons.freenas.org/community-icons/shinobi.png",
+        "description": "Shinobi is Open Source, written in Node.js, and real easy to use. It is the future of CCTV and NVR for developers and end-users alike. It is catered to by professionals and most importantly by the one who created it.",
+        "official": false,
+        "primary_pkg": null,
+        "category": "security",
+        "homepage": "https://shinobi.video/"
+    },
 	"sickchill": {
 		"MANIFEST": "sickchill.json",
 		"description": "Automatic video library manager for TV Shows.",

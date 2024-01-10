@@ -657,6 +657,15 @@ zoneminder_task:
   env:
     PLUGIN_FILE: "zoneminder.json"
 
+shinobi_task:
+  <<: *INSTALL_PLUGIN
+  only_if: "changesInclude('shinobi.json', '.cirrus/install_script.sh')"
+  matrix:
+    - freebsd_instance:
+        image_family: freebsd-12-2
+  env:
+    PLUGIN_FILE: "shinobi.json"
+
 zrepl_task:
   <<: *INSTALL_PLUGIN
   only_if: "changesInclude('zrepl.json', '.cirrus/install_script.sh')"
