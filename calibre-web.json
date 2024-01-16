@@ -9,7 +9,7 @@
         "py39-pip",
         "py39-setuptools",
         "py39-sqlite3",
-        "py39-ldap",
+        "py39-python-ldap",
         "rust",
         "calibre",
         "unrar",
