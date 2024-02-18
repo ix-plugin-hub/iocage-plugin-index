@@ -1,16 +1,16 @@
 {
     "name": "zabbix server",
     "release": "13.2-RELEASE",
-    "artifact": "https://github.com/xTITUSMAXIMUSX/iocage-plugin-zabbix6-server.git",
+    "artifact": "https://github.com/Tostis/iocage-plugin-zabbix64-server.git",
     "properties": {
         "allow_raw_sockets": "1",
         "boot": "on"
     },
     "pkgs": [
         "mysql80-server",
-        "zabbix6-server",
-        "zabbix6-agent",
-        "zabbix6-frontend-php81",
+        "zabbix64-server",
+        "zabbix64-agent",
+        "zabbix64-frontend-php83",
         "nginx"
     ],
     "packagesite": "http://pkg.FreeBSD.org/${ABI}/latest",
