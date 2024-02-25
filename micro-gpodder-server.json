@@ -1,0 +1,22 @@
+{
+    "name": "Micro GPodder Server",
+    "release": "13.2-RELEASE",
+    "artifact": "https://github.com/zorglube/iocage-plugin-micro-gpodder-server.git",
+    "pkgs": [
+        "php82",
+        "php82-ctype",
+        "php82-opcache",
+        "php82-session",
+        "php82-sqlite3"
+    ],
+    "packagesite": "http://pkg.FreeBSD.org/${ABI}/latest",
+    "fingerprints": {
+        "iocage-plugins": [
+            {
+                "function": "sha256",
+                "fingerprint": "b0170035af3acc5f3f3ae1859dc717101b4e6c1d0a794ad554928ca0cbb2f438"
+            }
+        ]
+    },
+    "official": false
+}

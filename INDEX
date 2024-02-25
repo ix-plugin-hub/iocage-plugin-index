@@ -310,6 +310,15 @@
 		"category": "server",
 		"homepage": "https://mariadb.org/"
 	},
+    "micro-gpodder-server": {
+        "MANIFEST": "micro-gpodder-server.json",
+        "name": "Micro GPodder Server",
+        "description": "This is a minimalist GPodder server to self-host your podcast synchronization data",
+        "icon": "https://icons.freenas.org/community-icons/mgps.png",
+        "official": false,
+        "category": "server",
+        "homepage": "https://github.com/bohwaz/micro-gpodder-server"
+    },
 	"monica": {
 		"MANIFEST": "monica.json",
 		"name": "Monica",
