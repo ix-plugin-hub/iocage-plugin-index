@@ -7,7 +7,7 @@
         "guacamole-server",
         "guacamole-client",
         "mysql80-server",
-        "mysql-connector-java"
+        "mysql-connector-j"
     ],
     "properties": {
         "nat": 1,
