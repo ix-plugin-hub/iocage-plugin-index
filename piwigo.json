@@ -1,5 +1,6 @@
 {
-    "name": "Piwigo",
+    "name": "Piwigo14",
+    "plugin_schema": "2",
     "release": "13.1-RELEASE",
     "artifact": "https://github.com/AfroUSApl/iocage-plugin-piwigo.git",
     "official": false,
@@ -12,17 +13,20 @@
         "git",
         "nginx",
         "mariadb105-server",
-        "php80",
-        "php80-exif",
-        "php80-filter",
-        "php80-gd",
-        "php80-mbstring",
-        "php80-mysqli",
-        "php80-session",
-        "php80-zip",
-        "php80-zlib"
+        "php83",
+        "php83-exif",
+        "php83-filter",
+        "php83-gd",
+        "php83-mbstring",
+        "php83-mysqli",
+        "php83-session",
+        "php83-zip",
+        "php83-zlib",
+        "php83-pecl-json_post",
+        "finfo",
+        "php83-fileinfo"
     ],
-    "packagesite": "http://pkg.FreeBSD.org/${ABI}/latest",
+    "packagesite": "http://pkg.FreeBSD.org/${ABI}/quarterly",
     "fingerprints": {
         "iocage-plugins": [
             {
@@ -31,5 +35,5 @@
             }
         ]
     },
-    "revision": 0
+    "revision": "0"
 }
