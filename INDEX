@@ -584,7 +584,7 @@
 		"icon": "https://icons.freenas.org/community-icons/unificontroller.png",
 		"name": "unificontroller",
 		"official": false,
-		"primary_pkg": "unifi5"
+		"primary_pkg": "unifi8"
 	},
 	"urbackup": {
 		"MANIFEST": "urbackup.json",
