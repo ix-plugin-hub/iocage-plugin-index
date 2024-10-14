@@ -222,6 +222,15 @@
 		"official": false,
 		"primary_pkg": "i2p"
 	},
+	"immich": {
+        "MANIFEST": "immich.json",
+        "description": "Self-hosted photo and video management solution",
+        "icon": "https://icons.freenas.org/community-icons/immich.png",
+        "name": "Immich",
+        "official": false,
+        "primary_pkg": null,
+        "homepage": "https://immich.app/"
+    },
 	"irssi": {
 		"MANIFEST": "irssi.json",
 		"description": "Modular IRC client using a CLI interface.",
